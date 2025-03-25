@@ -18,18 +18,16 @@ In this lab, you'll configure and prepare your environment for administration ta
 
 **Tasks:**
 
-- Set user passwords for lab exercises
-- Enable Audit in the Microsoft Purview portal
-- Enable Search by Name in Microsoft Teams
-- Enable information barriers in SharePoint Online and OneDrive
+1. Set user passwords for lab exercises
+1. Enable Audit in the Microsoft Purview portal
 
-## Task - Set user passwords for lab exercises
+## Task 1 - Set user passwords for lab exercises
 
 In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. Log into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account. The password should be provided by your lab hosting provider.
 
-1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** and log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
+1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
 1. On the left navigation pane, expand **Users** then select **Active users**.
 
@@ -39,7 +37,7 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
    ![Screenshot showing user accounts that need to be reset.](../Media/user-accounts.png)
 
-1. Select the **Reset password** button from the top, navigation ribbon to reset all three passwords.
+1. Select the **Reset password** button from the top navigation to reset all three passwords.
 
    ![Screenshot showing the Reset password button in the Microsoft 365 admin center.](../Media/reset-password-button.png)
 
@@ -55,11 +53,65 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 You have successfully reset passwords for lab exercises.
 
-## Task - Enable Audit in the Microsoft Purview portal
+## Task 2 - Enable Audit in the Microsoft Purview portal
 
 In this task, you'll enable Audit in the Microsoft Purview portal to monitor portal activities.
 
 1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and logged into Microsoft 365 with the MOD Administrator account.
+
+1. Open an elevated Terminal window by selecting the Windows button with the right mouse button and then select **Terminal (Admin)**.
+
+1. Run the Install Module cmdlet in the terminal window to install the latest **Exchange Online PowerShell** module version:
+
+    ```powershell
+    Install-Module ExchangeOnlineManagement
+    ```
+
+1. Confirm the NuGet provider security dialog with **Y** for Yes and press **Enter**. This process might take some time to complete.
+
+1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
+
+1. Run the **Set-ExecutionPolicy** cmdlet to change your execution policy and press **Enter**
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```
+
+1. Close the PowerShell window.
+
+1. Open a regular PowerShell window, without elevation, right clicking the Windows button in the task bar, then select **Terminal**.
+
+1. Run the **Connect-ExchangeOnline** cmdlet to use the Exchange Online PowerShell module and connect to your tenant:
+
+    ```powershell
+    Connect-ExchangeOnline
+    ```
+
+1. When the **Sign in** window is displayed, sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
+
+1. To check if Audit is enabled, run the **Get-AdminAuditLogConfig** cmdlet:
+
+    ```powershell
+    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    ```
+
+1. If _UnifiedAuditLogIngestionEnabled_ returns false, then Audit is disabled.
+
+1. To enable the Audit log, run the **Set-AdminAuditLogConfig** cmdlet and set the **UnifiedAuditLogIngestionEnabled** to _true_:
+
+    ```powershell
+    Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+    ```
+
+1. To verify that Audit is enabled, run the **Get-AdminAuditLogConfig** cmdlet again:
+
+    ```powershell
+    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    ```
+
+1. _UnifiedAuditLogIngestionEnabled_ should return _true_ to let you know Audit is enabled.
+
+<!---
 
 1. In Microsoft Edge, navigate to the Microsoft Purview portal, `https://purview.microsoft.com`, and log in.
 
@@ -75,77 +127,4 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 1. Once you select this option, the blue bar should disappear from this page.
 
->[!alert] If you receive an error enabling Audit in this exercise, please use these steps as a work around:
->1. Open an elevated Terminal window by selecting the Windows button with the right mouse button and then select Terminal (Admin).
->1. Install the ExchangeOnlineManagement module by running `Install-Module -Name ExchangeOnlineManagement`
->1. Connect to ExchangeOnlineManagement by running `Connect-ExchangeOnline`
->1. When prompted, login by entering the administrator username and password from your lab hosting provider.
->1. To verify if Audit is enabled, run `Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled`
->1. If false, then the audit log is turned off.
->1. To enable Audit, run `Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true`
->   1. If you receive an error that you are unable to run the script in your organization, run `Enable-OrganizationCustomization`
->   1. Try again to run `Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true`
->1. To confirm Audit is enabled, run `Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled`
->1. Once complete, run `Disconnect-ExchangeOnline` to end your session
-
-You have successfully enabled auditing in Microsoft 365.
-
-## Task - Enable search by name in Microsoft Teams
-
-In this task, you'll enable the **Search by name** feature in Microsoft Teams for easy user location. This is needed for configuring information barriers in a later exercise.
-
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and logged into Microsoft 365 with the MOD Administrator account.
-
-1. In **Microsoft Edge**, navigate to **`https://admin.teams.microsoft.com`**.
-
-1. In the left navigation pane, under the **Teams** dropdown, select **Teams settings**.
-
-    ![Screenshot showing the Teams settings button in the Teams admin portal.](../Media/teams-settings.png)
-
-1. Scroll down to **Search by name** section and toggle the **Scope directory search using an Exchange address book policy** to **On**.
-
-1. Select **Save** at the bottom of the page.
-
-1. On the **Changes might take some time to take effect** dialogue, select **Confirm**.
-
-You have successfully enabled the search by name feature in Microsoft Teams for information barriers.
-
-## Task - Enable information barriers in SharePoint Online and OneDrive
-
-In this task, you'll enable information barriers in SharePoint Online and OneDrive to ensure secure collaboration.
-
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account.
-
-1. Open an elevated PowerShell window by selecting the Windows button with the right mouse button and then select **Windows PowerShell (Admin)**.
-
-1. Confirm the **User Account Control** window with **Yes**.
-
-1. Run the following cmdlet to install the latest version of the SharePoint Online PowerShell module:
-
-    ```powershell
-    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
-    ```
-
-1. If prompted to install the PowerShell NuGet provider, enter **Y** to install the provider.
-
-1. If prompted to install from an untrusted repository, enter **Y** to install the module from the PSGallery.
-
-1. Run the following cmdlet to connect to the admin center for SharePoint Online:
-
-    ```powershell
-     Connect-SPOService -Url https://WWLxZZZZZZ-admin.sharepoint.com
-    ```
-
-    >**Note:** Be sure to update ZZZZZZ. ZZZZZZ is your unique tenant ID provided by your lab hosting provider.
-
-1. Login with the MOD Administrator password provided by your lab hosting provider.
-
-1. To enable information barriers in SharePoint and OneDrive, run the following command:
-
-    ```powershell
-    Set-SPOTenant -InformationBarriersSuspension $false
-    ```
-
-1. Close the PowerShell window once this is complete.
-
-You have successfully enabled information barriers in SharePoint Online and OneDrive.
+-->

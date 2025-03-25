@@ -60,6 +60,10 @@ In this task, you'll sign in as Joni Sherman to explore the Microsoft Purview po
 
 1. When the **Sign in** window is displayed, sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
+1. A message about the new Microsoft Purview portal will appear on the screen. Select **Get started** to access the new portal.
+
+    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/welcome-purview-portal.png)
+
 1. Get yourself familiar with the new Microsoft Purview Portal. When you are done, leave the browser window open.
 
 You have successfully switched to Joni Sherman's account and are now ready to start the lab.

@@ -44,9 +44,9 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. On the **+ Add a regular expression​** flyout panel on the right, enter:
 
-    - **ID**: `Contoso IDs`
-    - **Regular expression**: `[A-Z]{3}[0-9]{6}`
-    - Select the radio button for *String match*
+   - **ID**: `Contoso IDs`
+   - **Regular expression**: `[A-Z]{3}[0-9]{6}`
+   - Select the radio button for _String match_
 
 1. Select **Done** at the bottom of the flyout panel.
 
@@ -54,15 +54,15 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. On the **Add a keyword list** flyout panel on the right, enter:
 
-    - **ID**: `Employee ID keywords`
-    - **Case insensitive**:
+   - **ID**: `Employee ID keywords`
+   - **Case insensitive**:
 
-       ```text
-       Employee
-       ID
-       ```
+      ```text
+      Employee
+      ID
+      ```
 
-    - Select the radio button for *Word match*
+   - Select the radio button for _Word match_
 
 1. Select **Done** at the bottom of the flyout panel.
 
@@ -78,19 +78,17 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. Sign out of Joni's account by selecting the profile picture of Joni Sherman in the top right. Select **Sign out**, then close the browser window.
 
-1. Close the browser window then open a new browser window.
-
 You have successfully created a new sensitive information type to identify employee IDs in the pattern of three uppercase characters, six numbers, and the keywords 'Employee' or 'IDs' within a range of 100 characters.
 
-## Task 2 – Create EDM-based classification information type
+## Task 2 – Create a security group and assign roles to create an EDM classifier
 
-In this task, you'll create an Exact Data Match (EDM) based classification with a database schema of employee data.
+In this task, you'll create the role group to create an EDM classifier and add Joni to the new role group.
 
 1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account.
 
 1. Open **Microsoft Edge** then navigate to **`https://admin.microsoft.com`**.
 
-1. When the **Pick an account** page is displayed, select **Use another account** and sign in as **MOD Administrator** `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).  Admin's password should be provided by your lab hosting provider.
+1. When the **Pick an account** page is displayed, select **Use another account** and sign in as **MOD Administrator** `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
 1. From the left pane, expand **Teams & groups** then select **Active teams & groups**.
 
@@ -98,7 +96,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
     ![Screenshot of the Add a group button.](../Media/add-security-group.png)
 
-1. On the **Set up the basics** screen, enter the following:
+1. On the **Set up the basics** screen, enter:
 
     - **Name**: `EDM_DataUploaders`
     - **Description**: `People who upload data for EDM.`
@@ -121,11 +119,15 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 1. Verify **Joni Sherman** is listed below **Members**, then close the flyout panel by selecting the **X** on the top right of the flyout panel.
 
-1. Sign out of the Mod Administrator account by selecting the MA icon on the top right of the window, then selecting **Sign out**.
+1. Sign out of the Mod Administrator account by selecting the MA icon on the top right of the window, then selecting **Sign out** and closing the browser window.
 
-1. Close the browser window and open a new one.
+You have successfully created the **EDM_DataUploaders group** and assigned Joni access to create an EDM classifier.
 
-1. Navigate to the Microsoft Purview portal at `https://purview.microsoft.com`.
+## Task 3 –  Create EDM-based classification information type
+
+In this task, you'll create an Exact Data Match (EDM) based classification with a database schema of employee data.
+
+1. Open **Microsoft Edge** then navigate to the Microsoft Purview portal at `https://purview.microsoft.com`.
 
 1. When the **Pick an account** page is displayed, select **Joni Sherman** and sign in.
 
@@ -159,7 +161,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 1. Select **Next**.
 
-1. On the **Select primary elements** page, for the **EmployeeID** column, expand the **Match mode** dropdown here **Single-token** is displayed, and select the **+** (plus sign) for **Choose a SIT**.
+1. On the **Select primary elements** page, find the **EmployeeID** column. Expand the **Match mode** dropdown where **Single-token** is displayed. Select the **+** (plus sign) for **Choose a SIT**.
 
       ![Screenshot showing the click path to add a SIT for a primary element in an EDM classifier.](../Media/match-mode-sensitive-info-type.png)
 
@@ -177,13 +179,21 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 1. Select the checkbox for **Ignore delimiters and punctuation for data in all columns**.
 
-1. Select the dropdown for **Choose delimiters and punctuation to ignore** dropdown and select *Hyphen*, *Period*, *Space*, *Open parenthesis* and *Close parenthesis*, then select **Next**.
+1. Select the dropdown for **Choose delimiters and punctuation to ignore** dropdown and select:
+
+   - _Hyphen ('-')_
+   - _Period ('.')_
+   - _Space (' ')_
+   - _Open parenthesis ('(')_
+   - _Close parenthesis (')')_
+
+1. Click anywhere outside of the dropdown, then select **Next**.
 
 1. On the **Configure detection rules for primary elements**, leave the default configuration, then select **Next**.
 
 1. On the **Review settings and finish** page, select **Submit**.
 
-1. On the **You successfully created an EDM classifier** page, be sure to copy and paste the **Schema name** to use in the next task.
+1. On the **You successfully created an EDM classifier** page, be sure to capture the **Schema name** to use in the next task.
 
       ![Screenshot showing the schema name after creating an EDM classifier.](../Media/edm-copy-schema-name.png)
 
@@ -277,13 +287,13 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
     Alternatively, you can also refresh the **EDM classifiers** window in the Microsoft Purview portal to check the status of the hash. Once the status is set to **Index complete** the hash is complete.
 
-    > **Note**: This process time, and you might have to run the GetSession script or refresh the EDM classifiers page a few times before the status shows the hash is complete.
+    > **Note**: This process might take some time. You might need to run the GetSession script or refresh the EDM classifiers page several times before the status indicates that the hash is complete.
 
     ![Screenshot showing the EDM hash status set to Completed in PowerShell.](../Media/edm-hash-completed.png)
 
     ![Screenshot showing the EDM hash status set to Index complete in Microsoft Purview portal.](../Media/edm-hash-completed-ui.png)
 
-1. Close the PowerShell window.
+1. Close the terminal window.
 
 You have successfully hashed and uploaded a database file for an EDM-based classification sensitive information type.
 
