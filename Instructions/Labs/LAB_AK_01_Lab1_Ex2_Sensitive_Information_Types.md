@@ -312,7 +312,7 @@ Several violations of personal information leakage happened when users sent out 
 1. On the **Name your sensitive info type** page, enter:
 
     - **Name**: `Contoso Diseases List`
-    - **Description**: `List of possible diseases of employees`.
+    - **Description**: `List of possible diseases of employees.`
 
 1. Select **Next**.
 
@@ -382,7 +382,7 @@ Custom sensitive information types should always be tested before using them in 
 
 1. Close the Notepad window.
 
-1. Back in **Microsoft Edge**, Microsoft Purview portal should still be open on the Sensitive info types page.
+1. Back in **Microsoft Edge**, Microsoft Purview portal should still be open on the **Sensitive info types** page.
 
 1. In the **Search** bar on the upper right, enter `Contoso` and press Enter.
 
@@ -392,7 +392,7 @@ Custom sensitive information types should always be tested before using them in 
 
 1. On the **Upload file to test "Contoso Employee IDs"** flyout panel on the right, select **Upload file**.
 
-1. Select **Documents** from the left pane, select the *SickTestData.txt* file, then select **Open**.
+1. Select **Documents** from the left pane, select the _SickTestData.txt_ file, then select **Open**.
 
 1. Select **Test** to start the analysis.
 
@@ -406,7 +406,7 @@ Custom sensitive information types should always be tested before using them in 
 
 1. On the **Upload file to test** pane, select **Upload file**.
 
-1. Select **Documents** from the left pane, select the *SickTestData.txt* file, then select **Open**.
+1. Select **Documents** from the left pane, select the _SickTestData.txt_ file, then select **Open**.
 
 1. Select **Test** to start the analysis.
 
