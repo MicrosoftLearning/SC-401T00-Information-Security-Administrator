@@ -12,9 +12,9 @@ Joni Sherman, the System Administrator for Contoso Ltd., has been tasked with en
 
 1. Verify Azure RMS functionality
 1. Modify default branding template
-1. Test default branding template
+1. Validate default branding behavior
 1. Create custom branding template
-1. Test the custom branding template
+1. Validate custom branding behavior
 
 ## Task 1 – Verify Azure RMS functionality
 
@@ -90,7 +90,7 @@ There is a requirement in your organization to restrict trust for foreign identi
 
 You've successfully disabled social identity providers, helping ensure that encrypted emails from Contoso can only be opened using Microsoft accounts or one-time passcodes—improving control over sensitive message access.
 
-## Task 3 – Test default branding template
+## Task 3 – Validate default branding behavior
 
 You must confirm that no social IDs dialog is displayed for external recipients when receiving a message protected with Office 365 Message Encryption from users of your tenant and they need to use the OTP at any time accessing the encrypted content.
 
@@ -184,7 +184,7 @@ Protected messages sent by your organizations finance department require special
 
 You've configured a transport rule that ensures emails from the finance department are encrypted and branded consistently, reinforcing Contoso's messaging and security standards.
 
-## Task 5 – Test the custom branding template
+## Task 5 – Validate custom branding behavior
 
 To validate the new custom configuration, you need to use the account of Lynne Robbins again, who is a member of the finance team.
 

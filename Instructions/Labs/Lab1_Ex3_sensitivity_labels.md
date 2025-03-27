@@ -172,37 +172,7 @@ You will now publish the Internal and HR sensitivity label so that the published
 
 You have successfully published the Internal and HR sensitivity labels. Note that it can take up to 24 hours for changes to replicate to all users and services.
 
-## Task 4 – Apply sensitivity labels
-
-In this task, you'll apply a sensitivity label to a document in Word to simulate how users can manually label content. This helps ensure that HR documents are protected according to the label policy you published earlier.
-
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
-
-1. In **Microsoft Edge**, open a new Word document by selecting the meatball menu in the top left and selecting **Word**.
-
-    ![Screenshot showing where to select Word from the meatball menu.](../Media/meatball-menu-word.png)
-
-1. Select **Blank document** to create a new document.
-
-1. On the **Your privacy option** dialogue, select **Close**.
-
-1. Enter this text in the new blank document:
-
-   `Important HR employee document.`
-
-1. Select **Sensitivity** from the navigation ribbon and select **Internal** > **Employee Data (HR)** to apply the newly created sensitivity label to this document.
-
-    ![Screenshot showing the sensitivity label button in Word.](../Media/word_label.png)
-
-    >**Note:** It can take 24-48 hours for newly published sensitivity labels to be available for application. If the newly created sensitivity labels aren't available, you can use **Confidential** > **All Employees** for this exercise.
-
-1. In the upper left of the document, select **Document** to rename this file, and rename it to **`HR Document`**. Press enter to apply this name change.
-
-    ![Screenshot showing where to rename a file in Word on the web.](../Media/rename-web-word-file.png)
-
-You successfully applied the HR sensitivity label to a Word document saved in OneDrive.
-
-## Task 5 – Configure auto labeling
+## Task 4 – Configure auto labeling
 
 In this task, you'll create a sensitivity label for financial data and configure it to apply automatically to content containing specific financial identifiers, such as credit card numbers and bank routing information.
 
@@ -285,7 +255,7 @@ In this task, you'll create a sensitivity label for financial data and configure
 
 You have successfully created a sensitivity label for financial data and configured an auto-labeling policy to detect and label content that contains sensitive financial information.
 
-## Task 6 – Create and publish a DKE label for highly confidential content
+## Task 5 – Create and publish a DKE label for highly confidential content
 
 In this task, you'll create a sublabel under the built-in Highly Confidential label. This sublabel will use Double Key Encryption (DKE) and dynamic watermarking to protect sensitive content accessed only by Legal. You'll also configure a label policy that requires justification for downgrading the label.
 
@@ -376,7 +346,7 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
 
 You have successfully created and published a sublabel using Double Key Encryption with dynamic watermarking. This label provides strong protection for highly confidential content and enforces restricted access and justification for classification changes.
 
-## Task 7 – Enable Microsoft Purview integration in Defender for Cloud Apps
+## Task 6 – Enable Microsoft Purview integration in Defender for Cloud Apps
 
 In this task, you'll enable Microsoft Purview integration in Microsoft Defender for Cloud Apps. This allows Defender to scan new files for Microsoft Purview sensitivity labels and inspect content based on those labels.
 
@@ -384,7 +354,7 @@ In this task, you'll enable Microsoft Purview integration in Microsoft Defender 
 
 1. Open **Microsoft Edge**, then go to **Microsoft Defender** by navigating to `https://security.microsoft.com`.
 
-1. In the left navigation, select **Settings**, then select **Cloud Apps**.
+1. In the left navigation, select **System** > **Settings**, then select **Cloud Apps**.
 
 1. On the left pane in the Cloud Apps setting, select **Microsoft Information Protection** under **Information Protection**.
 
@@ -404,7 +374,7 @@ In this task, you'll enable Microsoft Purview integration in Microsoft Defender 
 
 You've enabled Defender for Cloud Apps to recognize and scan files for sensitivity labels from Microsoft Purview.
 
-## Task 8 – Create a file policy to auto-label externally shared files
+## Task 7 – Create a file policy to auto-label externally shared files
 
 Now that label scanning is enabled, you'll create a file policy that applies a general sensitivity label to any new files that are shared outside your organization.
 

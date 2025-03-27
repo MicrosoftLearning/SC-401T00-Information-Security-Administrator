@@ -6,7 +6,7 @@ lab:
 
 # Lab 2 – Exercise 2 – Manage endpoint DLP
 
-You are Joni Sherman, the newly hired Compliance Administrator for Contoso Ltd. tasked to configure the company's Microsoft 365 tenant for data loss prevention. Contoso Ltd. is a company offering driving instruction in the United States and you need to make sure that sensitive customer information does not leave the organization. For this reason, you decide to not only implement Microsoft 365 DLP policies but extend this protection to devices in your organization.
+Joni Sherman, the Information Security Administrator at Contoso Ltd., has received reports that employees are copying customer records onto USB drives to work from home. While the intent may not be malicious, this behavior increases the risk of accidental data exposure. To reduce this risk, Joni needs to create an endpoint DLP policy that detects and blocks the transfer of sensitive data, such as Social Security numbers, to removable storage devices.
 
 **Tasks**:
 

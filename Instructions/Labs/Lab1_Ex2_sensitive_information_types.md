@@ -82,11 +82,9 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 You have successfully created a new sensitive information type to identify employee IDs in the pattern of three uppercase characters, six numbers, and the keywords 'Employee' or 'IDs' within a range of 100 characters.
 
------------------
-
 ## Task 2 – Modify confidence level to reduce false positives
 
-You've received reports that some documents containing employee IDs are not being detected by your current sensitive information type. To improve detection coverage, you'll lower the confidence level of the existing pattern in the Contoso Employee IDs sensitive information type so it triggers even when only partial evidence is found.
+You've received reports that some documents containing employee IDs aren't being detected. To improve detection coverage, you'll lower the confidence level of the pattern in the Contoso Employee IDs SIT so it triggers even when only partial evidence is found, increasing the likelihood of detection.
 
 1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account, and logged into Microsoft Purview as Joni Sherman.
 
@@ -104,7 +102,7 @@ You've received reports that some documents containing employee IDs are not bein
 
 1. Select the pencil icon on the right to edit the pattern.
 
-1. In the **Edit pattern** flyout, set the **Confidence level** to **Medium confidence**.
+1. In the **Edit pattern** flyout, set the **Confidence level** dropdown to **Medium confidence**, which allows matches with less supporting evidence than high confidence.
 
 1. Select **Update** at the bottom of the flout.
 
