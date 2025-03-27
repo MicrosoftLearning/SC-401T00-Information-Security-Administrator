@@ -1,376 +1,213 @@
 ---
 lab:
-    title: 'Exercise 4 - Manage Sensitivity Labels in Microsoft Defender for Cloud Apps'
+    title: 'Exercise 4 - Manage Microsoft Purview Message Encryption'
     module: 'Module 1 - Implement Information Protection'
 ---
 
-# Lab 1 - Exercise 4 - Manage sensitivity labels
+# Lab 1 - Exercise 4 - Manage Microsoft Purview Message Encryption
 
-Joni Sherman, the System Administrator for Contoso Ltd., is implementing a sensitivity labeling plan to ensure that all employee documents in the HR department are appropriately labeled according to the company's information protection policies. Contoso Ltd. is based in Rednitzhembach, Germany, and aims to comply with internal data handling standards and regional regulations.
+Joni Sherman, the System Administrator for Contoso Ltd., has been tasked with ensuring secure communication between departments. To support this, she is configuring Microsoft Purview Message Encryption for Contoso, including modifying the default settings and creating a custom branding experience for the finance department.
 
 **Tasks**:
 
-1. Enable support for sensitivity labels
-1. Create sensitivity labels
-1. Publish sensitivity labels
-1. Apply sensitivity labels
-1. Configure auto labeling
+1. Verify Azure RMS functionality
+1. Modify default branding template
+1. Test default branding template
+1. Create custom branding template
+1. Test the custom branding template
 
-## Task 1 – Enable support for sensitivity labels
+## Task 1 – Verify Azure RMS functionality
 
-In this task, you'll enable co-authoring for sensitivity labels, which also enables sensitivity labels for files in SharePoint and OneDrive.
+In this task, you'll verify the correct Azure RMS functionality of your tenant.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and logged into Microsoft Purview and Joni Sherman.
+1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account.
 
-1. Open **Microsoft Edge**, then navigate to `https://purview.microsoft.com`.
+1. Open PowerShell by right-clicking the Start button in the taskbar and selecting **Terminal**.
 
-1. In the left navigation, select **Settings** > **Information Protection**.
+1. Run the **Connect-ExchangeOnline** cmdlet to use the Exchange Online PowerShell module and connect to your tenant:
 
-1. On the **Information Protection settings** ensure you're on the **Co-authoring for files with sensitivity labels** tab.
+    ```powershell
+    Connect-ExchangeOnline
+    ```
 
-1. Select the checkbox for **Turn on co-authoring for files with sensitivity labels**.
+1. When the **Sign in** window is displayed, sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). You will use the password you reset Joni's to in a previous lab.
 
-1. Select **Apply** at the bottom of the screen.
+1. Run the **Get-IRMConfiguration** cmdlet to verify Azure RMS and IRM is activated in your tenant:
 
-You have successfully enabled support for sensitivity labels for files in SharePoint and OneDrive.
+    ```powershell
+    Get-IRMConfiguration | fl AzureRMSLicensingEnabled
+    ```
 
-## Task 2 – Create sensitivity labels
+   The **AzureRMSLicensingEnabled** result should be **True**.
 
-In this task, you'll create a sensitivity label for internal content and a sublabel for documents used by the HR department.
+1. Run the **Test-IRMConfiguration** cmdlet to test the Azure RMS templates used for Office 365 Message Encryption with user **Megan Bowen**:
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
+    ```powershell
+    Test-IRMConfiguration -Sender MeganB@contoso.com -Recipient MeganB@contoso.com
+    ```
 
-1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com`.
+    ![IRM validation script result. ](../Media/irm-validation.png)
 
-1. In the Microsoft Purview portal, select **Solutions** from the left sidebar, then select **Information Protection**.
+    Verify all tests are in the status PASS and no errors are shown.
 
-1. On the **Microsoft Information Protection** page, on the left sidebar, select **Sensitivity labels**.
+1. Leave the PowerShell window open.
 
-1. On the **Sensitivity labels** page select **+ Create a label**.
+You have successfully installed the Exchange Online PowerShell module, connected to your tenant, and verified the correct functionality of Azure RMS.
 
-1. The **New sensitivity label** configuration will start. On the **Provide basic details for this label**, enter:
+## Task 2 – Modify default branding template
 
-    - **Name**: `Internal`
-    - **Display name**: `Internal`
-    - **Description for users**: `Internal sensitivity label.`
-    - **Description for admins**: `Internal sensitivity label for Contoso.`
+There is a requirement in your organization to restrict trust for foreign identity providers, such as Google or Facebook. Because these social IDs are activated by default for accessing messages protected with message encryption, you need to deactivate the use of social IDs for all users in your organization.
 
-1. Select **Next**.
+1. You should still be logged into your Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and there should still be an open PowerShell window with Exchange Online connected.
 
-1. On the **Define the scope for this label** page, select **Items**, then select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. Run the **Get-OMEConfiguration** cmdlet to view the default configuration:
 
-1. Select **Next**.
+    ```powershell
+    Get-OMEConfiguration -Identity "OME Configuration" | fl
+    ```
 
-1. On the **Choose protection settings for labeled items** page, select **Apply content marking**, then select **Next**.
+   Review the settings and confirm that the SocialIdSignIn is set to **True**.
 
-1. On the **Content marking** page, turn on the **Content marking** toggle
+    ![Screenshot showing the SocialIdSignIn value set to True. ](../Media/socialidsignin-value-true.png)
 
-1. For each of the following marking types, select the checkbox, then select the edit icon to enter the text:
+1. Run the **Set-OMEConfiguration** cmdlet to restrict the use of social IDs for accessing messages from your tenant protected with OME:
 
-   |Marking type|Text|
-   |:---|:---|
-   |Add a watermark|`INTERNAL USE ONLY`|
-   |Add a header|`Internal Document`|
-   |Add a footer|`Contoso Confidential`|
+    ```powershell
+    Set-OMEConfiguration -Identity "OME Configuration" -SocialIdSignIn:$false
+    ```
 
-1. Select **Next**.
+1. Confirm the warning message for customizing the default template by entering **Y** for Yes then press **Enter**.
 
-1. On the **Auto-labeling for files and emails** page, select **Next**.
+1. Run the **Get-OMEConfiguration** cmdlet to check the default configuration again and validate:
 
-1. On the **Define protection settings for groups and sites** page, select **Next**.
+    ```powershell
+    Get-OMEConfiguration -Identity "OME Configuration" | fl
+    ```
 
-1. On the **Review your settings and finish** page, select **Create label**.
+    ![Screenshot showing the SocialIdSignIn value set to False. ](../Media/socialidsignin-value-false.png)
 
-1. On the **Your sensitivity label was created** page, select **Don't create a policy yet**, then select **Done**.
+   Notice the result should show the SocialIDSignIn is set to **False**. Leave the PowerShell window and client open.
 
-1. On the **Sensitivity labels** page, find the newly created **Internal** sensitivity label. Select the vertical ellipsis (**...**) next to it, then select **+ Create sublabel** from the dropdown menu.
+You've successfully disabled social identity providers, helping ensure that encrypted emails from Contoso can only be opened using Microsoft accounts or one-time passcodes—improving control over sensitive message access.
 
-    ![Screenshot showing the Action menu to create a sublabel for a sensitivity label.](../Media/create-sublabel-button.png)
+## Task 3 – Test default branding template
 
-1. The **New sensitivity label** wizard will start. On the **Provide basic details for this label** page enter:
+You must confirm that no social IDs dialog is displayed for external recipients when receiving a message protected with Office 365 Message Encryption from users of your tenant and they need to use the OTP at any time accessing the encrypted content.
 
-   - **Name**: `Employee data (HR)`
-   - **Display name**: `Employee data (HR)`
-   - **Description for users**: `This HR label is the default label for all specified documents in the HR Department.`
-   - **Description for admins**: `This label is created in consultation with Ms. Jones (Head of HR department). Contact her when you want to change settings of the label.`
+1. You should still be logged into your Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin**.
 
-1. Select **Next**.
+1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
-1. On the **Define the scope for this label** page, select **Items**, then select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Lynne's password was set in a previous exercise.
 
-1. Select **Next**.
+1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again** then select **No**.
 
-1. On the **Choose protection settings for labeled items** page, select the **Control access** option, then select **Next**.
+1. In Outlook on the web, select **New mail**.
 
-1. On the **Access control** page, select **Configure access control settings**.
+1. In the **To** line enter your personal or other third-party email address that isn't in the tenant domain. Enter **`Secret Message`** in the subject line and **`My super-secret message.`** in the body of the email.
 
-1. Configure the encryption settings with these options:
+1. From the top pane, select **Options** then **Encrypt** to encrypt the message. Once you've successfully encrypted the message, you should see a notice that says "Encrypt: This message is encrypted. Recipients can't remove encryption."
 
-   - **Assign permissions now or let users decide?**: Assign permissions now
-   - **User access to content expires**: Never
-   - **Allow offline access**: Only for a number of days
-   - **Users have offline access to the content for this many days**: 15
-   - Select the **Assign permissions** link. On the **Assign permissions** flyout panel, select the **+ Add any authenticated users**, then select **Save** to apply this setting.
+      ![Screenshot of Encryption settings](../Media/OptionsEncrypt.png)
 
-1. On the **Access control** page, select **Next**.
+1. Select **Send** to send the message. Leave the Outlook window open.
 
-1. On the **Auto-labeling for files and emails** page, select **Next**.
+1. Sign into your personal email account in a new window and open the message from Lynne Robbins. If you sent this email to a Microsoft account (like @outlook.com) the encryption might be processed automatically, and you'll see the message automatically. If you sent the email to another email service like (@gmail.com), you might have to perform the next steps to process the encryption and read the message.
 
-1. On the **Define protection settings for groups and sites** page, select **Next**.
+    >**Note:** You might need to check your junk or spam folder for the message from Lynne Robbins.
 
-1. On the **Review your settings and finish** page, select **Create label**.
+1. Select **Read the message**.
 
-1. On the **Your sensitivity label was created** page, select **Don't create a policy yet**, then select **Done**.
+1. Without having social IDs activated, there is no button to authenticate with your non-Microsoft account.
 
-You have successfully created a sensitivity label for your organization's internal policies with content marking and a sublabel for the Human Resources (HR) department with protection settings.
+1. Select **Sign in with a One-time passcode** to receive a limited time passcode.
 
-## Task 3 – Publish sensitivity labels
+1. Go to your personal email portal and open the message with subject **Your one-time passcode to view the message**.
 
-You will now publish the Internal and HR sensitivity label so that the published sensitivity labels will be available for the HR users to apply to their HR documents.
+1. Copy the passcode, paste it into the OME portal and select **Continue**.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account, and you should be logged into Microsoft Purview as **Joni Sherman**.
+1. Review the encrypted message.
 
-1. In **Microsoft Edge**, the Microsoft Purview portal tab should still be open. If not, navigate to **`https://purview.microsoft.com`** > **Solutions** > **Information Protection** > **Sensitivity labels**.
+You have successfully tested the modified default OME template with deactivated social IDs.
 
-1. On the **Sensitivity labels** page select **Publish labels**.
+## Task 4 – Create custom branding template
 
-1. The publish sensitivity labels configuration will start.
+Protected messages sent by your organizations finance department require special branding, including customized introduction and body texts and a Disclaimer link in the footer. The finance messages shall also expire after seven days. In this task, you will create a new custom OME configuration and create a transport rule to apply the OME configuration to all mail sent from the finance department.
 
-1. On the **Choose sensitivity labels to publish** page, select the **Choose sensitivity labels to publish** link.
+1. You should still be logged into your Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin**, and there should still be an open PowerShell window with Exchange Online connected.
 
-1. On the **Sensitivity labels to publish** flyout panel, select the **Internal** and **Internal/Employee Data (HR)** checkboxes, then select **Add** at the bottom of the flyout page.
+1. Run the **New-OMEConfiguration** cmdlet to create a new configuration:
 
-1. Back on the **Choose sensitivity labels to publish** page, select **Next**.
+    ```powershell
+    New-OMEConfiguration -Identity "Finance Department" -ExternalMailExpiryInDays 7
+    ```
 
-1. On the **Assign admin units** page, select **Next**
+1. Confirm the warning message for customizing the template with **Y** for Yes and press **Enter**.
 
-1. On the **Publish to users and groups** page, select **Next**.
+1. Run the **Set-OMEConfiguration** cmdlet with the _IntroductionText_ parameter to change the introduction text:
 
-1. On the **Policy settings** page, select **Next**.
+    ```powershell
+    Set-OMEConfiguration -Identity "Finance Department" -IntroductionText " from Contoso Ltd. finance department has sent you a secure message."
+    ```
 
-1. On the **Default settings for documents** select **Next**.
+1. Confirm the warning message for customizing the template with **Y** for Yes and press **Enter**.
 
-1. On the **Default settings for emails** select **Next**.
+1. Run the **Set-OMEConfiguration** cmdlet with the _EmailText_ parameter to change the body email text:
 
-1. On the **Default settings for meetings and calendar events** select **Next**.
+    ```powershell
+    Set-OMEConfiguration -Identity "Finance Department" -EmailText "Encrypted message sent from Contoso Ltd. finance department. Handle the content responsibly."
+    ```
 
-1. On the **Default settings for Power BI Content** select **Next**.
+1. Confirm the warning message for customizing the template with **Y** for Yes and press **Enter**.
 
-1. On the **Name your policy** page, enter:
+1. Run the **Set-OMEConfiguration** cmdlet with the _PrivacyStatementURL_ parameter to change the disclaimer URL to point to Contoso's privacy statement site:
 
-   - **Name**: `Internal HR employee data`
-   - **Enter a description for your sensitivity label policy**: `This HR label is to be applied to internal HR employee data.`
+    ```powershell
+    Set-OMEConfiguration -Identity "Finance Department" -PrivacyStatementURL "https://contoso.com/privacystatement.html"
+    ```
 
-1. Select **Next**.
+1. Confirm the warning message for customizing the template with **Y** for Yes and press **Enter**.
 
-1. On the **Review and finish** page, select **Submit**.
+1. Run the **TransportRule** cmdlet to create a mail flow rule, which applies the custom OME template to all messages sent from the finance team. This process might take a few seconds to complete.
 
-1. On the **New policy created** page, select **Done** to finish publishing your label policy.
+    ```powershell
+    New-TransportRule -Name "Encrypt all mails from Finance team" -FromScope InOrganization -FromMemberOf "Finance Team" -ApplyRightsProtectionCustomizationTemplate "Finance Department" -ApplyRightsProtectionTemplate Encrypt
+    ```
 
-You have successfully published the Internal and HR sensitivity labels. Note that it can take up to 24 hours for changes to replicate to all users and services.
+1. Run the **Get-OMEConfiguration** cmdlet to verify changes.
 
-## Task 4 – Apply sensitivity labels
+    ```powershell
+    Get-OMEConfiguration -Identity "Finance Department" | Format-List
+    ```
 
-In this task, you'll apply a sensitivity label to a document in Word to simulate how users can manually label content. This helps ensure that HR documents are protected according to the label policy you published earlier.
+1. Close the PowerShell window after reviewing the results
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
+You've configured a transport rule that ensures emails from the finance department are encrypted and branded consistently, reinforcing Contoso's messaging and security standards.
 
-1. In **Microsoft Edge**, open a new Word document by selecting the meatball menu in the top left and selecting **Word**.
+## Task 5 – Test the custom branding template
 
-    ![Screenshot showing where to select Word from the meatball menu.](../Media/meatball-menu-word.png)
+To validate the new custom configuration, you need to use the account of Lynne Robbins again, who is a member of the finance team.
 
-1. Select **Blank document** to create a new document.
+1. Go back to **Microsoft Edge**  with the InPrivate Outlook on the web window where you should still be logged in as **Lynne Robbins**.
 
-1. On the **Your privacy option** dialogue, select **Close**.
+1. Select **New mail** from the upper left side part of Outlook on the web.
 
-1. Enter this text in the new blank document:
+1. In the **To** line enter your personal or other third-party email address that isn't in the tenant domain. Enter **`Finance Report`** in the subject line and enter **`Secret finance information.`** in the body of the email.
 
-   `Important HR employee document.`
+1. Select **Send** to send the message, then close the InPrivate window where you're logged in as Lynne.
 
-1. Select **Sensitivity** from the navigation ribbon and select **Internal** > **Employee Data (HR)** to apply the newly created sensitivity label to this document.
+1. Sign into your personal email account and open the message from Lynne Robbins.
 
-    ![Screenshot showing the sensitivity label button in Word.](../Media/word_label.png)
+1. You should see a message from Lynne Robbins that looks like the image below.  Select **Read the message**.
 
-    >**Note:** It can take 24-48 hours for newly published sensitivity labels to be available for application. If the newly created sensitivity labels aren't available, you can use **Confidential** > **All Employees** for this exercise.
+    ![Sample encrypted email from Lynne Robbins. ](../Media/EncryptedEmail.png)
 
-1. In the upper left of the document, select **Document** to rename this file, and rename it to **`HR Document`**. Press enter to apply this name change.
+1. The customized configuration has social IDs activated, because both options are available. Select **Sign in with a One-time passcode** to receive a limited time passcode.
 
-    ![Screenshot showing where to rename a file in Word on the web.](../Media/rename-web-word-file.png)
+1. Go to your personal email portal and open the message with subject **Your one-time passcode to view the message**.
 
-You successfully applied the HR sensitivity label to a Word document saved in OneDrive.
+1. Copy the passcode, paste it into the portal and select **Continue**.
 
-## Task 5 – Configure auto labeling
+1. Review the encrypted message with custom branding. Close the window with your email account open.
 
-In this task, you'll create a sensitivity label for financial data and configure it to apply automatically to content containing specific financial identifiers, such as credit card numbers and bank routing information.
-
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
-
-1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and log into the Microsoft Purview portal as **Joni Sherman**.
-
-1. In the Microsoft Purview portal, select **Solutions** > **Information protection** > **Sensitivity labels**.
-
-1. On the **Sensitivity labels** page, find the **Internal** sensitivity label. Select the vertical ellipsis (**...**), then select **+ Create sublabel** from the dropdown menu.
-
-1. On the **Provide basic details for this label** page, enter:
-
-   |Details|Text|
-   |---|---|
-   |**Name**|`Financial Data`|
-   |**Display name**|`Financial Data`|
-   |**Description for users**|`This content contains financial data that must be labeled and protected.`|
-   |**Description for admins**|`This label is used for content that includes sensitive financial identifiers.`|
-
-1. Select **Next**.
-
-1. On the **Define the scope for this label** page, select **Items**, then select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
-
-1. Select **Next**.
-
-1. On the **Choose protection settings for labeled items** page, select **Next**.
-
-1. On the **Auto-labeling for files and emails** page, set the **Auto-labeling for files and emails** to enabled.
-
-1. In the **Detect content that matches these conditions** section, select **+ Add condition** > **Content contains**.
-
-1. In **Content contains** section select the **Add** > **Sensitive info types**.
-
-1. In the **Sensitive info types** flyout page, search for and select these sensitive info types:
-
-   - `Credit Card Number`
-   - `ABA Routing Number`
-   - `SWIFT Code`
-
-1. Select **Add**.
-
-1. Back on the **Auto-labeling for files and emails** page, select **Next**.
-
-1. On the **Define protection settings for groups and sites** page, select **Next**.
-
-1. On the **Review your settings and finish** page, select **Create label**.
-
-1. On the **Your sensitivity label was created** page, select **Automatically apply label to sensitive content**, then select **Done**.
-
-1. On the **Create auto-labeling policy** flyout page, select **Review policy**.
-
-1. On the **Name your auto-labeling policy** page, leave the default, then select **Next**.
-
-1. On the **Choose a label to auto-apply** page, review to ensure the _Internal/Financial Data_ label is selected, then select **Next**.
-
-1. On the **Assign admin units** page, select **Next**.
-
-1. On the **Choose locations where you want to apply the label** page, select the options for:
-
-   - Exchange email
-   - SharePoint sites
-   - OneDrive accounts
-
-1. Select **Next**.
-
-1. On the **Set up common or advanced rules** page, leave the default **Common rules** selected, then select **Next**.
-
-1. On the **Define rules for content in all locations** page, expand the rules for _Financial Data rule_ to ensure the expected rules are defined, then select **Next**.
-
-1. On the **Additional settings for email** page, select **Next**.
-
-1. On the **Decide if you want to test out the policy now or later** page, select **Run policy in simulation mode**, and select the checkbox for **Automatically turn on policy if not modified after 7 days in simulation.**
-
-1. Select **Next**.
-
-1. On the **Review and finish** page, select **Create policy**.
-
-1. On the **Your auto-labeling policy was created** page, select **Done**.
-
-You have successfully created a sensitivity label for financial data and configured an auto-labeling policy to detect and label content that contains sensitive financial information.
-
-## Task 6 – Create and publish a DKE label for highly confidential content
-
-In this task, you'll create a sublabel under the built-in Highly Confidential label. This sublabel will use Double Key Encryption (DKE) and dynamic watermarking to protect sensitive content accessed only by Legal. You'll also configure a label policy that requires justification for downgrading the label.
-
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
-
-1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and log into the Microsoft Purview portal as **Joni Sherman**.
-
-1. In the Microsoft Purview portal, select **Solutions** > **Information protection** > **Sensitivity labels**.
-
-1. On the **Sensitivity labels** page, find the **Highly Confidential** sensitivity label. Select the vertical ellipsis (**...**), then select **+ Create sublabel** from the dropdown menu.
-
-1. On the **Provide basic details for this label** page, enter:
-
-   |Details|Text|
-   |---|---|
-   |**Name**|`Highly Confidential - Legal`|
-   |**Display name**|`Highly Confidential - Legal`|
-   |**Description for users**|`Use this label for highly sensitive content that must be encrypted using Double Key Encryption.`|
-   |**Description for admins**|`Label configured with DKE and dynamic watermarking for highly sensitive content.`|
-
-1. Select **Next**.
-
-1. On the **Define the scope for this label** page, select **Items**, then select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
-
-1. On the **Choose protection settings for the types of items you selected** page, select **Control access**, then select **Next**.
-
-1. On the **Access control** page, select **Configure access control settings**.
-
-1. Configure the encryption settings with these options:
-
-   - **Assign permissions now or let users decide?**: Assign permissions now
-   - **User access to content expires**: A number of days after label is applied
-   - **Access expires this many days after the label is applied**: 5
-   - **Allow offline access**: Only for a number of days
-   - **Users have offline access to the content for this many days**: Never
-   - Select the **Assign permissions** link. On the **Assign permissions** flyout panel, select the **+ Add users or groups**.
-   - On the **Add users or groups** or groups flyout page, search for and select `Legal Team` and `Joni Sherman`, and select **Add**.
-   - On the **Assign permissions** page, select **Save**.
-
-1. Back on the **Access control** page, select the checkbox for **Use dynamic watermarking**, then select **Customize text (optional)**.
-
-1. On the **Add custom text to watermark (optional)** page, Enter `Confidential`, then select the links for **UPN** and **Timestamp**.
-
-1. Select **Save** at the bottom of the flyout page.
-
-1. Back on the **Access control** page, select the checkbox for **Use Double Key Encryption**, and enter `https://testingdke1.azurewebsites.net/Test` as the the URL for the Double Key Encryption service.
-
-1. Select **Next**.
-
-1. On the **Auto-labeling for files and emails** page, select **Next**.
-
-1. On the **Define protection settings for groups and sites** page, select **Next**.
-
-1. On the **Review your settings and finish** page, select **Create label**.
-
-1. On the **Your sensitivity label was created** page, select **Publish label to users' apps**, then select **Done**.
-
-1. On the **Publish label** flyout page, select **Create new label policy**.
-
-1. On the **Choose sensitivity labels to publish** page, select **Choose sensitivity labels to publish** and add the **Highly Confidential** label and **Highly Confidential - DKE** sublabel, then select **Add**.
-
-1. Select **Next**.
-
-1. On the **Assign admin units** page, select **Next**.
-
-1. On the **Publish to users and groups** page, leave the default selected, then select **Next**.
-
-1. On the **Policy settings** page, select the checkbox for **Users must provide a justification to remove a label or lower its classification**, then select **Next**.
-
-1. On the **Default settings for documents​** page, select **Next**.
-
-1. On the **Default settings for emails​** page, select **Next**.
-
-1. On the **Default settings for meetings and calendar events​** page, select **Next**.
-
-1. On the **Default settings for Fabric and Power BI content​** page, select **Next**.
-
-1. On the **Name your policy** page, enter:
-
-   - **Name**: `Highly Confidential - Legal`
-   - **Description**: `Enables manual use of the DKE label for highly confidential content accessible by Legal.`
-
-1. Select **Next**.
-
-1. On the **Review and finish** page, select **Submit**.
-
-1. On the **New policy created** page, select **Done**.
-
-You have successfully created and published a sublabel using Double Key Encryption with dynamic watermarking. This label provides strong protection for highly confidential content and enforces restricted access and justification for classification changes.
-
-## Task 7
+You have successfully tested the new customized template.

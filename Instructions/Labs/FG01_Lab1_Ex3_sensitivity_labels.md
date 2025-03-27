@@ -1,12 +1,12 @@
 ---
 lab:
-    title: 'Exercise 4 - Manage Sensitivity Labels'
+    title: 'Exercise 3 - Manage Sensitivity Labels'
     module: 'Module 1 - Implement Information Protection'
 ---
 
-# Lab 1 - Exercise 4 - Manage sensitivity labels
+# Lab 1 - Exercise 3 - Manage sensitivity labels
 
-Joni Sherman, the System Administrator for Contoso Ltd., is implementing a sensitivity labeling plan to ensure that all employee documents in the HR department are appropriately labeled according to the company's information protection policies. Contoso Ltd. is based in Rednitzhembach, Germany, and aims to comply with internal data handling standards and regional regulations.
+Joni Sherman, a System Administrator at Contoso Ltd., is rolling out a sensitivity labeling strategy to help protect sensitive data across departments. As part of this effort, she's configuring manual and automatic labeling, sublabels, and encryption options, including support for Double Key Encryption (DKE) and integration with Microsoft Defender for Cloud Apps.
 
 **Tasks**:
 
@@ -16,6 +16,8 @@ Joni Sherman, the System Administrator for Contoso Ltd., is implementing a sensi
 1. Apply sensitivity labels
 1. Configure auto labeling
 1. Create and publish a DKE label for highly confidential content
+1. Enable Microsoft Purview integration in Defender for Cloud Apps
+1. Automatically apply labels to externally shared files
 
 ## Task 1 – Enable support for sensitivity labels
 
@@ -320,7 +322,7 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
    - **Allow offline access**: Only for a number of days
    - **Users have offline access to the content for this many days**: Never
    - Select the **Assign permissions** link. On the **Assign permissions** flyout panel, select the **+ Add users or groups**.
-   - On the **Add users or groups** or groups flyout page, search for and select `Legal Team` and `Joni Sherman`, and select **Add**.
+   - On the **Add users or groups** flyout page, search for and select `Legal Team` and `Joni Sherman`, and select **Add**.
    - On the **Assign permissions** page, select **Save**.
 
 1. Back on the **Access control** page, select the checkbox for **Use dynamic watermarking**, then select **Customize text (optional)**.
@@ -374,7 +376,7 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
 
 You have successfully created and published a sublabel using Double Key Encryption with dynamic watermarking. This label provides strong protection for highly confidential content and enforces restricted access and justification for classification changes.
 
-## Task 7 – E Enable Microsoft Purview integration in Defender for Cloud Apps
+## Task 7 – Enable Microsoft Purview integration in Defender for Cloud Apps
 
 In this task, you'll enable Microsoft Purview integration in Microsoft Defender for Cloud Apps. This allows Defender to scan new files for Microsoft Purview sensitivity labels and inspect content based on those labels.
 
@@ -402,7 +404,7 @@ In this task, you'll enable Microsoft Purview integration in Microsoft Defender 
 
 You've enabled Defender for Cloud Apps to recognize and scan files for sensitivity labels from Microsoft Purview.
 
-## Task 8 – Automatically apply labels to externally shared files
+## Task 8 – Create a file policy to auto-label externally shared files
 
 Now that label scanning is enabled, you'll create a file policy that applies a general sensitivity label to any new files that are shared outside your organization.
 
