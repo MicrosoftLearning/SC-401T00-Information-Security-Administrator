@@ -11,16 +11,16 @@ Tenants should not be shared or used for purposes outside of hands-on labs. The 
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
-# Lab 1 - Exercise 1 - Manage compliance roles
+# Lab 1 - Exercise 1 - Manage compliance and security roles
 
 As the recently hired Compliance Administrator for Contoso Ltd., you (Joni Sherman) need to ensure the new Microsoft 365 tenant complies with various legal and regulatory standards. Contoso Ltd. is expanding, and your role is crucial in maintaining compliance across different regions.
 
 **Tasks**:
 
-1. Assign compliance roles
+1. Assign compliance and security roles
 1. Explore the Microsoft Purview portal
 
-## Task 1 – Assign compliance roles
+## Task 1 – Assign compliance and security roles
 
 In this task, you'll assign the Compliance Admin role to Joni Sherman.
 
@@ -36,7 +36,7 @@ In this task, you'll assign the Compliance Admin role to Joni Sherman.
 
 1. On the **Manage admin roles** panel, select the option for **Admin center access**, then scroll down to expand **Show all by category**.
 
-1. Under the **Security & Compliance** category, select the checkbox for **Compliance Administrator**, then select **Save changes** at the bottom of the flyout panel.
+1. Under the **Security & Compliance** category, select the checkbox for **Compliance Administrator** and **Security Administrator**, then select **Save changes** at the bottom of the flyout panel.
 
 1. You should receive a message stating **Admin roles updated**.
 
@@ -46,7 +46,7 @@ In this task, you'll assign the Compliance Admin role to Joni Sherman.
 
    ![Screenshot showing the navigation path to sign out of the MOD Administrator account.](../Media/sign-out.png)
 
-You have successfully assigned Joni Sherman the Compliance Administrator role, which is required to perform the different exercises of this lab.
+You have successfully assigned Joni Sherman the Compliance and Security Administrator roles, which is required to perform the different exercises of this lab.
 
 ## Task 2 – Explore the Microsoft Purview portal
 

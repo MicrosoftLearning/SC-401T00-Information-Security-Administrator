@@ -15,6 +15,7 @@ Joni Sherman, the System Administrator for Contoso Ltd., is implementing a sensi
 1. Publish sensitivity labels
 1. Apply sensitivity labels
 1. Configure auto labeling
+1. Create and publish a DKE label for highly confidential content
 
 ## Task 1 – Enable support for sensitivity labels
 
@@ -372,3 +373,63 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
 1. On the **New policy created** page, select **Done**.
 
 You have successfully created and published a sublabel using Double Key Encryption with dynamic watermarking. This label provides strong protection for highly confidential content and enforces restricted access and justification for classification changes.
+
+## Task 7 – E Enable Microsoft Purview integration in Defender for Cloud Apps
+
+In this task, you'll enable Microsoft Purview integration in Microsoft Defender for Cloud Apps. This allows Defender to scan new files for Microsoft Purview sensitivity labels and inspect content based on those labels.
+
+1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin**, and you should still be logged in as Joni Sherman.
+
+1. Open **Microsoft Edge**, then go to **Microsoft Defender** by navigating to `https://security.microsoft.com`.
+
+1. In the left navigation, select **Settings**, then select **Cloud Apps**.
+
+1. On the left pane in the Cloud Apps setting, select **Microsoft Information Protection** under **Information Protection**.
+
+1. On the **Microsoft Information Protection** page, select both checkboxes available on the page.
+
+    ![Screenshot showing both checkboxes enabled for Information Protection in the Defender portal.](../Media/defender-information-protection-settings.png)
+
+   - **Automatically scan new files for Microsoft Information Protection sensitivity labels and content inspection warnings**
+
+      Enables Defender for Cloud Apps to automatically scan new or modified files for sensitivity labels and content inspection warnings from Microsoft Purview.
+
+   - **Only scan files for Microsoft Information Protection sensitivity labels and content inspection warnings from this tenant**
+
+      Limits scanning to labels and warnings created in your own organization. Labels applied by external tenants will be ignored.
+
+1. Select **Save** to apply the settings.
+
+You've enabled Defender for Cloud Apps to recognize and scan files for sensitivity labels from Microsoft Purview.
+
+## Task 8 – Automatically apply labels to externally shared files
+
+Now that label scanning is enabled, you'll create a file policy that applies a general sensitivity label to any new files that are shared outside your organization.
+
+1. In [Microsoft Defender](https://security.microsoft.com), navigate to **Cloud apps** > **Policies** > **Policy management**.
+
+1. Select the **Information protection** tab, then select **Create policy** > **File policy**.
+
+    ![Screenshot showing where to navigate to create a file policy in Microsoft Defender.](../Media/file-policy-defender.png)
+
+1. On the **Create file policy** page, configure:
+
+   - **Policy name**: `Auto-label externally shared files`
+   - **Policy severity**: **Low**
+   - **Category**: **DLP**
+   - In the **Files matching all of the following section**:
+      - For the first filter, configure the dropdowns to: **Access level equals external**
+      - For the second filter, configure the dropdowns to: **Last modified after (date)** and use today's date
+
+          ![Screenshot showing the filter settings in Defender.](../Media/configure-file-policy-filter.png)
+
+   - Under **Governance actions**, expand **Microsoft OneDrive for Business**:
+      - Select the checkbox for **Apply sensitivity label**
+      - In the dropdown select **General-Anyone (unrestricted)**
+   - Repeat the same process for **Microsoft SharePoint Online**
+      - Select the checkbox for **Apply sensitivity label**
+      - Select **General-Anyone (unrestricted)** from the dropdown
+
+1. Select **Create** to finish creating the file policy.
+
+You've created a file policy that applies a general sensitivity label to files shared externally in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically.

@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 4 - Manage Sensitivity Labels'
+    title: 'Exercise 4 - Manage Sensitivity Labels in Microsoft Defender for Cloud Apps'
     module: 'Module 1 - Implement Information Protection'
 ---
 
@@ -372,3 +372,5 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
 1. On the **New policy created** page, select **Done**.
 
 You have successfully created and published a sublabel using Double Key Encryption with dynamic watermarking. This label provides strong protection for highly confidential content and enforces restricted access and justification for classification changes.
+
+## Task 7
