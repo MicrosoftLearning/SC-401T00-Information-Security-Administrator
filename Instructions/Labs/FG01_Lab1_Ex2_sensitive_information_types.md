@@ -7,11 +7,13 @@ lab:
 
 # Lab 1 - Exercise 2 - Manage sensitive information types
 
-Contoso Ltd. previously had issues with employees accidentally sending out personal information from customers when working on support tickets in the ticketing solution. To prevent this, you need to create a custom sensitive information type to identify employee IDs in emails and documents.
+Joni Sherman, the System Administrator at Contoso Ltd., is updating the organization's information protection strategy after previous incidents involving the unintentional sharing of personal data in support tickets. She needs to create and test custom sensitive information types that help detect employee IDs and references to personal health information in documents and emails.
 
 **Tasks**:
 
 1. Create custom sensitive information types
+1. Modify confidence level to reduce false positives
+1. Create a security group and assign roles to create an EDM classifier
 1. Create EDM-based classification information type
 1. Create EDM-based classification data source
 1. Create keyword dictionary
@@ -80,7 +82,39 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 You have successfully created a new sensitive information type to identify employee IDs in the pattern of three uppercase characters, six numbers, and the keywords 'Employee' or 'IDs' within a range of 100 characters.
 
-## Task 2 – Create a security group and assign roles to create an EDM classifier
+-----------------
+
+## Task 2 – Modify confidence level to reduce false positives
+
+You've received reports that some documents containing employee IDs are not being detected by your current sensitive information type. To improve detection coverage, you'll lower the confidence level of the existing pattern in the Contoso Employee IDs sensitive information type so it triggers even when only partial evidence is found.
+
+1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account, and logged into Microsoft Purview as Joni Sherman.
+
+1. In Microsoft Edge, navigate to `https://purview.microsoft.com`.
+
+1. In the left navigation, select **Solutions** > **Information protection** > **Sensitive info types**.
+
+1. Search for `Contoso Employee IDs` in the list and select the SIT name to open the details page.
+
+1. Select **Edit** at the top of the page to modify the SIT.
+
+1. On the **Name your sensitive info type** page, select **Next**.
+
+1. On the **Define patterns for this sensitive info type** page, expand **Pattern #1** and review the settings.
+
+1. Select the pencil icon on the right to edit the pattern.
+
+1. In the **Edit pattern** flyout, set the **Confidence level** to **Medium confidence**.
+
+1. Select **Update** at the bottom of the flout.
+
+1. Select **Next** until you reach the **Review settings and finish** page.
+
+1. Select **Save**, then select **Done** to update your sensitive info type.
+
+You have successfully reduced the confidence level to increase the sensitivity of your custom SIT, helping ensure documents with partial matching content are more likely to be flagged.
+
+## Task 3 – Create a security group and assign roles to create an EDM classifier
 
 In this task, you'll create the role group to create an EDM classifier and add Joni to the new role group.
 
@@ -203,7 +237,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 You have successfully created a new EDM-based classification sensitive information type for identifying employee data from a database file source.
 
-## Task 3 – Create EDM-based classification data source
+## Task 4 – Create EDM-based classification data source
 
 In this task, you'll hash and upload the actual data for the EDM-based classification sensitive information type via the EDM Upload Agent tool.
 
@@ -297,7 +331,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
 You have successfully hashed and uploaded a database file for an EDM-based classification sensitive information type.
 
-## Task 4 – Create keyword dictionary
+## Task 5 – Create keyword dictionary
 
 Several violations of personal information leakage happened when users sent out emails after colleagues reported on sick leave. When that happened the reason for illness or disease was sent out. We don't want that to happen. In this task, you'll create a keyword dictionary to prevent personal information leakage in emails.
 
@@ -362,7 +396,7 @@ Several violations of personal information leakage happened when users sent out 
 
 You have successfully created a new sensitive information type based on a keyword dictionary and added more keywords to decrease the false positive rate.
 
-## Task 5 – Test custom sensitive information types
+## Task 6 – Test custom sensitive information types
 
 Custom sensitive information types should always be tested before using them in policies otherwise data loss or leakage may occur due to a malfunctioning custom search pattern. In this task, you'll test the custom sensitive information types to ensure they recognize the desired patterns.
 
