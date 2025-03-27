@@ -128,3 +128,19 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 1. Once you select this option, the blue bar should disappear from this page.
 
 -->
+
+## Task 3 – Enable device onboarding
+
+In this task, you'll enable device onboarding for your organization.
+
+1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
+
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`**, then select **Settings** from the left sidebar.
+
+1. In the left sidebar, expand **Device onboarding** then select **Devices**.
+
+1. On the **Devices** page, select **Turn on device onboarding** then select **Ok** to enable device onboarding.
+
+1. Accept the **Device monitoring is being turned on** dialog by selecting **OK**.
+
+You have now enabled device onboarding and can start to onboard devices to be protected with Endpoint DLP policies. The process of enabling the feature might take up to 30 minutes.
