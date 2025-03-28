@@ -127,6 +127,8 @@ On the **Policies** page for **Insider Risk Management**, you'll notice your dat
 
 1. On the **Choose threshold type for indicators** page, select **Next**.
 
+   This policy uses a built-in triggering event and indicators. It starts evaluating user activity only when Microsoft Defender for Endpoint detects threats like defense evasion or unwanted software.
+
 1. On the **Review settings and finish** page, select **Submit**.
 
 1. Select **Done** on the **Your policy was created** page.
