@@ -13,7 +13,7 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 # Lab 1 - Exercise 1 - Manage compliance and security roles
 
-As the recently hired Compliance Administrator for Contoso Ltd., you (Joni Sherman) need to ensure the new Microsoft 365 tenant complies with various legal and regulatory standards. Contoso Ltd. is expanding, and your role is crucial in maintaining compliance across different regions.
+As the recently hired Information Security Administrator for Contoso Ltd., you (Joni Sherman) need to ensure the new Microsoft 365 tenant complies with various legal and regulatory standards. Contoso Ltd. is expanding, and your role is crucial in maintaining compliance across different regions.
 
 **Tasks**:
 

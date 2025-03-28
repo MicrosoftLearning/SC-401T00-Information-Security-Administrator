@@ -6,7 +6,7 @@ lab:
 
 # Lab 1 - Exercise 4 - Deploy Microsoft Purview Message Encryption
 
-Joni Sherman, the System Administrator for Contoso Ltd., has been tasked with ensuring secure communication between departments. To support this, she is configuring Microsoft Purview Message Encryption for Contoso, including modifying the default settings and creating a custom branding experience for the finance department.
+Joni Sherman, the Information Security Administrator for Contoso Ltd., has been tasked with ensuring secure communication between departments. To support this, she is configuring Microsoft Purview Message Encryption for Contoso, including modifying the default settings and creating a custom branding experience for the finance department.
 
 **Tasks**:
 

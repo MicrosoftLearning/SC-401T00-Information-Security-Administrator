@@ -7,7 +7,7 @@ lab:
 
 # Lab 1 - Exercise 2 - Create and manage sensitive information types
 
-Joni Sherman, the System Administrator at Contoso Ltd., is updating the organization's information protection strategy after previous incidents involving the unintentional sharing of personal data in support tickets. She needs to create and test custom sensitive information types that help detect employee IDs and references to personal health information in documents and emails.
+Joni Sherman, the Information Security Administrator at Contoso Ltd., is updating the organization's information protection strategy after previous incidents involving the unintentional sharing of personal data in support tickets. She needs to create and test custom sensitive information types that help detect employee IDs and references to personal health information in documents and emails.
 
 **Tasks**:
 

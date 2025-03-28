@@ -6,7 +6,7 @@ lab:
 
 # Lab 3 - Exercise 1 - Implement Insider Risk Management
 
-You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Your role involves ensuring regulatory compliance and protecting sensitive information within the organization. Recently, Contoso Ltd. has noticed unusual browsing activities that could potentially expose sensitive data. To proactively address this insider risk, you will implement Microsoft Purview Insider Risk Management, focusing on identifying, analyzing, and responding to potential insider threats effectively.
+You are Joni Sherman, the Compliance Administrator for Contoso Ltd. Your role involves ensuring regulatory compliance and protecting sensitive information within the organization. Recently, Contoso Ltd. has noticed unusual browsing activities that could potentially expose sensitive data. To proactively address this insider risk, you will implement Microsoft Purview Insider Risk Management, focusing on identifying, analyzing, and responding to potential insider threats effectively.
 
 **Tasks**:
 
@@ -15,7 +15,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 1. Create an insider risk policy
 1. Customize the data leaks policy
 1. Enable Microsoft Defender for Endpoint integration with Insider Risk Management
-1. Enable indicators and configure priority users
+1. Configure insider risk indicators and create a priority user group
 1. Create a policy for security policy violations by priority users
 1. Create a notice template
 
@@ -99,7 +99,7 @@ On the **Policies** page for **Insider Risk Management**, you'll notice your dat
 
 1. Select the **Data leaks quick policy** you just created.
 
-1. Review the recommendation in the flyout page for the policy. You have a warning stating **Sequence trigger required indicators are not selected**. To resolve this warning, select **Edit policy**.
+1. Review the recommendation in the flyout page for the policy. You have a warning stating **Sequence trigger required indicators are not select**. To resolve this warning, select **Edit policy**.
 
 1. On the **Choose a policy template** page, select **Next**.
 
@@ -151,7 +151,7 @@ In this task, you'll enable integration between Microsoft Defender for Endpoint 
 
 You've successfully enabled Defender for Endpoint to share alerts with Microsoft Purview.
 
-## Task 6 – Enable indicators and configure priority users
+## Task 6 – Configure insider risk indicators and create a priority user group
 
 In this task, you'll configure the policy indicators and create a priority user group that can be used in insider risk policies.
 
@@ -246,7 +246,7 @@ In this task, you'll create a notice template in Microsoft Purview to notify use
 
 1. Fill out the necessary information in **Create a new notice template** flyout panel on the right.
 
-    - **Template name**: `Security Violation Alert`
+    - **Template name**: `Suspicious Activity Noticed`
     - **Send from**: `Joni Sherman`
     - **Subject**: `Unusual activity detected - please review`
     - **Message body**:
@@ -255,8 +255,8 @@ In this task, you'll create a notice template in Microsoft Purview to notify use
         <!DOCTYPE html>
         <html>
         <body>
-        <h2>Security Alert</h2>
-        <p>We've detected activity from your account that might violate our organization's security policies. This could be due to malware, disabled protections, or other risky behavior.</p>
+        <h2>Security Notice</h2>
+        <p>We've detected activity from your account that may violate our organization's security policies. This could be due to malware, disabled protections, or other risky behavior.</p>
         <p>Please review your recent actions and ensure your device security settings are up to date. If you believe this alert was generated in error, contact the IT Security team for assistance.</p>
         <p>To avoid future issues, refer to the <a href="https://contoso.com/security-guidelines">Contoso Security Guidelines</a>.</p>
         <p>Thank you,</p>
@@ -267,6 +267,6 @@ In this task, you'll create a notice template in Microsoft Purview to notify use
 
 1. Select **Create**.
 
-1. Back on the **Notice templates** page you'll see the **Security Violation Alert** template you just created.
+1. Back on the **Notice templates** page you'll see the **Suspicious Activity Noticed** template you just created.
 
 You've successfully created a notice template that will be used to notify users when security policy violations are detected.
