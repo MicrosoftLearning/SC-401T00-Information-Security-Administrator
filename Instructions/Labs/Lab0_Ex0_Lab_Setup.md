@@ -21,39 +21,7 @@ In this lab, you'll configure and prepare your environment for administration ta
 1. Set user passwords for lab exercises
 1. Enable Audit in the Microsoft Purview portal
 
-## Task 1 - Set user passwords for lab exercises
-
-In this task, you'll set passwords for the user accounts needed for the labs.
-
-1. Log into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account. The password should be provided by your lab hosting provider.
-
-1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
-
-1. On the left navigation pane, expand **Users** then select **Active users**.
-
-1. Select the checkbox to the left of **Joni Sherman**, **Lynne Robbins**, and **Megan Bowen**.
-
-   These accounts will be used through the lab exercises.
-
-   ![Screenshot showing user accounts that need to be reset.](../Media/user-accounts.png)
-
-1. Select the **Reset password** button from the top navigation to reset all three passwords.
-
-   ![Screenshot showing the Reset password button in the Microsoft 365 admin center.](../Media/reset-password-button.png)
-
-1. In the **Reset Password** flyout page on the right, ensure all options are deselected.
-
-   This will ensure that you can select a password for the three users being used for exercises, and that these passwords won't need to be reset when you first sign in.
-
-1. In the **Password** field, enter a password you can remember to reset the user passwords to be used in future exercises.
-
-1. At the bottom of the **Reset password** flyout page, select the **Reset password** button.
-
-1. On the **Passwords have been reset** page, you should see the three user accounts that have been reset. At the bottom of this flyout page, select **Close**.
-
-You have successfully reset passwords for lab exercises.
-
-## Task 2 - Enable Audit in the Microsoft Purview portal
+## Task 1 - Enable Audit in the Microsoft Purview portal
 
 In this task, you'll enable Audit in the Microsoft Purview portal to monitor portal activities.
 
@@ -129,6 +97,38 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 -->
 
+## Task 2 - Set user passwords for lab exercises
+
+In this task, you'll set passwords for the user accounts needed for the labs.
+
+1. Log into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account. The password should be provided by your lab hosting provider.
+
+1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
+
+1. On the left navigation pane, expand **Users** then select **Active users**.
+
+1. Select the checkbox to the left of **Joni Sherman**, **Lynne Robbins**, and **Megan Bowen**.
+
+   These accounts will be used through the lab exercises.
+
+   ![Screenshot showing user accounts that need to be reset.](../Media/user-accounts.png)
+
+1. Select the **Reset password** button from the top navigation to reset all three passwords.
+
+   ![Screenshot showing the Reset password button in the Microsoft 365 admin center.](../Media/reset-password-button.png)
+
+1. In the **Reset Password** flyout page on the right, ensure all options are deselected.
+
+   This will ensure that you can select a password for the three users being used for exercises, and that these passwords won't need to be reset when you first sign in.
+
+1. In the **Password** field, enter a password you can remember to reset the user passwords to be used in future exercises.
+
+1. At the bottom of the **Reset password** flyout page, select the **Reset password** button.
+
+1. On the **Passwords have been reset** page, you should see the three user accounts that have been reset. At the bottom of this flyout page, select **Close**.
+
+You have successfully reset passwords for lab exercises.
+
 ## Task 3 – Enable device onboarding
 
 In this task, you'll enable device onboarding for your organization.
@@ -144,3 +144,15 @@ In this task, you'll enable device onboarding for your organization.
 1. Accept the **Device monitoring is being turned on** dialog by selecting **OK**.
 
 You have now enabled device onboarding and can start to onboard devices to be protected with Endpoint DLP policies. The process of enabling the feature might take up to 30 minutes.
+
+## Task 4 – Enable insider risk analytics
+
+In this task, you'll enable analytics for Insider Risk Management.
+
+1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
+
+1. In Microsoft Purview, navigate to **Settings** > **Insider Risk Management** > **Analytics**.
+
+1. Toggle Analytics to **On** then select **Save**.
+
+You have enabled analytics for Insider Risk Management.
