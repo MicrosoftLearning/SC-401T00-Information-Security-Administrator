@@ -47,7 +47,7 @@ Now that Adaptive Protection is linked to your insider risk policy, you'll updat
 
 1. On the **Edit rule** page:
    - Update the **Description** to: `Block sharing of credit card data when user has an elevated insider risk level.`
-   - In the **Conditions** section, then select **Add condition** > **Insider risk level for Adaptive Protection is**.
+   - In the **Conditions** section, select **Add condition** > **Insider risk level for Adaptive Protection is**.
    - In the new section, select **Elevated Risk**.
    - Under **Actions**, update the **Restrict access or encrypt the content in Microsoft 365** action to **Block everyone**.
    - Select **Save** to update the rule.
@@ -115,7 +115,7 @@ In this final task, you'll turn on Adaptive Protection so the system can start a
 
 1. Navigate to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
 
-1. Confirm your Configurations:
+1. Confirm your configurations:
 
    - On the **Insider risk levels** tab, the **Data leaks quick policy** is selected.
 
@@ -127,4 +127,4 @@ In this final task, you'll turn on Adaptive Protection so the system can start a
 
 1. Toggle **Adaptive Protection** to **On**, then select **Save**.
 
-You've successfully enabled Adaptive Protection. Microsoft Purview will now apply stricter policy actions automatically when insider risk levels rise.
+You've successfully enabled Adaptive Protection. Adaptive Protection is now enabled. Enforcement actions will automatically adjust based on a user's insider risk level.
