@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 3 - Manage Sensitivity Labels'
+    title: 'Exercise 3 - Create and manage sensitivity labels'
     module: 'Module 1 - Implement Information Protection'
 ---
 
-# Lab 1 - Exercise 3 - Manage sensitivity labels
+# Lab 1 - Exercise 3 - Create and manage sensitivity labels
 
 Joni Sherman, a System Administrator at Contoso Ltd., is rolling out a sensitivity labeling strategy to help protect sensitive data across departments. As part of this effort, she's configuring manual and automatic labeling, sublabels, and encryption options, including support for Double Key Encryption (DKE) and integration with Microsoft Defender for Cloud Apps.
 

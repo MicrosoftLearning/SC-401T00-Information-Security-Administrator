@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 4 - Manage Microsoft Purview Message Encryption'
+    title: 'Exercise 4 - Deploy Microsoft Purview Message Encryption'
     module: 'Module 1 - Implement Information Protection'
 ---
 
-# Lab 1 - Exercise 4 - Manage Microsoft Purview Message Encryption
+# Lab 1 - Exercise 4 - Deploy Microsoft Purview Message Encryption
 
 Joni Sherman, the System Administrator for Contoso Ltd., has been tasked with ensuring secure communication between departments. To support this, she is configuring Microsoft Purview Message Encryption for Contoso, including modifying the default settings and creating a custom branding experience for the finance department.
 

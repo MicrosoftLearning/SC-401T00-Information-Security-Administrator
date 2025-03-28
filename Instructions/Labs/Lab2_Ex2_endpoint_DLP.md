@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 2 - Manage Endpoint DLP'
+    title: 'Exercise 2 - Implement and manage endpoint DLP'
     module: 'Module 2 - Implement Data Loss Prevention'
 ---
 
-# Lab 2 – Exercise 2 – Manage endpoint DLP
+# Lab 2 – Exercise 2 – Implement and manage endpoint DLP
 
 Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd., has been asked to strengthen DLP controls on company devices. Some employees have been copying sensitive customer information to USB drives, increasing the risk of data exposure. In this lab, Joni will configure an endpoint DLP policy to block these transfers.
 
