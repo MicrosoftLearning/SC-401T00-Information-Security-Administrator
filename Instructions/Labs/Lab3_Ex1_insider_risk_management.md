@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 1 - Implement Insider Risk Management'
-    module: 'Module 3 - Manage insider and privacy risk in Microsoft 365'
+    module: 'Module 3 - Implement Insider Risk Management'
 ---
 
 # Lab 3 - Exercise 1 - Implement Insider Risk Management

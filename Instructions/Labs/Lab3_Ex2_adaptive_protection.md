@@ -1,272 +1,114 @@
 ---
 lab:
-    title: 'Exercise 1 - Implement Insider Risk Management'
-    module: 'Module 3 - Manage insider and privacy risk in Microsoft 365'
+    title: 'Exercise 2 - Implement Adaptive Protection'
+    module: 'Module 3 - Implement Insider Risk Management'
 ---
 
-# Lab 3 - Exercise 1 - Implement Insider Risk Management
+# Lab 3 - Exercise 2 - Implement Adaptive Protection
 
 You are Joni Sherman, the Compliance Administrator for Contoso Ltd. Your role involves ensuring regulatory compliance and protecting sensitive information within the organization. Recently, Contoso Ltd. has noticed unusual browsing activities that could potentially expose sensitive data. To proactively address this insider risk, you will implement Microsoft Purview Insider Risk Management, focusing on identifying, analyzing, and responding to potential insider threats effectively.
 
 **Tasks**:
 
-1. Assign insider risk management permissions
-1. Configure insider risk indicators
-1. Create an insider risk policy
-1. Customize the data leaks policy
-1. Enable Microsoft Defender for Endpoint integration with Insider Risk Management
-1. Configure insider risk indicators and create a priority user group
-1. Create a policy for security policy violations by priority users
-1. Create a notice template
 
-## Task 1 – Assign insider risk management permissions
 
-In this task, you'll assign Joni Sherman the Insider Risk Management role so she can access and manage insider risk features in Microsoft Purview.
+## Task 1 – assign irm policy to adaptive protection
 
 1. Log into the Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
 
-1. In Microsoft Edge, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as MOD Administrator, **`admin@WWLxZZZZZZ.onmicrosoft.com`** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
-1. Select **Settings** > **Roles and Scopes** > **Role groups**.
+1. In the Microsoft Purview portal, navigate to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
 
-1. On the **Role groups for Microsoft Purview solutions** page select **Insider Risk Management**.
+1. From the left navigation pane, select **Insider risk levels**.
 
-1. On the **Insider Risk Management** flyout panel on the right, select **Edit** .
+1. On the **Insider risk levels** page:
 
-1. On the **Edit members of the role group** page select **+ Choose users**.
+   - In the Insider risk policy dropdown, select **Data leaks quick policy** you created in a previous exercise.
+   - Leave the default risk level settings as is.
+   - Select **Save**.
 
-1. On the **Choose users** flyout panel, search for `Joni` then select the checkbox for **Joni Sherman**.
+## Task 2 – Configure adaptive protection settings for your DLP policy
 
-1. Select the **Select** button at the bottom of the panel.
+1. In Microsoft Purview, navigate to **Solutions** > **Data Loss Prevention** > **Policies**.
 
-1. On the **Edit members of the role group** page select **Next**.
+1. On the **Policies** page, select the checkbox for the **DLP - Credit Card Protection** policy created in a previous exercise, then select **Edit policy**.
 
-1. On the **Review the role group and finish** page select **Save**.
+1. In the DLP configuration, select **Next** until you reach the **Customize advanced DLP rules** page.
 
-1. Once you have successfully added Joni to the role group, select **Done** on the **You successfully updated the role group** page.
+1. Select the pencil icon next to the **Credit card information rule** to edit it.
 
-1. Sign out of the Mod Administrator account by selecting the MA icon on the top right of the window, then selecting **Sign out**.
+1. On the **Edit rule** page:
+   - Update the **Description** to: `Block sharing of credit card data when user has an elevated insider risk level.`
+   - In the **Conditions** section, then select **Add condition** > **Insider risk level for Adaptive Protection is**.
+   - In the new section, select **Elevated Risk**.
+   - Under **Actions**, update the **Restrict access or encrypt the content in Microsoft 365** action to **Block everyone**.
+   - Select **Save** to update the rule.
 
-You've assigned Joni the necessary permissions to work with Insider Risk Management in the Microsoft Purview portal.
+1. Back on the **Customize advanced DLP rules** page, select **Next**.
 
-## Task 2 – Configure insider risk indicators
+1. On the **Policy mode** page, keep the policy active, then select **Next**.
 
-Before you create an insider risk policy, you'll turn on the indicators needed for detection. These indicators define the types of risky activity the system will look for.
+1. On the **Review and finish** page, select **Submit**, then select **Done** once your policy is updated.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
+## Task 3 – Optional: Configure Conditional Access with Adaptive Protection
 
-1. Select **Settings** > **Insider risk management**.
+1. In Microsoft Purview, sign out of Joni's account and close all browser windows.
 
-1. Select te tab on the left for **Policy indicators**.
+1. Open a new Microsoft Edge window and navigate to the **Microsoft Entra admin center** at `https://entra.microsoft.com`. Sign in as the **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The Admin password should be provided by your lab hosting provider.
 
-1. On the **Policy indicators** page, expand and select **Select all** to enable all indicators in these categories:
+1. On the **More information required** page, select **Next**.
 
-   - Office indicators
-   - Cumulative exfiltration detection
+1. On the **Keep your account secure** page, follow the prompts to set up multi-factor authentication (MFA) using either Microsoft Authenticator or another authentication app.
 
-1. Select **Save** at the bottom of the page.
+   After completing MFA setup, you'll be taken to the **Microsoft Entra admin center**.
 
-You've enabled key policy indicators so the system can detect sensitive actions like file exfiltration or risky Office activity.
+1. In the Microsoft Entra admin center, navigate to **Protection** > **Conditional Access** > **Policies**.
 
-## Task 3 – Create an insider risk policy
+1. On the **Policies** page, select **+ New policy**.
 
-In this task, you'll create a data leaks quick policy to automatically detect and respond to risky user behavior related to data exfiltration. Quick policies use built-in templates and default thresholds to simplify setup.
+1. On the **New policy** page, name your policy: `Block all access for elevated risk`.
 
-1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Policies**.
+1. Under **Assignments**, configure the **Users** section:
 
-1. On the **Policies** page, select **Create policy**, then select **Quick policy**.
+   - **Include**: All users  
+   - **Exclude**: `Joni Sherman` and `MOD Administrator`
 
-1. On the **Create quick policies** flyout, select to **Get started** by creating a **Data leaks** policy.
+     ![Screenshot showing where to exclude users in Conditional Access.](../Media/ca-exclude-users.png)
 
-1. Review the settings for creating a quick data leak policy, then select **Create policy**.
+1. Under **Target resources**, confirm the dropdown is set to **Resources (formerly cloud apps)** and select **All resources (formerly 'All cloud apps')**.
 
-1. On the **Your data leak policy is being created** page, select the checkboxes for:
+     ![Screenshot showing how to configure target resources in Conditional Access.](../Media/ca-target-resources.png)
 
-   - Email me when policies have unresolved warnings
-   - Email me when new high severity alerts are generated
+1. Under **Conditions**, select **Insider risk**. Set **Configure** to **Yes**, then set the risk level to **Elevated**.
 
-     Then select **Update notification settings**.
+     ![Screenshot showing insider risk configuration in Conditional Access.](../Media/ca-insider-risk-levels.png)
 
-1. On the bottom of the **Your data leak policy is being created** page, select **Done**.
+1. Under **Access controls**, select **Grant**. Choose **Block access**, then select **Select** at the bottom of the flyout.
 
-You've created a quick policy for detecting potential data leaks using the default settings. Next, you'll customize it to resolve the configuration warning.
+     ![Screenshot showing where to block access in Conditional Access.](../Media/ca-block-access.png)
 
-## Task 4 – Customize the data leaks policy
+1. At the bottom of the page, confirm **Enable policy** is set to **Report-only**, then select **Create**.
 
-Some insider risk policies require additional indicators to function correctly. In this task, you'll modify your policy to enable sequence indicators and bring the policy into a healthy state.
+1. Back on the **Policies** page for Conditional Access, select **Refresh** to verify your newly created policy appears.
 
-On the **Policies** page for **Insider Risk Management**, you'll notice your data leaks policy has a recommendation.
+1. Sign out of the Mod Administrator account by selecting the MA icon on the top right of the window, then selecting **Sign out** and close all browser windows.
 
-1. Select the **Data leaks quick policy** you just created.
+## task 4 - go back to adaptive protection
 
-1. Review the recommendation in the flyout page for the policy. You have a warning stating **Sequence trigger required indicators are not select**. To resolve this warning, select **Edit policy**.
+1. Open **Microsoft Edge** and navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
-1. On the **Choose a policy template** page, select **Next**.
+1. Navigate to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
 
-1. On the **Name your policy** page, select **Next**.
+1. Verify your settings:
 
-1. On the **Choose users, groups, & adaptive scopes** page, select **Next**.
+   - Select the **Insider risk levels** tab and verify your **Data leaks quick policy** is selected.
 
-1. On the **Exclude users and groups (optional) (preview)** page, select **Next**.
+   - (Optional) Select the **Conditional Access** tab and verify your **Block all access for elevated risk** policy is visible.
 
-1. On the **Decide whether to prioritize content**, select **Next**
+   - Select the **Data Loss Prevention** tab and verify your **Credit Card Protection** is visible.
 
-1. On the **Choose triggering event for this policy** page, review the **Select which sequences will trigger this policy** and view the information stating **Some sequences require specific indicators to be turned on in 'Settings' before they can be selected below.**
+1. Select the **Adaptive Protection settings** tab and toggle **Adaptive Protection** to **On**.
 
-1. Select the option to **Turn on indicators** to enable the necessary sequence indicators for this policy.
+1. Select **Save**.
 
-1. Data leaks is primarily a data exfiltration insider risk policy. In the dialogue to enable sequence indicators, select **Select all** to enable any remaining **Exfiltrate indicators**, then select **Save**.
-
-1. Select **Next** on the **Choose triggering event for this policy** page.
-
-1. On the **Choose thresholds for triggering events** page, select **Next**.
-
-1. On the **Indicators** page, select **Next**.
-
-1. On the **Detection options**, select **Next**.
-
-1. On the **Choose threshold type for indicators** page, select **Next**.
-
-1. On the **Review settings and finish** page, select **Submit**.
-
-1. Select **Done** on the **Your policy was created** page.
-
-1. Back on the **Policies** page, your policy should now have a **Healthy** status.
-
-Your insider risk policy is now healthy and ready to detect risky activities based on sequence triggers and enabled indicators.
-
-## Task 5 – Enable Microsoft Defender for Endpoint integration with Insider Risk Management
-
-In this task, you'll enable integration between Microsoft Defender for Endpoint and Microsoft Purview so security alerts can be used in insider risk policies.
-
-1. In Microsoft Edge, navigate to Microsoft Defender by going to `https://purview.microsoft.com`.
-
-1. In the left navigation pane, select **Settings** > **Endpoints** > **Advanced features**.
-
-1. Scroll down and select the toggle to **On** to **Share endpoints with Microsoft Compliance Center**.
-
-   ![Screenshot showing the files matching dropdown with the internal option added.](../Media/enable-irm-in-mde.png)
-
-1. Select **Save preferences** at the bottom of the screen.
-
-You've successfully enabled Defender for Endpoint to share alerts with Microsoft Purview.
-
-## Task 6 – Configure insider risk indicators and create a priority user group
-
-In this task, you'll configure the policy indicators and create a priority user group that can be used in insider risk policies.
-
-1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com`.
-
-1. Select **Settings** > **Insider risk management**.
-
-1. Select the tab on the left for **Policy indicators**.
-
-1. On the **Policy indicators** page, expand and select **Select all** to enable all indicators in these categories:
-
-   - Microsoft Defender for Endpoint indicators (preview)
-   - Risky browsing indicators (preview)
-
-1. Select **Save** at the bottom of the page.
-
-1. Select the tab for **Priority user groups**, then select **Create priority user group**.
-
-1. On the **Name and describe the priority user group** page, enter:
-
-   - **Name**: `Finance team`
-   - **Description**: `Team members who manage financial operations, budgeting, and payroll systems.`
-
-1. Select **Next**.
-
-1. On the **Members** page, select **+ Members**.
-
-1. In the **Members** flyout, search for and select:
-
-   - `Lynne Robbins`
-   - `Debra Berger`
-   - `Megan Bowen`
-
-1. Select **Add** to add the three members to the Finance team priority group.
-
-1. Select **Next**.
-
-1. On the **Choose who can view data involving users in this priority group**, select **+Choose users and role groups**.
-
-1. In the flyout, select the checkbox to add the **Insider Risk Management** role group, then select **Add**.
-
-1. Select **Next**.
-
-1. **Review** and **Submit** your settings, then select **Done** once your priority user group has been created.
-
-You've configured policy indicators and created a priority group for monitoring high-risk users.
-
-## Task 7 – Create a policy for security policy violations by priority users
-
-In this task, you'll create an insider risk policy that detects Defender for Endpoint alerts for risky activity by priority users.
-
-1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Policies**.
-
-1. On the **Policies** page, select **Create policy**, then select **Custom policy**.
-
-1. On the **Choose a policy template** page, select **Security policy violations by priority users (preview)**, then select **Next**.
-
-1. On the **Name your policy** page, enter:
-
-   - **Name**: `Security policy violations - Priority users`
-   - **Description**: `Detects Defender for Endpoint alerts for risky activity by priority users, such as malware or disabled protections.`
-
-1. Select **Next**.
-
-1. On the **Choose users, groups, & adaptive scopes** page, select **Add or edit priority user groups**.
-
-1. On the **Choose priority user groups** flyout, select the checkbox, then add the **Finance team** group.
-
-1. Select **Next**.
-
-1. On the **Decide whether to prioritize content** page, select **Next**.
-
-1. On the **Choose triggering event for this policy** page, select **Next**.
-
-1. On the **Indicators** page, select **Next**.
-
-1. On the **Choose threshold type for indicators** page, leave the default **Apply thresholds provided by Microsoft** option selected, then select **Next**.
-
-1. On the **Review settings and finish** page, select **Submit**.
-
-1. On the **Your policy was created** page, select **Done**.
-
-You've created a custom insider risk policy that uses Defender for Endpoint signals to detect risky activity from priority users.
-
-## Task 8 – Create a notice template
-
-In this task, you'll create a notice template in Microsoft Purview to notify users when an insider risk alert is triggered.
-
-1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Notice templates**.
-
-1. On the **Notice templates** page, select **+ Create notice template**.
-
-1. Fill out the necessary information in **Create a new notice template** flyout panel on the right.
-
-    - **Template name**: `Suspicious Activity Noticed`
-    - **Send from**: `Joni Sherman`
-    - **Subject**: `Unusual activity detected - please review`
-    - **Message body**:
-
-        ````html
-        <!DOCTYPE html>
-        <html>
-        <body>
-        <h2>Security Notice</h2>
-        <p>We've detected activity from your account that may violate our organization's security policies. This could be due to malware, disabled protections, or other risky behavior.</p>
-        <p>Please review your recent actions and ensure your device security settings are up to date. If you believe this alert was generated in error, contact the IT Security team for assistance.</p>
-        <p>To avoid future issues, refer to the <a href="https://contoso.com/security-guidelines">Contoso Security Guidelines</a>.</p>
-        <p>Thank you,</p>
-        <p><em>Compliance and Security Team</em></p>
-        </body>
-        </html>
-        ````
-
-1. Select **Create**.
-
-1. Back on the **Notice templates** page you'll see the **Suspicious Activity Noticed** template you just created.
-
-You've successfully created a notice template that will be used to notify users when security policy violations are detected.
