@@ -6,13 +6,16 @@ lab:
 
 # Lab 3 - Exercise 2 - Implement Adaptive Protection
 
-You are Joni Sherman, the Compliance Administrator for Contoso Ltd. Your role involves ensuring regulatory compliance and protecting sensitive information within the organization. Recently, Contoso Ltd. has noticed unusual browsing activities that could potentially expose sensitive data. To proactively address this insider risk, you will implement Microsoft Purview Insider Risk Management, focusing on identifying, analyzing, and responding to potential insider threats effectively.
+You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Your role involves protecting sensitive data and responding to insider risks. To enhance protection, you'll enable Microsoft Purview Adaptive Protection, which dynamically adjusts data loss prevention (DLP) enforcement based on insider risk levels.
 
 **Tasks**:
 
+1. Assign an insider risk policy to Adaptive Protection
+1. Configure adaptive protection settings for your DLP policy
+1. (Optional) Configure Conditional Access with Adaptive Protection
+1. Enable Adaptive Protection
 
-
-## Task 1 – assign irm policy to adaptive protection
+## Task 1 – Assign an insider risk policy to Adaptive Protection
 
 1. Log into the Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
 
@@ -28,7 +31,11 @@ You are Joni Sherman, the Compliance Administrator for Contoso Ltd. Your role in
    - Leave the default risk level settings as is.
    - Select **Save**.
 
+You've linked an insider risk policy to Adaptive Protection, enabling dynamic risk-based actions across Microsoft Purview.
+
 ## Task 2 – Configure adaptive protection settings for your DLP policy
+
+Now that Adaptive Protection is linked to your insider risk policy, you'll update a DLP policy to respond to elevated risk levels by blocking sharing of sensitive data.
 
 1. In Microsoft Purview, navigate to **Solutions** > **Data Loss Prevention** > **Policies**.
 
@@ -51,7 +58,11 @@ You are Joni Sherman, the Compliance Administrator for Contoso Ltd. Your role in
 
 1. On the **Review and finish** page, select **Submit**, then select **Done** once your policy is updated.
 
-## Task 3 – Optional: Configure Conditional Access with Adaptive Protection
+You've updated your DLP policy to block sharing when insider risk is elevated, strengthening data protection based on user behavior.
+
+## Task 3 – (Optional) Configure Conditional Access with Adaptive Protection
+
+To add another layer of enforcement, you can use insider risk levels to restrict access using Conditional Access. In this task, you'll create a policy that blocks access for users with an elevated insider risk level.
 
 1. In Microsoft Purview, sign out of Joni's account and close all browser windows.
 
@@ -94,21 +105,26 @@ You are Joni Sherman, the Compliance Administrator for Contoso Ltd. Your role in
 
 1. Sign out of the Mod Administrator account by selecting the MA icon on the top right of the window, then selecting **Sign out** and close all browser windows.
 
-## task 4 - go back to adaptive protection
+You've created a Conditional Access policy that blocks access for elevated-risk users, without impacting current access thanks to report-only mode.
+
+## Task 4 – Enable Adaptive Protection
+
+In this final task, you'll turn on Adaptive Protection so the system can start applying dynamic enforcement based on insider risk.
 
 1. Open **Microsoft Edge** and navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
 1. Navigate to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
 
-1. Verify your settings:
+1. Confirm your Configurations:
 
-   - Select the **Insider risk levels** tab and verify your **Data leaks quick policy** is selected.
+   - On the **Insider risk levels** tab, the **Data leaks quick policy** is selected.
 
-   - (Optional) Select the **Conditional Access** tab and verify your **Block all access for elevated risk** policy is visible.
+   - On the **Conditional Access** tab, the **Block all access for elevated risk** policy is visible (optional).
 
-   - Select the **Data Loss Prevention** tab and verify your **Credit Card Protection** is visible.
+   - On the **Data Loss Prevention** tab, the **DLP - Credit Card Protection policy** is listed.
 
-1. Select the **Adaptive Protection settings** tab and toggle **Adaptive Protection** to **On**.
+1. Select the **Adaptive Protection settings** tab.
 
-1. Select **Save**.
+1. Toggle **Adaptive Protection** to **On**, then select **Save**.
 
+You've successfully enabled Adaptive Protection. Microsoft Purview will now apply stricter policy actions automatically when insider risk levels rise.
