@@ -12,10 +12,24 @@ Tenants should not be shared or used for purposes outside of hands-on labs. The 
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
+# Lab 5 - Exercise 1 - Implement and manage retention
 
+You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is tightening its data security strategy to reduce risk exposure related to financial data and privileged communications. You’ve been asked to configure Microsoft Purview retention solutions that support audit readiness, limit unnecessary data retention, and ensure proper oversight for sensitive communications.
 
--------
+**Tasks**:
+
+1. Create a retention label
+1. Publish a retention label
+1. Create an auto-apply retention label policy
+1. Create a static retention policy
+1. Create an adaptive scope
+1. Create an adaptive retention policy
+1. Test the adaptive retention policy
+1. Recover SharePoint content
+
 ## Task 1 – Create a retention label
+
+In this task, you'll create a retention label for sensitive financial data that needs to be retained for auditing and investigation purposes.
 
 1. Log into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
 
@@ -48,7 +62,11 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 1. On the **Your retention label is created** page, select the option to **Do nothing**, then select **Done**.
 
-## Task 2 – Publish retention labels
+You've created a retention label that retains financial content for five years and deletes it afterward to reduce data exposure.
+
+## Task 2 – Publish a retention label
+
+In this task, you'll publish the retention label so users can apply it in Microsoft 365 services like Exchange, SharePoint, and OneDrive.
 
 1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Retention labels**.
 
@@ -80,7 +98,11 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 1. On the **Your retention label was published** page, select **Done**.
 
-## Task 3 – Publish auto-apply retention labels
+You've published the retention label, making it available for users to apply in key Microsoft 365 services.
+
+## Task 3 – Create an auto-apply retention label policy
+
+In this task, you'll configure a policy that automatically applies a retention label to content containing personal financial information.
 
 1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Policies** > **Label policies**.
 
@@ -120,9 +142,13 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 1. On the **Review and finish** page, select **Submit**, then select **Done** on the **Your auto-labeling policy has been created** page.
 
-## Task 4 – 
+You've created an auto-apply policy that identifies personal financial data and applies a retention label automatically.
 
-1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Retention policies**.
+## Task 4 – Create a static retention policy
+
+In this task, you'll create a static retention policy for Microsoft Teams content to help reduce long-term data risk.
+
+1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Policies** > **Retention policies**.
 
 1. On the **Retention policies** page, select **New retention policy**.
 
@@ -157,7 +183,11 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 1. On the **Review and finish** page select **Submit**, then select **Done** on the **You successfully created a retention policy** page.
 
-## Task 5 –
+You've configured a static retention policy that retains Teams messages for three years before automatically deleting them.
+
+## Task 5 – Create an adaptive scope
+
+In this task, you'll define an adaptive scope that targets Microsoft 365 groups associated with leadership and operations roles.
 
 1. In Microsoft Purview, **Settings** > **Roles and scopes** > **Adaptive scopes**.
 
@@ -165,27 +195,27 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 1. On the **Name your adaptive policy scope** page enter:
 
-    - **Name**: `Legal and Research Scope`
-    - **Description**: `Targets users in Legal or R&D.`
+    - **Name**: `Leadership and Ops Groups`
+    - **Description**: `Targets Leadership and Operations M365 groups with privileged access to sensitive data.`
 
 1. Select **Next**.
 
 1. On the **Assign admin unit** page select **Next**.
 
-1. On the **What type of scope do you want to create?** page select **Users** then select **Next**.
+1. On the **What type of scope do you want to create?** page select **Microsoft 365**, then select **Next**.
 
 1. On the **Create the query to define users** page, in the **User attributes** section, ensure these values are selected for the user attribute configuration:
 
    - Select the **Attribute** dropdown then select **Department**
    - Leave the default **is equal to** value in the next field
-   - Enter `Legal` as the **Value**
+   - Enter `Leadership` as the **Value**
 
 1. Add a second attribute by selecting **+ Add attribute** on the **Create the query to define users** page. In the new field under the one we just configured, configure these values:
 
    - Select the dropdown for the query operator and update it from And to **Or**
    - Select the **Attribute** dropdown then select **Department**
    - Leave the default **is equal to** value in the next field
-   - Enter `Retail` as the **Value**
+   - Enter `Operations` as the **Value**
 
 1. Select **Next**.
 
@@ -193,86 +223,20 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 1. Once your adaptive scope is created select **Done** on the **Your scope was created** page.
 
+You've created an adaptive scope to support targeted retention for privileged groups in the organization.
 
+## Task 6 – Create an adaptive retention policy
 
+In this task, you'll use the adaptive scope you created to configure a retention policy for Microsoft 365 groups with sensitive responsibilities.
 
-
-
-
-
-
---------
-
-
-# Lab 5 - Exercise 1 - Configure retention policies
-
-In this lab, you are Joni Sherman, a Compliance Administrator at Contoso Ltd. in Texas. Your task is to implement retention policies to comply with state regulations, which allow records to be deleted after three years. You'll configure various retention policies across the organization to ensure data is managed and retained according to these legal requirements.
-
-**Tasks**:
-
-1. Create a company-wide retention policy
-1. Create a Teams retention policy with specific user selection
-1. Create a retention policy with PowerShell
-1. Create an adaptive retention policy for legal and retail documents
-1. Test the adaptive scope policy
-
-
-## Task 4 – Create an adaptive retention policy for legal and retail documents
-
-Now, you'll create an adaptive retention policy for the finance and legal departments, ensuring that all legal-related documents are retained for five years.
-
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
-
-1. Open Microsoft Edge and navigate to **`https://purview.microsoft.com`**. Verify you're still logged in with Joni's account, then select **Settings** from the left sidebar.
-
-1. On the **Settings** page, expand **Roles and scopes** from the left sidebar, then select **Adaptive scopes**.
-
-1. On the **Adaptive scopes** page select **+ Create scope**.
-
-1. On the **Name your adaptive policy scope** page enter:
-
-    - **Name**: `Legal Documents Retention`
-    - **Description**: `Retention for legal related documents`
-
-1. Select **Next**.
-
-1. On the **Assign admin unit** page select **Next**.
-
-1. On the **What type of scope do you want to create?** page select **Users** then select **Next**.
-
-1. On the **Create the query to define users** page, in the **User attributes** section, ensure these values are selected for the user attribute configuration:
-
-   - Select the **Attribute** dropdown then select **Department**
-   - Leave the default **is equal to** value in the next field
-   - Enter `Legal` as the **Value**
-
-1. Add a second attribute by selecting **+ Add attribute** on the **Create the query to define users** page. In the new field under the one we just configured, configure these values:
-
-   - Select the dropdown for the query operator and update it from And to **Or**
-   - Select the **Attribute** dropdown then select **Department**
-   - Leave the default **is equal to** value in the next field
-   - Enter `Retail` as the **Value**
-
-1. Select **Next**.
-
-1. On the **Review and finish** page select **Submit**.
-
-1. Once your adaptive scope is created select **Done** on the **Your scope was created** page.
-
-1. Back on the **Adaptive scopes** page, select **Solutions** from the bottom of the left sidebar.
-
-1. Select the tab for **Data Governance** from the top filter buttons.
-
-1. Select the **Data Lifecycle Management** card.
-
-1. On the **Data Lifecycle Management** page, expand **Policies** then select **Retention policies**.
+1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Policies** >  **Retention policies**.
 
 1. On the **Retention policies** page, select **+ New retention policy**.
 
 1. On the **Name your retention policy** page enter:
 
-    - **Name**: `Legal Data Retention`
-    - **Description**: `Retention of all documents within the legal and retail departments.`
+    - **Name**: `Privileged Group Retention`
+    - **Description**: `Retains content from Leadership and Operations groups for 5 years to support audit and investigation.`
 
 1. Select **Next**.
 
@@ -282,12 +246,11 @@ Now, you'll create an adaptive retention policy for the finance and legal depart
 
 1. On the **Choose adaptive policy scopes and locations** page select **+ Add scopes**.
 
-1. On the **Choose adaptive policy scopes** flyout panel select the checkbox for **Legal Documents Retention** then select **Add** at the bottom of the panel.
+1. On the **Choose adaptive policy scopes** flyout panel select the checkbox for **Leadership and Ops Groups** then select **Add** at the bottom of the panel.
 
 1. Back on the **Choose locations to apply the policy** enable:
 
-    - Exchange mailboxes
-    - OneDrive accounts
+    - Microsoft 365 Group mailboxes & sties
     - Leave all other locations disabled.
 
 1. Select **Next**.
@@ -297,7 +260,7 @@ Now, you'll create an adaptive retention policy for the finance and legal depart
    - Select **Retain items for a specific period**.
    - Under **Retain items for a specific period**, select **5 years** from the dropdown list
    - **Start the retention period based on**: When items were last modified
-   - **At the end of the retention period**: Do nothing
+   - **At the end of the retention period**: Delete items automatically
 
 1. Select **Next**.
 
@@ -305,13 +268,13 @@ Now, you'll create an adaptive retention policy for the finance and legal depart
 
 1. Once your policy is created, select the **Done** button.
 
-1. Once your policy is created select **Done** on the **You successfully created a retention policy** page.
+1. On the **You successfully created a retention policy** page, select **Done**.
 
-You have successfully applied an adaptive scope to a retention policy, covering legal and retail department documents for five years.
+You've created a retention policy that applies to content owned by privileged groups, retaining it for five years before deletion.
 
-## Task 5 – Test the adaptive scope policy
+## Task 7 – Test the adaptive retention policy
 
-In this final task, you'll verify the users affected by the adaptive scope and test the new retention policy to ensure it is functioning as expected.
+In this task, you'll use PowerShell to confirm that the adaptive policy was created and distributed successfully.
 
 >**Note**: When you create and submit a retention policy, it can take up to seven days for the retention policy to be applied.
 
@@ -328,7 +291,7 @@ In this final task, you'll verify the users affected by the adaptive scope and t
 1. Run the **Get-RetentionCompliancePolicy** cmdlet to view all details of the adaptive scope policy:
 
     ```powershell
-    Get-RetentionCompliancePolicy -Identity "Legal Data Retention" -DistributionDetail | Format-List
+    Get-RetentionCompliancePolicy -Identity "Privileged Group Retention" -DistributionDetail | Format-List
     ```
 
 1. Review the results and search for these details:
@@ -339,212 +302,11 @@ In this final task, you'll verify the users affected by the adaptive scope and t
 
     ![Screenshot of the results of the Get-RetentionCompliancePolicy cmdlet.](../Media/results-getretentioncompliancepolicy.png)
 
-You have verified the successful implementation of the adaptive scope retention policy, confirming that it is correctly applied and operational.
+You've confirmed that the adaptive retention policy is active and successfully distributed.
 
-## Task 1 – Create retention labels with file plan
+## Task 8 – Recover SharePoint content
 
-In this task, you'll create retention labels for VAT returns and supporting documents, as well as for credit card receipts. These labels will be part of a comprehensive file plan to manage and secure these documents according to the company's compliance requirements.
-
-1. Log into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
-
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
-
-1. In the **Microsoft Purview** portal, on the left sidebar, select **Solutions**, then select **Records Management**.
-
-1. On the **Records Management** page, in the left sidebar select **File plan**.
-
-1. On the **File plan** page, select **+ Create a label**.
-
-1. On the **Name your retention label** page enter:
-
-    - **Name**: `VAT Returns and Supporting Documents`
-    - **Description for users**: `Assign this label to VAT Documents to ensure they are retained for the legal period of seven years.`
-    - **Description for admins**: `VAT returns with seven-year retention.`
-
-1. Select **Next**.
-
-1. On the **Define file plan descriptors for this label** page enter:
-
-   - **Reference ID**: `VAT-001`
-   - **Business function/department**: Select **Choose** next to this field. In the **Business function/department** flyout panel select **Finance**, then select **Choose** at the bottom of the panel.
-   - **Category**: Select **Choose** next to this field. In the **Category** flyout panel, select **+ Create new category**. In the **Category** field, enter `Financial records`, then select **Add** at the bottom of the panel.
-   - **Sub category**: Leave this field blank.
-   - **Authority type**: Select **Choose** next to this field. In the **Authority type** flyout panel, select **Regulatory**, then select **Choose** at the bottom of the panel.
-   - **Provision/citation**: Select **Choose** next to this field. In the **Provision/citation** flyout panel, select **Sarbanes-Oxley Act of 2002**, then select **Choose** at the bottom of the panel.
-
-1. Back on the **Define file plan descriptors for this label** page, select **Next**.
-
-1. On the **Define label settings** page, select **Retain items forever or for a specific period**, then select **Next**.
-
-1. On the **Define the period** page, ensure these values are set for the retention period configuration input:
-
-    - **How long is the period?**: 7 Years
-    - **When should the period begin?**: When items were created
-
-1. Select **Next**.
-
-1. On the **Choose what happens during the retention period** page, select **Retain items even if users delete**, then select **Next**.
-
-1. On the **Choose what happens after the retention period** page select **Deactivate retention settings** then select **Next**.
-
-1. On the **Review and finish** page select **Create label**.
-
-1. On the **Your retention label is created** page select the option to **Do Nothing** then select **Done**. The label will be published in a later task.
-
-1. Back on the **File plan** page, select **+ Create a label** to create another retention label.
-
-1. On the **Name your retention label** enter:
-
-    - **Name**: `Credit Card Receipts`
-    - **Description for users**: `This label is auto applied to Credit card receipts with a retention period of three years.`
-    - **Description for admins**: `Auto applied retention label for Credit card receipts with three-year retention.`
-
-1. Select **Next**.
-
-1. On the **Define file plan descriptors for this label** page enter:
-
-   - **Reference ID**: `CC-002`
-   - **Business function/department**: Select **Choose** next to this field. In the **Business function/department** flyout panel select **Sales**, then select **Choose** at the bottom of the panel.
-   - **Category**: Select **Choose** next to this field. In the **Category** flyout panel select **Financial records**, then select **Choose** at the bottom of the panel.
-   - **Sub category**: Select **Choose** next to this field. In the **Sub category** flyout panel, select **+ Create new subcategory**. In the **Sub category** field, enter `Receipts`, then select **Add** at the bottom of the panel.
-   - **Authority type**: Select **Choose** next to this field. In the **Authority type** flyout panel, select **Business**, then select **Choose** at the bottom of the panel.
-   - **Provision/citation**: Select **Choose** next to this field. In the **Provision/citation** flyout panel, select **Truth in Lending Act**, then select **Choose** at the bottom of the panel.
-
-1. Back on the **Define file plan descriptors for this label** page, select **Next**.
-
-1. On the **Define label settings** page select **Retain items forever or for a specific period** then select **Next**.
-
-1. On the **Define the period** page, ensure these values are set for the retention period configuration input:
-
-    - **Retain items for**: Select the dropdown list and select **Custom**. Enter 3 for Years.
-    - **Start the retention period based on**: When items were created.
-
-1. Select **Next**.
-
-1. On the **Choose what happens during the retention period** page, select **Retain items even if users delete**, then select **Next**.
-
-1. On the **Choose what happens after the retention period** page select **Deactivate retention settings** then select **Next**.
-
-1. On the **Review and finish** page select **Create label**.
-
-1. On the **Your retention label is created** page select **Do Nothing** then select **Done**.
-
-You have successfully created retention labels for VAT returns with a seven-year retention period and for Credit Card receipts with a three-year retention period.
-
-## Task 2 – Publish retention labels
-
-Now, you will publish the VAT returns retention label, making it available for finance users to apply to relevant documents in Exchange emails and SharePoint sites.
-
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
-
-1. You should still be on the **File plan** page in **Records Management**. If not, navigate to `https://purview.microsoft.com`, and select **Solutions** from the left sidebar, then select **Records Management**. Select **File plan** from the **Records Management** page.
-
-1. Select the **VAT Returns and Supporting Documents** label that was created previously.
-
-1. Select the **Publish labels** button (![Publish labels icon](../Media/publish-labels-icon.png)) to start the configuration to publish this retention label.
-
-1. On the **Choose labels to publish** page, verify the **VAT Returns and Supporting Documents** label is selected, then select **Next**.
-
-1. On the **Policy Scope** page select **Next**.
-
-1. On the **Choose the type of retention policy to create** page select **Static** then select **Next**.
-
-1. On the **Choose where to publish labels** page select **Let me choose specific locations** and select:
-
-    - Exchange mailboxes
-    - SharePoint classic and communication sites
-    - OneDrive accounts
-    - Deselect all other locations
-
-1. Select **Next**.
-
-1. On the **Name your policy** enter:
-
-    - **Name**: `VAT Returns and Supporting Documents Retention Label`
-    - **Description**: `VAT Returns and supporting documents Retention label, retention period 3 years, Exchange email and SharePoint site locations.`
-
-1. Select **Next**.
-
-1. On the **Finish** page select **Submit**.  
-
-1. Once your retention label has been published, select **Done** on the **Your retention label was published** page.
-
-You have successfully published the retention label for VAT Returns and supporting documents.
-
-## Task 3 – Publish auto-apply retention labels
-
-
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
-
-1. You should still be on the **File plan** page in **Records Management**. If not, navigate to `https://purview.microsoft.com`, and select **Solutions** from the left sidebar, then select **Records Management**. Select **File plan** from the **Records Management** page.
-
-1. Select the **Credit Card Receipts** label that was created previously.
-
-1. Select the **Auto-apply a label** button (![Auto-apply labels icon](../Media/auto-apply-labels-icon.png)) to start the configuration to publish this auto-apply retention label.
-
-1. On the **Let's get started** page, enter:
-
-    - **Name**: `Credit Card Receipts auto-applied`
-    - **Description**: `Credit Card Receipts auto-applied retention label, with a retention period of three years for all locations.`
-
-1. Select **Next**.
-
-1. On the **Choose the type of content you want to apply this label to** page select  **Apply label to content that contains sensitive info** then select **Next**.
-
-1. On the **Content that contains sensitive info** page, select **Financial** under **Categories**, then select **U.K. Financial Data** under **Regulations**
-
-1. Select **Next**.
-
-1. On the **Define content that contains sensitive info** page select **Next**.
-
-1. On the **Policy Scope** page select **Next**.
-
-1. On the **Choose the type of retention policy to create** page, select **Static** then select **Next**.
-
-1. On the **Choose locations to apply the policy** page, select these locations:
-
-    - Exchange mailboxes
-    - SharePoint classic and communication sites
-    - OneDrive accounts
-    - Microsoft 365 Group mailboxes & sites
-
-1. Select **Next**.
-
-1. On the **Choose a label to auto-apply** page, ensure the **Credit Card Receipts** label is selected, then select **Next**.
-
-1. On the **Decide whether to test or run your policy**, select **Turn on policy** then select **Next**.
-
-1. On the **Review and finish** page, select **Submit**.
-
-1. Once your auto-labeling policy has been created, select **Done** on the **Your auto-labeling policy has been created.** page.
-
-1. Sign out of Joni's account by selecting her image in the top, right hand corner and selecting **Sign out**.
-
-You have successfully configured the **Credit Card Receipts** retention label to be auto-applied, setting a three-year retention period for all identified documents.
-
-## Task 4 – Apply retention labels in Outlook
-
-Megan Bowen, a financial analyst at Contoso Ltd., needs to ensure that specific emails and folders in Outlook comply with the company's data retention policies. In this task, you'll apply the appropriate retention labels to her Outlook items.
-
-1. Log into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
-
-1. In **Microsoft Edge**, navigate to **`https://outlook.office.com`**. and login as **Megan Bowen** `MeganB@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Megan's password was set in a previous exercise.
-
-1. In Megan's inbox, select right click the any email then select **Advanced actions** > **Assign policy** > **5 year delete** under the **Retention labels** section.
-
-   This retention label assigns a retention period of 5 years to the chosen email. After the 5 year period, the item is deleted.
-
-1. Still in Outlook, expand **Inbox** from the left side bar, then right click the right click the **Project Falcon** folder.
-
-1. From the menu that appeared when you right clicked, select **Advanced actions** > **Assign policy** > **5 year delete** under the **Retention labels** section.
-
-   This retention label assigns a retention period of 5 years to the Project Falcon folder and all its contents. After the 5 year period, the items are deleted.
-
-You have successfully applied retention labels to both an email and a folder in Outlook.
-
-## Task 2 – Recover SharePoint documents
-
-In this task, you'll delete and restore a deleted document to make sure you can restore documents the employee might delete after he is informed about the litigation hold against his mailbox.
+In this task, you'll simulate restoring a deleted document from a SharePoint site to validate your recovery options.
 
 1. Log into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
 
@@ -558,7 +320,7 @@ In this task, you'll delete and restore a deleted document to make sure you can 
 
 1. In the left sidebar select **Documents**.
 
-1. On the **Documents** page, select the checkbox to the left of **Vacation Policies.pptx** then select **Delete** from the action bar.
+1. On the **Documents** page, select the checkbox for **Vacation Policies.pptx** then select **Delete** from the action bar.
 
 1. On the **Delete?** dialog, select **Delete**.
 
@@ -569,3 +331,5 @@ In this task, you'll delete and restore a deleted document to make sure you can 
 1. On the left sidebar, select **Documents** and notice the file has been restored.
 
 You have successfully recovered a deleted document from a SharePoint Site.
+
+You've restored deleted content from SharePoint, validating document recovery in case of accidental or unauthorized deletion.
