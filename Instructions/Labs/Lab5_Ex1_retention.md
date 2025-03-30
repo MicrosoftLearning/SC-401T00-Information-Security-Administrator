@@ -24,7 +24,6 @@ You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is 
 1. Create a static retention policy
 1. Create an adaptive scope
 1. Create an adaptive retention policy
-1. Test the adaptive retention policy
 1. Recover SharePoint content
 
 ## Task 1 – Create a retention label
@@ -272,39 +271,7 @@ In this task, you'll use the adaptive scope you created to configure a retention
 
 You've created a retention policy that applies to content owned by privileged groups, retaining it for five years before deletion.
 
-## Task 7 – Test the adaptive retention policy
-
-In this task, you'll use PowerShell to confirm that the adaptive policy was created and distributed successfully.
-
->**Note**: When you create and submit a retention policy, it can take up to seven days for the retention policy to be applied.
-
-1. Open an elevated PowerShell window by right clicking the Windows button in the task bar, then select **Terminal (Admin)**. Select **Yes** if the **User Account Control** dialogue pops up.
-
-1. Run the **Connect-IPPSSession** cmdlet to the Security & Compliance Center in your tenant:
-
-    ```powershell
-    Connect-IPPSSession
-    ```
-
-1. When prompted with a sign in dialog box, sign in with Joni Sherman's account, `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's account was set in a previous exercise.
-
-1. Run the **Get-RetentionCompliancePolicy** cmdlet to view all details of the adaptive scope policy:
-
-    ```powershell
-    Get-RetentionCompliancePolicy -Identity "Privileged Group Retention" -DistributionDetail | Format-List
-    ```
-
-1. Review the results and search for these details:
-
-    - **Enabled**: True
-    - **Mode**: Enforce
-    - **DistributionStatus**: Success
-
-    ![Screenshot of the results of the Get-RetentionCompliancePolicy cmdlet.](../Media/results-getretentioncompliancepolicy.png)
-
-You've confirmed that the adaptive retention policy is active and successfully distributed.
-
-## Task 8 – Recover SharePoint content
+## Task 7 – Recover SharePoint content
 
 In this task, you'll simulate restoring a deleted document from a SharePoint site to validate your recovery options.
 
