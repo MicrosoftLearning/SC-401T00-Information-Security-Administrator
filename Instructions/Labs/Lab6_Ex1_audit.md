@@ -18,6 +18,10 @@ You're Joni Sherman, an Information Security Administrator at Contoso Ltd. As pa
 
 **Tasks**:
 
+1. Search for DLP-related activity
+1. Export audit search results
+1. Create an audit retention policy
+
 ## Task 1 – Search for DLP-related activity
 
 In this task, you'll use the Microsoft Purview Audit solution to search for recent audit events related to DLP policy and rule changes.

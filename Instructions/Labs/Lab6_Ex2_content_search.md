@@ -14,13 +14,72 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 # Lab 6 - Exercise 1 - Search the Audit log
 
-You're Joni Sherman, an Information Security Administrator at Contoso Ltd. As part of strengthening your organization's investigation and compliance readiness, you've been asked to use Microsoft Purview Audit to review DLP configuration changes and ensure that audit records for sensitive activity are retained for an extended period. You'll search for audit events related to DLP policies, export the results for offline analysis, and configure an audit retention policy that preserves key records across Exchange, SharePoint, and endpoint activity.
+Contoso's information security team received an alert about the potential exposure of sensitive financial data. As the Information Security Administrator, you've been asked to perform a content search to determine if any content containing the phrase "confidential financial summary" was shared inappropriately across Microsoft 365 locations. The results will help identify possible policy violations and support a security investigation.
 
 **Tasks**:
 
-## Task 1 – Search for DLP-related activity
+# Task 1 – 
 
-In this task, you'll use the Microsoft Purview Audit solution to search for recent audit events related to DLP policy and rule changes.
+1. Log into Client 1 VM (LON-CL1) as the **lon-cl1\admin** account.
+
+1. In Microsoft Purview, sign out of Joni's account and close all browser windows.
+
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **MOD Administrator** `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+
+1. In the left sidebar, select **Settings** > **Roles and Scopes** > **Role groups**.
+
+1. On the **Role groups for Microsoft Purview solutions** page, search for `eDiscovery`, then select **eDiscovery Manager**.
+
+1. On the **eDiscovery Manager** flyout panel, select **Edit**.
+
+1. On the **Manage eDiscovery Manager** page, select **Choose users**.
+
+1. On the **Choose users** flyout page, search for `Joni`, then select the checkbox for **Joni Sherman**. Select the **Select** button at the bottom of the panel.
+
+1. Back on the **Manage eDiscovery Manager** page, select **Next**.
+
+1. On the **Manage eDiscovery Administrator** page, select **Next**.
+
+1. On the **Review the role group and finish** page select **Save**.
+
+1. On the **You successfully updated the role group**, select **Done**.
+
+1. Sign out of the MOD Administrator account by selecting the **MA** icon on the top right of the window, then select **Sign out**.
+
+## Task 2
+
+1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
+
+1. In Microsoft Purview, navigate to **Solutions** > **eDiscovery**.
+
+1. On the **Cases** page, select the dropdown to the right of the **Create case** button to select **Create search**.
+
+   ![Screenshot showing where to create a search in eDiscovery.](../Media/ediscovery-create-search.png)
+
+1. On the **Enter details to get started** dialogue, enter:
+
+   - **Case name**: `Financial Content Investigation`
+   - **Search name**: `Confidential Summary Search`
+   - **Case description**: `Search to support audit of content containing confidential financial data.`
+   - **Search description**: `Locate items containing the phrase “confidential financial summary” across mailboxes and SharePoint.`
+
+1. Select **Create** to create the search.
+
+1. On the **Confidential Summary Search** page, under **Data sources** select **+** (plus sign) > **Add data sources**.
+
+   ![Screenshot showing add data sources in Content Search.](../Media/content-search-data-sources.png)
+
+1. On the **Search for sources** flyout, select the **Finance team** group, then select **Save and close**.
+
+
+
+
+
+
+
+
+
+
 
 1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
