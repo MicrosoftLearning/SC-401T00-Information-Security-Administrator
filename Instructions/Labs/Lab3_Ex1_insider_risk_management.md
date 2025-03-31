@@ -31,7 +31,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 In this task, you'll assign Joni Sherman the Insider Risk Management role so she can access and manage insider risk features in Microsoft Purview.
 
-1. Log into the Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
+1. Log into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
 1. In Microsoft Edge, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as MOD Administrator, **`admin@WWLxZZZZZZ.onmicrosoft.com`** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 

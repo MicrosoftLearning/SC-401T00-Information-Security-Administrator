@@ -23,7 +23,7 @@ Joni Sherman, a Information Security Administrator at Contoso Ltd., is rolling o
 
 In this task, you'll enable co-authoring for sensitivity labels, which also enables sensitivity labels for files in SharePoint and OneDrive.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and logged into Microsoft Purview and Joni Sherman.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged into Microsoft Purview and Joni Sherman.
 
 1. Open **Microsoft Edge**, then navigate to `https://purview.microsoft.com`.
 
@@ -41,7 +41,7 @@ You have successfully enabled support for sensitivity labels for files in ShareP
 
 In this task, you'll create a sensitivity label for internal content and a sublabel for documents used by the HR department.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com`.
 
@@ -131,7 +131,7 @@ You have successfully created a sensitivity label for your organization's intern
 
 You will now publish the Internal and HR sensitivity label so that the published sensitivity labels will be available for the HR users to apply to their HR documents.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account, and you should be logged into Microsoft Purview as **Joni Sherman**.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account, and you should be logged into Microsoft Purview as **Joni Sherman**.
 
 1. In **Microsoft Edge**, the Microsoft Purview portal tab should still be open. If not, navigate to **`https://purview.microsoft.com`** > **Solutions** > **Information Protection** > **Sensitivity labels**.
 
@@ -176,7 +176,7 @@ You have successfully published the Internal and HR sensitivity labels. Note tha
 
 In this task, you'll create a sensitivity label for financial data and configure it to apply automatically to content containing specific financial identifiers, such as credit card numbers and bank routing information.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and log into the Microsoft Purview portal as **Joni Sherman**.
 
@@ -259,7 +259,7 @@ You have successfully created a sensitivity label for financial data and configu
 
 In this task, you'll create a sublabel under the built-in Highly Confidential label. This sublabel will use Double Key Encryption (DKE) and dynamic watermarking to protect sensitive content accessed only by Legal. You'll also configure a label policy that requires justification for downgrading the label.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and log into the Microsoft Purview portal as **Joni Sherman**.
 
@@ -350,7 +350,7 @@ You have successfully created and published a sublabel using Double Key Encrypti
 
 In this task, you'll enable Microsoft Purview integration in Microsoft Defender for Cloud Apps. This allows Defender to scan new files for Microsoft Purview sensitivity labels and inspect content based on those labels.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin**, and you should still be logged in as Joni Sherman.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin**, and you should still be logged in as Joni Sherman.
 
 1. Open **Microsoft Edge**, then go to **Microsoft Defender** by navigating to `https://security.microsoft.com`.
 

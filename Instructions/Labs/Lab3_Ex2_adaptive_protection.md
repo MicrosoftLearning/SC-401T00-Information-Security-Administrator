@@ -17,7 +17,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 ## Task 1 – Assign an insider risk policy to Adaptive Protection
 
-1. Log into the Client 1 VM (SC-400-CL1) as the **SC-400-cl1\admin** account.
+1. Log into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 

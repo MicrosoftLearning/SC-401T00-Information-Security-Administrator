@@ -21,7 +21,7 @@ You are Joni Sherman, an Information Security Administrator at Contoso Ltd. The 
 
 In this task, you'll assign eDiscovery permissions to Joni Sherman so she can perform a content search in Microsoft Purview.
 
-1. Log into Client 1 VM (LON-CL1) as the **lon-cl1\admin** account.
+1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
 1. In Microsoft Purview, sign out of Joni's account and close all browser windows.
 

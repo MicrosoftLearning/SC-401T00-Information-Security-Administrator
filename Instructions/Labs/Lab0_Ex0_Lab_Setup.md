@@ -25,7 +25,7 @@ In this lab, you'll configure and prepare your environment for administration ta
 
 In this task, you'll enable Audit in the Microsoft Purview portal to monitor portal activities.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and logged into Microsoft 365 with the MOD Administrator account.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged into Microsoft 365 with the MOD Administrator account.
 
 1. Open an elevated Terminal window by selecting the Windows button with the right mouse button and then select **Terminal (Admin)**.
 
@@ -101,7 +101,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 In this task, you'll set passwords for the user accounts needed for the labs.
 
-1. Log into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account. The password should be provided by your lab hosting provider.
+1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account. The password should be provided by your lab hosting provider.
 
 1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
@@ -133,7 +133,7 @@ You have successfully reset passwords for lab exercises.
 
 In this task, you'll enable device onboarding for your organization.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`**, then select **Settings** from the left sidebar.
 
@@ -149,7 +149,7 @@ You have now enabled device onboarding and can start to onboard devices to be pr
 
 In this task, you'll enable analytics for Insider Risk Management.
 
-1. You should still be logged into Client 1 VM (SC-400-CL1) as the **SC-400-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
 
 1. In Microsoft Purview, navigate to **Settings** > **Insider Risk Management** > **Analytics**.
 
