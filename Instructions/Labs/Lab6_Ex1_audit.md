@@ -14,9 +14,13 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 # Lab 6 - Exercise 1 - Search the Audit log
 
-scenario
+You're Joni Sherman, an Information Security Administrator at Contoso Ltd. As part of strengthening your organization's investigation and compliance readiness, you've been asked to use Microsoft Purview Audit to review DLP configuration changes and ensure that audit records for sensitive activity are retained for an extended period. You'll search for audit events related to DLP policies, export the results for offline analysis, and configure an audit retention policy that preserves key records across Exchange, SharePoint, and endpoint activity.
 
 **Tasks**:
+
+## Task 1 – Search for DLP-related activity
+
+In this task, you'll use the Microsoft Purview Audit solution to search for recent audit events related to DLP policy and rule changes.
 
 1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
@@ -50,7 +54,11 @@ scenario
 
 1. Select individual results in the list to review detailed information about each activity.
 
-## Task 2 
+You've searched for and reviewed audit activity related to DLP policy and rule configuration.
+
+## Task 2 – Export audit search results
+
+In this task, you'll export the DLP audit search results for offline analysis or compliance record-keeping.
 
 1. In Microsoft Purview, navigate to **Solutions** > **Audit**.
 
@@ -64,7 +72,11 @@ scenario
 
 > **Note**: Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review and filtering, many organizations use Excel or another spreadsheet tool. In this lab, you can open the CSV in Notepad to confirm the export completed successfully.
 
-## Task 3 
+You've exported DLP-related audit logs, which can be used for offline analysis or recordkeeping.
+
+## Task 3 – Create an audit retention policy
+
+In this task, you'll configure an audit retention policy to preserve logs related to DLP matches and actions for long-term investigation.
 
 1. In Microsoft Purview, navigate to **Solutions** > **Audit**.
 
@@ -87,3 +99,4 @@ scenario
 
 1. Select **Save** to create the audit retention policy.
 
+You've configured an audit retention policy that keeps logs of DLP matches and activity for one year.
