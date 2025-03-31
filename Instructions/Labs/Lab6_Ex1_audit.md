@@ -74,7 +74,7 @@ In this task, you'll export the DLP audit search results for offline analysis or
 
 1. When the export completes, select the **Download file** link in the green **Your export is complete**. banner.
 
-> **Note**: Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review and filtering, many organizations use Excel or another spreadsheet tool. In this lab environment, you can open the CSV in Notepad to confirm that the export completed successfully.
+ > [!Note] Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review and filtering, many organizations use Excel or another spreadsheet tool. In this lab environment, you can open the CSV in Notepad to confirm that the export completed successfully.
 
 You've exported DLP-related audit logs, which can be used for offline review or recordkeeping.
 

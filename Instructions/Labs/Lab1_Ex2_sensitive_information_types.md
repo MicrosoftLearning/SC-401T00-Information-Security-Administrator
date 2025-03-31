@@ -299,7 +299,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
     You should get a message that the command completed successfully.
 
-    > **Note**: If the last command fails, it possibly takes more time until the **EDM_DataUploaders** group membership is applied. It can take up to one hour until it is possible to download the schema file.  If it fails proceed to the next task and return to this step later.
+    > [!Note] If the last command fails, it possibly takes more time until the **EDM_DataUploaders** group membership is applied. It can take up to one hour until it is possible to download the schema file.  If it fails proceed to the next task and return to this step later.
 
 1. Hash the database file and upload it to the EDM-based classification sensitive information type by running the following script in PowerShell:
 
@@ -319,7 +319,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
     Alternatively, you can also refresh the **EDM classifiers** window in the Microsoft Purview portal to check the status of the hash. Once the status is set to **Index complete** the hash is complete.
 
-    > **Note**: This process might take some time. You might need to run the GetSession script or refresh the EDM classifiers page several times before the status indicates that the hash is complete.
+    > [!Note] This process might take some time. You might need to run the GetSession script or refresh the EDM classifiers page several times before the status indicates that the hash is complete.
 
     ![Screenshot showing the EDM hash status set to Completed in PowerShell.](../Media/edm-hash-completed.png)
 
