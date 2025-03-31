@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 1 - Configure Retention Policies'
-    module: 'Module 5 - Implement and manage retention'
+    module: 'Module 6 - Implement and manage retention'
 ---
 
 ## WWL Tenants - Terms of use
@@ -14,7 +14,7 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 # Lab 5 - Exercise 1 - Implement and manage retention
 
-You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is tightening its data security strategy to reduce risk exposure related to financial data and privileged communications. You’ve been asked to configure Microsoft Purview retention solutions that support audit readiness, limit unnecessary data retention, and ensure proper oversight for sensitive communications.
+You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is tightening its data security strategy to reduce risk exposure related to financial data and privileged communications. You've been asked to configure Microsoft Purview retention solutions that support audit readiness, limit unnecessary data retention, and ensure proper oversight for sensitive communications.
 
 **Tasks**:
 
