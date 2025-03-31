@@ -52,7 +52,7 @@ In this task, you'll use the Microsoft Purview Audit solution to search for rece
 
 1. Once complete, select **DLP Policy Activity** to view the results.
 
-1. Select individual results in the list to review detailed information about each activity.
+1. Select individual results to view detailed information about each DLP activity..
 
 You've searched for and reviewed audit activity related to DLP policy and rule configuration.
 
@@ -70,9 +70,9 @@ In this task, you'll export the DLP audit search results for offline analysis or
 
 1. When the export completes, select the **Download file** link in the green **Your export is complete**. banner.
 
-> **Note**: Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review and filtering, many organizations use Excel or another spreadsheet tool. In this lab, you can open the CSV in Notepad to confirm the export completed successfully.
+> **Note**: Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review and filtering, many organizations use Excel or another spreadsheet tool. In this lab environment, you can open the CSV in Notepad to confirm that the export completed successfully.
 
-You've exported DLP-related audit logs, which can be used for offline analysis or recordkeeping.
+You've exported DLP-related audit logs, which can be used for offline review or recordkeeping.
 
 ## Task 3 – Create an audit retention policy
 
@@ -95,7 +95,8 @@ In this task, you'll configure an audit retention policy to preserve logs relate
       - ComplianceDLPExchangeClassification
       - ComplianceDLPSharePoint
       - ComplianceDLPSharePointClassification
-   - Duration: **1 year**
+   - **Duration**: 1 year
+   - **Priority**: `1`
 
 1. Select **Save** to create the audit retention policy.
 
