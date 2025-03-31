@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 1 - Search the Audit log'
+    title: 'Exercise 1 - Perform a content search'
     module: 'Module 6 - Audit and search activity in Microsoft purview'
 ---
 
@@ -12,13 +12,14 @@ Tenants should not be shared or used for purposes outside of hands-on labs. The 
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
-# Lab 6 - Exercise 1 - Search the Audit log
+# Lab 6 - Exercise 1 - Perform a content search
 
-Contoso's information security team received an alert about the potential exposure of sensitive financial data. As the Information Security Administrator, you've been asked to perform a content search to determine if any content containing the phrase "confidential financial summary" was shared inappropriately across Microsoft 365 locations. The results will help identify possible policy violations and support a security investigation.
-
+You are Joni Sherman, an Information Security Administrator at Contoso Ltd. The organization has received an alert that sensitive financial data may have been exposed. You've been asked to use Microsoft Purview to search for content containing key financial terms across Microsoft 365 services. Your goal is to determine if any sensitive content was shared inappropriately and help inform the investigation.
 **Tasks**:
 
-# Task 1 – 
+## Task 1 – Assign eDiscovery permissions
+
+In this task, you'll assign eDiscovery permissions to Joni Sherman so she can perform a content search in Microsoft Purview.
 
 1. Log into Client 1 VM (LON-CL1) as the **lon-cl1\admin** account.
 
@@ -46,7 +47,9 @@ Contoso's information security team received an alert about the potential exposu
 
 1. Sign out of the MOD Administrator account by selecting the **MA** icon on the top right of the window, then select **Sign out**.
 
-## Task 2
+You've assigned eDiscovery permissions to Joni Sherman, enabling her to search for sensitive content as part of the investigation.
+
+## Task 2 – Search for content using sensitive financial terms
 
 1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
@@ -58,10 +61,10 @@ Contoso's information security team received an alert about the potential exposu
 
 1. On the **Enter details to get started** dialogue, enter:
 
-   - **Case name**: `Financial Content Investigation`
-   - **Search name**: `Confidential Summary Search`
-   - **Case description**: `Search to support audit of content containing confidential financial data.`
-   - **Search description**: `Locate items containing the phrase “confidential financial summary” across mailboxes and SharePoint.`
+   - **Case name**: `Financial Data Exposure Review`
+   - **Search name**: `Sensitive Financial Keywords`
+   - **Case description**: `Case opened to support security investigation efforts by identifying potential exposure of sensitive financial terms in Microsoft 365 content.`
+   - **Search description**: `Search targets common high-risk financial keywords to support data security monitoring and policy validation.`
 
 1. Select **Create** to create the search.
 
@@ -71,92 +74,15 @@ Contoso's information security team received an alert about the potential exposu
 
 1. On the **Search for sources** flyout, select the **Finance team** group, then select **Save and close**.
 
+1. In the **Condition builder** pane, add the keywords `bank account` and `credit card`, then select **Run query**.
 
+   ![Screenshot showing the condition builder in COntent Search.](../Media/content-search-query-builder.png)
 
+1. In the **Choose search results**, select the checkboxes for **Include categories** and **Include query keywords report**, then select **Run Query**.
 
+1. Review the results of the search by:
 
+   - Select the **Statistics** tab to view a summary of search metrics.
+   - Select the **Sample** tab to preview matched content.
 
-
-
-
-
-
-1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
-
-1. In Microsoft Purview, navigate to **Solutions** > **Audit**.
-
-1. On the **Search** page, configure your search:
-
-   - **Date and time range (UTC)**:
-
-     - **Start date**: 3 days ago
-     - **End date**: Today
-
-   - **Activities – friendly names**: Search for `DLP` and select the following activities under **Information protection and DLP activities**:
-
-     - Created DLP rule
-     - Updated DLP rule
-     - Deleted DLP rule
-     - Created DLP policy
-     - Updated DLP policy
-     - Deleted DLP policy
-
-   ![Screenshot showing the DLP activities to select in Audit.](../Media/audit-dlp-search.png)
-
-   - **Search name**: `DLP Policy Activity`
-
-1. Select **Search**.
-
-1. It may take several minutes for the search to complete. While Audit processes your search, refresh the page to check the **Job status**, **Progress (%)**, and **Search time**.
-
-1. Once complete, select **DLP Policy Activity** to view the results.
-
-1. Select individual results to view detailed information about each DLP activity..
-
-You've searched for and reviewed audit activity related to DLP policy and rule configuration.
-
-## Task 2 – Export audit search results
-
-In this task, you'll export the DLP audit search results for offline analysis or compliance record-keeping.
-
-1. In Microsoft Purview, navigate to **Solutions** > **Audit**.
-
-1. On the **Search** page, select the **DLP Policy Activity** search you created in the previous task.
-
-1. Select **Export** at the top of the page.
-
-1. In the confirmation dialog, select **OK** to start the export.
-
-1. When the export completes, select the **Download file** link in the green **Your export is complete**. banner.
-
-> **Note**: Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review and filtering, many organizations use Excel or another spreadsheet tool. In this lab environment, you can open the CSV in Notepad to confirm that the export completed successfully.
-
-You've exported DLP-related audit logs, which can be used for offline review or recordkeeping.
-
-## Task 3 – Create an audit retention policy
-
-In this task, you'll configure an audit retention policy to preserve logs related to DLP matches and actions for long-term investigation.
-
-1. In Microsoft Purview, navigate to **Solutions** > **Audit**.
-
-1. Select **Policies** from the left sidebar.
-
-1. On the **Policies** page select **New audit retention policy**
-
-1. On the **New audit retention policy** panel, enter:
-
-   - **Policy name**: `Retain DLP Audit Logs`
-   - **Description**: `Retains audit logs for DLP activities across Exchange, SharePoint, and endpoints to support investigation and compliance.`
-   - **Users**: Leave blank to apply to all users
-   - **Record Type**:
-      - ComplianceDLPEndpoint
-      - ComplianceDLPExchange
-      - ComplianceDLPExchangeClassification
-      - ComplianceDLPSharePoint
-      - ComplianceDLPSharePointClassification
-   - **Duration**: 1 year
-   - **Priority**: `1`
-
-1. Select **Save** to create the audit retention policy.
-
-You've configured an audit retention policy that keeps logs of DLP matches and activity for one year.
+You've performed a keyword-based content search to help identify whether sensitive financial data was shared inappropriately. These results can support ongoing security investigations and inform risk response.
