@@ -26,7 +26,7 @@ You are Joni Sherman, the Information Security Administrator at Contoso Ltd. Now
 
 In this task, you'll verify that published sensitivity labels are available to users and can be applied directly from Microsoft Word.
 
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
 1. In Microsoft Edge, select the app launcher in the top left and choose **Word**.
 
@@ -94,7 +94,7 @@ You've confirmed that your DLP policy blocked the transmission of sensitive empl
 
 To test your retention configuration, you'll apply a retention label to a document stored in SharePoint and verify that sensitivity labels are also available.
 
-1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged into Microsoft 365 as Joni Sherman.
 
 1. In Microsoft Edge, select the app launcher in the top left and choose **SharePoint**.
 
@@ -113,3 +113,4 @@ To test your retention configuration, you'll apply a retention label to a docume
      ![Screenshot showing sensitivity label and retention label applied in SharePoint.](../Media/sharepoint-choose-labels.png)
 
 You've confirmed that retention and sensitivity labels are available and can be applied to SharePoint documents.
+
