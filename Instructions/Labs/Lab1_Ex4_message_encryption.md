@@ -114,7 +114,7 @@ You must confirm that no social IDs dialog is displayed for external recipients 
 
 1. Sign into your personal email account in a new window and open the message from Lynne Robbins. If you sent this email to a Microsoft account (like @outlook.com) the encryption might be processed automatically, and you'll see the message automatically. If you sent the email to another email service like (@gmail.com), you might have to perform the next steps to process the encryption and read the message.
 
-    > [!Note] You might need to check your junk or spam folder for the message from Lynne Robbins.
+    > [!Note] **Note**: You might need to check your junk or spam folder for the message from Lynne Robbins.
 
 1. Select **Read the message**.
 

@@ -138,29 +138,29 @@ In this task, you'll create a DLP policy using PowerShell to block sharing of em
 
 1. Run the **Connect-IPPSSession** cmdlet to connect to the Security & Compliance PowerShell:
 
-   ```powershell
-   Connect-IPPSSession
-   ```
+    ```powershell
+    Connect-IPPSSession
+    ```
 
 1. Sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) in the **Sign in to your account** pop-up window. Joni's password was set in a previous exercise.
 
 1. Run the **New-DlpCompliancePolicy** cmdlet to create a DLP policy that scans all Exchange mailboxes:
 
-   ```powershell
-   New-DlpCompliancePolicy -Name "EmployeeID DLP Policy" -Comment "This policy blocks sharing of Employee IDs" -ExchangeLocation All
-   ```
+    ```powershell
+    New-DlpCompliancePolicy -Name "EmployeeID DLP Policy" -Comment "This policy blocks sharing of Employee IDs" -ExchangeLocation All
+    ```
 
 1. Run the **New-DlpComplianceRule** cmdlet to add a DLP rule to the DLP policy you created in the previous step. This policy uses the **Contoso Employee IDs** sensitive info type created in a previous exercise:
 
-   ```powershell
-   New-DlpComplianceRule -Name "EmployeeID DLP rule" -Policy "EmployeeID DLP Policy" -BlockAccess $true -ContentContainsSensitiveInformation @{Name="Contoso Employee IDs"}
-   ```
+    ```powershell
+    New-DlpComplianceRule -Name "EmployeeID DLP rule" -Policy "EmployeeID DLP Policy" -BlockAccess $true -ContentContainsSensitiveInformation @{Name="Contoso Employee IDs"}
+    ```
 
 1. Run the **Get-DLPComplianceRule** cmdlet to review the **EmployeeID DLP rule**:
 
-   ```powershell
-   Get-DLPComplianceRule -Identity "EmployeeID DLP rule"
-   ```
+    ```powershell
+    Get-DLPComplianceRule -Identity "EmployeeID DLP rule"
+    ```
 
 You've successfully used PowerShell to create a DLP policy that blocks the sharing of employee IDs.
 
