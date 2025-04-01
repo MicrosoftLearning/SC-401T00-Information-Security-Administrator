@@ -40,7 +40,7 @@ In this task, you'll verify the correct Azure RMS functionality of your tenant.
 
    The **AzureRMSLicensingEnabled** result should be **True**.
 
-1. Run the **Test-IRMConfiguration** cmdlet to test the Azure RMS templates used for Office 365 Message Encryption with user **Megan Bowen**:
+1. Run the **Test-IRMConfiguration** cmdlet to test Azure RMS functionality using Office 365 Message Encryption with **Megan Bowen** as both sender and recipient:
 
     ```powershell
     Test-IRMConfiguration -Sender MeganB@contoso.com -Recipient MeganB@contoso.com
@@ -66,7 +66,7 @@ There is a requirement in your organization to restrict trust for foreign identi
     Get-OMEConfiguration -Identity "OME Configuration" | fl
     ```
 
-   Review the settings and confirm that the SocialIdSignIn is set to **True**.
+   Review the settings and confirm that the SocialIdSignIn property is set to **True**.
 
     ![Screenshot showing the SocialIdSignIn value set to True. ](../Media/socialidsignin-value-true.png)
 
@@ -86,7 +86,7 @@ There is a requirement in your organization to restrict trust for foreign identi
 
     ![Screenshot showing the SocialIdSignIn value set to False. ](../Media/socialidsignin-value-false.png)
 
-   Notice the result should show the SocialIDSignIn is set to **False**. Leave the PowerShell window and client open.
+   Notice the result should show the SocialIdSignIn is set to **False**. Leave the PowerShell window and client open.
 
 You've successfully disabled social identity providers, helping ensure that encrypted emails from Contoso can only be opened using Microsoft accounts or one-time passcodes—improving control over sensitive message access.
 
@@ -118,7 +118,7 @@ You must confirm that no social IDs dialog is displayed for external recipients 
 
 1. Select **Read the message**.
 
-1. Without having social IDs activated, there is no button to authenticate with your non-Microsoft account.
+1. Because social IDs are disabled, you shouldn't see an option to sign in with a third-party account.
 
 1. Select **Sign in with a One-time passcode** to receive a limited time passcode.
 
@@ -152,7 +152,7 @@ Protected messages sent by your organizations finance department require special
 
 1. Confirm the warning message for customizing the template with **Y** for Yes and press **Enter**.
 
-1. Run the **Set-OMEConfiguration** cmdlet with the _EmailText_ parameter to change the body email text:
+1. Run the **Set-OMEConfiguration** cmdlet with the _EmailText_ parameter to update the body text of the encrypted email:
 
     ```powershell
     Set-OMEConfiguration -Identity "Finance Department" -EmailText "Encrypted message sent from Contoso Ltd. finance department. Handle the content responsibly."
@@ -168,7 +168,7 @@ Protected messages sent by your organizations finance department require special
 
 1. Confirm the warning message for customizing the template with **Y** for Yes and press **Enter**.
 
-1. Run the **TransportRule** cmdlet to create a mail flow rule, which applies the custom OME template to all messages sent from the finance team. This process might take a few seconds to complete.
+1. Run the **New-TransportRule** cmdlet to create a mail flow rule, which applies the custom OME template to all messages sent from the finance team. This process might take a few seconds to complete.
 
     ```powershell
     New-TransportRule -Name "Encrypt all mails from Finance team" -FromScope InOrganization -FromMemberOf "Finance Team" -ApplyRightsProtectionCustomizationTemplate "Finance Department" -ApplyRightsProtectionTemplate Encrypt
@@ -202,7 +202,7 @@ To validate the new custom configuration, you need to use the account of Lynne R
 
     ![Sample encrypted email from Lynne Robbins. ](../Media/EncryptedEmail.png)
 
-1. The customized configuration has social IDs activated, because both options are available. Select **Sign in with a One-time passcode** to receive a limited time passcode.
+1. In the customized configuration, both authentication options are available, indicating that social ID sign-in is enabled. Select **Sign in with a One-time passcode** to receive a limited time passcode.
 
 1. Go to your personal email portal and open the message with subject **Your one-time passcode to view the message**.
 

@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Lab Setup: Preparing Your Environment for Administration'
-    module: 'Module 0 - Lab Setup'
+    title: 'Lab Setup - Prepare your environment for administration'
+    module: 'Module 0 - Lab setup'
 ---
 
 ## WWL Tenants - Terms of use
@@ -12,7 +12,7 @@ Tenants should not be shared or used for purposes outside of hands-on labs. The 
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
-# Lab Setup: Preparing Your Environment for Administration
+# Lab Setup: Prepare your environment for administration
 
 In this lab, you'll configure and prepare your environment for administration tasks. You'll activate necessary features, set up administrative permissions, and ensure proper configuration of key elements.
 
@@ -29,13 +29,13 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 1. Open an elevated Terminal window by selecting the Windows button with the right mouse button and then select **Terminal (Admin)**.
 
-1. Run the Install Module cmdlet in the terminal window to install the latest **Exchange Online PowerShell** module version:
+1. Run the **Install Module** cmdlet in the terminal window to install the latest **Exchange Online PowerShell** module version:
 
     ```powershell
     Install-Module ExchangeOnlineManagement
     ```
 
-1. Confirm the NuGet provider security dialog with **Y** for Yes and press **Enter**. This process might take some time to complete.
+1. Confirm the NuGet provider prompt  by typing **Y** for Yes and press **Enter**.
 
 1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
 
@@ -47,7 +47,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 1. Close the PowerShell window.
 
-1. Open a regular PowerShell window, without elevation, right clicking the Windows button in the task bar, then select **Terminal**.
+1. Open a regular (non-elevated) PowerShell window by right-clicking the Windows button and selecting **Terminal**.
 
 1. Run the **Connect-ExchangeOnline** cmdlet to use the Exchange Online PowerShell module and connect to your tenant:
 
@@ -109,7 +109,7 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. Select the checkbox to the left of **Joni Sherman**, **Lynne Robbins**, and **Megan Bowen**.
 
-   These accounts will be used through the lab exercises.
+   These accounts will be used throughout the lab exercises.
 
    ![Screenshot showing user accounts that need to be reset.](../Media/user-accounts.png)
 
@@ -117,7 +117,7 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
    ![Screenshot showing the Reset password button in the Microsoft 365 admin center.](../Media/reset-password-button.png)
 
-1. In the **Reset Password** flyout page on the right, ensure all options are deselected.
+1. In the **Reset Password** flyout page on the right, ensure that both checkboxes are deselected.
 
    This will ensure that you can select a password for the three users being used for exercises, and that these passwords won't need to be reset when you first sign in.
 
@@ -141,7 +141,7 @@ In this task, you'll enable device onboarding for your organization.
 
 1. On the **Devices** page, select **Turn on device onboarding** then select **Ok** to enable device onboarding.
 
-1. Accept the **Device monitoring is being turned on** dialog by selecting **OK**.
+1. When prompted, select **OK** to confirm that device monitoring is being turned on.
 
 You have now enabled device onboarding and can start to onboard devices to be protected with Endpoint DLP policies. The process of enabling the feature might take up to 30 minutes.
 
@@ -153,6 +153,6 @@ In this task, you'll enable analytics for Insider Risk Management.
 
 1. In Microsoft Purview, navigate to **Settings** > **Insider Risk Management** > **Analytics**.
 
-1. Toggle Analytics to **On** then select **Save**.
+1. Toggle **Analytics** to **On** then select **Save**.
 
 You have enabled analytics for Insider Risk Management.

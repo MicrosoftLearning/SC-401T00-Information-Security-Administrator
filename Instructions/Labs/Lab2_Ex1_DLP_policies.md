@@ -31,7 +31,7 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
 
 1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**. sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**. Sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
 1. Select **Solutions** > **Data Loss Prevention** > **Policies**.
 
@@ -78,7 +78,7 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
     - Select **Block only people outside your organization**.
 
 1. Under **User notifications**:
-    - Turn **On** the toggle for **Use notifications to inform your users and help educate them on the proper use of sensitive info.**.
+    - Turn on the toggle for **Use notifications to inform your users and help educate them on the proper use of sensitive info.**.
     - Select the checkbox for **Notify users in Office 365 service with a policy tip**.
 
 1. Under **User overrides**:
@@ -110,7 +110,7 @@ In this task, you'll expand the scope of your existing DLP policy to include Exc
 
 1. You should still be on the **Policies** page in Microsoft Purview. If not, open **Microsoft Edge** and navigate to `https://purview.microsoft.com`. Select **Solutions** > **Data Loss Prevention** > **Policies**.
 
-1. On the **Policies** page select the checkbox for the recently created **Credit Card DLP Policy**, then select **Edit policy** to open the policy configuration.
+1. On the **Policies** page select the checkbox for the recently created **DLP - Credit Card Protection**, then select **Edit policy** to open the policy configuration.
 
 1. On the **Name your DLP policy** page, edit the description to `Detect and restrict sharing of credit card numbers in Teams and Exchange messages.`
 
@@ -172,7 +172,7 @@ Now that your DLP policy has been tested in simulation, you'll activate it to be
 
 1. In **Microsoft Edge**, navigate to DLP policies by going to `https://purview.microsoft.com` > **Solutions** > **Data Loss Prevention** then select **Policies** from the left sidebar.
 
-1. On the  **Policies** page select the **DLP - Credit Card Protection** policy.
+1. On the **Policies** page select the **DLP - Credit Card Protection** policy.
 
 1. At the bottom of the flyout on the right, select **View simulation**.
 
@@ -196,7 +196,7 @@ When multiple policies exist, their priority determines which one applies first.
 
 1. In **Microsoft Edge**, the Microsoft Purview portal tab should still be open to the **Policies** page. If not, open **Microsoft Edge** and navigate to `https://purview.microsoft.com`. Select **Solutions** > **Data Loss Prevention** > **Policies**.
 
-1. On the **Policies** page, select the **EmployeeID DLP Policy** DLP policy.
+1. On the **Policies** page, select the **EmployeeID DLP Policy**.
 
 1. Select **Reprioritize** from the top navigation ribbon, then select **Move to top (highest priority)**.
 
@@ -216,7 +216,7 @@ Before you can use file policies in Microsoft Defender, file monitoring must be 
 
 1. On the left sidebar, select **System** > **Settings**, then select **Cloud Apps**.
 
-1. In the left pane within the **Cloud apps** window, scroll down to the **Information Protection** section. Under **Inspect protected files** select **Grant permission** to enable file inspection.
+1. In the left pane within the **Cloud apps** window, scroll down to the **Information Protection** section. Under **Inspect protected files**, select **Grant permission** to enable file inspection.
 
 1. Follow the prompt to allow the required permissions in Microsoft Entra ID, then you should see file inspection is **Active** in Microsoft Defender for Cloud Apps.
 

@@ -48,7 +48,7 @@ In this task, you'll create a new custom sensitive information type that recogni
 
    - **ID**: `Contoso IDs`
    - **Regular expression**: `[A-Z]{3}[0-9]{6}`
-   - Select the radio button for _String match_
+   - Select the radio button for _String match_.
 
 1. Select **Done** at the bottom of the flyout panel.
 
@@ -104,7 +104,7 @@ You've received reports that some documents containing employee IDs aren't being
 
 1. In the **Edit pattern** flyout, set the **Confidence level** dropdown to **Medium confidence**, which allows matches with less supporting evidence than high confidence.
 
-1. Select **Update** at the bottom of the flout.
+1. Select **Update** at the bottom of the flyout.
 
 1. Select **Next** until you reach the **Review settings and finish** page.
 
@@ -124,7 +124,7 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. From the left pane, expand **Teams & groups** then select **Active teams & groups**.
 
-1. On the **Active teams and groups** page, on the top navigation ribbon, select **Security groups** then select **+ Add a security group**.
+1. On the top of the **Active teams and groups** page, select **Security groups** then select **+ Add a security group**.
 
     ![Screenshot of the Add a group button.](../Media/add-security-group.png)
 
@@ -155,7 +155,7 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 You have successfully created the **EDM_DataUploaders group** and assigned Joni access to create an EDM classifier.
 
-## Task 3 –  Create EDM-based classification information type
+## Task 4 –  Create EDM-based classification information type
 
 In this task, you'll create an Exact Data Match (EDM) based classification with a database schema of employee data.
 
@@ -169,7 +169,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 1. On the **EDM classifiers** page, select **+ Create EDM classifier**.
 
-1. Examine the **Familiarize yourself with the steps needed to put your classifier to work** to understand the workflow for creating EDM classifiers, then select **Create EDM classifier**.
+1. Review the **Familiarize yourself with the steps needed to put your classifier to work** to understand the workflow for creating EDM classifiers, then select **Create EDM classifier**.
 
 1. On the **Name and describe your EDM classifier** page, enter:
 
@@ -187,7 +187,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
    - `StreetAddress`
    - `EmployeeID`
 
-   You should have four columns. You'll need to select the **+ Add column** button to add new fields for new columns.
+   Select **+ Add column** to add the remaining fields until you have four columns total.
 
       ![Screenshot showing the EDM columns in the EDM configuration walkthrough.](../Media/edm-columns.png)
 
@@ -235,7 +235,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 You have successfully created a new EDM-based classification sensitive information type for identifying employee data from a database file source.
 
-## Task 4 – Create EDM-based classification data source
+## Task 5 – Create EDM-based classification data source
 
 In this task, you'll hash and upload the actual data for the EDM-based classification sensitive information type via the EDM Upload Agent tool.
 
@@ -273,7 +273,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
 1. Close the Notepad window.
 
-1. right click the Windows symbol in the task bar and select **Terminal (Admin)**.
+1. Right click the Windows symbol in the task bar and select **Terminal (Admin)**.
 
 1. If the **User Account Control** window pops up, select **Yes** to allow this application to make changes to your device.
 
@@ -299,7 +299,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
     You should get a message that the command completed successfully.
 
-    > [!Note] If the last command fails, it possibly takes more time until the **EDM_DataUploaders** group membership is applied. It can take up to one hour until it is possible to download the schema file.  If it fails proceed to the next task and return to this step later.
+    > [!Note] If the last command fails, it possibly takes more time until the **EDM_DataUploaders** group membership is applied. It can take up to one hour until it is possible to download the schema file.  If it fails, proceed to the next task and return to this step later.
 
 1. Hash the database file and upload it to the EDM-based classification sensitive information type by running the following script in PowerShell:
 
@@ -329,9 +329,9 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
 You have successfully hashed and uploaded a database file for an EDM-based classification sensitive information type.
 
-## Task 5 – Create keyword dictionary
+## Task 6 – Create keyword dictionary
 
-Several violations of personal information leakage happened when users sent out emails after colleagues reported on sick leave. When that happened the reason for illness or disease was sent out. We don't want that to happen. In this task, you'll create a keyword dictionary to prevent personal information leakage in emails.
+Several violations of personal information leakage happened when users sent out emails after colleagues reported on sick leave. In those cases, the reason for illness or disease was disclosed. We don't want that to happen. In this task, you'll create a keyword dictionary to prevent personal information leakage in emails.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
 
@@ -384,7 +384,7 @@ Several violations of personal information leakage happened when users sent out 
 
 1. Back on the **New pattern** page, review the configuration and select **Create**.
 
-1. Back on the **Define patterns for this sensitive info type** select **Next**.
+1. Back on the **Define patterns for this sensitive info type**, select **Next**.
 
 1. On the **Choose the recommended confidence level to show in compliance policies**, leave the default value, then select **Next**.
 
@@ -394,9 +394,9 @@ Several violations of personal information leakage happened when users sent out 
 
 You have successfully created a new sensitive information type based on a keyword dictionary and added more keywords to decrease the false positive rate.
 
-## Task 6 – Test custom sensitive information types
+## Task 7 – Test custom sensitive information types
 
-Custom sensitive information types should always be tested before using them in policies otherwise data loss or leakage may occur due to a malfunctioning custom search pattern. In this task, you'll test the custom sensitive information types to ensure they recognize the desired patterns.
+Always test custom sensitive information types before using them in policies. Otherwise, data loss or leakage may occur if the pattern is misconfigured.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
 
@@ -410,7 +410,7 @@ Custom sensitive information types should always be tested before using them in 
 
 1. Select **File** > **Save As**.
 
-1. Select **Documents** on the left side pane and enter `SickTestData` as the **File name**, then select **Save**.
+1. Select **Documents** on the left side pane and enter `SickTestData.txt` as the **File name**, then select **Save**.
 
 1. Close the Notepad window.
 
@@ -444,4 +444,4 @@ Custom sensitive information types should always be tested before using them in 
 
 1. On the **Match results** page, review the matches, then select **Finish** to end the test.
 
-You have successfully tested the two custom sensitive information types and validated the search pattern recognizes the desired patterns.
+You've successfully tested the two custom sensitive information types and validated that the search patterns work as expected.

@@ -17,7 +17,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 ## Task 1 – Assign an insider risk policy to Adaptive Protection
 
-1. Log into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
@@ -28,7 +28,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 1. On the **Insider risk levels** page:
 
    - In the Insider risk policy dropdown, select **Data leaks quick policy** you created in a previous exercise.
-   - Leave the default risk level settings as is.
+   - Leave the default risk level settings unchanged.
    - Select **Save**.
 
 You've linked an insider risk policy to Adaptive Protection, enabling dynamic risk-based actions across Microsoft Purview.
@@ -46,10 +46,10 @@ Now that Adaptive Protection is linked to your insider risk policy, you'll updat
 1. Select the pencil icon next to the **Credit card information rule** to edit it.
 
 1. On the **Edit rule** page:
-   - Update the **Description** to: `Block sharing of credit card data when user has an elevated insider risk level.`
+   - In the **Description** field, enter: `Block sharing of credit card data when user has an elevated insider risk level.`
    - In the **Conditions** section, select **Add condition** > **Insider risk level for Adaptive Protection is**.
    - In the new section, select **Elevated Risk**.
-   - Under **Actions**, update the **Restrict access or encrypt the content in Microsoft 365** action to **Block everyone**.
+   - Under **Actions**, set **Restrict access or encrypt the content in Microsoft 365** to **Block everyone**.
    - Select **Save** to update the rule.
 
 1. Back on the **Customize advanced DLP rules** page, select **Next**.
@@ -105,7 +105,7 @@ To add another layer of enforcement, you can use insider risk levels to restrict
 
 1. Sign out of the Mod Administrator account by selecting the MA icon on the top right of the window, then selecting **Sign out** and close all browser windows.
 
-You've created a Conditional Access policy that blocks access for elevated-risk users, without impacting current access thanks to report-only mode.
+You've created a Conditional Access policy that blocks access for elevated-risk users, without affecting access immediately, since the policy is in report-only mode.
 
 ## Task 4 – Enable Adaptive Protection
 
@@ -127,4 +127,4 @@ In this final task, you'll turn on Adaptive Protection so the system can start a
 
 1. Toggle **Adaptive Protection** to **On**, then select **Save**.
 
-You've successfully enabled Adaptive Protection. Adaptive Protection is now enabled. Enforcement actions will automatically adjust based on a user's insider risk level.
+You've successfully enabled Adaptive Protection. Enforcement actions will now adjust automatically based on a user's insider risk level.

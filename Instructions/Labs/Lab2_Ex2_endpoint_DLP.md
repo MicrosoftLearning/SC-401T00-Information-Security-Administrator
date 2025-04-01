@@ -21,7 +21,7 @@ In this task, you'll onboard a Windows 11 device so it's ready to be protected b
 
 1. Log into **Client 2 VM (SC-401-CL2)** as the **SC-401-cl1\admin** account.
 
-1. Open Microsoft Edge, and navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**. sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. Open Microsoft Edge, and navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**. Sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
 1. Select **Settings** from the left sidebar.
 
@@ -31,7 +31,7 @@ In this task, you'll onboard a Windows 11 device so it's ready to be protected b
 
 1. In the **Downloads** dialog, hover over the download, then select the folder icon to **Show in folder**.
 
-1. Extract the zip-file to the **Desktop** of SC-401-CL1. You should see a script named **DeviceComplianceLocalOnboardingScript.cmd**.
+1. Extract the zip file to the **Desktop** of SC-401-CL1. You should see a script named **DeviceComplianceLocalOnboardingScript.cmd**.
 
 1. On the desktop right click the **DeviceComplianceLocalOnboardingScript.cmd** file you just extracted and select **Show more options**, then select **Properties**.
 
@@ -59,13 +59,13 @@ In this task, you'll onboard a Windows 11 device so it's ready to be protected b
 
 1. The Microsoft Purview window should still be open at the **Devices** page. Refresh this page and verify the device has been successfully onboarded.
 
-You've successfully onboarded the device and joined it to Microsoft Entra ID. The device is now eligible for protection by endpoint DLP policies.
+You've successfully onboarded the device and joined it to Microsoft Entra ID. It can now be protected by endpoint DLP policies.
 
 ## Task 2 – Create an endpoint DLP policy
 
 In this task, you'll create a DLP policy that blocks the transfer of sensitive information to USB drives. This helps reduce the risk of data being taken offsite without authorization.
 
-1. Log on to Client 1 VM (SC-401-CL1) as the SC-401-cl1\admin account.
+1. Sing in to Client 1 VM (SC-401-CL1) as the SC-401-cl1\admin account.
 
 1. You should still be at the **Devices** page in the Microsoft Purview portal, logged in as Joni Sherman.
 
@@ -82,7 +82,7 @@ In this task, you'll create a DLP policy that blocks the transfer of sensitive i
 
 1. On the **Assign admin units** page, select **Next**.
 
-1. On the **Choose locations to apply the policy** page, select only the **Devices** location. If any other location is selected, ensure they're deselected, then select **Next**.
+1. On the **Choose locations to apply the policy** page, ensure only the **Devices** location is selected. If any other location is selected, ensure they're deselected, then select **Next**.
 
 1. On the **Define policy settings** page, select **Create or customize advanced DLP rules** then select **Next**.
 
@@ -147,13 +147,13 @@ In this task, you'll fine-tune endpoint DLP settings by excluding a local folder
 
 1. On the **Add unallowed browsers** flyout page select the checkbox for **Google Chrome** and select **Save**.
 
-1. Back on the **Endpoint DLP settings** page, select the dropdown to for **Service domains** and change it from **Off** to **Block**.
+1. Back on the **Endpoint DLP settings** page, select the dropdown for **Service domains** and change it from **Off** to **Block**.
 
 1. In the **Update cloud app mode** dialogue select **Yes** to activate the block mode.
 
 1. Under **Service domains** select **+ Add cloud service domain**.
 
-1. On the **Add cloud service domain** flyout page in the **Domain** field enter `dropbox.com` then select the **+** to the right. Select **Save** to save this setting.
+1. On the **Add cloud service domain** flyout page in the **Domain** field enter `dropbox.com` then select the **+** (plus) icon to add the path. Select **Save** to save this setting.
 
 You've applied custom endpoint DLP settings that refine the behavior of your policy, including exclusions, browser restrictions, and blocking access to specific domains.
 
@@ -169,7 +169,7 @@ In this task, you'll install the Microsoft Purview Extension in Google Chrome to
 
 1. Select **Yes** in the **User Account Control** dialog to install the Chrome browser.
 
-1. When the installation is finished, select **Don't sign in** on the **Sign in to Chrome** page.
+1. When the installation is finished, on the **Sign in to Chrome** screen, select **No thanks** or **Don't sign in**.
 
 1. Select **Skip** on the **Set your default browser** page.
 
@@ -177,7 +177,7 @@ In this task, you'll install the Microsoft Purview Extension in Google Chrome to
 
    `https://chrome.google.com/webstore/detail/microsoft-purview-extensi/echcggldkblhodogklpincgchnpgcdco`
 
-1. Verify you are on the extension page of **Microsoft Purview Extension** and select **Add to Chrome**.
+1. Confirm you're on the correct extension page, then select **Add to Chrome**.
 
 1. On the **Add "Microsoft Purview Extension"?** window, select **Add extension**.
 
@@ -187,4 +187,4 @@ In this task, you'll install the Microsoft Purview Extension in Google Chrome to
 
 1. Close the Chrome browser window.
 
-You've installed Chrome and added the Microsoft Purview Extension. DLP policy enforcement is now supported in both Edge and Chrome on this device
+You've successfully installed Chrome and added the Microsoft Purview Extension. The device now supports DLP policy enforcement in both Edge and Chrome.
