@@ -113,4 +113,3 @@ To test your retention configuration, you'll apply a retention label to a docume
      ![Screenshot showing sensitivity label and retention label applied in SharePoint.](../Media/sharepoint-choose-labels.png)
 
 You've confirmed that retention and sensitivity labels are available and can be applied to SharePoint documents.
-
