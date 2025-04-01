@@ -168,6 +168,7 @@ You will now publish the Internal and HR sensitivity label so that the published
 1. On the **Name your policy** page, enter:
 
    - **Name**: `Internal HR employee data`
+
    - **Enter a description for your sensitivity label policy**: `This HR label is to be applied to internal HR employee data.`
 
 1. Select **Next**.
@@ -293,12 +294,19 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
 1. Configure the encryption settings with these options:
 
    - **Assign permissions now or let users decide?**: Assign permissions now
+
    - **User access to content expires**: A number of days after label is applied
+
    - **Access expires this many days after the label is applied**: 5
+
    - **Allow offline access**: Only for a number of days
+
    - **Users have offline access to the content for this many days**: Never
+
    - Select the **Assign permissions** link. On the **Assign permissions** flyout panel, select the **+ Add users or groups**.
+
    - On the **Add users or groups** flyout page, search for and select `Legal Team` and `Joni Sherman`, and select **Add**.
+
    - On the **Assign permissions** page, select **Save**.
 
 1. Back on the **Access control** page, select the checkbox for **Use dynamic watermarking**, then select **Customize text (optional)**.
@@ -342,6 +350,7 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
 1. On the **Name your policy** page, enter:
 
    - **Name**: `Highly Confidential - Legal`
+
    - **Description**: `Enables manual use of the DKE label for highly confidential content accessible by Legal.`
 
 1. Select **Next**.
@@ -393,19 +402,29 @@ Now that label scanning is enabled, you'll create a file policy that applies a g
 1. On the **Create file policy** page, configure:
 
    - **Policy name**: `Auto-label externally shared files`
+
    - **Policy severity**: **Low**
+
    - **Category**: **DLP**
+
    - In the **Files matching all of the following section**:
+
       - For the first filter, configure the dropdowns to: **Access level equals external**
+
       - For the second filter, configure the dropdowns to: **Last modified after (date)** and use today's date
 
           ![Screenshot showing the filter settings in Defender.](../Media/configure-file-policy-filter.png)
 
    - Under **Governance actions**, expand **Microsoft OneDrive for Business**:
+
       - Select the checkbox for **Apply sensitivity label**
+
       - In the dropdown select **General-Anyone (unrestricted)**
+
    - Repeat the same process for **Microsoft SharePoint Online**
+
       - Select the checkbox for **Apply sensitivity label**
+
       - Select **General-Anyone (unrestricted)** from the dropdown
 
 1. Select **Create** to finish creating the file policy.
