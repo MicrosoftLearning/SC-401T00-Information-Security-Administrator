@@ -55,7 +55,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
     Connect-ExchangeOnline
     ```
 
-1. When the **Sign in** window is displayed, sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
+1. When the **Sign in** window is displayed, sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
 1. To check if Audit is enabled, run the **Get-AdminAuditLogConfig** cmdlet:
 
