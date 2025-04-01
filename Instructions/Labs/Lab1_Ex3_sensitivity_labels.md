@@ -393,7 +393,7 @@ You've enabled Defender for Cloud Apps to recognize and scan files for sensitivi
 
 Now that label scanning is enabled, you'll create a file policy that applies a general sensitivity label to any new files that are shared outside your organization.
 
-1. In [Microsoft Defender](https://security.microsoft.com), navigate to **Cloud apps** > **Policies** > **Policy management**.
+1. In **Microsoft Defender**, navigate to **Cloud apps** > **Policies** > **Policy management**.
 
 1. Select the **Information protection** tab, then select **Create policy** > **File policy**.
 
