@@ -13,7 +13,6 @@ Joni Sherman, a Information Security Administrator at Contoso Ltd., is rolling o
 1. Enable support for sensitivity labels
 1. Create sensitivity labels
 1. Publish sensitivity labels
-1. Apply sensitivity labels
 1. Configure auto labeling
 1. Create and publish a DKE label for highly confidential content
 1. Enable Microsoft Purview integration in Defender for Cloud Apps
