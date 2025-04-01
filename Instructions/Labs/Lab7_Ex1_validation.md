@@ -34,7 +34,7 @@ In this task, you'll verify that published sensitivity labels are available to u
 
 1. Select **Blank document**.
 
-1. If prompted, close the **Your privacy options** dialog..
+1. If prompted, close the **Your privacy options** dialog.
 
 1. Enter the following text into the document:
 
@@ -46,7 +46,7 @@ In this task, you'll verify that published sensitivity labels are available to u
 
     > [!Note] It can take 24-48 hours for newly published sensitivity labels to be available for application. If the newly created sensitivity labels aren't available, you can use **Confidential** > **All Employees** for this exercise.
 
-1. Change the sensitivity label to **Public** to verify the business justification dialogue appears.
+1. Change the sensitivity label to **Public** to verify the business justification dialog appears.
 
 1. Select **Cancel** to keep the sensitivity label.
 
@@ -102,11 +102,11 @@ To test your retention configuration, you'll apply a retention label to a docume
 
 1. Select **Documents** from the left pane.
 
-1. On the **Documents** page, select the ellipses next to **Profit-sharing Plan.docx**, then select **Details**.
+1. On the **Documents** page, select the ellipsis next to **Profit-sharing Plan.docx**, then select **Details**.
 
    ![Screenshot showing where to select document details in SharePoint.](../Media/sharepoint-details.png)
 
-1. In the **Details** panel under, select:
+1. In the **Details** panel, update the following fields:
    - **Sensitivity**: Confidential - Finance
    - **Apply label**: Sensitive Financial Records
 
