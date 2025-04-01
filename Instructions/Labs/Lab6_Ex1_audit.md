@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 1 - Search the Audit log'
-    module: 'Module 6 - Audit and search activity in Microsoft purview'
+    module: 'Module 6 - Audit and search activity in Microsoft Purview'
 ---
 
 ## WWL Tenants - Terms of use
