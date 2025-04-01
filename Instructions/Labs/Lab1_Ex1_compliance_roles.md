@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 1 - Manage Compliance Roles'
+    title: 'Exercise 1 - Manage compliance and security roles'
     module: 'Module 1 - Implement Information Protection'
 ---
 ## WWL Tenants - Terms of use
@@ -13,7 +13,7 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 # Lab 1 - Exercise 1 - Manage compliance and security roles
 
-As the recently hired Information Security Administrator for Contoso Ltd., you (Joni Sherman) need to ensure the new Microsoft 365 tenant complies with various legal and regulatory standards. Contoso Ltd. is expanding, and your role is crucial in maintaining compliance across different regions.
+As the recently hired Information Security Administrator for Contoso Ltd., you (Joni Sherman) need to ensure the new Microsoft 365 tenant complies with various legal and regulatory standards. Contoso Ltd. is expanding, and your role is crucial to maintaining compliance across its regions.
 
 **Tasks**:
 
@@ -32,13 +32,13 @@ In this task, you'll assign the Compliance Admin role to Joni Sherman.
 
 1. On the **Active users** page, search for `Joni`, then select **Joni Sherman**.
 
-1. The properties for Joni's account is displayed in a right, flyout panel. Select **Manage roles** on the flyout panel.
+1. The properties for Joni's account are displayed in a flyout panel on the right. Select **Manage roles** on the flyout panel.
 
-1. On the **Manage admin roles** panel, select the option for **Admin center access**, then scroll down to expand **Show all by category**.
+1. On the **Manage admin roles** panel, select **Admin center access**, then scroll down to expand **Show all by category**.
 
 1. Under the **Security & Compliance** category, select the checkbox for **Compliance Administrator** and **Security Administrator**, then select **Save changes** at the bottom of the flyout panel.
 
-1. You should receive a message stating **Admin roles updated**.
+1. You should see a message: **Admin roles updated**.
 
 1. On the **Manage admin roles** page, select the **X** on the top right corner of the flyout panel to close the panel.
 
@@ -46,7 +46,7 @@ In this task, you'll assign the Compliance Admin role to Joni Sherman.
 
    ![Screenshot showing the navigation path to sign out of the MOD Administrator account.](../Media/sign-out.png)
 
-You have successfully assigned Joni Sherman the Compliance and Security Administrator roles, which is required to perform the different exercises of this lab.
+You have successfully assigned Joni Sherman the Compliance and Security Administrator roles, which is required to complete the tasks in this lab.
 
 ## Task 2 – Explore the Microsoft Purview portal
 
@@ -64,6 +64,6 @@ In this task, you'll sign in as Joni Sherman to explore the Microsoft Purview po
 
     ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/welcome-purview-portal.png)
 
-1. Get yourself familiar with the new Microsoft Purview Portal. When you are done, leave the browser window open.
+1. Get yourself familiar with the new Microsoft Purview portal. When you are done, leave the browser window open.
 
 You have successfully switched to Joni Sherman's account and are now ready to start the lab.

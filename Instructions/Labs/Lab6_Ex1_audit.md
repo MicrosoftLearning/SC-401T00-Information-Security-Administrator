@@ -24,7 +24,7 @@ You're Joni Sherman, an Information Security Administrator at Contoso Ltd. As pa
 
 ## Task 1 – Search for DLP-related activity
 
-In this task, you'll use the Microsoft Purview Audit solution to search for recent audit events related to DLP policy and rule changes.
+In this task, you'll use the Microsoft Purview Audit solution to search for recent audit events related to DLP policy and rules.
 
 1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
@@ -37,7 +37,7 @@ In this task, you'll use the Microsoft Purview Audit solution to search for rece
      - **Start date**: 3 days ago
      - **End date**: Today
 
-   - **Activities – friendly names**: Search for `DLP` and select the following activities under **Information protection and DLP activities**:
+   - **Activities - friendly names**: Search for `DLP` and select the following activities under **Information protection and DLP activities**:
 
      - Created DLP rule
      - Updated DLP rule
@@ -56,7 +56,7 @@ In this task, you'll use the Microsoft Purview Audit solution to search for rece
 
 1. Once complete, select **DLP Policy Activity** to view the results.
 
-1. Select individual results to view detailed information about each DLP activity..
+1. Select individual results to view detailed information about each DLP activity.
 
 You've searched for and reviewed audit activity related to DLP policy and rule configuration.
 
@@ -72,9 +72,9 @@ In this task, you'll export the DLP audit search results for offline analysis or
 
 1. In the confirmation dialog, select **OK** to start the export.
 
-1. When the export completes, select the **Download file** link in the green **Your export is complete**. banner.
+1. When the export completes, select the **Download file** link in the green **Your export is complete** banner.
 
- > [!Note] Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review and filtering, many organizations use Excel or another spreadsheet tool. In this lab environment, you can open the CSV in Notepad to confirm that the export completed successfully.
+ > [!Note] Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review, use Excel or another spreadsheet tool. In this lab environment, you can open the CSV in Notepad to confirm that the export completed successfully.
 
 You've exported DLP-related audit logs, which can be used for offline review or recordkeeping.
 

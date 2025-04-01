@@ -69,7 +69,7 @@ In this task, you'll publish the retention label so users can apply it in Micros
 
 1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Retention labels**.
 
-1. Select the checkbox next to the **Sensitive Financial Records** label, then select the **Publish labels** button (![Publish labels icon](../Media/publish-labels-icon.png)) to publish this retention label.
+1. Select the checkbox next to the **Sensitive Financial Records** label, then select the **Publish labels** icon (![Publish labels icon](../Media/publish-labels-icon.png)) to publish this retention label.
 
 1. On the **Choose labels to publish** page, verify the **Sensitive Financial Records** label is selected, then select **Next**.
 
@@ -249,7 +249,7 @@ In this task, you'll use the adaptive scope you created to configure a retention
 
 1. Back on the **Choose locations to apply the policy** enable:
 
-    - Microsoft 365 Group mailboxes & sties
+    - Microsoft 365 Group mailboxes & sites
     - Leave all other locations disabled.
 
 1. Select **Next**.
@@ -265,9 +265,7 @@ In this task, you'll use the adaptive scope you created to configure a retention
 
 1. On the **Review and finish** page select **Submit**.
 
-1. Once your policy is created, select the **Done** button.
-
-1. On the **You successfully created a retention policy** page, select **Done**.
+1. Select **Done** once the policy is created.
 
 You've created a retention policy that applies to content owned by privileged groups, retaining it for five years before deletion.
 
@@ -279,7 +277,7 @@ In this task, you'll simulate restoring a deleted document from a SharePoint sit
 
 1. In **Microsoft Edge**, navigate to **`https://www.office.com`** and log in Microsoft 365 as **Joni Sherman**.
 
-1. In the Microsoft Office 365 landing page, select the meatball menu in the top-left corner, then select **SharePoint** from the sub-menu.
+1. In the Microsoft Office 365 landing page, select the App launcher (the grid icon) in the top-left corner, then select **SharePoint** from the sub-menu.
 
    ![Screenshot showing where there ellipses is to display the action menu.](../Media/show-more-actions-sharepoint.png)
 
