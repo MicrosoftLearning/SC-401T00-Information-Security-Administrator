@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Lab Setup - Prepare your environment for administration'
-    module: 'Module 0 - Lab setup'
+    title: 'Lab setup - Prepare your environment for administration'
+    module: 'Lab setup'
 ---
 
 ## WWL Tenants - Terms of use
@@ -12,7 +12,7 @@ Tenants should not be shared or used for purposes outside of hands-on labs. The 
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
-# Lab Setup: Prepare your environment for administration
+# Lab setup - Prepare your environment for administration
 
 In this lab, you'll configure and prepare your environment for administration tasks. You'll activate necessary features, set up administrative permissions, and ensure proper configuration of key elements.
 
