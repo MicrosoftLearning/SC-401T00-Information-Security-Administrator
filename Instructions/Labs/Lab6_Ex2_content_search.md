@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 1 - Perform a content search'
+    title: 'Exercise 2 - Perform a content search'
     module: 'Module 6 - Audit and search activity in Microsoft Purview'
 ---
 
