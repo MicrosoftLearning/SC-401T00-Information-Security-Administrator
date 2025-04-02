@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Exercise 1 - Configure Retention Policies'
-    module: 'Module 6 - Implement and manage retention'
+    title: 'Exercise 1 - Configure retention policies'
+    module: 'Module 5 - Implement and manage retention'
 ---
 
 ## WWL Tenants - Terms of use
