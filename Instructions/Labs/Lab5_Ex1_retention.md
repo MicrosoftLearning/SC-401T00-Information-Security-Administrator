@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 1 - Configure Retention Policies'
+    title: 'Exercise 1 - Configure retention policies'
     module: 'Module 6 - Implement and manage retention'
 ---
 
