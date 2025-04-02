@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 1 - Validate sensitivity, DLP, and retention policies'
+    title: 'Validate sensitivity, DLP, and retention policies'
     module: 'Policy validation - Validate sensitivity, DLP, and retention policies'
 ---
 
