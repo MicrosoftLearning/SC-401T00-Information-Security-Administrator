@@ -18,8 +18,10 @@ In this lab, you'll configure and prepare your environment for administration ta
 
 **Tasks:**
 
-1. Set user passwords for lab exercises
 1. Enable Audit in the Microsoft Purview portal
+1. Set user passwords for lab exercises
+1. Enable device onboarding
+1. Enable insider risk analytics
 
 ## Task 1 - Enable Audit in the Microsoft Purview portal
 
