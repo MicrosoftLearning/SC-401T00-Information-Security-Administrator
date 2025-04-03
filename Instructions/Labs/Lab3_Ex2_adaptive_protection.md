@@ -27,7 +27,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 1. On the **Insider risk levels** page:
 
-   - In the Insider risk policy dropdown, select **Data leaks quick policy** you created in a previous exercise.
+   - In the Insider risk policy dropdown, select the **Data leaks quick policy** you created in a previous exercise.
    - Leave the default risk level settings unchanged.
    - Select **Save**.
 
