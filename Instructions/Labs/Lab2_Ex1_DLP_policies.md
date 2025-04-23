@@ -22,7 +22,7 @@ Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd.
 1. Create a DLP policy in PowerShell
 1. Activate a policy in simulation mode
 1. Modify policy priority
-1. Enable file monitoring in Microsoft 365 Defender
+1. Enable file inspection in Microsoft 365 Defender
 1. Create a file policy for Microsoft 365 Defender
 
 ## Task 1 – Create a DLP policy in simulation mode
@@ -206,9 +206,9 @@ When multiple policies exist, their priority determines which one applies first.
 
 You've updated policy priority so that the employee ID policy takes precedence over others.
 
-## Task 6 – Enable file monitoring in Microsoft 365 Defender
+## Task 6 – Enable file inspection in Microsoft 365 Defender
 
-Before you can use file policies in Microsoft Defender, file monitoring must be enabled. In this task, you'll grant the necessary permissions to allow scanning of OneDrive and SharePoint content.
+Some file policies require access to inspect the contents of protected files. In this task, you'll grant the necessary permissions to allow Microsoft Defender to scan the contents of OneDrive and SharePoint files for sensitive information.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and signed in as Joni Sherman.
 
@@ -222,7 +222,7 @@ Before you can use file policies in Microsoft Defender, file monitoring must be 
 
 1. Sign out of the MOD Administrator account by selecting the **MA** icon in the top right, select **Sign out**, then close your browser window.
 
-File monitoring is now enabled in Defender, allowing file policies to scan for sensitive content.
+File inspection is now enabled in Defender, allowing file policies to scan for sensitive content.
 
 ## Task 7 – Create a file policy for Microsoft 365 Defender
 

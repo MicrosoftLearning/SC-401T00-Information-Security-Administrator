@@ -201,7 +201,7 @@ In this task, you'll define an adaptive scope that targets Microsoft 365 groups 
 
 1. On the **Assign admin unit** page select **Next**.
 
-1. On the **What type of scope do you want to create?** page select **Microsoft 365**, then select **Next**.
+1. On the **What type of scope do you want to create?** page select **Users**, then select **Next**.
 
 1. On the **Create the query to define users** page, in the **User attributes** section, ensure these values are selected for the user attribute configuration:
 

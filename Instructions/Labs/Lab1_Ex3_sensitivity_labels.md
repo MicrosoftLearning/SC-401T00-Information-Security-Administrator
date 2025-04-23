@@ -285,7 +285,7 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Items**, then select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. On the **Define the scope for this label** page, select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
 
 1. On the **Choose protection settings for the types of items you selected** page, select **Control access**, then select **Next**.
 
@@ -299,9 +299,7 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
 
    - **Access expires this many days after the label is applied**: 5
 
-   - **Allow offline access**: Only for a number of days
-
-   - **Users have offline access to the content for this many days**: Never
+   - **Allow offline access**: Never
 
    - Select the **Assign permissions** link. On the **Assign permissions** flyout panel, select the **+ Add users or groups**.
 
@@ -369,9 +367,9 @@ In this task, you'll enable Microsoft Purview integration in Microsoft Defender 
 
 1. Open **Microsoft Edge**, then go to **Microsoft Defender** by navigating to `https://security.microsoft.com`.
 
-1. In the left navigation, select **System** > **Settings**, then select **Cloud Apps**.
+1. In the left navigation, select **Settings**, then select **Cloud Apps**.
 
-1. On the left pane in the Cloud Apps setting, select **Microsoft Information Protection** under **Information Protection**.
+1. Under the **Information Protection** section in the left pane, select **Microsoft Information Protection**.
 
 1. On the **Microsoft Information Protection** page, select both checkboxes available on the page.
 

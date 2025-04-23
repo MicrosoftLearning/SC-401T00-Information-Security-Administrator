@@ -137,7 +137,7 @@ In this task, you'll enable device onboarding for your organization.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`**, then select **Settings** from the left sidebar.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** to log into Microsoft Purview, then select **Settings** from the left sidebar.
 
 1. In the left sidebar, expand **Device onboarding** then select **Devices**.
 
@@ -158,3 +158,19 @@ In this task, you'll enable analytics for Insider Risk Management.
 1. Toggle **Analytics** to **On** then select **Save**.
 
 You have enabled analytics for Insider Risk Management.
+
+## Task 5 – Initialize Microsoft Defender XDR
+
+In this task, you'll open Microsoft Defender and wait for Microsoft Defender XDR to finish initializing.
+
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
+
+1. In **Microsoft Edge**, navigate to **`https://security.microsoft.com/`** to open Microsoft Defender.
+
+1. From the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents**.
+
+1. You'll see a message stating that Microsoft Defender XDR is being prepared. This process runs automatically and might take a few minutes.
+
+   ![Screenshot showing Microsoft Defender XDR being onboarded.](../Media/enable-defender-xdr.png)
+
+Microsoft Defender XDR is being initialized. You can continue with other tasks while it finishes setting up.
