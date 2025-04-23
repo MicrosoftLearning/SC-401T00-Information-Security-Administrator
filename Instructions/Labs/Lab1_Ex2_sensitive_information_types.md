@@ -90,7 +90,7 @@ You've received reports that some documents containing employee IDs aren't being
 
 1. In Microsoft Edge, navigate to `https://purview.microsoft.com`.
 
-1. In the left navigation, select **Solutions** > **Information protection** > **Sensitive info types**.
+1. In the left navigation, select **Solutions** > **Information protection** > **Classifiers** > **Sensitive info types**.
 
 1. Search for `Contoso Employee IDs` in the list and select the SIT name to open the details page.
 
