@@ -153,7 +153,7 @@ In this task, you'll enable integration between Microsoft Defender for Endpoint 
 
 1. In the left navigation pane, select **Settings** > **Endpoints** > **Advanced features**.
 
-1. Scroll down and select the toggle to **On** to **Share endpoints with Microsoft Compliance Center**.
+1. Scroll down and select the toggle to **On** to **Share endpoint alerts with Microsoft Compliance Center**.
 
    ![Screenshot showing the Share endpoints with Microsoft Compliance Center toggle.](../Media/enable-irm-in-mde.png)
 
