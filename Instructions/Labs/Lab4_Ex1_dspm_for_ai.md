@@ -152,9 +152,9 @@ You've created a DLP policy that prevents labeled content from being used in Cop
 
 To understand potential gaps in labeling coverage, you'll run a data risk assessment to identify files without sensitivity labels that may be accessed by Copilot.
 
-1. In **DSPM for AI**, select the recommendation titled **Protect sensitive data referenced in Copilot responses**.
+1. In **DSPM for AI**, select the recommendation titled **Protect sensitive data referenced in Copilot responses and agent responses**.
 
-1. In the **Protect sensitive data referenced in Copilot responses** pane, review the summary, then select **Go to assessments**.
+1. In the **Protect sensitive data referenced in Copilot responses  and agent responses** pane, review the summary, then select **Go to assessments**.
 
 1. On the **Data risk assessments** page, select **Create custom assessment**
 
