@@ -165,7 +165,7 @@ In this task, you'll create a static retention policy for Microsoft Teams conten
 1. On the **Choose locations to apply the policy** page, enable:
 
    - Teams channel messages
-   - Teams chats and Copilot interactions
+   - Teams chats
    - Leave all other locations disabled.
 
 1. Select **Next**.
