@@ -108,7 +108,7 @@ You can further reduce risk by preventing Copilot from processing or responding 
 
 1. In Microsoft Purview, navigate to **DSPM for AI** by selecting **Solutions** > **DSPM for AI** > **Recommendations**.
 
-1. Select the **Protect sensitive data referenced in Microsoft 365 Copilot (preview)** recommendation.
+1. Select the **Protect sensitive data referenced in Copilot and agent responses** recommendation.
 
 1. Review the guidance provided in this recommendation.
 
@@ -144,19 +144,19 @@ You can further reduce risk by preventing Copilot from processing or responding 
 
 1. Return to **DSPM for AI recommendations** by selecting **Solutions** > **DSPM for AI** > **Recommendations**.
 
-1. Select the **Protect sensitive data referenced in Microsoft 365 Copilot (preview)** recommendation and select **Mark as complete**.
+1. Select the **Protect sensitive data referenced in Copilot and agent responses** recommendation and select **Mark as complete**.
 
 You've created a DLP policy that prevents labeled content from being used in Copilot prompts and responses.
 
-## Task 4 – Run a data assessment to detect unlabeled content
+## Task 4 – Run a data risk assessment to detect unlabeled content
 
-To understand potential gaps in labeling coverage, you'll run a data assessment to identify files without sensitivity labels that may be accessed by Copilot.
+To understand potential gaps in labeling coverage, you'll run a data risk assessment to identify files without sensitivity labels that may be accessed by Copilot.
 
-1. In **DSPM for AI**, select the recommendation titled **Protect sensitive data referenced in Copilot responses**.
+1. In **DSPM for AI**, select the recommendation titled **Protect sensitive data referenced in Copilot responses and agent responses**.
 
-1. In the **Protect sensitive data referenced in Copilot responses** pane, review the summary, then select **Go to assessments**.
+1. In the **Protect sensitive data referenced in Copilot responses  and agent responses** pane, review the summary, then select **Go to assessments**.
 
-1. On the **Data assessments (preview)** page, select **Create assessment (preview)**
+1. On the **Data risk assessments** page, select **Create custom assessment**
 
 1. On the **Basic details** page, enter:
 
@@ -173,4 +173,4 @@ To understand potential gaps in labeling coverage, you'll run a data assessment 
 
 1. On the **Data assessment successfully created** page, select **Done**.
 
-You’ve now used Microsoft Purview DSPM for AI to detect AI-related risks, enforce policies, and assess sensitive data exposure, helping your organization use AI securely.
+You've now used Microsoft Purview DSPM for AI to detect AI-related risks, enforce policies, and assess sensitive data exposure, helping your organization use AI securely.
