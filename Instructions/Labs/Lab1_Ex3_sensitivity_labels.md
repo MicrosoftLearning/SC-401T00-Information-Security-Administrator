@@ -423,7 +423,7 @@ Now that label scanning is enabled, you'll create a file policy that applies a g
 
       - Select the checkbox for **Apply sensitivity label**
 
-      - Select **General-Anyone (unrestricted)** from the dropdown
+      - Select **Highly Confidential-Project Falcon** from the dropdown
 
 1. Select **Create** to finish creating the file policy.
 
