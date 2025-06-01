@@ -60,7 +60,7 @@ In this task, you'll create a parent sensitivity label for internal content. Thi
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Items**, then select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. On the **Define the scope for this label** page, select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
 
 1. Select **Next**.
 
@@ -93,7 +93,7 @@ Now that you have a base label, you'll create a sublabel for HR-related document
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Items**, then select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. On the **Define the scope for this label** page, select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
 
 1. Select **Next**.
 
