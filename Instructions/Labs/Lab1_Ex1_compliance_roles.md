@@ -62,8 +62,6 @@ In this task, you'll sign in as Joni Sherman to explore the Microsoft Purview po
 
 1. A message about the new Microsoft Purview portal will appear on the screen. Select **Get started** to access the new portal.
 
-    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/welcome-purview-portal.png)
-
 1. Get yourself familiar with the new Microsoft Purview portal. When you are done, leave the browser window open.
 
 You have successfully switched to Joni Sherman's account and are now ready to start the lab.
