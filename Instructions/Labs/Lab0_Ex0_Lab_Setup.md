@@ -27,7 +27,23 @@ In this lab, you'll configure and prepare your environment for administration ta
 
 In this task, you'll enable Audit in the Microsoft Purview portal to monitor portal activities.
 
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged into Microsoft 365 with the MOD Administrator account.
+1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged into Microsoft 365 with the MOD Administrator account.
+
+1. In Microsoft Edge, navigate to the Microsoft Purview portal, `https://purview.microsoft.com`, and log in.
+
+1. A message about the new Microsoft Purview portal will appear on the screen. Select **Get started** to access the new portal.
+
+    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/welcome-purview-portal.png)
+
+1. Select **Solutions** from the left sidebar, then select **Audit**.
+
+1. On the **Search** page, select the **Start recording user and admin activity** bar to enable audit logging.
+
+    ![Screenshot showing the Start recording user and admin activity button.](../Media/enable-audit-button.png)
+
+1. Once you select this option, the blue bar should disappear from this page.
+
+<!----- PowerShell instructions
 
 1. Open an elevated Terminal window by selecting the Windows button with the right mouse button and then select **Terminal (Admin)**.
 
@@ -81,23 +97,9 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 1. _UnifiedAuditLogIngestionEnabled_ should return _true_ to let you know Audit is enabled.
 
-<!---
-
-1. In Microsoft Edge, navigate to the Microsoft Purview portal, `https://purview.microsoft.com`, and log in.
-
-1. A message about the new Microsoft Purview portal will appear on the screen. Select the option to agree with the terms of data flow disclosure and the privacy statement, then select **Try now**.
-
-    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/welcome-purview-portal.png)
-
-1. Select **Solutions** from the left sidebar, then select **Audit**.
-
-1. On the **Search** page, select the **Start recording user and admin activity** bar to enable audit logging.
-
-    ![Screenshot showing the Start recording user and admin activity button.](../Media/enable-audit-button.png)
-
-1. Once you select this option, the blue bar should disappear from this page.
-
 -->
+
+You have successfully enabled auditing in Microsoft 365.
 
 ## Task 2 - Set user passwords for lab exercises
 
@@ -147,17 +149,29 @@ In this task, you'll enable device onboarding for your organization.
 
 You have now enabled device onboarding and can start to onboard devices to be protected with Endpoint DLP policies. The process of enabling the feature might take up to 30 minutes.
 
-## Task 4 – Enable insider risk analytics
+## Task 4 – Enable insider risk analytics and data sharing
 
-In this task, you'll enable analytics for Insider Risk Management.
+In this task, you'll enable analytics and data sharing for Insider Risk Management.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
 
 1. In Microsoft Purview, navigate to **Settings** > **Insider Risk Management** > **Analytics**.
 
-1. Toggle **Analytics** to **On** then select **Save**.
+1. Toggle these settings to **On**:
 
-You have enabled analytics for Insider Risk Management.
+   - **Show insights at tenant level**
+
+   - **Show insights at user level**
+
+1. Select **Save** at the bottom of the page.
+
+1. Select **Data sharing** on the left navigation pane.
+
+1. In the Data sharing section, toggle **Share user risk details with other security solutions** to **On**.
+
+1. Select **Save** at the bottom of the page.
+
+You have enabled analytics and data sharing for Insider Risk Management.
 
 ## Task 5 – Initialize Microsoft Defender XDR
 
