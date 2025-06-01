@@ -163,7 +163,7 @@ You will now publish the Internal and HR sensitivity label so that the published
 
 1. On the **Default settings for meetings and calendar events** select **Next**.
 
-1. On the **Default settings for Power BI Content** select **Next**.
+1. On the **Default settings for Fabric and Power BI Content** page, select **Next**.
 
 1. On the **Name your policy** page, enter:
 
@@ -202,7 +202,7 @@ In this task, you'll create a sensitivity label for financial data and configure
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Items**, then select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. On the **Define the scope for this label** page, select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
 
 1. Select **Next**.
 
@@ -262,9 +262,9 @@ In this task, you'll create a sensitivity label for financial data and configure
 
 You have successfully created a sensitivity label for financial data and configured an auto-labeling policy to detect and label content that contains sensitive financial information.
 
-## Task 6 – Create and publish a DKE label for highly confidential content
+## Task 6 – Create and publish a DKE label for confidential content
 
-In this task, you'll create a sublabel under the built-in Highly Confidential label. This sublabel will use Double Key Encryption (DKE) and dynamic watermarking to protect sensitive content accessed only by Legal. You'll also configure a label policy that requires justification for downgrading the label.
+In this task, you'll create a sublabel under the Internal label. This sublabel will use Double Key Encryption (DKE) and dynamic watermarking to protect sensitive content accessed only by Legal. You'll also configure a label policy that requires justification for downgrading the label.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
@@ -272,7 +272,7 @@ In this task, you'll create a sublabel under the built-in Highly Confidential la
 
 1. In the Microsoft Purview portal, select **Solutions** > **Information protection** > **Sensitivity labels**.
 
-1. On the **Sensitivity labels** page, find the **Highly Confidential** sensitivity label. Select the vertical ellipsis (**...**), then select **+ Create sublabel** from the dropdown menu.
+1. On the **Sensitivity labels** page, find the **Internal** sensitivity label. Select the vertical ellipsis (**...**), then select **+ Create sublabel** from the dropdown menu.
 
 1. On the **Provide basic details for this label** page, enter:
 
