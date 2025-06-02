@@ -19,7 +19,7 @@ Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd.
 
 In this task, you'll onboard a Windows 11 device so it's ready to be protected by endpoint DLP policies.
 
-1. Log into **Client 2 VM (SC-401-CL2)** as the **SC-401-cl1\admin** account.
+1. Log into **Client 2 VM (SC-401-CL2)** as the **SC-401-cl2\admin** account.
 
 1. Open Microsoft Edge, and navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**. Sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
@@ -65,7 +65,7 @@ You've successfully onboarded the device and joined it to Microsoft Entra ID. It
 
 In this task, you'll create a DLP policy that blocks the transfer of sensitive information to USB drives. This helps reduce the risk of data being taken offsite without authorization.
 
-1. Sing in to Client 1 VM (SC-401-CL1) as the SC-401-cl1\admin account.
+1. Sign in to Client 1 VM (SC-401-CL1) as the SC-401-cl1\admin account.
 
 1. You should still be at the **Devices** page in the Microsoft Purview portal, logged in as Joni Sherman.
 
