@@ -24,6 +24,14 @@ In this task, you'll verify the correct Azure RMS functionality of your tenant.
 
 1. Open PowerShell by right-clicking the Start button in the taskbar and selecting **Terminal**.
 
+1. Run the **Install Module** cmdlet in the terminal window to install the latest **Exchange Online PowerShell** module version:
+
+    ```powershell
+    Install-Module ExchangeOnlineManagement
+    ```
+
+1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
+
 1. Run the **Connect-ExchangeOnline** cmdlet to use the Exchange Online PowerShell module and connect to your tenant:
 
     ```powershell
