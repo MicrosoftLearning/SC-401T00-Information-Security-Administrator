@@ -102,6 +102,8 @@ You've successfully disabled social identity providers, helping ensure that encr
 
 You must confirm that no social IDs dialog is displayed for external recipients when receiving a message protected with Office 365 Message Encryption from users of your tenant and they need to use the OTP at any time accessing the encrypted content.
 
+> [!alert] External email delivery mig ht be blocked in some lab environments. This task might not complete as expected.
+
 1. You should still be logged into your Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin**.
 
 1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
@@ -195,6 +197,8 @@ You've configured a transport rule that ensures emails from the finance departme
 ## Task 5 – Validate custom branding behavior
 
 To validate the new custom configuration, you need to use the account of Lynne Robbins again, who is a member of the finance team.
+
+> [!alert] External email restrictions might prevent this message from being received. Branding might not appear as expected.
 
 1. Go back to **Microsoft Edge**  with the InPrivate Outlook on the web window where you should still be logged in as **Lynne Robbins**.
 
