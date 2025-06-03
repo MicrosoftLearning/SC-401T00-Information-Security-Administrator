@@ -102,7 +102,7 @@ You've successfully disabled social identity providers, helping ensure that encr
 
 You must confirm that no social IDs dialog is displayed for external recipients when receiving a message protected with Office 365 Message Encryption from users of your tenant and they need to use the OTP at any time accessing the encrypted content.
 
-> [!alert] External email delivery mig ht be blocked in some lab environments. This task might not complete as expected.
+> [!alert] External email delivery might be blocked in some lab environments. This task might not complete as expected.
 
 1. You should still be logged into your Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin**.
 
