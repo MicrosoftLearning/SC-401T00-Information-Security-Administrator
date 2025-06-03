@@ -184,6 +184,7 @@ In this task, you'll create a static retention policy for Microsoft Teams conten
 
 You've configured a static retention policy that retains Teams messages for three years before automatically deleting them.
 
+<!------ Commenting out until tenant bug issues are resolved
 ## Task 5 – Create an adaptive scope
 
 In this task, you'll define an adaptive scope that targets Microsoft 365 groups associated with leadership and operations roles.
@@ -268,8 +269,9 @@ In this task, you'll use the adaptive scope you created to configure a retention
 1. Select **Done** once the policy is created.
 
 You've created a retention policy that applies to content owned by privileged groups, retaining it for five years before deletion.
+-->
 
-## Task 7 – Recover SharePoint content
+## Task 5 – Recover SharePoint content
 
 In this task, you'll simulate restoring a deleted document from a SharePoint site to validate your recovery options.
 
