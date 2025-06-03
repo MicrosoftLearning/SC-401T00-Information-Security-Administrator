@@ -298,5 +298,3 @@ In this task, you'll simulate restoring a deleted document from a SharePoint sit
 1. On the left sidebar, select **Documents** and notice the file has been restored.
 
 You have successfully recovered a deleted document from a SharePoint Site.
-
-You've restored deleted content from SharePoint, validating document recovery in case of accidental or unauthorized deletion.
