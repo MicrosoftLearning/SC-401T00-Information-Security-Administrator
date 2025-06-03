@@ -89,7 +89,7 @@ In this task, you'll publish the retention label so users can apply it in Micros
 1. On the **Name your policy** enter:
 
     - **Name**: `Sensitive Financial Data Retention`
-    - **Description**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, OneDrive, and Teams.`
+    - **Description**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, and OneDrive.`
 
 1. Select **Next**.
 
