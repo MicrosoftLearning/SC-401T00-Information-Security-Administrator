@@ -165,6 +165,8 @@ You've successfully enabled Defender for Endpoint to share alerts with Microsoft
 
 In this task, you'll configure the policy indicators and create a priority user group that can be used in insider risk policies.
 
+[!note] Microsoft Defender for Endpoint indicators might appear greyed out and unselectable if the integration from the previous task hasn't finished processing. If that happens, wait a few minutes and refresh the page before continuing.
+
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com`.
 
 1. Select **Settings** > **Insider risk management**.
