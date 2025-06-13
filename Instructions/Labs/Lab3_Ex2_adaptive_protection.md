@@ -68,11 +68,15 @@ To add another layer of enforcement, you can use insider risk levels to restrict
 
 1. Open a new Microsoft Edge window and navigate to the **Microsoft Entra admin center** at `https://entra.microsoft.com`. Sign in as the **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). The Admin password should be provided by your lab hosting provider.
 
-1. On the **More information required** page, select **Next**.
-
-1. On the **Keep your account secure** page, follow the prompts to set up multi-factor authentication (MFA) using either Microsoft Authenticator or another authentication app.
-
-   After completing MFA setup, you'll be taken to the **Microsoft Entra admin center**.
+> [!note] **Note**: In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
+> - Select **Postpone MFA** to temporarily delay MFA setup.
+>
+>   ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
+> - Select **Confirm postponement**.
+>
+> - Select **Continue sign-in without MFA** to access Microsoft Entra.
+>
+> This postpones MFA enforcement for the tenant and allows you to proceed with the lab.
 
 1. In the Microsoft Entra admin center, navigate to **Protection** > **Conditional Access** > **Policies**.
 

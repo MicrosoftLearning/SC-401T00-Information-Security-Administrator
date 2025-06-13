@@ -154,7 +154,9 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 > - Select **Postpone MFA** to temporarily delay MFA setup.
 >
 >   ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
-> - On the next screen, select **Confirm postponement** to allow access to the admin center.
+> - Select **Confirm postponement**.
+>
+> - Select **Continue sign-in without MFA** to access the admin center.
 >
 > This postpones MFA enforcement for the tenant and allows you to proceed with the lab.
 
