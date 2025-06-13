@@ -145,7 +145,7 @@ You can further reduce risk by preventing Copilot from processing or responding 
 
 1. Return to **DSPM for AI recommendations** by selecting **Solutions** > **DSPM for AI** > **Recommendations**.
 
-1. Select the **Protect sensitive data referenced in Copilot and agent responses** recommendation and select **Mark as complete**.
+1. Select the **Protect sensitive data referenced in Microsoft 365 Copilot and agents (preview)** recommendation and select **Mark as complete**.
 
 You've created a DLP policy that prevents labeled content from being used in Copilot prompts and responses.
 
@@ -153,9 +153,9 @@ You've created a DLP policy that prevents labeled content from being used in Cop
 
 To understand potential gaps in labeling coverage, you'll run a data risk assessment to identify files without sensitivity labels that may be accessed by Copilot.
 
-1. In **DSPM for AI**, select the recommendation titled **Protect sensitive data referenced in Copilot responses and agent responses**.
+1. In **DSPM for AI**, select the recommendation titled **Protect sensitive data referenced in Copilot and agent responses**.
 
-1. In the **Protect sensitive data referenced in Copilot responses and agent responses** pane, review the summary, then select **Go to assessments**.
+1. In the **Protect sensitive data referenced in Copilot and agent responses** pane, review the summary, then select **Go to assessments**.
 
 1. On the **Data risk assessments** page, select **Create custom assessment**
 
