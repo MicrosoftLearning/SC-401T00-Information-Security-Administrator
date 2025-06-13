@@ -109,6 +109,14 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
+> [!note] **Note**: In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
+> - Select **Postpone MFA** to temporarily delay MFA setup.
+>
+>   ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
+> - On the next screen, select **Confirm postponement** to allow access to the admin center.
+>
+> This postpones MFA enforcement for the tenant and allows you to proceed with the lab.
+
 1. On the left navigation pane, expand **Users** then select **Active users**.
 
 1. Select the checkbox to the left of **Joni Sherman**, **Lynne Robbins**, and **Megan Bowen**.
