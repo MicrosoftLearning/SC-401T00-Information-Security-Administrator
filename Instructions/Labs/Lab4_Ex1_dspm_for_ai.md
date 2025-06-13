@@ -55,7 +55,8 @@ To reduce the risk of data loss through AI assistants, you'll start by creating 
 
 1. Review the configuration of the rule created by DSPM for AI:
    - Under **Conditions**, note the sensitive info types included and that the rule uses **Adaptive Protection** based on elevated risk.
-   - Under **Actions**, confirm that **Service domain and browser activities** is set to **Block with override** for **Generative AI Websites**.
+   - Under **Actions**, for both the Upload and Paste activities, select **Edit** next to **Sensitive service domain group restriction(s)**.
+   - In the service domain group configuration, confirm that **Generative AI Websites** is set to **Block with override**.
 
 1. Select **Cancel** to exit the rule editor without changes.
 
