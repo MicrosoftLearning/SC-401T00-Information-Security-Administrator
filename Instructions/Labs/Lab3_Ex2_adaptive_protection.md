@@ -12,7 +12,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 1. Assign an insider risk policy to Adaptive Protection
 1. Configure adaptive protection settings for your DLP policy
-1. (Optional) Configure Conditional Access with Adaptive Protection
+1. Configure Conditional Access with Adaptive Protection
 1. Enable Adaptive Protection
 
 ## Task 1 – Assign an insider risk policy to Adaptive Protection
@@ -60,7 +60,7 @@ Now that Adaptive Protection is linked to your insider risk policy, you'll updat
 
 You've updated your DLP policy to block sharing when insider risk is elevated, strengthening data protection based on user behavior.
 
-## Task 3 – (Optional) Configure Conditional Access with Adaptive Protection
+## Task 3 – Configure Conditional Access with Adaptive Protection
 
 To add another layer of enforcement, you can use insider risk levels to restrict access using Conditional Access. In this task, you'll create a policy that blocks access for users with an elevated insider risk level.
 
@@ -119,7 +119,7 @@ In this final task, you'll turn on Adaptive Protection so the system can start a
 
    - On the **Insider risk levels** tab, the **Data leaks quick policy** is selected.
 
-   - On the **Conditional Access** tab, the **Block all access for elevated risk** policy is visible (optional).
+   - On the **Conditional Access** tab, the **Block all access for elevated risk** policy is visible.
 
    - On the **Data Loss Prevention** tab, the **DLP - Credit Card Protection policy** is listed.
 
