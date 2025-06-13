@@ -22,8 +22,6 @@ You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is 
 1. Publish a retention label
 1. Create an auto-apply retention label policy
 1. Create a static retention policy
-1. Create an adaptive scope
-1. Create an adaptive retention policy
 1. Recover SharePoint content
 
 ## Task 1 – Create a retention label
@@ -275,13 +273,11 @@ You've created a retention policy that applies to content owned by privileged gr
 
 In this task, you'll simulate restoring a deleted document from a SharePoint site to validate your recovery options.
 
-1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as Joni Sherman in Microsoft Purview.
 
-1. In **Microsoft Edge**, navigate to **`https://www.office.com`** and log in Microsoft 365 as **Joni Sherman**.
+1. Select the App launcher (the grid icon) in the top-left corner, then select **SharePoint** from the sub-menu.
 
-1. In the Microsoft Office 365 landing page, select the App launcher (the grid icon) in the top-left corner, then select **SharePoint** from the sub-menu.
-
-   ![Screenshot showing where there ellipses is to display the action menu.](../Media/show-more-actions-sharepoint.png)
+   ![Screenshot showing where there ellipses is to display the action menu.](../Media/sharepoint-app-launcher.png)
 
 1. On the SharePoint landing page, search for `Benefits` then select **Benefits @ Contoso** from the search results.
 
