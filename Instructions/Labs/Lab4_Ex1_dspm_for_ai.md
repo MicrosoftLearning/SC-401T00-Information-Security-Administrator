@@ -20,7 +20,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. As
 
 1. Use DSPM for AI to create a DLP policy for generative AI sites
 1. Create an insider risk policy to detect risky AI interactions
-1. (Optional) Block Copilot from accessing labeled content
+1. Block Copilot from accessing labeled content
 1. Run a data assessment to detect unlabeled content
 
 ## Task 1 – Use DSPM for AI to create a DLP policy for generative AI sites
@@ -102,7 +102,7 @@ Confirm that the triggering event is **User account deleted from Microsoft Entra
 
 You've created a policy that detects risky AI interactions, including prompts and responses, to help identify early signs of risky user behavior.
 
-## Task 3 – (Optional) Block Copilot from accessing labeled content
+## Task 3 – Block Copilot from accessing labeled content
 
 You can further reduce risk by preventing Copilot from processing or responding with content protected by sensitivity labels.
 
