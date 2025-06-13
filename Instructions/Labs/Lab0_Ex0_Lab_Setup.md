@@ -14,14 +14,15 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 # Lab setup - Prepare your environment for administration
 
-In this lab, you'll configure and prepare your environment for administration tasks. You'll activate necessary features, set up administrative permissions, and ensure proper configuration of key elements.
+In this lab, you'll configure and prepare your environment for administration tasks. You'll enable required features, configure permissions, and prepare core services for administration.
 
 **Tasks:**
 
-1. Enable Audit in the Microsoft Purview portal
-1. Set user passwords for lab exercises
-1. Enable device onboarding
-1. Enable insider risk analytics
+1. Enable Audit in the Microsoft Purview portal  
+1. Enable device onboarding  
+1. Enable insider risk analytics and data sharing  
+1. Set user passwords for lab exercises  
+1. Initialize Microsoft Defender XDR
 
 ## Task 1 - Enable Audit in the Microsoft Purview portal
 
@@ -53,7 +54,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
     Install-Module ExchangeOnlineManagement
     ```
 
-1. Confirm the NuGet provider prompt  by typing **Y** for Yes and press **Enter**.
+1. Confirm the NuGet provider prompt by typing **Y** for Yes and press **Enter**.
 
 1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
 
@@ -101,11 +102,51 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 You have successfully enabled auditing in Microsoft 365.
 
-## Task 2 - Set user passwords for lab exercises
+## Task 2 – Enable device onboarding
+
+In this task, you'll enable device onboarding for your organization.
+
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
+
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** to log into Microsoft Purview, then select **Settings** from the left sidebar.
+
+1. In the left sidebar, expand **Device onboarding** then select **Devices**.
+
+1. On the **Devices** page, select **Turn on device onboarding** then select **Ok** to enable device onboarding.
+
+1. When prompted, select **OK** to confirm that device monitoring is being turned on.
+
+You have now enabled device onboarding and can start to onboard devices to be protected with Endpoint DLP policies. The process of enabling the feature might take up to 30 minutes.
+
+## Task 3 – Enable insider risk analytics and data sharing
+
+In this task, you'll enable analytics and data sharing for Insider Risk Management.
+
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
+
+1. In Microsoft Purview, navigate to **Settings** > **Insider Risk Management** > **Analytics**.
+
+1. Toggle these settings to **On**:
+
+   - **Show insights at tenant level**
+
+   - **Show insights at user level**
+
+1. Select **Save** at the bottom of the page.
+
+1. Select **Data sharing** on the left navigation pane.
+
+1. In the Data sharing section, toggle **Share user risk details with other security solutions** to **On**.
+
+1. Select **Save** at the bottom of the page.
+
+You have enabled analytics and data sharing for Insider Risk Management.
+
+## Task 4 - Set user passwords for lab exercises
 
 In this task, you'll set passwords for the user accounts needed for the labs.
 
-1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account. The password should be provided by your lab hosting provider.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
 
 1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
@@ -140,46 +181,6 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 1. On the **Passwords have been reset** page, you should see the three user accounts that have been reset. At the bottom of this flyout page, select **Close**.
 
 You have successfully reset passwords for lab exercises.
-
-## Task 3 – Enable device onboarding
-
-In this task, you'll enable device onboarding for your organization.
-
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
-
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** to log into Microsoft Purview, then select **Settings** from the left sidebar.
-
-1. In the left sidebar, expand **Device onboarding** then select **Devices**.
-
-1. On the **Devices** page, select **Turn on device onboarding** then select **Ok** to enable device onboarding.
-
-1. When prompted, select **OK** to confirm that device monitoring is being turned on.
-
-You have now enabled device onboarding and can start to onboard devices to be protected with Endpoint DLP policies. The process of enabling the feature might take up to 30 minutes.
-
-## Task 4 – Enable insider risk analytics and data sharing
-
-In this task, you'll enable analytics and data sharing for Insider Risk Management.
-
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
-
-1. In Microsoft Purview, navigate to **Settings** > **Insider Risk Management** > **Analytics**.
-
-1. Toggle these settings to **On**:
-
-   - **Show insights at tenant level**
-
-   - **Show insights at user level**
-
-1. Select **Save** at the bottom of the page.
-
-1. Select **Data sharing** on the left navigation pane.
-
-1. In the Data sharing section, toggle **Share user risk details with other security solutions** to **On**.
-
-1. Select **Save** at the bottom of the page.
-
-You have enabled analytics and data sharing for Insider Risk Management.
 
 ## Task 5 – Initialize Microsoft Defender XDR
 
