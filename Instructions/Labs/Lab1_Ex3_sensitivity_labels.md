@@ -395,7 +395,7 @@ You've enabled Defender for Cloud Apps to scan files for sensitivity labels and 
 
 ## Task 8 – Create a file policy to auto-label externally shared files
 
-Now that label scanning is enabled, you'll create a file policy that applies the **Highly Confidential - Project - Falcon** sensitivity label to files in the Mark 8 Project folders that are shared outside your organization.
+Now that label scanning is enabled, you'll create a file policy that applies the **Highly Confidential - Project - Falcon** sensitivity label to files in the Mark 8 Project folders that are shared outside your organization. This policy is categorized as DLP because it protects sensitive data from unintended exposure.
 
 1. In **Microsoft Defender**, navigate to **Cloud apps** > **Policies** > **Policy management**.
 
