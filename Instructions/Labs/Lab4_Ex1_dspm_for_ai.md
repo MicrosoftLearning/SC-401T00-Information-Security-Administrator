@@ -109,7 +109,7 @@ You can further reduce risk by preventing Copilot from processing or responding 
 
 1. In Microsoft Purview, navigate to **DSPM for AI** by selecting **Solutions** > **DSPM for AI** > **Recommendations**.
 
-1. Select the **Protect sensitive data referenced in Copilot and agent responses** recommendation.
+1. Select the **Protect sensitive data referenced in Microsoft 365 Copilot and agents (preview)** recommendation.
 
 1. Review the guidance provided in this recommendation.
 
@@ -130,9 +130,9 @@ You can further reduce risk by preventing Copilot from processing or responding 
 
    - **Name**: `Prevent Copilot from accessing labeled data`
    - Under **Conditions**, select **Add condition** > **Content contains** > **Sensitivity labels**. Add these sensitivity labels:
-     - `Internal`
-     - `Confidential`
-     - `Highly Confidential`
+     - `Trusted People`
+     - `Project - Falcon`
+     - `Financial Data`
    - Select **Add**
    - Under **Actions** select **Add an action** > **Prevent Copilot from processing content (preview)**
    - Select **Save** at the bottom of the **Create rule** flyout.
@@ -155,7 +155,7 @@ To understand potential gaps in labeling coverage, you'll run a data risk assess
 
 1. In **DSPM for AI**, select the recommendation titled **Protect sensitive data referenced in Copilot responses and agent responses**.
 
-1. In the **Protect sensitive data referenced in Copilot responses  and agent responses** pane, review the summary, then select **Go to assessments**.
+1. In the **Protect sensitive data referenced in Copilot responses and agent responses** pane, review the summary, then select **Go to assessments**.
 
 1. On the **Data risk assessments** page, select **Create custom assessment**
 
