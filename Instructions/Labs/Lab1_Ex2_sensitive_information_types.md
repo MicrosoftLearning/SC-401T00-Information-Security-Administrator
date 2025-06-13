@@ -78,8 +78,6 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. On the **Review settings and finish** page review the settings and select **Create**. When successfully created select **Done**.
 
-1. Sign out of Joni's account by selecting the profile picture of Joni Sherman in the top right. Select **Sign out**, then close the browser window.
-
 You have successfully created a new sensitive information type to identify employee IDs in the pattern of three uppercase characters, six numbers, and the keywords 'Employee' or 'IDs' within a range of 100 characters.
 
 ## Task 2 – Modify confidence level to reduce false positives
@@ -109,6 +107,8 @@ You've received reports that some documents containing employee IDs aren't being
 1. Select **Next** until you reach the **Review settings and finish** page.
 
 1. Select **Save**, then select **Done** to update your sensitive info type.
+
+1. Sign out of Joni's account by selecting the profile picture of Joni Sherman in the top right. Select **Sign out**, then close the browser window.
 
 You have successfully reduced the confidence level to increase the sensitivity of your custom SIT, helping ensure documents with partial matching content are more likely to be flagged.
 
