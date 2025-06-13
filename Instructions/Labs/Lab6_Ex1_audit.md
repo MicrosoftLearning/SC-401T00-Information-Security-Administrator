@@ -86,7 +86,7 @@ In this task, you'll configure an audit retention policy to preserve logs relate
 
 1. Select **Policies** from the left sidebar.
 
-1. On the **Policies** page select **New audit retention policy**
+1. On the **Policies** page select **Create audit retention policy**
 
 1. On the **New audit retention policy** panel, enter:
 
