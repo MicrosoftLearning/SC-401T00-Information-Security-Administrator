@@ -22,7 +22,7 @@ In this task, you'll verify the correct Azure RMS functionality of your tenant.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Open PowerShell by right-clicking the Start button in the taskbar and selecting **Terminal**.
+1. Open PowerShell by right-clicking the Start button in the taskbar and selecting **Terminal (Admin)**.
 
 1. Run the **Install Module** cmdlet in the terminal window to install the latest **Exchange Online PowerShell** module version:
 
