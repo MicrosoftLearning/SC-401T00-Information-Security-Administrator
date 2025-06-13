@@ -361,7 +361,7 @@ You have successfully created and published a sublabel using Double Key Encrypti
 
 ## Task 7 – Enable Microsoft Purview integration in Defender for Cloud Apps
 
-In this task, you'll enable Microsoft Purview integration in Microsoft Defender for Cloud Apps. This allows Defender to scan new files for Microsoft Purview sensitivity labels and inspect content based on those labels.
+In this task, you'll enable Microsoft Purview integration in Microsoft Defender for Cloud Apps and turn on file monitoring. This allows Defender to scan new and modified files for sensitivity labels from Microsoft Purview, inspect content based on those labels, and monitor files so that file policies can be applied.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin**, and you should still be logged in as Joni Sherman.
 
@@ -385,11 +385,17 @@ In this task, you'll enable Microsoft Purview integration in Microsoft Defender 
 
 1. Select **Save** to apply the settings.
 
-You've enabled Defender for Cloud Apps to recognize and scan files for sensitivity labels from Microsoft Purview.
+1. Under the **Information Protection** section in the left pane, select **Files**.
+
+1. On the **Files** page, select **Enable file monitoring**.
+
+1. Select **Save** to apply the settings.
+
+You've enabled Defender for Cloud Apps to scan files for sensitivity labels and monitor files so that file policies can evaluate and apply governance actions.
 
 ## Task 8 – Create a file policy to auto-label externally shared files
 
-Now that label scanning is enabled, you'll create a file policy that applies a general sensitivity label to any new files that are shared outside your organization.
+Now that label scanning is enabled, you'll create a file policy that applies the **Highly Confidential - Project - Falcon** sensitivity label to files in the Mark 8 Project folders that are shared outside your organization.
 
 1. In **Microsoft Defender**, navigate to **Cloud apps** > **Policies** > **Policy management**.
 
@@ -399,11 +405,19 @@ Now that label scanning is enabled, you'll create a file policy that applies a g
 
 1. On the **Create file policy** page, configure:
 
-   - **Policy name**: `Auto-label externally shared files`
+   - **Policy name**: `Auto-label external sharing for Project Falcon files`
 
-   - **Policy severity**: **Low**
+   - **Policy severity**: **High**
 
    - **Category**: **DLP**
+
+   - **Apply to**: **Selected folders**
+
+      - Select **Add folder(s)**, then search for `Project` in the **File name** field.
+
+      - Select the checkbox for the **Mark 8 Project Team Notebook** and **Mark 8 Project team** SharePoint folders.
+
+      - Select **Done** to close the **Select a folder** window.
 
    - In the **Files matching all of the following section**:
 
@@ -417,14 +431,14 @@ Now that label scanning is enabled, you'll create a file policy that applies a g
 
       - Select the checkbox for **Apply sensitivity label**
 
-      - In the dropdown select **General-Anyone (unrestricted)**
+      - In the dropdown select **Highly Confidential-Project - Falcon**
 
    - Repeat the same process for **Microsoft SharePoint Online**
 
       - Select the checkbox for **Apply sensitivity label**
 
-      - Select **Highly Confidential-Project Falcon** from the dropdown
+      - Select **Highly Confidential-Project - Falcon** from the dropdown
 
 1. Select **Create** to finish creating the file policy.
 
-You've created a file policy that applies a general sensitivity label to files shared externally in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically.
+You've created a file policy that applies a highly confidential sensitivity label to externally shared files located in the Mark 8 Project folders in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically.
