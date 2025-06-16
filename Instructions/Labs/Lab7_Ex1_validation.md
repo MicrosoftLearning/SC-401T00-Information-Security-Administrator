@@ -28,9 +28,7 @@ In this task, you'll verify that published sensitivity labels are available to u
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
-1. In Microsoft Edge, select the app launcher in the top left and choose **Word**.
-
-    ![Screenshot showing where to select Word from the app launcher menu.](../Media/meatball-menu-word.png)
+1. In Microsoft Edge, navigate to `https://word.office.com` and sign in to the Microsoft Office **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
 1. Select **Blank document**.
 
@@ -46,7 +44,7 @@ In this task, you'll verify that published sensitivity labels are available to u
 
     > [!Note] It can take 24-48 hours for newly published sensitivity labels to be available for application. If the newly created sensitivity labels aren't available, you can use **Confidential** > **All Employees** for this exercise.
 
-1. Change the sensitivity label to **Public** to verify the business justification dialog appears.
+1. Change the sensitivity label to **Highly Confidential** > **Project - Falcon** to verify the business justification dialog appears.
 
 1. Select **Cancel** to keep the sensitivity label.
 
