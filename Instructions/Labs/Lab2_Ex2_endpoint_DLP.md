@@ -31,7 +31,7 @@ In this task, you'll onboard a Windows 11 device so it's ready to be protected b
 
 1. In the **Downloads** dialog, hover over the download, then select the folder icon to **Show in folder**.
 
-1. Extract the zip file to the **Desktop** of SC-401-CL1. You should see a script named **DeviceComplianceLocalOnboardingScript.cmd**.
+1. Extract the zip file to the **Desktop** of SC-401-CL2. You should see a script named **DeviceComplianceLocalOnboardingScript.cmd**.
 
 1. On the desktop right click the **DeviceComplianceLocalOnboardingScript.cmd** file you just extracted and select **Show more options**, then select **Properties**.
 
