@@ -24,13 +24,13 @@ Audit records user and administrator activity, and you'll need it enabled to con
 
 1. Select **Get started** on the welcome message for the new Microsoft Purview portal.
 
-    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/welcome-purview-portal.png)
+    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](./media/welcome-purview-portal.png)
 
 1. From the left sidebar, select **Solutions**, then select **Audit**.
 
 1. On the **Search** page, select **Start recording user and admin activity** to enable audit logging.
 
-    ![Screenshot showing the Start recording user and admin activity button.](../Media/enable-audit-button.png)
+    ![Screenshot showing the Start recording user and admin activity button.](./media/enable-audit-button.png)
 
 1. Verify that the blue bar disappears from the page after you enable auditing.
 
@@ -136,7 +136,7 @@ In this task, you'll enable support for sensitivity labels in SharePoint and One
 
 1. At the top of the page, select **Turn on now** in the banner to enable support for sensitivity labels in SharePoint and OneDrive.
 
-   ![Screenshot showing the banner with the Turn on now button for enabling sensitivity labels in SharePoint and OneDrive.](../Media/turn-on-sensitivity-labels.png)
+   ![Screenshot showing the banner with the Turn on now button for enabling sensitivity labels in SharePoint and OneDrive.](./media/turn-on-sensitivity-labels.png)
 
 1. On the **Sensitivity labels** page, select **+ Create a label**.
 
@@ -163,7 +163,7 @@ Now that you have a base label, you'll create a sublabel specifically for projec
 
 1. On the **Sensitivity labels** page, find the newly created **Internal** sensitivity label. Select the vertical ellipsis (**...**) next to it, then select **+ Create sublabel**.
 
-   ![Screenshot showing the Action menu to create a sublabel for a sensitivity label.](../Media/create-sublabel-button.png)
+   ![Screenshot showing the Action menu to create a sublabel for a sensitivity label.](./media/create-sublabel-button.png)
 
 1. The **New sensitivity label** wizard will open. On the **Provide basic details for this label** page enter:
 

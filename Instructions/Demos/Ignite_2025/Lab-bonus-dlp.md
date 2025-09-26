@@ -45,7 +45,7 @@ With classification in place, you’ll now create a DLP policy in Microsoft Purv
 
 1. In the **Content contains** section, select **Add** > **Sensitivity labels**.
 
-   ![Screenshot of the Conditions pane in Microsoft Purview with Content contains selected and the Add menu showing Sensitivity labels.](../Media/dlp-condition-sensitivity-label.png)
+   ![Screenshot of the Conditions pane in Microsoft Purview with Content contains selected and the Add menu showing Sensitivity labels.](./media/dlp-condition-sensitivity-label.png)
 
 1. In the **Sensitivity labels** flyout, select the checkbox next to the **Project data** label, then select **Add**.
 
