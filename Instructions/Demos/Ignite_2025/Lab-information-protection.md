@@ -1,4 +1,4 @@
-# Lab - Protect project data with sensitivity labels in Copilot
+# Lab – Classify and protect project data with information protection in Copilot
 
 Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating the organization's information protection strategy to reduce the risk of sensitive data showing up in Microsoft 365 Copilot. After previous incidents where personal data surfaced in support tickets, she needs to create and test custom sensitive information types that detect Contoso project codes and other sensitive information. These classifications will later support labels and policies that protect content from being exposed in Copilot or shared inappropriately.
 
