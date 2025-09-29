@@ -8,7 +8,7 @@ Megan Bowen has already classified Contoso project data with sensitivity labels.
 
 ## Task 1 – Create a DLP policy in simulation mode
 
-With classification in place, you’ll now create a DLP policy in Microsoft Purview that targets content labeled as project data. The policy will run in simulation mode and prevent Copilot from processing labeled content.
+With classification in place, you'll now create a DLP policy in Microsoft Purview that targets content labeled as project data. The policy will run in simulation mode and prevent Copilot from processing labeled content.
 
 1. In the Microsoft Purview portal, navigate to **Solutions** > **Data Loss Prevention** > **Policies**.
 

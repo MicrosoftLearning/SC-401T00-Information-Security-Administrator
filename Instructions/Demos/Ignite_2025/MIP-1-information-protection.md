@@ -297,7 +297,7 @@ In this task, you'll configure an auto-apply policy so that the Project data sub
 
 You've successfully configured an auto-apply policy for project data. Any content containing Contoso project codes is automatically labeled with the Project data sensitivity label, helping prevent sensitive information from appearing in Copilot responses or being shared inappropriately.
 
-## Lab 1 complete
+## Lab complete
 
 You created and tested a custom sensitive information type, built sensitivity labels, published them, and configured auto-apply so project data is labeled consistently. With classification in place, sensitive content is marked before it can surface in Copilot or other Microsoft 365 apps.
 
