@@ -17,7 +17,11 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is preparin
 
 In this task, you'll enable Insider Risk Management analytics to surface organization-wide patterns.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign into the Microsoft Purview portal as `MeganB@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
+1. Log into Client 1 VM (SC-401-CL1) with the **Admin** account.
+
+1. Open Microsoft Edge.
+
+1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **Megan Bowen** (`MeganB@WWLxZZZZZZ.onmicrosoft.com`, where ZZZZZZ is your unique tenant ID). Use the password provided by your lab host.
 
 1. Select **Settings** > **Insider risk management**.
 
