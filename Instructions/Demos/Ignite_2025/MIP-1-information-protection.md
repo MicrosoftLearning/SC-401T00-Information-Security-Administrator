@@ -299,6 +299,6 @@ You've successfully configured an auto-apply policy for project data. Any conten
 
 ## Lab complete
 
-You created and tested a custom sensitive information type, built sensitivity labels, published them, and configured auto-apply so project data is labeled consistently. With classification in place, sensitive content is marked before it can surface in Copilot or other Microsoft 365 apps.
+You created and tested a custom sensitive information type, built sensitivity labels, published them, and configured auto-apply labeling. With these protections in place, project data is consistently classified and secured before it can appear in Copilot responses or be shared inappropriately.
 
 If you'd like to extend this scenario, continue to the bonus task to add a DLP safeguard that controls how Copilot handles labeled project data.

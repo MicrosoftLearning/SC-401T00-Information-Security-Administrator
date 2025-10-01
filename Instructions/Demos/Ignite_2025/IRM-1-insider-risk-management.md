@@ -1,6 +1,6 @@
 # Lab – Detect and adapt to risky AI usage with Insider Risk Management
 
-Megan Bowen, the Information Security Administrator at Contoso Ltd., is preparing for a broad Copilot rollout. Leadership is concerned about employees unintentionally exposing sensitive data when using Copilot and other AI tools. To address this risk, Megan will implement Insider Risk Management policies that detect risky prompts and responses, prioritize critical project content, and dynamically enforce protections through Adaptive Protection and DLP. She'll begin by configuring policies for the Mark 8 Project Team as a pilot group.
+Megan Bowen, the Information Security Administrator at Contoso Ltd., is preparing for a broad Copilot rollout. Leadership is concerned about employees unintentionally exposing sensitive data when using Copilot and other AI tools. To address this risk, Megan will configure Insider Risk Management to detect risky prompts and responses, prioritize critical project content, and connect policies with DLP and Adaptive Protection. She'll begin with a pilot for the Mark 8 Project Team.
 
 **Tasks**:
 
@@ -247,4 +247,4 @@ You've turned on Adaptive Protection, allowing DLP policies to tighten enforceme
 
 ## Lab complete
 
-You enabled analytics, set global exclusions, and configured insider risk indicators. You then created a Risky AI usage policy, set up notice templates, and connected risk levels to Adaptive Protection. Finally, you created a DLP policy that blocks external sharing when risky activity is detected and enabled Adaptive Protection to enforce it automatically. Together, these steps help Contoso detect risky Copilot and AI usage and respond dynamically before sensitive data can be exposed.
+You enabled analytics, set exclusions, and turned on AI risk indicators. You then built a Risky AI usage policy, connected it to Adaptive Protection, and linked it with DLP enforcement. With these controls in place, Contoso can detect risky Copilot and AI activity and automatically strengthen protections before sensitive data is exposed.

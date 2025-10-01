@@ -188,6 +188,6 @@ You've created an endpoint DLP policy that blocks sensitive project data from be
 
 ## Lab complete
 
-You created a targeted DLP policy to keep highly confidential content out of Microsoft 365 Copilot, explored simulation insights, and then turned the policy on for enforcement. You also built an endpoint DLP policy that blocks pasting and uploading sensitive project data to AI websites in supported browsers. Together, these controls reduce the chance that sensitive information is processed by Copilot or shared with external AI tools.
+You created a DLP policy that keeps highly confidential content out of Microsoft 365 Copilot, tested it in simulation mode, and then activated it for enforcement. You also added an endpoint policy that blocks sensitive project data from being pasted or uploaded to AI websites. Together, these safeguards reduce the chance that Copilot or external AI tools process Contoso's sensitive data.
 
-If you'd like to extend this scenario, continue to the **Bonus – Implement Adaptive Protection** task to apply these protections dynamically based on Insider Risk signals.
+If you'd like to extend this scenario, continue to the bonus task to use Adaptive Protection so these safeguards apply dynamically based on insider risk signals.
