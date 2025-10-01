@@ -71,11 +71,11 @@ In this task, you'll create a custom sensitive information type (SIT) to detect 
    - **ID**: `Project code keywords`
    - In **Keyword Group #1** under **Case insensitive**:
 
-  ```text
-  Project
-  Code
-  Identifier
-  ```
+    ```text
+    Project
+    Code
+    Identifier
+    ```
 
    - Select the radio button for **Word match**.
    - Select **Done**.
