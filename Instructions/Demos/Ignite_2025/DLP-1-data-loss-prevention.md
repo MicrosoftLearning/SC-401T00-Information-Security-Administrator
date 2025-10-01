@@ -4,6 +4,8 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is strength
 
 ## Task 1 – Create a DLP policy in simulation mode
 
+In this task, you'll create a data loss prevention (DLP) policy that restricts Microsoft 365 Copilot from processing content labeled as highly confidential.
+
 1. Log into Client 1 VM (SC-401-CL1) with the **Admin** account.
 
 1. Open Microsoft Edge.
@@ -76,7 +78,11 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is strength
 
 1. On the **New policy created** page select **Done**.
 
+You've created a DLP policy in simulation mode that prevents Copilot from processing highly confidential content.
+
 ## Task 2 – Activate a policy in simulation mode
+
+In this task, you'll activate the Copilot DLP policy and explore the insights available in simulation mode.
 
 1. On the **Policies** page select the **Copilot restrict highly confidential data** policy.
 
@@ -92,7 +98,11 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is strength
 
    A confirmation flyout will appear indicating that the policy has been published successfully.
 
+You've activated the Copilot DLP policy, moving it from simulation mode to active enforcement.
+
 ## Task 3 – Create an endpoint DLP policy
+
+In this task, you'll create an endpoint DLP policy that blocks users from pasting or uploading sensitive project data to AI websites.
 
 1. On the **Policies** page of the **Data Loss Prevention** solution of the Microsoft Purview portal, select **+ Create policy**.
 
@@ -173,3 +183,5 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is strength
 1. On the **Review and finish** page, review your policy settings then select **Submit** to create the policy.
 
 1. Once the policy is created select **Done** on the **New policy created** page.
+
+You've created an endpoint DLP policy that blocks sensitive project data from being pasted or uploaded into AI websites.
