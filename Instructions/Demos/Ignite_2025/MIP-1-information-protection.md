@@ -100,9 +100,9 @@ In this task, you'll confirm that the custom sensitive information type (SIT) fo
 
 1. In Notepad, enter:
 
-  ```text
-  The Contoso project code PR-2025-001 has been assigned to this work.
-  ```
+    ```text
+    The Contoso project code PR-2025-001 has been assigned to this work.
+    ```
 
 1. Select **File** > **Save As**.
 
@@ -220,8 +220,8 @@ You've created a sublabel that applies a footer to project data. When used with 
 
 1. On the **Name your policy** page, enter:
 
-    - **Name**: `Internal project data`
-    - **Description**: `Makes Internal and Project data sensitivity labels available to users.`
+   - **Name**: `Internal project data`
+   - **Description**: `Makes Internal and Project data sensitivity labels available to users.`
 
 1. Select **Next**, then on the **Review and finish** page, select **Submit**.
 
