@@ -104,7 +104,7 @@ In this task, you'll confirm that the custom sensitive information type (SIT) fo
     The Contoso project code PR-2025-001 has been assigned to this work.
     ```
 
-1. Select **File** > **Save As**
+1. Select **File** > **Save As**.
 
 1. In the **Documents** folder, enter `ProjectCodeTest.txt` as the **File name**, then select **Save**.
 
