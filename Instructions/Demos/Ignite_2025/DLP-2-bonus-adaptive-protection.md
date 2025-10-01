@@ -4,7 +4,7 @@ After testing the DLP policies, Megan Bowen, the Information Security Administra
 
 ## Task 1 – Add Adaptive Protection to a DLP rule
 
-In this task, you'll edit the DLP policy you created earlier so it only applies when a user has an elevated insider risk level.
+In this task, you'll edit a DLP policy so it applies only when a user has an elevated insider risk level.
 
 1. In the Microsoft Purview portal, go to **Solutions** > **Data Loss Prevention** > **Policies**.
 
@@ -17,7 +17,7 @@ In this task, you'll edit the DLP policy you created earlier so it only applies 
 1. To the right of the rule, select the **Edit** (pencil) icon to open it for editing.
 
 1. In the **Edit rule** flyout, in the **Conditions** section, select **+ Add condition** > **Insider risk level for Adaptive Protection is**.
-
+in this task
    ![Screenshot of the Add condition menu in Microsoft Purview DLP. showing 'Insider risk level for Adaptive Protection is' highlighted.](./media/dlp-adaptive-protection-condition.png)
 
 1. In the new **Insider risk level for Adaptive Protection is** section, select the dropdown for **Select one or more risk levels**, then select **Elevated risk level**.
@@ -52,7 +52,7 @@ You've created a quick policy that detects risky AI usage. It will raise insider
 
 ## Task 3 – Enable Adaptive Protection for DLP
 
-In this task, you'll connect the risky AI usage policy to risk levels and enable Adaptive Protection so your DLP policy enforces dynamically.
+In this task, you'll connect the risky AI usage policy to risk levels and enable Adaptive Protection so your DLP policy is enforced dynamically.
 
 1. In the Microsoft Purview portal, go to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
 
