@@ -184,10 +184,10 @@ Now that you have a base label, you'll create a sublabel specifically for projec
 
 1. In the **Customize footer text** flyout, enter:
 
-   - **Footer text**: `Contoso Project Data – Confidential`
+   - **Footer text**: `Contoso Project Data - Confidential`
    - **Font size**: `10`
-   - **Font color**: `Black`
-   - **Align text**: `Left`
+   - **Font color**: Black
+   - **Align text**: Left
    - Select **Save**.
 
 1. Back on the **Content marking** page, select **Next**.

@@ -39,7 +39,7 @@ With classification in place, you'll now create a DLP policy in Microsoft Purvie
 
 1. In the **Create rule** flyout:
 
-   - In the **Name** field, enter `Block project data in Copilot`.
+   - In the **Name** field, enter `Restrict Copilot content`.
 
 1. Under **Conditions**, select **+ Add condition** > **Content contains**.
 

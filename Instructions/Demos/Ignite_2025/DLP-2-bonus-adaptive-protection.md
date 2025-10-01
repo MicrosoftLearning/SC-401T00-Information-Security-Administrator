@@ -79,4 +79,3 @@ In this task, you'll connect the risky AI usage policy to risk levels and enable
 1. Set the toggle to **On** under **Adaptive Protection** to enable Adaptive Protection.
 
 You enabled Adaptive Protection so your DLP safeguards are enforced only when users show risky AI activity. This dynamic enforcement reduces friction for most users while still protecting sensitive data when risks arise.
-
