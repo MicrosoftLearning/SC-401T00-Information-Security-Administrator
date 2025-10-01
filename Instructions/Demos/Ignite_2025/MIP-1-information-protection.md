@@ -71,11 +71,11 @@ In this task, you'll create a custom sensitive information type (SIT) to detect 
    - **ID**: `Project code keywords`
    - In **Keyword Group #1** under **Case insensitive**:
 
-   ```text
-   Project
-   Code
-   Identifier
-   ```
+  ```text
+  Project
+  Code
+  Identifier
+  ```
 
    - Select the radio button for **Word match**.
    - Select **Done**.
@@ -100,9 +100,9 @@ In this task, you'll confirm that the custom sensitive information type (SIT) fo
 
 1. In Notepad, enter:
 
-   ```text
-   The Contoso project code PR-2025-001 has been assigned to this work.
-   ```
+  ```text
+  The Contoso project code PR-2025-001 has been assigned to this work.
+  ```
 
 1. Select **File** > **Save As**.
 
