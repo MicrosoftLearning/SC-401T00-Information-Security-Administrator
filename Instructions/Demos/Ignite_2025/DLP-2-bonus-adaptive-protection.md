@@ -2,6 +2,12 @@
 
 After testing the DLP policies, Megan Bowen, the Information Security Administrator at Contoso Ltd., notices that blocking all users creates unnecessary friction. Leadership wants restrictions applied only to users showing risky AI activity. To meet this requirement, Megan will use Adaptive Protection to dynamically enforce the DLP policy for users flagged by Insider Risk Management.
 
+**Tasks**:
+
+1. Add Adaptive Protection to a DLP rule
+1. Create a risky AI usage policy
+1. Enable Adaptive Protection for DLP
+
 ## Task 1 – Add Adaptive Protection to a DLP rule
 
 In this task, you'll edit a DLP policy so it applies only when a user has an elevated insider risk level.

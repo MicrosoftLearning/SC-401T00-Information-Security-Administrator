@@ -23,7 +23,11 @@ In this task, you'll enable Insider Risk Management analytics to surface organiz
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **Megan Bowen** (`MeganB@WWLxZZZZZZ.onmicrosoft.com`, where ZZZZZZ is your unique tenant ID). Use the password provided by your lab host.
 
-1. Select **Settings** > **Insider risk management**.
+1. Select **Get started** on the welcome message for the new Microsoft Purview portal.
+
+    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](./media/welcome-purview-portal.png)
+
+1. From the left sidebar, select **Settings** > **Insider risk management**.
 
 1. On the **Insider Risk Management settings** page, select **Analytics** from the left navigation.
 

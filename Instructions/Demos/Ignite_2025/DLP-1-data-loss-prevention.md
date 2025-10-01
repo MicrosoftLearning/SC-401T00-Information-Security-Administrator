@@ -2,6 +2,12 @@
 
 Megan Bowen, the Information Security Administrator at Contoso Ltd., is strengthening protections as the company expands its use of Microsoft 365 Copilot. Leadership wants to reduce the chance that sensitive data is processed by Copilot or copied into external AI tools. To address this concern, Megan will configure data loss prevention (DLP) policies that restrict Copilot from handling sensitive content and block pasting or uploading of sensitive data to AI websites in Microsoft Edge.
 
+**Tasks**:
+
+1. Create a DLP policy in simulation mode
+1. Activate a policy in simulation mode
+1. Create an endpoint DLP policy
+
 ## Task 1 – Create a DLP policy in simulation mode
 
 In this task, you'll create a data loss prevention (DLP) policy that restricts Microsoft 365 Copilot from processing content labeled as highly confidential.
@@ -12,7 +18,11 @@ In this task, you'll create a data loss prevention (DLP) policy that restricts M
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **Megan Bowen** (`MeganB@WWLxZZZZZZ.onmicrosoft.com`, where ZZZZZZ is your unique tenant ID). Use the password provided by your lab host.
 
-1. Select **Solutions** > **Data Loss Prevention** > **Policies**.
+1. Select **Get started** on the welcome message for the new Microsoft Purview portal.
+
+    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](./media/welcome-purview-portal.png)
+
+1. From the left sidebar, select **Solutions** > **Data Loss Prevention** > **Policies**.
 
 1. On the **Policies** page, select **+ Create policy** to start the configuration for creating a new data loss prevention policy.
 
