@@ -142,7 +142,7 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 1. In the new **Content contains** section:
 
     - Select **Add** > **Sensitive info types**.
-    - In the **Sensitive info types** flyout, search for these classifiers:
+    - In the **Sensitive info types** flyout, search for these sensitive info types:
        - `Credit Card Number`
        - `ABA Routing Number`
        - `SWIFT Code`
