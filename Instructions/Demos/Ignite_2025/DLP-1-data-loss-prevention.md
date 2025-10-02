@@ -92,7 +92,7 @@ You've created a DLP policy in simulation mode that prevents Copilot from proces
 
 ## Task 2 – Activate a policy in simulation mode
 
-In this task, you'll activate the Copilot DLP policy and explore the insights available in simulation mode.
+In this task, you'll activate the DLP for Copilot policy and explore the insights available in simulation mode.
 
 1. On the **Policies** page select the **Copilot restrict highly confidential data** policy.
 
@@ -108,7 +108,7 @@ In this task, you'll activate the Copilot DLP policy and explore the insights av
 
    A confirmation flyout will appear indicating that the policy has been published successfully.
 
-You've activated the Copilot DLP policy, moving it from simulation mode to active enforcement.
+You've activated the DLP for Copilot policy, moving it from simulation mode to active enforcement.
 
 ## Task 3 – Create an endpoint DLP policy
 
