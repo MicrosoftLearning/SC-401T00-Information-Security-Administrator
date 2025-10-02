@@ -1,6 +1,6 @@
 # Lab – Prevent data exposure in Copilot and AI apps with data loss prevention
 
-Megan Bowen, the Information Security Administrator at Contoso Ltd., is strengthening protections as the company expands its use of Microsoft 365 Copilot. Leadership wants to reduce the chance that sensitive data is processed by Copilot or copied into external AI tools. To address this concern, Megan will configure data loss prevention (DLP) policies that restrict Copilot from handling sensitive content and block pasting or uploading of sensitive data to AI websites in Microsoft Edge.
+Megan Bowen, the Information Security Administrator at Contoso Ltd., is strengthening protections as the company expands its use of Microsoft 365 Copilot. Leadership wants to reduce the risk of sensitive information being processed by Copilot or shared with external AI tools. To meet this goal, Megan will configure data loss prevention (DLP) policies that keep highly confidential project data out of Copilot and prevent regulated personal data from being pasted or uploaded to AI websites.
 
 **Tasks**:
 
@@ -112,7 +112,7 @@ You've activated the Copilot DLP policy, moving it from simulation mode to activ
 
 ## Task 3 – Create an endpoint DLP policy
 
-In this task, you'll create an endpoint DLP policy that blocks users from pasting or uploading sensitive project data to AI websites.
+In this task, you'll create an endpoint DLP policy that blocks users from pasting or uploading banking data, such as credit card numbers and routing information, into AI websites.
 
 1. On the **Policies** page of the **Data Loss Prevention** solution of the Microsoft Purview portal, select **+ Create policy**.
 
@@ -122,8 +122,8 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
 1. On the **Name your DLP policy** page, enter:
 
-    - **Name**: `Block AI website uploads on devices`
-    - **Description**: `Prevent users from pasting or uploading sensitive data to AI websites.`
+    - **Name**: `Block AI website uploads of banking data`
+    - **Description**: `Prevent users from pasting or uploading banking information, such as credit card or routing numbers, to AI websites.`
 
 1. Select **Next**.
 
@@ -135,18 +135,20 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
 1. On the **Customize advanced DLP rules** page, select **+ Create rule**.
 
-1. In the **Create rule** flyout, in the **Name** field, enter `Block AI website uploads`.
+1. In the **Create rule** flyout, in the **Name** field, enter `Block banking data exposure to AI websites`.
 
 1. Under **Conditions** select **+ Add condition** then select **Content contains**.
 
 1. In the new **Content contains** section:
 
-    - Select **Add** > **Trainable classifiers**.
-    - In the **Trainable classifiers** flyout, search for these classifiers:
-       - `IP`
-       - `Project documents`
-       - `Non disclosure agreement`
+    - Select **Add** > **Sensitive info types**.
+    - In the **Sensitive info types** flyout, search for these classifiers:
+       - `Credit Card Number`
+       - `ABA Routing Number`
+       - `SWIFT Code`
+       - `International Banking Account Number (IBAN)`
     - Select **Add** at the bottom of the flyout
+
 1. Under **Actions**, select **+ Add an action** > **Audit or restrict activities on devices**.
 
 1. In the **Service domain and browser activities** section:
@@ -194,10 +196,10 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
 1. Once the policy is created select **Done** on the **New policy created** page.
 
-You've created an endpoint DLP policy that blocks sensitive project data from being pasted or uploaded into AI websites.
+You've created an endpoint DLP policy that blocks banking data from being pasted or uploaded into AI websites.
 
 ## Lab complete
 
-You created a DLP policy that keeps highly confidential content out of Microsoft 365 Copilot, tested it in simulation mode, and then activated it for enforcement. You also added an endpoint policy that blocks sensitive project data from being pasted or uploaded to AI websites. Together, these safeguards reduce the chance that Copilot or external AI tools process Contoso's sensitive data.
+You created a DLP policy that keeps highly confidential project content out of Microsoft 365 Copilot, tested it in simulation mode, and then activated it for enforcement. You also added an endpoint policy that blocks banking data, such as credit card and routing numbers, from being pasted or uploaded to AI websites. Together, these safeguards reduce the chance that Copilot or external AI tools process Contoso's sensitive or regulated data.
 
 If you'd like to extend this scenario, continue to the bonus task to use Adaptive Protection so these safeguards apply dynamically based on insider risk signals.
