@@ -113,7 +113,7 @@ In this task, you'll create a Risky AI usage policy for the Mark 8 Project Team.
 
 1. Back on the **Exclude users and groups (optional)** page, select **Next**.
 
-1. On the **Decide whether to prioritize content** page, select **I want to prioritize content**, then select the checkbox for **Sharepoint sites**.
+1. On the **Decide whether to prioritize content** page, select **I want to prioritize content**, then select only the checkbox for **Sharepoint sites**. If any other options are selected, deselect them.
 
 1. Select **Next**.
 
@@ -245,7 +245,7 @@ In this task, you'll enable Adaptive Protection so DLP reacts automatically to r
 
 1. On the **Adaptive Protection** page, select **Adaptive Protection settings** from the left navigation.
 
-1. Set the toggle to **On** under **Adaptive Protection** to enable Adaptive Protection.
+1. Set the toggle to **On** under **Adaptive Protection**, then select **Save** to enable Adaptive Protection.
 
 You've turned on Adaptive Protection, allowing DLP policies to tighten enforcement the moment risky AI behavior is detected.
 
