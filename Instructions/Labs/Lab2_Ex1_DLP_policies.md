@@ -218,7 +218,9 @@ Some file policies require access to inspect the contents of protected files. In
 
 1. On the left sidebar, select **System** > **Settings**, then select **Cloud Apps**.
 
-1. In the left pane within the **Cloud apps** window, scroll down to the **Information Protection** section. Under **Inspect protected files**, select **Grant permission** to enable file inspection.
+1. In the left pane within the **Cloud apps** window, scroll down to the **Information Protection** section and select **Microsoft Information Protection**.
+
+1. Under **Inspect protected files**, select **Grant permission** to enable file inspection.
 
 1. Follow the prompt to allow the required permissions in Microsoft Entra ID, then you should see file inspection is **Active** in Microsoft Defender for Cloud Apps.
 
