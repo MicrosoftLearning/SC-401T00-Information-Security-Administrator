@@ -201,3 +201,35 @@ In this task, you'll open Microsoft Defender and wait for Microsoft Defender XDR
    ![Screenshot showing Microsoft Defender XDR being onboarded.](../Media/enable-defender-xdr.png)
 
 Microsoft Defender XDR is being initialized. You can continue with other tasks while it finishes setting up.
+
+## Task 6 – Configure multi-factor authentication in Microsoft Entra
+
+In this task, you'll configure multi-factor authentication (MFA) for the admin account to secure access to Microsoft Entra and other Microsoft 365 services.
+
+1. In **Microsoft Edge**, navigate to **`https://entra.microsoft.com/`** to open Microsoft Entra.
+
+1. On the **Start by getting the app** screen, install the **Microsoft Authenticator** app from your device's app store, or open it if it's already installed.
+
+   ![Screenshot showing the Keep your account secure screen for multi-factor authentication.](../Media/mfa-entra.png)
+
+   - If you prefer a different app, select **I want to use a different authenticator app** and follow the on-screen instructions.
+
+1. Select **Next**.
+
+1. On the **Set up your account** screen, follow the instructions on your phone to allow notifications, then select **Next**.  
+
+   - If you already have the Microsoft Authenticator app installed and configured, you might not see this screen. In that case, continue to the next step.
+
+1. On the **Scan the QR code** screen, use the Microsoft Authenticator app on your device to scan the QR code displayed on your screen, then select **Next**.
+
+1. On your phone, approve the sign-in request by entering the number shown on your browser.
+
+1. After approving the request, the **Notification approved** screen will appear. Select **Next**.
+
+1. On the **Success!** screen, verify that your **Default sign-in method** shows **Microsoft Authenticator**, then select **Done**.
+
+1. When prompted to sign in again, approve the sign-in request on your phone to verify your identity.
+
+1. After the approval completes, you'll be redirected to the **Microsoft Entra admin center**.
+
+You've successfully configured and verified multi-factor authentication for the admin account in Microsoft Entra.

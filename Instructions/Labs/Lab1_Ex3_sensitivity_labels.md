@@ -17,7 +17,7 @@ Joni Sherman, an Information Security Administrator at Contoso Ltd., is rolling 
 1. Configure auto labeling
 1. Create and publish a DKE label for highly confidential content
 1. Enable Microsoft Purview integration in Defender for Cloud Apps
-1. Create a file policy to auto-label externally shared files
+1. Create a file policy to label externally shared files
 
 ## Task 1 – Enable support for sensitivity labels
 
@@ -393,6 +393,10 @@ In this task, you'll enable Microsoft Purview integration in Microsoft Defender 
 
 You've enabled Defender for Cloud Apps to scan files for sensitivity labels and monitor files so that file policies can evaluate and apply governance actions.
 
+<!---
+
+NOTE - Reworking task 8 due to tenant issue
+
 ## Task 8 – Create a file policy to auto-label externally shared files
 
 Now that label scanning is enabled, you'll create a file policy that applies the **Highly Confidential - Project - Falcon** sensitivity label to files in the Mark 8 Project folders that are shared outside your organization. This policy is categorized as DLP because it protects sensitive data from unintended exposure.
@@ -442,3 +446,46 @@ Now that label scanning is enabled, you'll create a file policy that applies the
 1. Select **Create** to finish creating the file policy.
 
 You've created a file policy that applies a highly confidential sensitivity label to externally shared files located in the Mark 8 Project folders in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically.
+-->
+
+## Task 8 – Create a file policy to label externally shared files
+
+In this task, you'll create a file policy that automatically applies a sensitivity label to files that are shared outside your organization. This type of policy helps protect sensitive content by ensuring externally shared files are labeled and governed according to your data loss prevention (DLP) strategy.
+
+1. In **Microsoft Defender**, navigate to **Cloud apps** > **Policies** > **Policy management**.
+
+1. Select the **Information protection** tab, then select **Create policy** > **File policy**.
+
+    ![Screenshot showing where to navigate to create a file policy in Microsoft Defender.](../Media/file-policy-defender.png)
+
+1. On the **Create file policy** page, configure:
+
+   - **Policy name**: `Auto-label externally shared files`
+
+   - **Policy severity**: **High**
+
+   - **Category**: **DLP**
+
+   - In the **Files matching all of the following section**:
+
+      - For the first filter, configure the dropdowns to: **Access level equals external**
+
+      - For the second filter, configure the dropdowns to: **Last modified after (date)** and use today's date
+
+          ![Screenshot showing the filter settings in Defender.](../Media/configure-file-policy-filter.png)
+
+   - Under **Governance actions**, expand **Microsoft OneDrive for Business**:
+
+      - Select the checkbox for **Apply sensitivity label**
+
+      - In the dropdown select **Highly Confidential-Specified People**
+
+   - Repeat the same process for **Microsoft SharePoint Online**
+
+      - Select the checkbox for **Apply sensitivity label**
+
+      - Select **Highly Confidential-Specified People** from the dropdown
+
+1. Select **Create** to finish creating the file policy.
+
+You've created a file policy that applies a highly confidential sensitivity label to externally shared files in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically to protect sensitive content.
