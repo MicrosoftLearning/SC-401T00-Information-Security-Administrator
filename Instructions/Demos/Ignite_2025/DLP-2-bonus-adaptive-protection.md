@@ -76,6 +76,6 @@ In this task, you'll connect the risky AI usage policy to risk levels and enable
 
 1. From the left navigation, on the **Adaptive Protection** page, select **Adaptive Protection settings**.
 
-1. Set the toggle to **On** under **Adaptive Protection** to enable Adaptive Protection.
+1. Set the toggle to **On** under **Adaptive Protection**, then select **Save** to enable Adaptive Protection.
 
 You enabled Adaptive Protection so your banking data safeguards are enforced only when users show risky AI activity. This dynamic enforcement reduces friction for most users while still protecting sensitive financial data when risks arise.
