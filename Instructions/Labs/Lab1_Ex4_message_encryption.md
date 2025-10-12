@@ -3,6 +3,11 @@ lab:
     title: 'Exercise 4 - Deploy Microsoft Purview Message Encryption'
     module: 'Module 1 - Implement Information Protection'
 ---
+<!--
+
+=======
+This lab is broken by Exchange provisioning issues on the tenant
+=======
 
 # Lab 1 - Exercise 4 - Deploy Microsoft Purview Message Encryption
 
@@ -134,15 +139,15 @@ You must confirm that no social IDs dialog is displayed for external recipients 
 
 1. Go to your personal email portal and open the message with subject **Your one-time passcode to view the message**.
 
-1. Copy the passcode, paste it into the OME portal and select **Continue**.
+1. Copy the passcode, paste it into the'portal and select **Continue**.
 
 1. Review the encrypted message.
 
-You have successfully tested the modified default OME template with deactivated social IDs.
+You have successfully tested the modified default'template with deactivated social IDs.
 
 ## Task 4 – Create custom branding template
 
-Protected messages sent by your organizations finance department require special branding, including customized introduction and body texts and a Disclaimer link in the footer. The finance messages shall also expire after seven days. In this task, you will create a new custom OME configuration and create a transport rule to apply the OME configuration to all mail sent from the finance department.
+Protected messages sent by your organizations finance department require special branding, including customized introduction and body texts and a Disclaimer link in the footer. The finance messages shall also expire after seven days. In this task, you will create a new custom'configuration and create a transport rule to apply the'configuration to all mail sent from the finance department.
 
 1. You should still be logged into your Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin**, and there should still be an open PowerShell window with Exchange Online connected.
 
@@ -178,7 +183,7 @@ Protected messages sent by your organizations finance department require special
 
 1. Confirm the warning message for customizing the template with **Y** for Yes and press **Enter**.
 
-1. Run the **New-TransportRule** cmdlet to create a mail flow rule, which applies the custom OME template to all messages sent from the finance team. This process might take a few seconds to complete.
+1. Run the **New-TransportRule** cmdlet to create a mailflow rule, which applies the custom'template to all messages sent from the finance team. This process might take a few seconds to complete.
 
     ```powershell
     New-TransportRule -Name "Encrypt all mails from Finance team" -FromScope InOrganization -FromMemberOf "Finance Team" -ApplyRightsProtectionCustomizationTemplate "Finance Department" -ApplyRightsProtectionTemplate Encrypt
@@ -223,3 +228,136 @@ To validate the new custom configuration, you need to use the account of Lynne R
 1. Review the encrypted message with custom branding. Close the window with your email account open.
 
 You have successfully tested the new customized template.
+
+-->
+
+# Lab 1 - Exercise 4 - Deploy Microsoft Purview Message Encryption
+
+Joni Sherman, an Information Security Administrator at Contoso Ltd., is implementing secure email communication to protect sensitive information exchanged between departments. As part of this effort, she'll configure Microsoft Purview Message Encryption (OME) by using the Exchange admin center to automatically encrypt messages sent from the Finance department and include a clear notice that the message was sent securely.
+
+**Tasks**:
+
+1. Create a mailflow rule to encrypt messages from the Finance department
+1. Add a disclaimer to encrypted messages
+1. Enable the mailflow rule  
+1. Validate message encryption
+
+## Task 1 – Create a mailflow rule to encrypt messages from the Finance department
+
+In this task, you'll use the Exchange admin center to create a mailflow rule that applies Microsoft Purview Message Encryption to all messages sent by members of the Finance Team group.
+
+1. In **Microsoft Edge**, go to `https://admin.exchange.microsoft.com` and sign in as JoniS@WWLxZZZZZZ.onmicrosoft.com (replace ZZZZZZ with your unique tenant ID).
+
+1. In the left navigation pane, expand **mailflow**, then select **Rules**.
+
+1. On the **Rules** page, select **+ Add a rule** > **Apply Office 365 Message Encryption and rights protection to messages**.
+
+1. On the **Set rule conditions** page, configure:
+
+   - **Name:** `Encrypt messages from Finance department`
+
+   - In the **Apply this rule if** section, configure:
+
+      - For dropdown 1: **The sender**
+
+      - For dropdown 2: **is a member of this group**, then select **Finance team** and **Save** in the **Select members** flyout.
+
+   - In the **Do the following** section:
+
+     - Leave the default **Modify the message security** and **Apply Office 365 Message Encryption and rights protection** selected
+
+     - Select the **Select one** link under the **Do the following** section.
+
+       ![Screenshot showing where to select Select one in the Exchange Admin Center.](../Media/rights-protect-message-options.png)
+
+     - In the **Select RMS template** flyout, select **Encrypt**, then select **Save**.
+
+     - Select **Next** back on the **Set rule conditions** page.
+
+1. On the **Set rule settings** page, leave the default selected, then select **Next**.
+
+1. On the **Review and finish** page, review your mailflow rule, then select **Finish**.
+
+1. Select **Done** once your mailflow rule has been created.
+
+You've successfully created a mailflow rule that encrypts messages sent from the Finance department using Microsoft Purview Message Encryption. This ensures that sensitive financial communications are protected before leaving the organization.
+
+## Task 2 – Add a disclaimer to encrypted messages
+
+Next, you'll modify the existing encryption rule to append a disclaimer. This disclaimer acts as a simple form of message branding, notifying recipients that the message was sent securely by Contoso Ltd.
+
+1. On the **Rules** page, select the newly created **Encrypt messages from Finance department**.
+
+1. In the **Encrypt messages from Finance department** flyout, select **Edit rule conditions**.
+
+1. Select the **+** to the right of the **Do the following** section to add another action.
+
+   ![Screenshot showing where the plus (+) is to add another mailflow action.](../Media/add-mail-flow-condition.png)
+
+1. In the newly created **And** section:
+
+   - For dropdown 1: **Apply a disclaimer to the message**
+
+   - For dropdown 2: **append a disclaimer**.
+
+   - Under the dropdowns, select **Enter text**, then enter `This email has been encrypted and sent securely by Contoso Ltd.` in the **specify disclaimer text** flyout.
+
+   - Select **Save** at the bottom of the flyout.
+
+   - Select the link to add a fallback action. In the **specify fallback action** flyout, select **Wrap**, then select **Save** at the bottom of the flyout.
+
+1. Select **Save** at the bottom **Encrypt messages from Finance department** flyout.
+
+1. Once the rule has been changed, you'll see a message stating **Transport rule updated successfully**.
+
+1. Close the flyout by selecting the **X** in the top right corner of the flyout.
+
+You've updated the encryption rule to append a disclaimer to each protected message. This makes it clear to recipients that the email was encrypted and securely transmitted from Contoso Ltd.
+
+## Task 3 – Enable the mailflow rule
+
+By default, new mailflow rules are created in a disabled state. In this task, you'll enable the encryption rule so it can begin protecting messages from the Finance department.
+
+1. On the **Rules** page, select **Disabled** for the newly created **Encrypt messages from Finance department**.
+
+1. In the **Encrypt messages from Finance department** flyout, set the toggle under **Enable or disable rule** to **Enabled**.
+
+1. The mailflow rule will enable automatically. You'll see a message stating **Updating the rule status, please wait...**. Once the rule is enabled, you'll see a message stating **Rule status updated successfully**.
+
+1. Close the flyout by selecting the **X** in the top right corner of the flyout.
+
+The encryption rule is now active and enforcing Microsoft Purview Message Encryption for messages sent from the Finance department. Any future messages from Finance users will be automatically encrypted and include the Contoso Ltd. disclaimer.
+
+## Task 4 – Validate message encryption
+
+In this task, you'll send a test email from a member of the Finance department to confirm that Microsoft Purview Message Encryption is applied automatically and that the recipient sees the secure message notice.
+
+> [!alert] External email delivery might be blocked in some lab environments. This task might not complete as expected.
+
+1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
+
+1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Lynne's password was set in a previous exercise.
+
+1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again** then select **No**.
+
+1. In Outlook on the web, select **New mail**.
+
+1. In the **To** line enter your personal or other third-party email address that isn't in the tenant domain. Enter **`Secret Message`** in the subject line and **`My super-secret message.`** in the body of the email.
+
+1. Select **Send** to send the message. Leave the Outlook window open.
+
+1. Sign into your personal email account in a new window and open the message from Lynne Robbins. If you sent the message to a Microsoft account (such as @outlook.com), it might open automatically. If you sent the email to another email service like (@gmail.com), you might have to perform the next steps to process the encryption and read the message.
+
+    > [!Note] **Note**: You might need to check your junk or spam folder for the message from Lynne Robbins.
+
+1. Select **Read the message**.
+
+1. Select **Sign in with a One-time passcode** to receive a limited time passcode.
+
+1. Go to your personal email portal and open the message with subject **Your one-time passcode to view the message**.
+
+1. Copy the passcode, paste it into the portal and select **Continue**.
+
+1. Review the encrypted message. You should see the **This email has been encrypted and sent securely by Contoso Ltd.** message at the bottom of your email.
+
+You've successfully validated that messages from the Finance department are automatically encrypted and include the appended Contoso disclaimer, confirming that Microsoft Purview Message Encryption is working as expected.
