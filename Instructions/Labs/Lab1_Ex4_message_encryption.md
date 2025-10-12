@@ -248,7 +248,7 @@ In this task, you'll use the Exchange admin center to create a mailflow rule tha
 
 1. In **Microsoft Edge**, go to `https://admin.exchange.microsoft.com` and sign in as JoniS@WWLxZZZZZZ.onmicrosoft.com (replace ZZZZZZ with your unique tenant ID).
 
-1. In the left navigation pane, expand **mailflow**, then select **Rules**.
+1. In the left navigation pane, expand **Mailflow**, then select **Rules**.
 
 1. On the **Rules** page, select **+ Add a rule** > **Apply Office 365 Message Encryption and rights protection to messages**.
 
