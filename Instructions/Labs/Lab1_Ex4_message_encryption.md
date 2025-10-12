@@ -183,7 +183,7 @@ Protected messages sent by your organizations finance department require special
 
 1. Confirm the warning message for customizing the template with **Y** for Yes and press **Enter**.
 
-1. Run the **New-TransportRule** cmdlet to create a mailflow rule, which applies the custom'template to all messages sent from the finance team. This process might take a few seconds to complete.
+1. Run the **New-TransportRule** cmdlet to create a mail flow rule, which applies the custom'template to all messages sent from the finance team. This process might take a few seconds to complete.
 
     ```powershell
     New-TransportRule -Name "Encrypt all mails from Finance team" -FromScope InOrganization -FromMemberOf "Finance Team" -ApplyRightsProtectionCustomizationTemplate "Finance Department" -ApplyRightsProtectionTemplate Encrypt
@@ -237,18 +237,18 @@ Joni Sherman, an Information Security Administrator at Contoso Ltd., is implemen
 
 **Tasks**:
 
-1. Create a mailflow rule to encrypt messages from the Finance department
+1. Create a mail flow rule to encrypt messages from the Finance department
 1. Add a disclaimer to encrypted messages
-1. Enable the mailflow rule  
+1. Enable the mail flow rule  
 1. Validate message encryption
 
-## Task 1 – Create a mailflow rule to encrypt messages from the Finance department
+## Task 1 – Create a mail flow rule to encrypt messages from the Finance department
 
-In this task, you'll use the Exchange admin center to create a mailflow rule that applies Microsoft Purview Message Encryption to all messages sent by members of the Finance Team group.
+In this task, you'll use the Exchange admin center to create a mail flow rule that applies Microsoft Purview Message Encryption to all messages sent by members of the Finance Team group.
 
 1. In **Microsoft Edge**, go to `https://admin.exchange.microsoft.com` and sign in as JoniS@WWLxZZZZZZ.onmicrosoft.com (replace ZZZZZZ with your unique tenant ID).
 
-1. In the left navigation pane, expand **Mailflow**, then select **Rules**.
+1. In the left navigation pane, expand **Mail flow**, then select **Rules**.
 
 1. On the **Rules** page, select **+ Add a rule** > **Apply Office 365 Message Encryption and rights protection to messages**.
 
@@ -276,11 +276,11 @@ In this task, you'll use the Exchange admin center to create a mailflow rule tha
 
 1. On the **Set rule settings** page, leave the default selected, then select **Next**.
 
-1. On the **Review and finish** page, review your mailflow rule, then select **Finish**.
+1. On the **Review and finish** page, review your mail flow rule, then select **Finish**.
 
-1. Select **Done** once your mailflow rule has been created.
+1. Select **Done** once your mail flow rule has been created.
 
-You've successfully created a mailflow rule that encrypts messages sent from the Finance department using Microsoft Purview Message Encryption. This ensures that sensitive financial communications are protected before leaving the organization.
+You've successfully created a mail flow rule that encrypts messages sent from the Finance department using Microsoft Purview Message Encryption. This ensures that sensitive financial communications are protected before leaving the organization.
 
 ## Task 2 – Add a disclaimer to encrypted messages
 
@@ -292,7 +292,7 @@ Next, you'll modify the existing encryption rule to append a disclaimer. This di
 
 1. Select the **+** to the right of the **Do the following** section to add another action.
 
-   ![Screenshot showing where the plus (+) is to add another mailflow action.](../Media/add-mail-flow-condition.png)
+   ![Screenshot showing where the plus (+) is to add another mail flow action.](../Media/add-mail-flow-condition.png)
 
 1. In the newly created **And** section:
 
@@ -314,15 +314,15 @@ Next, you'll modify the existing encryption rule to append a disclaimer. This di
 
 You've updated the encryption rule to append a disclaimer to each protected message. This makes it clear to recipients that the email was encrypted and securely transmitted from Contoso Ltd.
 
-## Task 3 – Enable the mailflow rule
+## Task 3 – Enable the mail flow rule
 
-By default, new mailflow rules are created in a disabled state. In this task, you'll enable the encryption rule so it can begin protecting messages from the Finance department.
+By default, new mail flow rules are created in a disabled state. In this task, you'll enable the encryption rule so it can begin protecting messages from the Finance department.
 
 1. On the **Rules** page, select **Disabled** for the newly created **Encrypt messages from Finance department**.
 
 1. In the **Encrypt messages from Finance department** flyout, set the toggle under **Enable or disable rule** to **Enabled**.
 
-1. The mailflow rule will enable automatically. You'll see a message stating **Updating the rule status, please wait...**. Once the rule is enabled, you'll see a message stating **Rule status updated successfully**.
+1. The mail flow rule will enable automatically. You'll see a message stating **Updating the rule status, please wait...**. Once the rule is enabled, you'll see a message stating **Rule status updated successfully**.
 
 1. Close the flyout by selecting the **X** in the top right corner of the flyout.
 
