@@ -20,7 +20,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. As
 
 1. Use DSPM for AI to create a DLP policy for generative AI sites
 1. Create an insider risk policy to detect risky AI interactions
-1. Block Copilot from accessing labeled content
+1. Detect unethical behavior in AI apps
 1. Run a data assessment to detect unlabeled content
 
 ## Task 1 – Use DSPM for AI to create a DLP policy for generative AI sites
@@ -103,51 +103,35 @@ Confirm that the triggering event is **User account deleted from Microsoft Entra
 
 You've created a policy that detects risky AI interactions, including prompts and responses, to help identify early signs of risky user behavior.
 
-## Task 3 – Block Copilot from accessing labeled content
+## Task 3 – Detect unethical behavior in AI apps
 
-You can further reduce risk by preventing Copilot from processing or responding with content protected by sensitivity labels.
+In this task, you'll create a policy in DSPM for AI to detect unethical or inappropriate behavior in Microsoft 365 Copilot and other AI applications.
 
-1. In Microsoft Purview, navigate to **DSPM for AI** by selecting **Solutions** > **DSPM for AI** > **Recommendations**.
+1. In Microsoft Purview, go to **DSPM for AI** by selecting **Solutions** > **DSPM for AI** > **Recommendations**.
 
-1. Select the **Protect sensitive data referenced in Microsoft 365 Copilot and agents (preview)** recommendation.
+1. Select the **Detect unethical behavior in AI apps** recommendation.
 
-1. Review the guidance provided in this recommendation.
+1. In the flyout, review the overview of what this policy will configure:
 
-1. Navigate to **Solutions** > **Data Loss Prevention** > **Policies**.
+   - The default policy name is **DSPM for AI – Unethical behavior in AI apps**.
 
-1. Select **+ Create policy**, then choose **Custom policy**.
+   - The policy detects sensitive or inappropriate information within prompts and responses in Microsoft 365 Copilot and other AI agents.
 
-1. On the **Name your DLP policy** page, enter:
+   - It applies to all users and groups in your organization.
 
-   - **Name**: `DLP - Block Copilot access to labeled content`
-   - **Description**: `Prevents Microsoft 365 Copilot from processing or responding with content labeled using sensitivity labels.`
+1. Select **Create policy** to create the Communication Compliance policy.
 
-1. Select **Next** until you reach the **Choose where to apply the policy** page.
+1. On the **Policy successfully created** page, select **X** to close the flyout.
 
-1. Select **Microsoft 365 Copilot (preview)** as the policy scope, then select **Next** until you reach the **Customize advanced DLP rules** page.
+1. The **Recommendations** page will refresh, and the **Detect unethical behavior in AI apps** recommendation will move to **Completed**.
 
-1. Select **Create rule**, and configure:
+1. In the left navigation, select **Policies**.
 
-   - **Name**: `Prevent Copilot from accessing labeled data`
-   - Under **Conditions**, select **Add condition** > **Content contains** > **Sensitivity labels**. Add these sensitivity labels:
-     - `Trusted People`
-     - `Project - Falcon`
-     - `Financial Data`
-   - Select **Add**
-   - Under **Actions** select **Add an action** > **Prevent Copilot from processing content (preview)**
-   - Select **Save** at the bottom of the **Create rule** flyout.
+1. Select the newly created **DSPM for AI – Unethical behavior in AI apps** policy to review its configuration and status.
 
-1. Back on the **Customize advanced DLP rules** page, select **Next**.
+1. On the **DSPM for AI - Unethical behavior in AI apps** page, select **X** to close the flyout.
 
-1. On the **Policy mode** page, select **Turn the policy on immediately**, then select **Next**.
-
-1. On the **Review and finish** page select **Submit**, then select **Done** on the **New policy created** page.
-
-1. Return to **DSPM for AI recommendations** by selecting **Solutions** > **DSPM for AI** > **Recommendations**.
-
-1. Select the **Protect sensitive data referenced in Microsoft 365 Copilot and agents (preview)** recommendation and select **Mark as complete**.
-
-You've created a DLP policy that prevents labeled content from being used in Copilot prompts and responses.
+You've created a policy that detects unethical activity in AI applications to help Contoso maintain responsible use of Copilot.
 
 ## Task 4 – Run a data risk assessment to detect unlabeled content
 
