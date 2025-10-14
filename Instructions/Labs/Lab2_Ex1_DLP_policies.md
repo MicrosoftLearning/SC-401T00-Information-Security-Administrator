@@ -138,6 +138,14 @@ In this task, you'll create a DLP policy using PowerShell to block sharing of em
 
 1. Open an elevated PowerShell window by right clicking the **Start** button in the task bar, then select **Terminal (Admin)**.
 
+1. Run the **Install Module** cmdlet in the terminal window to install the latest **Exchange Online PowerShell** module version:
+
+    ```powershell
+    Install-Module ExchangeOnlineManagement
+    ```
+
+1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
+
 1. Run the **Connect-IPPSSession** cmdlet to connect to the Security & Compliance PowerShell:
 
     ```powershell
