@@ -43,7 +43,7 @@ In this task, you'll verify the correct Azure RMS functionality of your tenant.
     Connect-ExchangeOnline
     ```
 
-1. When the **Sign in** window is displayed, sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). You will use the password you reset Joni's to in a previous lab.
+1. When the **Sign in** window is displayed, sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). You will use the password you reset Joni's to in a previous lab.
 
 1. Run the **Get-IRMConfiguration** cmdlet to verify Azure RMS and IRM is activated in your tenant:
 
@@ -113,7 +113,7 @@ You must confirm that no social IDs dialog is displayed for external recipients 
 
 1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
-1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Lynne's password was set in a previous exercise.
+1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Lynne's password was set in a previous exercise.
 
 1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again** then select **No**.
 
@@ -246,7 +246,7 @@ Joni Sherman, an Information Security Administrator at Contoso Ltd., is implemen
 
 In this task, you'll use the Exchange admin center to create a mail flow rule that applies Microsoft Purview Message Encryption to all messages sent by members of the Finance Team group.
 
-1. In **Microsoft Edge**, go to `https://admin.exchange.microsoft.com` and sign in as JoniS@WWLxZZZZZZ.onmicrosoft.com (replace ZZZZZZ with your unique tenant ID).
+1. In **Microsoft Edge**, go to `https://admin.exchange.microsoft.com` and sign in as JoniS@WWLxZZZZZZ.onmicrosoft.com (replace ZZZZZZ with your unique tenant prefix).
 
 1. In the left navigation pane, expand **Mail flow**, then select **Rules**.
 
@@ -336,7 +336,7 @@ In this task, you'll send a test email from a member of the Finance department t
 
 1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
-1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Lynne's password was set in a previous exercise.
+1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Lynne's password was set in a previous exercise.
 
 1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again** then select **No**.
 

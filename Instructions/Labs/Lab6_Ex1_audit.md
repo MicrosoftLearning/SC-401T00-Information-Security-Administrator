@@ -26,7 +26,7 @@ You're Joni Sherman, an Information Security Administrator at Contoso Ltd. As pa
 
 In this task, you'll use the Microsoft Purview Audit solution to search for recent audit events related to DLP policy and rules.
 
-1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Joni's password was set in a previous exercise.
 
 1. In Microsoft Purview, navigate to **Solutions** > **Audit**.
 

@@ -28,7 +28,11 @@ In this lab, you'll configure and prepare your environment for administration ta
 
 In this task, you'll enable Audit in the Microsoft Purview portal to monitor portal activities.
 
-1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged into Microsoft 365 with the MOD Administrator account.
+1. Log into Client 1 VM (SC-401-CL1) with the **Admin** account.
+
+1. Open Microsoft Edge.
+
+1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **MOD Administrator** (`admin@WWLxZZZZZZ.onmicrosoft.com`, where ZZZZZZ is your unique tenant prefix). Use the password provided by your lab host.
 
 1. In Microsoft Edge, navigate to the Microsoft Purview portal, `https://purview.microsoft.com`, and log in.
 
@@ -74,7 +78,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
   >      Connect-ExchangeOnline
   >      ```
   >
-  >    Sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (replace ZZZZZZ with your tenant ID).
+  >    Sign in as `admin@WWLxZZZZZZ.onmicrosoft.com`.
   >
   > 1. Check if Audit is enabled:
   >
@@ -144,7 +148,7 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
 
-1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
+1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider).
 
   > [!note] **Skip MFA for the Microsoft 365 Admin center**
   >
