@@ -22,8 +22,8 @@ Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd.
 1. Create a DLP policy in PowerShell
 1. Activate a policy in simulation mode
 1. Modify policy priority
-1. Enable file inspection in Microsoft 365 Defender
-1. Create a file policy for Microsoft 365 Defender
+1. Enable file inspection in Microsoft Defender
+1. Create a file policy for Microsoft Defender
 
 ## Task 1 – Create a DLP policy in simulation mode
 
@@ -214,7 +214,7 @@ When multiple policies exist, their priority determines which one applies first.
 
 You've updated policy priority so that the employee ID policy takes precedence over others.
 
-## Task 6 – Enable file inspection in Microsoft 365 Defender
+## Task 6 – Enable file inspection in Microsoft Defender
 
 Some file policies require access to inspect the contents of protected files. In this task, you'll grant the necessary permissions to allow Microsoft Defender to scan the contents of OneDrive and SharePoint files for sensitive information.
 
@@ -236,7 +236,7 @@ Some file policies require access to inspect the contents of protected files. In
 
 File inspection is now enabled in Defender, allowing file policies to scan for sensitive content.
 
-## Task 7 – Create a file policy for Microsoft 365 Defender
+## Task 7 – Create a file policy for Microsoft Defender
 
 In this task, you'll create a file policy in Microsoft Defender that identifies and quarantines files containing credit card numbers in OneDrive and SharePoint.
 
