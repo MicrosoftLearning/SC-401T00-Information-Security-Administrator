@@ -21,8 +21,8 @@ In this lab, you'll configure and prepare your environment for administration ta
 1. Enable Audit in the Microsoft Purview portal  
 1. Enable device onboarding  
 1. Enable insider risk analytics and data sharing  
-1. Set user passwords for lab exercises  
 1. Initialize Microsoft Defender XDR
+1. Configure multi-factor authentication in Microsoft Entra
 
 ## Task 1 - Enable Audit in the Microsoft Purview portal
 
@@ -48,55 +48,55 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 1. Once you select this option, the blue bar should disappear from this page.
 
-    > [!Note] **Note: If the Audit button doesn't enable logging**
+    >[!Note] **Note: If the Audit button doesn't enable logging**
     >
-    > In some tenants, selecting **Start recording user and admin activity** might not activate Audit.  
+    >In some tenants, selecting **Start recording user and admin activity** might not activate Audit.  
     >
-    > If this happens, you can enable Audit through PowerShell instead:
+    >If this happens, you can enable Audit through PowerShell instead:
     >
-    > 1. Open an elevated Terminal window by right-clicking the Windows button and selecting **Terminal (Admin)**.  
+    >1. Open an elevated Terminal window by right-clicking the Windows button and selecting **Terminal (Admin)**.  
     >
-    > 1. Install the latest **Exchange Online PowerShell** module:
+    >1. Install the latest **Exchange Online PowerShell** module:
     >
-    >        ```powershell
-    >        Install-Module ExchangeOnlineManagement
-    >        ```
+    >    ```powershell
+    >    Install-Module ExchangeOnlineManagement
+    >    ```
     >
     >    Confirm any prompts by typing **Y** for Yes and pressing **Enter**.
     >
-    > 1. Run the following command to change your execution policy:
+    >1. Run the following command to change your execution policy:
     >
-    >        ```powershell
-    >        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-    >        ```
+    >    ```powershell
+    >    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    >    ```
     >
-    > 1. Close the elevated Terminal window and open a regular PowerShell session.
+    >1. Close the elevated Terminal window and open a regular PowerShell session.
     >
-    > 1. Connect to Exchange Online:
+    >1. Connect to Exchange Online:
     >
-    >        ```powershell
-    >        Connect-ExchangeOnline
-    >        ```
+    >    ```powershell
+    >    Connect-ExchangeOnline
+    >    ```
     >
-    >    Sign in as `admin@WWLxZZZZZZ.onmicrosoft.com`.
+    >    Sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
     >
-    > 1. Check if Audit is enabled:
+    >1. Check if Audit is enabled:
     >
-    >        ```powershell
-    >        Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
-    >        ```
+    >    ```powershell
+    >    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    >    ```
     >
     >    If it returns **_False_**, enable Audit:
     >
-    >        ```powershell
-    >        Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
-    >        ```
+    >    ```powershell
+    >    Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+    >    ```
     >
-    > 1. Verify that it's now enabled:
+    >1. Verify that it's now enabled:
     >
-    >        ```powershell
-    >        Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
-    >        ```
+    >    ```powershell
+    >    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    >    ```
     >
     >    The command should return **_True_** once Audit is active.
 
@@ -142,13 +142,17 @@ In this task, you'll enable analytics and data sharing for Insider Risk Manageme
 
 You have enabled analytics and data sharing for Insider Risk Management.
 
+<!---
+
+Removing this task in favor of using lab passwords
+
 ## Task 4 - Set user passwords for lab exercises
 
 In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
 
-1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider).
+1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
     > [!Note] **Note: Skip MFA for the Microsoft 365 Admin center**
     >
@@ -185,8 +189,9 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 1. On the **Passwords have been reset** page, you should see the three user accounts that have been reset. At the bottom of this flyout page, select **Close**.
 
 You have successfully reset passwords for lab exercises.
+-->
 
-## Task 5 – Initialize Microsoft Defender XDR
+## Task 4 – Initialize Microsoft Defender XDR
 
 In this task, you'll open Microsoft Defender and wait for Microsoft Defender XDR to finish initializing.
 
@@ -206,7 +211,7 @@ In this task, you'll open Microsoft Defender and wait for Microsoft Defender XDR
 
 Microsoft Defender XDR is being initialized. You can continue with other tasks while it finishes setting up.
 
-## Task 6 – Configure multi-factor authentication in Microsoft Entra
+## Task 5 – Configure multi-factor authentication in Microsoft Entra
 
 In this task, you'll configure multi-factor authentication (MFA) for the admin account to secure access to Microsoft Entra and other Microsoft 365 services.
 
