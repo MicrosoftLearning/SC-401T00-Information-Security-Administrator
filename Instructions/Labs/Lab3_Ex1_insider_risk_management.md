@@ -33,7 +33,9 @@ In this task, you'll assign Joni Sherman the Insider Risk Management role so she
 
 1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
-1. In Microsoft Edge, navigate to **`https://purview.microsoft.com`** and sign into the Microsoft Purview portal as MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
+
+1. Navigate to **`https://purview.microsoft.com`** and sign into the Microsoft Purview portal as MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
 1. Select **Settings** > **Roles and Scopes** > **Role groups**.
 
@@ -53,7 +55,7 @@ In this task, you'll assign Joni Sherman the Insider Risk Management role so she
 
 1. Once you have successfully added Joni to the role group, select **Done** on the **You successfully updated the role group** page.
 
-1. Sign out of the **Mod Administrator** account by selecting the MA icon on the top right of the window, then selecting **Sign out**.
+1. Close the InPrivate window.
 
 You've assigned Joni the necessary permissions to work with Insider Risk Management in the Microsoft Purview portal.
 
@@ -61,7 +63,7 @@ You've assigned Joni the necessary permissions to work with Insider Risk Managem
 
 Before you create an insider risk policy, you'll turn on the indicators needed for detection. These indicators define the types of risky activity the system will look for.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign into the Microsoft Purview portal as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider).
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign into the Microsoft Purview portal as sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. Select **Settings** > **Insider risk management**.
 

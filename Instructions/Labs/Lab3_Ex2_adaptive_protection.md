@@ -19,7 +19,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider).
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. In the Microsoft Purview portal, navigate to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
 
@@ -64,19 +64,15 @@ You've updated your DLP policy to block sharing when insider risk is elevated, s
 
 To add another layer of enforcement, you can use insider risk levels to restrict access using Conditional Access. In this task, you'll create a policy that blocks access for users with an elevated insider risk level.
 
-1. In Microsoft Purview, sign out of Joni's account and close all browser windows.
+1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
-1. Open a new Microsoft Edge window and navigate to the **Microsoft Entra admin center** at `https://entra.microsoft.com`. Sign in as the **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). The Admin password should be provided by your lab hosting provider.
+1. Navigate **Microsoft Entra admin center** at `https://entra.microsoft.com`, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
-> [!note] **Note**: In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
-> - Select **Postpone MFA** to temporarily delay MFA setup.
->
->   ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
-> - Select **Confirm postponement**.
->
-> - Select **Continue sign-in without MFA** to access Microsoft Entra.
->
-> This postpones MFA enforcement for the tenant and allows you to proceed with the lab.
+    > [!note] **Multi-factor authentication prompt**
+    >
+    > If you're prompted for MFA while signing in, open the **Microsoft Authenticator** app on your mobile device and approve the sign-in request.  
+    >
+    > After approval, you'll be redirected to the **Microsoft Entra admin center**.
 
 1. In the Microsoft Entra admin center, navigate to **Protection** > **Conditional Access** > **Policies**.
 
@@ -107,7 +103,7 @@ To add another layer of enforcement, you can use insider risk levels to restrict
 
 1. Back on the **Policies** page for Conditional Access, select **Refresh** to verify your newly created policy appears.
 
-1. Sign out of the Mod Administrator account by selecting the MA icon on the top right of the window, then selecting **Sign out** and close all browser windows.
+1. Close the InPrivate window.
 
 You've created a Conditional Access policy that blocks access for elevated-risk users, without affecting access immediately, since the policy is in report-only mode.
 
@@ -115,7 +111,7 @@ You've created a Conditional Access policy that blocks access for elevated-risk 
 
 In this final task, you'll turn on Adaptive Protection so the system can start applying dynamic enforcement based on insider risk.
 
-1. Open **Microsoft Edge** and navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider).
+1. Return to the Microsoft Edge window where you're signed in as Joni Sherman.
 
 1. Navigate to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
 

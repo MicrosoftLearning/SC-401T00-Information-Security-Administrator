@@ -27,9 +27,9 @@ In this task, you'll assign eDiscovery permissions to Joni Sherman so she can pe
 
 1. Sign into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. If you're signed in as Joni, sign out and close all browser windows.
+1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **MOD Administrator** `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. Navigate to **`https://purview.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
 1. In the left sidebar, select **Settings** > **Roles and Scopes** > **Role groups**.
 
@@ -49,13 +49,13 @@ In this task, you'll assign eDiscovery permissions to Joni Sherman so she can pe
 
 1. On the **You successfully updated the role group** page, select **Done**.
 
-1. Sign out of the MOD Administrator account by selecting the **MA** icon on the top right of the window, then select **Sign out**.
+1. Close the InPrivate window.
 
 You've assigned eDiscovery permissions to Joni Sherman, enabling her to search for sensitive content as part of the investigation.
 
 ## Task 2 – Search for content using sensitive financial terms
 
-1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. Return to the Microsoft Edge window where you're signed in as Joni Sherman.
 
 1. In Microsoft Purview, navigate to **Solutions** > **eDiscovery**.
 

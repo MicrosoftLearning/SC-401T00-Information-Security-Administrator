@@ -30,7 +30,7 @@ In this task, you'll create a retention label for sensitive financial data that 
 
 1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
-1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. In Microsoft Edge, navigate to `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. Navigate to **Solutions** > **Data Lifecycle Management** > **Retention labels**.
 
@@ -182,7 +182,6 @@ In this task, you'll create a static retention policy for Microsoft Teams conten
 
 You've configured a static retention policy that retains Teams messages for three years before automatically deleting them.
 
-<!------ Commenting out until tenant bug issues are resolved
 ## Task 5 – Create an adaptive scope
 
 In this task, you'll define an adaptive scope that targets Microsoft 365 groups associated with leadership and operations roles.
@@ -267,9 +266,8 @@ In this task, you'll use the adaptive scope you created to configure a retention
 1. Select **Done** once the policy is created.
 
 You've created a retention policy that applies to content owned by privileged groups, retaining it for five years before deletion.
--->
 
-## Task 5 – Recover SharePoint content
+## Task 7 – Recover SharePoint content
 
 In this task, you'll simulate restoring a deleted document from a SharePoint site to validate your recovery options.
 

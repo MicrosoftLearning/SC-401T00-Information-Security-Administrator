@@ -31,7 +31,7 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
 
 1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**. Sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**. Sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. Select **Solutions** > **Data Loss Prevention** > **Policies**.
 
@@ -152,7 +152,7 @@ In this task, you'll create a DLP policy using PowerShell to block sharing of em
     Connect-IPPSSession
     ```
 
-1. Sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider) in the **Sign in to your account** pop-up window. Joni's password was set in a previous exercise.
+1. Sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider) in the **Sign in to your account** pop-up window. User account passwords are provided by your lab hosting provider.
 
 1. Run the **New-DlpCompliancePolicy** cmdlet to create a DLP policy that scans all Exchange mailboxes:
 
@@ -212,8 +212,6 @@ When multiple policies exist, their priority determines which one applies first.
 
 1. In the **Data loss prevention** window, select **Refresh** and review the priority in the **Order** column of the policy table.
 
-1. Sign out of Joni's account by selecting her icon in the top right, then select **Sign out**.
-
 You've updated policy priority so that the employee ID policy takes precedence over others.
 
 ## Task 6 – Enable file inspection in Microsoft 365 Defender
@@ -222,7 +220,9 @@ Some file policies require access to inspect the contents of protected files. In
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and signed in as Joni Sherman.
 
-1. In **Microsoft Edge**, navigate to Microsoft Defender by going to `https://security.microsoft.com`. Log in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
+
+1. Navigate to Microsoft Defender XDR by going to **`https://security.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
 1. On the left sidebar, select **System** > **Settings**, then select **Cloud Apps**.
 
@@ -232,7 +232,7 @@ Some file policies require access to inspect the contents of protected files. In
 
 1. Follow the prompt to allow the required permissions in Microsoft Entra ID, then you should see file inspection is **Active** in Microsoft Defender for Cloud Apps.
 
-1. Sign out of the MOD Administrator account by selecting the **MA** icon in the top right, select **Sign out**, then close your browser window.
+1. Close the InPrivate window.
 
 File inspection is now enabled in Defender, allowing file policies to scan for sensitive content.
 
@@ -242,7 +242,7 @@ In this task, you'll create a file policy in Microsoft Defender that identifies 
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Open **Microsoft Edge** and navigate to **`https://security.microsoft.com`** and log into the Microsoft Defender portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. Return to the Microsoft Edge window where you're signed in as Joni Sherman.
 
 1. In the **Microsoft Defender** portal, in the left navigation, select  **Cloud apps** > **Policies** then select **Policy management**.
 
