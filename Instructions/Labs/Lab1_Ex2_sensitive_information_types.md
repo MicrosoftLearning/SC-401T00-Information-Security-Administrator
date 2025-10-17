@@ -25,7 +25,7 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. On the left sidebar, select **Solutions** then select **Information Protection**.
 
@@ -108,8 +108,6 @@ You've received reports that some documents containing employee IDs aren't being
 
 1. Select **Save**, then select **Done** to update your sensitive info type.
 
-1. Sign out of Joni's account by selecting the profile picture of Joni Sherman in the top right. Select **Sign out**, then close the browser window.
-
 You have successfully reduced the confidence level to increase the sensitivity of your custom SIT, helping ensure documents with partial matching content are more likely to be flagged.
 
 ## Task 3 – Create a security group and assign roles to create an EDM classifier
@@ -118,9 +116,9 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Open **Microsoft Edge** then navigate to **`https://admin.microsoft.com`**.
+1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
-1. When the **Pick an account** page is displayed, select **Use another account** and sign in as **MOD Administrator** `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. Navigate to **`https://admin.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
 1. From the left pane, expand **Teams & groups** then select **Active teams & groups**.
 
@@ -151,7 +149,7 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. Verify **Joni Sherman** is listed below **Members**, then close the flyout panel by selecting the **X** on the top right of the flyout panel.
 
-1. Sign out of the Mod Administrator account by selecting the MA icon on the top right of the window, then selecting **Sign out** and closing the browser window.
+1. Close the InPrivate window.
 
 You have successfully created the **EDM_DataUploaders group** and assigned Joni access to create an EDM classifier.
 
@@ -159,9 +157,9 @@ You have successfully created the **EDM_DataUploaders group** and assigned Joni 
 
 In this task, you'll create an Exact Data Match (EDM) based classification with a database schema of employee data.
 
-1. Open **Microsoft Edge** then navigate to the Microsoft Purview portal at `https://purview.microsoft.com`.
+1. Return to the Microsoft Edge window where you're signed in as Joni Sherman.
 
-1. When the **Pick an account** page is displayed, select **Joni Sherman** and sign in.
+1. In **Microsoft Edge**, you should still be logged into Microsoft Purview as Joni Sherman.
 
 1. Navigate to **Information Protection** by selecting **Solutions** > **Information Protection** from the left sidebar.
 
