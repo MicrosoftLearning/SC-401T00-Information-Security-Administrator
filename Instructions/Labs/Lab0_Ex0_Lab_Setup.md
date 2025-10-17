@@ -48,57 +48,57 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 1. Once you select this option, the blue bar should disappear from this page.
 
-  > [!note] **If the Audit button doesn't enable logging**
-  >
-  > In some tenants, selecting **Start recording user and admin activity** might not activate Audit.  
-  >
-  > If this happens, you can enable Audit through PowerShell instead:
-  >
-  > 1. Open an elevated Terminal window by right-clicking the Windows button and selecting **Terminal (Admin)**.  
-  >
-  > 1. Install the latest **Exchange Online PowerShell** module:
-  >
-  >      ```powershell
-  >      Install-Module ExchangeOnlineManagement
-  >      ```
-  >
-  >    Confirm any prompts by typing **Y** for Yes and pressing **Enter**.
-  >
-  > 1. Run the following command to change your execution policy:
-  >
-  >      ```powershell
-  >      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-  >      ```
-  >
-  > 1. Close the elevated Terminal window and open a regular PowerShell session.
-  >
-  > 1. Connect to Exchange Online:
-  >
-  >      ```powershell
-  >      Connect-ExchangeOnline
-  >      ```
-  >
-  >    Sign in as `admin@WWLxZZZZZZ.onmicrosoft.com`.
-  >
-  > 1. Check if Audit is enabled:
-  >
-  >      ```powershell
-  >      Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
-  >      ```
-  >
-  >    If it returns **_False_**, enable Audit:
-  >
-  >      ```powershell
-  >      Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
-  >      ```
-  >
-  > 1. Verify that it's now enabled:
-  >
-  >      ```powershell
-  >      Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
-  >      ```
-  >
-  >    The command should return **_True_** once Audit is active.
+    > [!Note] **If the Audit button doesn't enable logging**
+    >
+    > In some tenants, selecting **Start recording user and admin activity** might not activate Audit.  
+    >
+    > If this happens, you can enable Audit through PowerShell instead:
+    >
+    > 1. Open an elevated Terminal window by right-clicking the Windows button and selecting **Terminal (Admin)**.  
+    >
+    > 1. Install the latest **Exchange Online PowerShell** module:
+    >
+    >      ```powershell
+    >      Install-Module ExchangeOnlineManagement
+    >      ```
+    >
+    >    Confirm any prompts by typing **Y** for Yes and pressing **Enter**.
+    >
+    > 1. Run the following command to change your execution policy:
+    >
+    >      ```powershell
+    >      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    >      ```
+    >
+    > 1. Close the elevated Terminal window and open a regular PowerShell session.
+    >
+    > 1. Connect to Exchange Online:
+    >
+    >      ```powershell
+    >      Connect-ExchangeOnline
+    >      ```
+    >
+    >    Sign in as `admin@WWLxZZZZZZ.onmicrosoft.com`.
+    >
+    > 1. Check if Audit is enabled:
+    >
+    >      ```powershell
+    >      Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    >      ```
+    >
+    >    If it returns **_False_**, enable Audit:
+    >
+    >      ```powershell
+    >      Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+    >      ```
+    >
+    > 1. Verify that it's now enabled:
+    >
+    >      ```powershell
+    >      Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    >      ```
+    >
+    >    The command should return **_True_** once Audit is active.
 
 You have successfully enabled auditing in Microsoft 365.
 
@@ -150,17 +150,17 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider).
 
-  > [!note] **Skip MFA for the Microsoft 365 Admin center**
-  >
-  > In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
-  >
-  > - Select **Skip for now** to temporarily delay MFA setup.
-  >
-  >   ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
-  >
-  > - On the **Let us know why you're skipping MFA** dialogue, select any justification, then select **Send and skip**.
-  >
-  > This postpones MFA enforcement in the Microsoft 365 Admin center for the tenant and allows you to proceed with the lab.
+    > [!Note] **Skip MFA for the Microsoft 365 Admin center**
+    >
+    > In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
+    >
+    > - Select **Skip for now** to temporarily delay MFA setup.
+    >
+    >   ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
+    >
+    > - On the **Let us know why you're skipping MFA** dialogue, select any justification, then select **Send and skip**.
+    >
+    > This postpones MFA enforcement in the Microsoft 365 Admin center for the tenant and allows you to proceed with the lab.
 
 1. On the left navigation pane, expand **Users** then select **Active users**.
 
@@ -196,9 +196,9 @@ In this task, you'll open Microsoft Defender and wait for Microsoft Defender XDR
 
 1. From the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents**.
 
-  > [!note] **Initialize Microsoft Defender XDR**
-  >
-  > The Microsoft Defender XDR initialization screen might or might not appear depending on your lab tenant. If it appears, you can continue with other tasks while it completes in the background.
+    > [!Note] **Initialize Microsoft Defender XDR**
+    >
+    > The Microsoft Defender XDR initialization screen might or might not appear depending on your lab tenant. If it appears, you can continue with other tasks while it completes in the background.
 
 1. You'll see a message stating that Microsoft Defender XDR is being prepared. This process runs automatically and might take a few minutes.
 
