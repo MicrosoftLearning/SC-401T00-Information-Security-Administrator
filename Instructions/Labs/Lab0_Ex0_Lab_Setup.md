@@ -48,7 +48,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 >
 > In some tenants, selecting **Start recording user and admin activity** might not activate Audit.  
 >
-> If this occurs, you can enable Audit through PowerShell instead:
+> If this happens, you can enable Audit through PowerShell instead:
 >
 > 1. Open an elevated Terminal window by right-clicking the Windows button and selecting **Terminal (Admin)**.  
 >
@@ -82,7 +82,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 >    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
 >    ```
 >
->    If it returns `False`, enable Audit:
+>    If it returns **_False_**, enable Audit:
 >
 >    ```powershell
 >    Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
@@ -94,7 +94,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 >    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
 >    ```
 >
->    The command should return `True` once Audit is active.
+>    The command should return **_True_** once Audit is active.
 
 You have successfully enabled auditing in Microsoft 365.
 
@@ -146,7 +146,9 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
-> [!note] **Note**: In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
+> [!note] **Skip MFA for the Microsoft 365 Admin center**
+>
+> In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
 >
 > - Select **Skip for now** to temporarily delay MFA setup.
 >
@@ -190,7 +192,9 @@ In this task, you'll open Microsoft Defender and wait for Microsoft Defender XDR
 
 1. From the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents**.
 
-> [!note] **Note**: The Microsoft Defender XDR initialization screen might or might not appear depending on your lab tenant. If it appears, you can continue with other tasks while it completes in the background.
+> [!note] **Initialize Microsoft Defender XDR**
+>
+> The Microsoft Defender XDR initialization screen might or might not appear depending on your lab tenant. If it appears, you can continue with other tasks while it completes in the background.
 
 1. You'll see a message stating that Microsoft Defender XDR is being prepared. This process runs automatically and might take a few minutes.
 
