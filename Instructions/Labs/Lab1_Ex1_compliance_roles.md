@@ -17,12 +17,12 @@ As the recently hired Information Security Administrator for Contoso Ltd., you (
 
 **Tasks**:
 
-1. Assign compliance and security roles
+1. Assign administrative roles
 1. Explore the Microsoft Purview portal
 
-## Task 1 – Assign compliance and security roles
+## Task 1 – Assign administrative roles
 
-In this task, you'll assign the Compliance Admin role to Joni Sherman.
+In this task, you'll assign the necessary compliance and security roles to Joni Sherman.
 
 1. Log into the Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account. The password should be provided by your lab hosting provider.
 
@@ -36,7 +36,7 @@ In this task, you'll assign the Compliance Admin role to Joni Sherman.
 
 1. On the **Manage admin roles** panel, select **Admin center access**, then scroll down to expand **Show all by category**.
 
-1. Under the **Security & Compliance** category, select the checkbox for **Compliance Administrator** and **Security Administrator**, then select **Save changes** at the bottom of the flyout panel.
+1. Under the **Security & Compliance** category, select the checkbox for **Compliance Administrator**, **Security Administrator**, and **Application Administrator** then select **Save changes** at the bottom of the flyout panel.
 
 1. You should see a message: **Admin roles updated**.
 
