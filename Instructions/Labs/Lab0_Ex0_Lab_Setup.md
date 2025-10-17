@@ -58,11 +58,11 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
     >
     >1. Install the latest **Exchange Online PowerShell** module:
     >
-    >    ```powershell
-    >    Install-Module ExchangeOnlineManagement
-    >    ```
+    >     ```powershell
+    >     Install-Module ExchangeOnlineManagement
+    >     ```
     >
-    >    Confirm any prompts by typing **Y** for Yes and pressing **Enter**.
+    >     Confirm any prompts by typing **Y** for Yes and pressing **Enter**.
     >
     >1. Run the following command to change your execution policy:
     >
