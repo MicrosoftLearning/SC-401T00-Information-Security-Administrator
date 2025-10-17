@@ -28,6 +28,18 @@ In this task, you'll assign the necessary compliance and security roles to Joni 
 
 1. Open **Microsoft Edge** and navigate to the Microsoft 365 admin center, `https://admin.microsoft.com`, and log in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
+    > [!Note] **Note: Skip MFA for the Microsoft 365 Admin center**
+    >
+    > In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
+    >
+    > - Select **Skip for now** to temporarily delay MFA setup.
+    >
+    >    ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
+    >
+    > - On the **Let us know why you're skipping MFA** dialogue, select any justification, then select **Send and skip**.
+    >
+    > This postpones MFA enforcement in the Microsoft 365 Admin center for the tenant and allows you to proceed with the lab.
+
 1. On the left sidebar, expand **Users** then select **Active users**.
 
 1. On the **Active users** page, search for `Joni`, then select **Joni Sherman**.
