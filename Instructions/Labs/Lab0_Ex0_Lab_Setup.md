@@ -66,37 +66,37 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
     >
     >1. Run the following command to change your execution policy:
     >
-    >    ```powershell
-    >    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-    >    ```
+    >     ```powershell
+    >     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    >     ```
     >
     >1. Close the elevated Terminal window and open a regular PowerShell session.
     >
     >1. Connect to Exchange Online:
     >
-    >    ```powershell
-    >    Connect-ExchangeOnline
-    >    ```
+    >     ```powershell
+    >     Connect-ExchangeOnline
+    >     ```
     >
     >    Sign in as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
     >
     >1. Check if Audit is enabled:
     >
-    >    ```powershell
-    >    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
-    >    ```
+    >     ```powershell
+    >     Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    >     ```
     >
     >    If it returns **_False_**, enable Audit:
     >
-    >    ```powershell
-    >    Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
-    >    ```
+    >     ```powershell
+    >     Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+    >     ```
     >
     >1. Verify that it's now enabled:
     >
-    >    ```powershell
-    >    Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
-    >    ```
+    >     ```powershell
+    >     Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
+    >     ```
     >
     >    The command should return **_True_** once Audit is active.
 
