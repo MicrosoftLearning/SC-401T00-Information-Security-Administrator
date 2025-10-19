@@ -22,7 +22,7 @@ As the recently hired Information Security Administrator for Contoso Ltd., you (
 
 ## Task 1 – Assign administrative roles
 
-In this task, you'll assign the necessary compliance and security roles to Joni Sherman.
+In this task, you'll assign the required compliance and security roles to Joni Sherman.
 
 1. Log into the Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account. The password should be provided by your lab hosting provider.
 
@@ -74,6 +74,6 @@ In this task, you'll sign in as Joni Sherman to explore the Microsoft Purview po
 
 1. A message about the new Microsoft Purview portal will appear on the screen. Select **Get started** to access the new portal.
 
-1. Get yourself familiar with the new Microsoft Purview portal. When you are done, leave the browser window open.
+1. Explore the layout and navigation of the new Microsoft Purview portal. Leave the browser window open when you're finished.
 
-You have successfully switched to Joni Sherman's account and are now ready to start the lab.
+You have successfully signed in as Joni Sherman and are ready to continue the lab.

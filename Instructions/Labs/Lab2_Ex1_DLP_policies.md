@@ -242,7 +242,7 @@ In this task, you'll create a file policy in Microsoft Defender that identifies 
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Return to the Microsoft Edge window where you're signed in as Joni Sherman.
+1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the new permissions are active.
 
 1. In the **Microsoft Defender** portal, in the left navigation, select  **Cloud apps** > **Policies** then select **Policy management**.
 

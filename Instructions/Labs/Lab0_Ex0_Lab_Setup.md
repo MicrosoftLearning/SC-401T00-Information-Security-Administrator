@@ -106,13 +106,13 @@ You have successfully enabled auditing in Microsoft 365.
 
 In this task, you'll enable device onboarding for your organization.
 
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft 365.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** to log into Microsoft Purview, then select **Settings** from the left sidebar.
+1. Select **Settings** from the left sidebar, then expand **Device onboarding**.
 
-1. In the left sidebar, expand **Device onboarding** then select **Devices**.
+1. On the **Device onboarding** page, select **Devices**.
 
-1. On the **Devices** page, select **Turn on device onboarding** then select **Ok** to enable device onboarding.
+1. On the **Devices** page, select **Turn on device onboarding** then select **Ok** to confirm.
 
 1. When prompted, select **OK** to confirm that device monitoring is being turned on.
 
@@ -193,7 +193,7 @@ You have successfully reset passwords for lab exercises.
 
 ## Task 4 – Initialize Microsoft Defender XDR
 
-In this task, you'll open Microsoft Defender and wait for Microsoft Defender XDR to finish initializing.
+In this task, you'll go to Microsoft Defender and wait for Microsoft Defender XDR to initialize.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
 
@@ -201,9 +201,9 @@ In this task, you'll open Microsoft Defender and wait for Microsoft Defender XDR
 
 1. From the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents**.
 
-    > [!Note] **Note: Initialize Microsoft Defender XDR**
+    > [!Note] **Note: Microsoft Defender XDR initialization**
     >
-    > The Microsoft Defender XDR initialization screen might or might not appear depending on your lab tenant. If it appears, you can continue with other tasks while it completes in the background.
+    > The Microsoft Defender XDR initialization screen might or might not appear depending on your lab tenant.
 
 1. You'll see a message stating that Microsoft Defender XDR is being prepared. This process runs automatically and might take a few minutes.
 
@@ -213,7 +213,7 @@ Microsoft Defender XDR is being initialized. You can continue with other tasks w
 
 ## Task 5 – Configure multi-factor authentication in Microsoft Entra
 
-In this task, you'll configure multi-factor authentication (MFA) for the admin account to secure access to Microsoft Entra and other Microsoft 365 services.
+In this task, you'll configure multi-factor authentication (MFA) for the admin account to secure access to Microsoft Entra and other connected Microsoft 365 services.
 
 1. In **Microsoft Edge**, navigate to **`https://entra.microsoft.com/`** to open Microsoft Entra.
 

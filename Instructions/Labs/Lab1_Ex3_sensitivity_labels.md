@@ -29,7 +29,7 @@ In this task, you'll enable co-authoring for sensitivity labels, which also enab
 
 1. In the left navigation, select **Settings** > **Information Protection**.
 
-1. On the **Information Protection settings** ensure you're on the **Co-authoring for files with sensitivity labels** tab.
+1. On the **Information Protection settings**, ensure you're on the **Co-authoring for files with sensitivity labels** tab.
 
 1. Select the checkbox for **Turn on co-authoring for files with sensitivity labels**.
 
@@ -107,7 +107,7 @@ Now that you have a base label, you'll create a sublabel for HR-related document
    - **User access to content expires**: Never
    - **Allow offline access**: Only for a number of days
    - **Users have offline access to the content for this many days**: 15
-   - Select the **Assign permissions** link. On the **Assign permissions** flyout panel, select the **+ Add any authenticated users**, then select **Save** to apply this setting.
+   - Select the **Assign permissions** link. On the **Assign permissions** flyout panel, select **+ Add any authenticated users**, then select **Save** to apply this setting.
 
 1. On the **Access control** page, select **Next**.
 
@@ -135,7 +135,7 @@ You've created a sublabel that applies encryption and content markings to HR doc
 
 ## Task 4 – Publish sensitivity labels
 
-You will now publish the Internal and HR sensitivity label so that the published sensitivity labels will be available for the HR users to apply to their HR documents.
+You will now publish the Internal and HR sensitivity labels so that the published sensitivity labels will be available for the HR users to apply to their HR documents.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account, and you should be logged into Microsoft Purview as **Joni Sherman**.
 
@@ -488,4 +488,4 @@ In this task, you'll create a file policy that automatically applies a sensitivi
 
 1. Select **Create** to finish creating the file policy.
 
-You've created a file policy that applies a highly confidential sensitivity label to externally shared files in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically to protect sensitive content.
+You've created a file policy that applies a highly confidential sensitivity label to externally shared files in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps apply the label automatically to enforce protection on externally shared files.

@@ -260,7 +260,7 @@ In this task, you'll use the Exchange admin center to create a mail flow rule th
 
       - For dropdown 1: **The sender**
 
-      - For dropdown 2: **is a member of this group**, then select **Finance team** and **Save** in the **Select members** flyout.
+      - For dropdown 2: **is a member of this group**, then select **Finance Team** and **Save** in the **Select members** flyout.
 
    - In the **Do the following** section:
 
@@ -325,6 +325,10 @@ By default, new mail flow rules are created in a disabled state. In this task, y
 1. The mail flow rule will enable automatically. You'll see a message stating **Updating the rule status, please wait...**. Once the rule is enabled, you'll see a message stating **Rule status updated successfully**.
 
 1. Close the flyout by selecting the **X** in the top right corner of the flyout.
+
+> [!note] **Note: Rule propagation**
+>
+> Changes can take several minutes to apply. If validation fails, wait a few minutes and send the test again.
 
 The encryption rule is now active and enforcing Microsoft Purview Message Encryption for messages sent from the Finance department. Any future messages from Finance users will be automatically encrypted and include the Contoso Ltd. disclaimer.
 

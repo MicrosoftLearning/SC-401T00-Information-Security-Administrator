@@ -30,7 +30,7 @@ In this task, you'll create a retention label for sensitive financial data that 
 
 1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
-1. In Microsoft Edge, navigate to `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
+1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. Navigate to **Solutions** > **Data Lifecycle Management** > **Retention labels**.
 
@@ -199,18 +199,18 @@ In this task, you'll define an adaptive scope that targets Microsoft 365 groups 
 
 1. On the **Assign admin unit** page select **Next**.
 
-1. On the **What type of scope do you want to create?** page select **Users**, then select **Next**.
+1. On the **What type of scope do you want to create?** page select **Microsoft 365 Groups**, then select **Next**.
 
 1. On the **Create the query to define users** page, in the **User attributes** section, ensure these values are selected for the user attribute configuration:
 
-   - Select the **Attribute** dropdown then select **Department**
+   - Select the **Attribute** dropdown then select **Name**
    - Leave the default **is equal to** value in the next field
    - Enter `Leadership` as the **Value**
 
 1. Add a second attribute by selecting **+ Add attribute** on the **Create the query to define users** page. In the new field under the one we just configured, configure these values:
 
    - Select the dropdown for the query operator and update it from And to **Or**
-   - Select the **Attribute** dropdown then select **Department**
+   - Select the **Attribute** dropdown then select **Name**
    - Leave the default **is equal to** value in the next field
    - Enter `Operations` as the **Value**
 

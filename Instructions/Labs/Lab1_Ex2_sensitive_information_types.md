@@ -82,13 +82,13 @@ You have successfully created a new sensitive information type to identify emplo
 
 ## Task 2 – Modify confidence level to reduce false positives
 
-You've received reports that some documents containing employee IDs aren't being detected. To improve detection coverage, you'll lower the confidence level of the pattern in the Contoso Employee IDs SIT so it triggers even when only partial evidence is found, increasing the likelihood of detection.
+You've received reports that some documents containing employee IDs aren't being detected. To improve detection coverage, you'll lower the confidence level of the pattern in the Contoso Employee IDs SIT so it triggers even when only partial evidence is found, increasing the likelihood of detection. This increases detections during testing and policy simulation.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and logged into Microsoft Purview as Joni Sherman.
 
 1. In Microsoft Edge, navigate to `https://purview.microsoft.com`.
 
-1. In the left navigation, select **Solutions** > **Information protection** > **Classifiers** > **Sensitive info types**.
+1. In the left navigation, select **Solutions** > **Information Protection** > **Classifiers** > **Sensitive info types**.
 
 1. Search for `Contoso Employee IDs` in the list and select the SIT name to open the details page.
 
@@ -157,7 +157,7 @@ You have successfully created the **EDM_DataUploaders group** and assigned Joni 
 
 In this task, you'll create an Exact Data Match (EDM) based classification with a database schema of employee data.
 
-1. Return to the Microsoft Edge window where you're signed in as Joni Sherman.
+1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the new permissions are active.
 
 1. In **Microsoft Edge**, you should still be logged into Microsoft Purview as Joni Sherman.
 
@@ -178,7 +178,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 1. On the **Choose a method for defining your schema** page, select **Manually define your data structure**, then select **Next**.
 
-1. On the **Define columns that contain the data you want to detect**, enter these columns:
+1. On the **Define columns that contain the data you want to detect** page, enter these columns:
 
    - `Name`
    - `BirthDate`
@@ -209,7 +209,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 1. Select the checkbox for **Ignore delimiters and punctuation for data in all columns**.
 
-1. Select the dropdown for **Choose delimiters and punctuation to ignore** dropdown and select:
+1. Select the dropdown for **Choose delimiters and punctuation to ignore** and select:
 
    - _Hyphen ('-')_
    - _Period ('.')_
@@ -287,7 +287,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
     .\EdmUploadAgent.exe /Authorize
     ```
 
-1. When the **Pick an account** window is displayed, sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Joni's password was set in a previous exercise.
+1. When the **Pick an account** window is displayed, sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. Back in the terminal window, download the database schema definition of the EDM-based classification sensitive information type by running this script in PowerShell. For the **DataStoreName**, this is where you'll use the schema name saved from the previous task.
 
@@ -333,7 +333,7 @@ Several violations of personal information leakage happened when users sent out 
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
 
-1. The Microsoft Purview portal should still be to the EDM classifiers page in Microsoft Edge. If not, in Microsoft Edge, navigate to `https://purview.microsoft.com` > **Solutions** > **Information protection**.
+1. The Microsoft Purview portal should still be to the EDM classifiers page in Microsoft Edge. If not, in Microsoft Edge, navigate to `https://purview.microsoft.com` > **Solutions** > **Information Protection**.
 
 1. In the left sidebar, expand **Classifiers** then select **Sensitive info types**.
 
@@ -369,7 +369,7 @@ Several violations of personal information leakage happened when users sent out 
 
 1. On the **Add a keyword list** page enter:
 
-   - **ID**: `Employee absence`
+   - **Name**: `Absence reason terms`
    - **Case insensitive**:
 
     ``` text
@@ -403,7 +403,7 @@ Always test custom sensitive information types before using them in policies. Ot
 1. In Notepad, enter:
 
     ``` text
-    Employee Joni Sherman EMP123456 is absent because of the flu/influenza.
+    Employee ID: EMP123456 - Joni Sherman is absent because of the flu/influenza.
     ```
 
 1. Select **File** > **Save As**.
@@ -433,8 +433,6 @@ Always test custom sensitive information types before using them in policies. Ot
 1. This time select the **Contoso Diseases List** sensitive info type, then select **Test**.
 
 1. On the **Upload file to test "Contoso Diseases List"** flyout panel on the right, select **Upload file**.
-
-1. On the **Upload file to test** pane, select **Upload file**.
 
 1. Select **Documents** from the left pane, select the _SickTestData.txt_ file, then select **Open**.
 

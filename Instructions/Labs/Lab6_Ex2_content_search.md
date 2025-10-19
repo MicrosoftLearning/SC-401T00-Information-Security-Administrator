@@ -80,7 +80,7 @@ You've assigned eDiscovery permissions to Joni Sherman, enabling her to search f
 
 1. In the **Condition builder** pane, add the keywords `bank account` and `credit card`, then select **Run query**.
 
-   ![Screenshot showing the condition builder in COntent Search.](../Media/content-search-query-builder.png)
+   ![Screenshot showing the condition builder in Content Search.](../Media/content-search-query-builder.png)
 
 1. In the **Choose search results** flyout under **Statistics**, select the checkboxes for **Include categories** and **Include query keywords report**, then select **Run Query**.
 

@@ -19,7 +19,7 @@ Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd.
 
 In this task, you'll onboard a Windows 11 device so it's ready to be protected by endpoint DLP policies.
 
-1. Log into **Client 2 VM (SC-401-CL2)** as the **SC-401-cl2\admin** account.
+1. Log into **Client 2 VM (SC-401-CL2)** as the **SC-401-CL2\admin** account.
 
 1. Open Microsoft Edge, and navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**. Sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
@@ -27,7 +27,7 @@ In this task, you'll onboard a Windows 11 device so it's ready to be protected b
 
 1. On the left sidebar, expand **Device onboarding**, then select **Onboarding**.
 
-1. On the **Onboarding** page, in the **Deployment method** dropdown menu, select **Local Script (for up to 10 machines)** and select **Download package**.
+1. On the **Onboarding** page, in the **Deployment method** dropdown menu, select **Local Script (for up to 10 machines)**, then select **Download package**.
 
 1. In the **Downloads** dialog, hover over the download, then select the folder icon to **Show in folder**.
 
@@ -39,7 +39,7 @@ In this task, you'll onboard a Windows 11 device so it's ready to be protected b
 
 1. Back on the desktop, right click **DeviceComplianceLocalOnboardingScript.cmd**, then select **Run as administrator**. On the **User Account Control** dialogue, select **Yes**.
 
-1. In the **Command Prompt** screen type **Y** to confirm, and then press Enter.
+1. In the **Command Prompt** screen, type **Y** to confirm, then press Enter.
 
 1. When the script is complete, you'll get a success message and a prompt to **Press any key to continue**. Press any key to close the command line window. It can take a minute to complete the onboarding.
 
@@ -65,7 +65,7 @@ You've successfully onboarded the device and joined it to Microsoft Entra ID. It
 
 In this task, you'll create a DLP policy that blocks the transfer of sensitive information to USB drives. This helps reduce the risk of data being taken offsite without authorization.
 
-1. Sign in to Client 1 VM (SC-401-CL1) as the SC-401-cl1\admin account.
+1. Sign in to Client 1 VM (SC-401-CL1) as the SC-401-CL1\admin account.
 
 1. You should still be at the **Devices** page in the Microsoft Purview portal, logged in as Joni Sherman.
 
@@ -135,7 +135,7 @@ You've successfully created a DLP policy in simulation mode that blocks USB tran
 
 In this task, you'll fine-tune endpoint DLP settings by excluding a local folder, setting browser restrictions, and blocking a cloud domain.
 
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
 
 1. In Microsoft Purview, from the left navigation pane, select **Settings** > **Data Loss Prevention**.
 
