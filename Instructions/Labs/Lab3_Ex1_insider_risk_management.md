@@ -31,7 +31,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 In this task, you'll assign Joni Sherman the Insider Risk Management role so she can access and manage insider risk features in Microsoft Purview.
 
-1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
 1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
@@ -63,7 +63,7 @@ You've assigned Joni the necessary permissions to work with Insider Risk Managem
 
 Before you create an insider risk policy, you'll turn on the indicators needed for detection. These indicators define the types of risky activity the system will look for.
 
-1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign into the Microsoft Purview portal as sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
+1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the new permissions are active.
 
 1. Select **Settings** > **Insider risk management**.
 
