@@ -111,7 +111,7 @@ You've created a Conditional Access policy that blocks access for elevated-risk 
 
 In this final task, you'll turn on Adaptive Protection so the system can start applying dynamic enforcement based on insider risk.
 
-1. Return to the Microsoft Edge window where you're signed in as Joni Sherman.
+1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the Conditional Access policy appears in Adaptive Protection.
 
 1. Navigate to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
 

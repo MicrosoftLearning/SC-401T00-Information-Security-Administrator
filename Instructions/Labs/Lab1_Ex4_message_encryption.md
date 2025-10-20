@@ -326,9 +326,9 @@ By default, new mail flow rules are created in a disabled state. In this task, y
 
 1. Close the flyout by selecting the **X** in the top right corner of the flyout.
 
-> [!note] **Note: Rule propagation**
->
-> Changes can take several minutes to apply. If validation fails, wait a few minutes and send the test again.
+    > [!note] **Note: Rule propagation**
+    >
+    > Changes can take several minutes to apply. If validation fails, wait a few minutes and send the test again.
 
 The encryption rule is now active and enforcing Microsoft Purview Message Encryption for messages sent from the Finance department. Any future messages from Finance users will be automatically encrypted and include the Contoso Ltd. disclaimer.
 
