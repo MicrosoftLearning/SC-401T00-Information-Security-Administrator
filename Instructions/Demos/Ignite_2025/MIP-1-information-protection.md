@@ -1,6 +1,6 @@
 # Lab – Classify and protect project data with information protection in Copilot
 
-Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating the organization's information protection strategy to reduce the risk of sensitive data showing up in Microsoft 365 Copilot. After previous incidents where personal data surfaced in support tickets, she needs to create and test custom sensitive information types that detect Contoso project codes and other sensitive information. These classifications will later support labels and policies that protect content from being exposed in Copilot or shared inappropriately.
+Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating the organization's information protection strategy to reduce the risk of sensitive data showing up in Microsoft 365 Copilot. After previous incidents where personal data surfaced in support tickets, she needs to create and test custom sensitive information types that detect Contoso project codes and other sensitive information. AAs she refines her configuration, Megan realizes that many internal documents are created without labels. To maintain consistent protection and reduce unclassified content in Copilot results, she plans to apply a default label across supported workloads. These classifications will later support labels and policies that protect content from being exposed in Copilot or shared inappropriately.
 
 **Tasks**:
 
@@ -11,6 +11,7 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating
 1. Create a sublabel
 1. Publish sensitivity labels
 1. Configure auto-apply labeling
+1. Configure default sensitivity labels
 
 ## Task 1 – Enable Audit in the Microsoft Purview portal
 
@@ -296,6 +297,63 @@ In this task, you'll configure an auto-apply policy so that the Project data sub
 1. On the confirmation page, select **Done**.
 
 You've successfully configured an auto-apply policy for project data. Any content containing Contoso project codes is automatically labeled with the Project data sensitivity label, helping prevent sensitive information from appearing in Copilot responses or being shared inappropriately.
+
+## Task 8 – Configure default sensitivity labels
+
+In this task, you'll configure a default labeling policy to make sure all new content starts with a baseline level of protection. This helps prevent unlabeled internal documents, emails, meetings, and Fabric content from appearing in Copilot results or being shared without classification.
+
+1. In the Microsoft Purview portal, under **Information Protection**, expand **Policies** then select **Label publishing policies**.
+
+1. On the **Label policies** page, select **Publish labels**.
+
+1. On the **Choose sensitivity labels to publish** page, select **Choose sensitivity labels to publish**.
+
+1. On the **Sensitivity labels to publish** flyout, select the checkboxes for:
+
+   - **General**
+   - **General/All Employees (unrestricted)**
+   - Select **Add**
+
+1. Back on the **Choose sensitivity labels to publish** page, select **Next** through the remaining pages until you reach the **Policy settings** page.
+
+1. On the **Policy settings** page, enable  **Users must provide a justification to remove a label or lower its classification**.
+
+1. Select **Next**.
+
+1. On the **Default settings for documents​** page, under **Apply a default label to documents​**, select the dropdown to change the **Default label** from **None** to **General/All Employees (unrestricted)**.
+
+1. Select **Next**.
+
+1. On the **Default settings for emails** page:
+
+   - Under **Apply a default label to emails**, select the dropdown to change the **Default label** from **Same as document** to **General/All Employees (unrestricted)**.
+   - Under **Inherit label from attachments**, select the checkbox for **Email inherits highest priority label from attachments**.
+   - Leave the default **Automatically apply label** option.
+
+1. Select **Next**.
+
+1. On the **Default settings for meetings and calendar events** page:
+
+   - Under **Apply a default label to meetings and calendar events**, select the dropdown to change the **Default label** from **Same as document** to **General/All Employees (unrestricted)**.
+   - Select the checkbox for **Require users to apply a label to their meetings and calendar events**.
+   - Under **Apply inheritance between Teams meeting and artifacts**, leave the default **Automatically apply highest priority label** option.
+
+1. Select **Next**.
+
+1. On the **Default settings for Fabric and Power BI content​** page, under **Apply a default label to Fabric and Power BI content​**, select the dropdown to change the **Default label** from **None** to **General/All Employees (unrestricted)**.
+
+1. Select **Next**.
+
+1. On the **Name your policy** page, enter:
+
+   - **Name**: `General default labeling`
+   - **Description**: `Applies General and General/All Employees (unrestricted) labels by default across supported workloads.`
+
+1. Select **Next**, then on the **Review and finish** page, select **Submit**.
+
+1. On the **New policy created** page, select **Done**.
+
+You've successfully configured a default labeling policy that applies the General label by default across supported workloads. This ensures that all new documents, emails, meetings, and Fabric content begin with consistent protection, reducing the risk of unclassified data appearing in Copilot or being shared without proper labeling.
 
 ## Lab complete
 
