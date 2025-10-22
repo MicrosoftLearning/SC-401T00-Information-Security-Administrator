@@ -357,6 +357,6 @@ You've successfully configured a default labeling policy that applies the Genera
 
 ## Lab complete
 
-You created and tested a custom sensitive information type, built sensitivity labels, published them, and configured auto-apply labeling. With these protections in place, project data is consistently classified and secured before it can appear in Copilot responses or be shared inappropriately.
+You created and tested a custom sensitive information type, built and published sensitivity labels, configured auto-apply labeling, and enforced a default labeling policy. Together, these steps ensure that all new content begins with a baseline level of protection and that project data is automatically classified before it can appear in Copilot responses or be shared inappropriately.
 
 If you'd like to extend this scenario, continue to the bonus task to add a DLP safeguard that controls how Copilot handles labeled project data.
