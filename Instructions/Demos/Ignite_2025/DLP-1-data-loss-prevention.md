@@ -230,6 +230,8 @@ Now that the DLP rule is in place, you'll configure alert settings so DLP incide
 
    - In **During the last**, enter **60** minutes.
 
+    ![Screenshot showing incident alert settings in a data loss prevention rule.](./media/incident-alert-settings.png)
+
 1. Select **Save** at the bottom of the flyout.
 
 1. Back on the **Customize advanced DLP rules** page, select **Next**.
