@@ -1,12 +1,14 @@
 # Lab – Prevent data exposure in Copilot and AI apps with data loss prevention
 
-Megan Bowen, the Information Security Administrator at Contoso Ltd., is strengthening protections as the company expands its use of Microsoft 365 Copilot. Leadership wants to reduce the risk of sensitive information being processed by Copilot or shared with external AI tools. To meet this goal, Megan will configure data loss prevention (DLP) policies that keep highly confidential project data out of Copilot and prevent regulated personal data from being pasted or uploaded to AI websites.
+Megan Bowen, the Information Security Administrator at Contoso Ltd., is strengthening protections as the company expands its use of Microsoft 365 Copilot. Leadership wants to ensure sensitive information isn't processed by Copilot or shared with external AI tools. To meet this goal, Megan will configure and refine data loss prevention (DLP) policies that restrict Copilot from accessing highly confidential project data, prevent banking details from being uploaded to AI websites, and improve how DLP alerts are managed and reported.
 
 **Tasks**:
 
 1. Create a DLP policy in simulation mode
 1. Activate a policy in simulation mode
 1. Create an endpoint DLP policy
+1. Configure DLP alert settings
+1. Configure DLP alert aggregation
 
 ## Task 1 – Create a DLP policy in simulation mode
 
@@ -32,7 +34,7 @@ In this task, you'll create a data loss prevention (DLP) policy that restricts M
 
 1. Select **Next**.
 
-1. On the **Name your DLP policy** page enter:
+1. On the **Name your DLP policy** page, enter:
 
    - **Name**: `Copilot restrict highly confidential data`
    - **Description**: `Restricts Copilot from processing content labeled Highly Confidential.`
@@ -198,8 +200,66 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
 You've created an endpoint DLP policy that blocks banking data from being pasted or uploaded into AI websites.
 
+## Task 4 – Configure DLP alert settings
+
+Now that the DLP rule is in place, you'll configure alert settings so DLP incidents are routed to the right administrator for timely review.
+
+1. On the **Policies** page of the **Data Loss Prevention**, select the **Block AI website uploads of banking data** policy, then select **Edit policy**.
+
+1. Select **Next** until you reach the **Customize advanced DLP rules** page.
+
+1. Select the pencil icon (![Icon of a pencil.](./media/edit-pencil-icon.png)) to the right of the **Block banking data exposure to AI websites** rule to edit the rule.
+
+1. In the **Edit rule** flyout, scroll down to the **Incident reports** section.
+
+1. In the **Incident reports** section:
+
+   - In **Use this severity level in admin alerts and reports**, set the dropdown to **Medium**.
+
+   - Ensure the toggle is set to **On** for **Send an alert to admins when a rule match occurs**.
+
+   - Under **Send email alerts to these people (optional)**, select **+ Add or remove users**.
+
+      - In the **Add or remove users** flyout, search for, then select `MOD Administrator`
+
+      - Select the checkbox to the left of the **MOD Administrator** account, then select **Add** at the bottom of the flyout.
+
+   - Select **Send alert when the volume of matched activities reaches a threshold**.
+
+   - Select the checkbox for **Instances more than or equal to _15_ matched activities**
+
+   - In **During the last**, enter **60** minutes.
+
+1. Select **Save** at the bottom of the flyout.
+
+1. Back on the **Customize advanced DLP rules** page, select **Next**.
+
+1. On the **Policy mode** page, leave the selection **Turn the policy on immediately**, then select **Next**.
+
+1. On the **Review and finish** page, review your policy settings then select **Submit** to create the policy.
+
+1. Select **Done** on the **Policy updated** page.
+
+You configured incident alert settings so that medium-severity DLP alerts are sent to the MOD Administrator account when multiple matches occur within an hour.
+
+## Task 5 – Configure DLP alert aggregation
+
+Frequent Copilot or AI website activity can trigger many DLP rule matches in a short time. You'll configure alert aggregation so repeated events from the same user are grouped into a single alert.
+
+1. In the Microsoft Purview portal, go to **Settings** > **Data Loss Prevention**.
+
+1. On the **Data Loss Prevention settings** page, select **Aggregate DLP alerts by user** from the left panel of the settings options.
+
+1. On the **Aggregate DLP alerts by user** page, turn the toggle on.
+
+1. In the **Alert aggregation window (in minutes)** dropdown, select **30**.
+
+1. Select **Save**.
+
+You've configured alert aggregation so multiple DLP detections from the same user within a 30-minute window are combined into one alert.
+
 ## Lab complete
 
-You created a DLP policy that keeps highly confidential project content out of Microsoft 365 Copilot, tested it in simulation mode, and then activated it for enforcement. You also added an endpoint policy that blocks banking data, such as credit card and routing numbers, from being pasted or uploaded to AI websites. Together, these safeguards reduce the chance that Copilot or external AI tools process Contoso's sensitive or regulated data.
+You configured DLP policies that prevent Copilot from processing highly confidential content and block regulated data, such as banking information, from being pasted or uploaded to AI websites. You also set up incident alerts and alert aggregation to improve how DLP detections are routed and reviewed. Together, these configurations strengthen Contoso's ability to protect sensitive information in Copilot and other AI environments, and set the stage for **Adaptive Protection** to enforce them dynamically.
 
 If you'd like to extend this scenario, continue to the bonus task to use Adaptive Protection so these safeguards apply dynamically based on insider risk signals.

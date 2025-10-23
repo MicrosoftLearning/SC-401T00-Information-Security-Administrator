@@ -1,6 +1,6 @@
 # Bonus – Implement Adaptive Protection
 
-After testing the DLP policies, Megan Bowen notices that blocking all users creates unnecessary friction. Leadership wants restrictions applied only to users showing risky AI activity. To meet this requirement, Megan will use Adaptive Protection to dynamically enforce the endpoint DLP policy for banking data when users are flagged by Insider Risk Management.
+After testing the DLP policies, Megan Bowen sees that blocking all users creates unnecessary friction. Leadership wants restrictions applied only when users show risky AI activity. To meet this requirement, Megan will use Adaptive Protection to dynamically enforce the endpoint DLP policy for banking data when users are flagged by Insider Risk Management.
 
 **Tasks**:
 
