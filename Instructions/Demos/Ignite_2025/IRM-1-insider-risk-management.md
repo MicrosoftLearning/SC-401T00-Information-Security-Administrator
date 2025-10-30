@@ -12,6 +12,7 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is preparin
 1. Configure insider risk levels
 1. Create a DLP policy
 1. Enable Adaptive Protection
+1. (Optional) Investigate insider risk alerts with Security Copilot
 
 ## Task 1 – Enable analytics
 
@@ -77,7 +78,7 @@ In this task, you'll enable indicators that detect risky Copilot activity and DL
 
    - Select **+ Add policy**
    - In the **Add DLP policies** select **Default policy for Teams**, then select **Add** at the bottom of the flyout.
-   - Once a policy has been selected, ensure you select the checkbox for **Generating alerts from selected DLP policies**.
+   - After you add the policy, select the checkbox for **Generating alerts from selected DLP policies**.
 
 1. Select **Save** at the bottom of the page.
 
@@ -116,7 +117,7 @@ In this task, you'll create a Risky AI usage policy for the Mark 8 Project Team.
 
 1. Back on the **Exclude users and groups (optional)** page, select **Next**.
 
-1. On the **Decide whether to prioritize content** page, select **I want to prioritize content**, then select only the checkbox for **Sharepoint sites**. If any other options are selected, deselect them.
+1. On the **Decide whether to prioritize content** page, select **I want to prioritize content**, then select only the checkbox for **SharePoint sites**. If any other options are selected, deselect them.
 
 1. Select **Next**.
 
@@ -242,7 +243,7 @@ In this task, you'll create a DLP policy that blocks external sharing when risky
 
 1. On the **New policy created** page, select **Done**.
 
-You've created a DLP policy that blocks external sharing for users with risky Copilot activity, containing exposure before it spreads.
+You've created a DLP policy that blocks users at elevated risk levels from sharing personally identifiable information (PII) with external recipients, helping prevent sensitive data exposure.
 
 ## Task 8 – Enable Adaptive Protection
 
@@ -252,11 +253,7 @@ In this task, you'll enable Adaptive Protection so DLP reacts automatically to r
 
 1. Set the toggle to **On** under **Adaptive Protection**, then select **Save** to enable Adaptive Protection.
 
-You've created a DLP policy that blocks users at elevated risk levels from sharing personally identifiable information (PII) with external recipients, helping prevent sensitive data exposure.
-
-## Lab complete
-
-You enabled analytics, set exclusions, and turned on AI risk indicators. You then built a Risky AI usage policy, connected it to Adaptive Protection, and linked it with DLP enforcement. With these controls in place, Contoso can detect risky Copilot and AI activity and automatically strengthen protections before sensitive data is exposed.
+You've enabled Adaptive Protection so DLP policies automatically adjust to apply stricter controls when a user reaches an elevated insider risk level.
 
 ---
 
