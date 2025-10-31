@@ -1,6 +1,6 @@
 # Lab – Classify and protect project data with information protection in Copilot
 
-Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating the organization's information protection strategy to reduce the risk of sensitive data showing up in Microsoft 365 Copilot. After previous incidents where personal data surfaced in support tickets, she needs to create and test custom sensitive information types that detect Contoso project codes and other sensitive information. AAs she refines her configuration, Megan realizes that many internal documents are created without labels. To maintain consistent protection and reduce unclassified content in Copilot results, she plans to apply a default label across supported workloads. These classifications will later support labels and policies that protect content from being exposed in Copilot or shared inappropriately.
+Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating the organization's information protection strategy to reduce the risk of sensitive data showing up in Microsoft 365 Copilot. After previous incidents where personal data surfaced in support tickets, she needs to create and test custom sensitive information types that detect Contoso project codes and other sensitive information. As she refines her configuration, Megan realizes that many internal documents are created without labels. To maintain consistent protection and reduce unclassified content in Copilot results, she plans to apply a default label across supported workloads. These classifications will later support labels and policies that protect content from being exposed in Copilot or shared inappropriately.
 
 **Tasks**:
 
@@ -249,7 +249,7 @@ In this task, you'll configure an auto-apply policy so that the Project data sub
 
 1. Select **Next**.
 
-1. On the **Choose a label to auto-apply** page, select **+ Choose a label**, then select **Next**.
+1. On the **Choose a label to auto-apply** page, select **+ Choose a label**.
 
 1. On the **Choose a sensitivity label** flyout, select the checkbox for **Internal/Project data**, then select **Add**.
 
