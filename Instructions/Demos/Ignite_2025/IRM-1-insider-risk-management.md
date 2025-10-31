@@ -258,7 +258,7 @@ You've enabled Adaptive Protection so DLP policies automatically adjust to apply
 ---
 
 ## Optional task – Investigate insider risk alerts with Security Copilot
-<!-- Old optional task message
+<!-- Old optional task intro
 Now that you've configured Insider Risk Management to detect risky AI activity, you can see how alerts are investigated using **Security Copilot**. This interactive demo shows how Security Copilot and Copilot for Security Agents help review alert details, analyze user activity, and guide remediation actions within Microsoft Purview.
 -->
 
