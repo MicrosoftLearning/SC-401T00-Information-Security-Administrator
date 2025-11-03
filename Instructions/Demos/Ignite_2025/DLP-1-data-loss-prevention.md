@@ -20,9 +20,7 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is strength
 
 In this task, you'll create a data loss prevention (DLP) policy that restricts Microsoft 365 Copilot from processing content labeled as highly confidential.
 
-You're already signed in to **Client 1 (SC-401-CL1)** as the **Admin** user. Next, you'll use Microsoft Edge to access the Microsoft Purview portal.
-
-1. Open Microsoft Edge.
+1. With the lab environment ready, open **Microsoft Edge**.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **Megan Bowen** (`MeganB@WWLxZZZZZZ.onmicrosoft.com`, where ZZZZZZ is your unique tenant ID). Use the password provided by your lab host.
 
