@@ -14,7 +14,7 @@ In this task, you'll edit a DLP policy so it applies only when a user has an ele
 
 1. In the Microsoft Purview portal, go to **Solutions** > **Data Loss Prevention** > **Policies**.
 
-1. On the **Policies** page, select the **Block AI website uploads of banking data** policy, then select **Edit policy** from the command bar.
+1. On the **Policies** page, select the **Block AI website uploads of banking data** policy, then select **Edit policy** (pencil) icon (![Icon of a pencil.](./media/edit-pencil-icon.png)) from the command bar.
 
 1. On the **Name your DLP policy** page, select **Next** until you reach the **Customize advanced DLP rules** page.
 
