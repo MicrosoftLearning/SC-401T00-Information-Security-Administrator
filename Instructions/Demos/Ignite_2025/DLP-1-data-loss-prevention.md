@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Prevent data exposure in Copilot and AI apps with data loss prevention'
-    module: 'Prevent data exposure in Copilot and AI apps with data loss prevention'
+    title: 'Implement and Manage Data Loss Prevention policies'
+    module: 'Implement and Manage Data Loss Prevention policies'
 ---
 
-# Lab – Prevent data exposure in Copilot and AI apps with data loss prevention
+# Lab – Implement and Manage Data Loss Prevention policies
 
 Megan Bowen, the Information Security Administrator at Contoso Ltd., is strengthening protections as the company expands its use of Microsoft 365 Copilot. Leadership wants to ensure sensitive information isn't processed by Copilot or shared with external AI tools. To meet this goal, Megan will configure and refine data loss prevention (DLP) policies that restrict Copilot from accessing highly confidential project data, prevent banking details from being uploaded to AI websites, and improve how DLP alerts are managed and reported.
 
