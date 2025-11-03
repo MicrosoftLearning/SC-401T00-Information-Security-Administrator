@@ -100,7 +100,7 @@ Now that you've created a label group, you'll add a child label for HR-related c
    - **Name**: `Employee data (HR)`
    - **Display name**: `Employee data (HR)`
    - **Description for users**: `This HR label is the default label for all specified documents in the HR Department.`
-   - **Description for admins**: `This label is created in consultation with Ms. Jones (Head of HR department). Contact her if you need to change the label settings.`
+   - **Description for admins**: `This label is created in consultation with Ms. Jones (Head of the HR department). Contact her if you need to change the label settings.`
 
 1. Select **Next**.
 
@@ -174,7 +174,7 @@ Next, you'll publish the HR label from the Internal label group so users in the 
 
 1. On the **Default settings for meetings and calendar events** select **Next**.
 
-1. On the **Default settings for Fabric and Power BI Content** page, select **Next**.
+1. On the **Default settings for Fabric and Power BI content** page, select **Next**.
 
 1. On the **Name your policy** page, enter:
 
@@ -198,7 +198,7 @@ You'll now create a child label for financial data and configure it to apply aut
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and log into the Microsoft Purview portal as **Joni Sherman**.
 
-1. In the Microsoft Purview portal, select **Solutions** > **Information protection** > **Sensitivity labels**.
+1. In the Microsoft Purview portal, select **Solutions** > **Information Protection** > **Sensitivity labels**.
 
 1. On the **Sensitivity labels** page, find the **Internal** sensitivity label. Select the vertical ellipsis (**...**), then select **+ Create label in group** from the dropdown menu.
 
@@ -223,7 +223,7 @@ You'll now create a child label for financial data and configure it to apply aut
 
 1. In the **Detect content that matches these conditions** section, select **+ Add condition** > **Content contains**.
 
-1. In **Content contains** section, select the **Add** > **Sensitive info types**.
+1. In the **Content contains** section, select the **Add** > **Sensitive info types**.
 
 1. In the **Sensitive info types** flyout page, search for and select these sensitive info types:
 
@@ -291,8 +291,8 @@ Next, you'll create a child label in the Internal group that uses Double Key Enc
    |---|---|
    |**Name**|`Confidential Legal`|
    |**Display name**|`Confidential Legal`|
-   |**Description for users**|`Use this label for highly sensitive content that must be encrypted using Double Key Encryption.`|
-   |**Description for admins**|`Label configured with DKE and dynamic watermarking for highly sensitive content.`|
+   |**Description for users**|`Use this label for highly sensitive legal content that must be encrypted using Double Key Encryption.`|
+   |**Description for admins**|`Label configured with DKE and dynamic watermarking for highly sensitive legal content.`|
 
 1. Select **Next**.
 
