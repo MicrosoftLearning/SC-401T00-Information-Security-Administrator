@@ -6,16 +6,17 @@ lab:
 
 # Lab 1 - Exercise 3 - Create and manage sensitivity labels
 
-Joni Sherman, an Information Security Administrator at Contoso Ltd., is rolling out a sensitivity labeling strategy to help protect sensitive data across departments. As part of this effort, she's configuring manual and automatic labeling, sublabels, and encryption options, including support for Double Key Encryption (DKE) and integration with Microsoft Defender for Cloud Apps.
+Joni Sherman, an Information Security Administrator at Contoso Ltd., is deploying a modern sensitivity labeling framework to strengthen data protection across the organization. She'll create and publish sensitivity label groups and labels to classify and protect content, including encryption, auto-labeling, and Double Key Encryption (DKE). Joni will also integrate Microsoft Purview with Microsoft Defender for Cloud Apps to extend data protection controls to files stored in cloud locations.
 
 **Tasks**:
 
 1. Enable support for sensitivity labels
-1. Create a sensitivity label
-1. Create a sublabel
-1. Publish sensitivity labels
-1. Configure auto labeling
-1. Create and publish a DKE label for highly confidential content
+1. Migrate to the modern label scheme
+1. Create a label group
+1. Create a child label
+1. Publish labels
+1. Configure auto-labeling
+1. Create and publish a DKE label for confidential content
 1. Enable Microsoft Purview integration in Defender for Cloud Apps
 1. Create a file policy to label externally shared files
 
@@ -29,7 +30,7 @@ In this task, you'll enable co-authoring for sensitivity labels, which also enab
 
 1. In the left navigation, select **Settings** > **Information Protection**.
 
-1. On the **Information Protection settings**, ensure you're on the **Co-authoring for files with sensitivity labels** tab.
+1. On the **Information Protection settings** page, ensure you're on the **Co-authoring for files with sensitivity labels** tab.
 
 1. Select the checkbox for **Turn on co-authoring for files with sensitivity labels**.
 
@@ -37,9 +38,29 @@ In this task, you'll enable co-authoring for sensitivity labels, which also enab
 
 You have successfully enabled support for sensitivity labels for files in SharePoint and OneDrive.
 
-## Task 2 – Create a sensitivity label
+## Task 2 – Migrate to the modern label scheme
 
-In this task, you'll create a parent sensitivity label for internal content. This label includes basic settings and acts as a parent label for department-specific sublabels.
+With sensitivity label support enabled, you'll confirm that the tenant uses the modern label scheme. If it still uses the classic scheme, you'll migrate to the modern one to ensure new labels and policies use the latest configuration model.
+
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged into Microsoft Purview as Joni Sherman.
+
+1. In the left navigation, select **Information Protection** > **Sensitivity labels**.
+
+1. On the **Sensitivity labels** page, review the information box for **Migrate to the modern label scheme**, then select **Get started**.
+
+1. In the **Migrate to the modern label scheme** flyout, review the summary to understand how existing labels and policies will be affected.
+
+1. At the bottom of the flyout, select **Migrate**.
+
+1. In the **Confirm migration to modern label scheme** dialog box, select **Confirm migration**.
+
+    > [!Note] **Note**: The migration process might take a few minutes to complete.
+
+You've successfully migrated your tenant to the modern sensitivity label scheme. New labels and policies you create will now use the modern configuration experience.
+
+## Task 3 – Create a label group
+
+In this task, you'll create a label group to organize internal sensitivity labels. Label groups act as containers for related labels, like department or business unit classifications.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
@@ -49,40 +70,30 @@ In this task, you'll create a parent sensitivity label for internal content. Thi
 
 1. On the **Microsoft Information Protection** page, on the left sidebar, select **Sensitivity labels**.
 
-1. On the **Sensitivity labels** page select **+ Create a label**.
+1. On the **Sensitivity labels** page select **+ Create** > **Label group**.
 
-1. The **New sensitivity label** configuration will start. On the **Provide basic details for this label**, enter:
+1. The **New label group** configuration will start. On the **Provide basic details for this label group**, enter:
 
     - **Name**: `Internal`
     - **Display name**: `Internal`
     - **Description for users**: `Internal sensitivity label.`
-    - **Description for admins**: `Internal sensitivity label for Contoso.`
+    - **Description for admins**: `Internal sensitivity label group for Contoso.`
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. On the **Review your settings and finish** page, select **Create label group**.
 
-1. Select **Next**.
+1. On the **Your label group was created successfully** page, select **Don't create a label yet**, then select **Done**.
 
-1. On the **Choose protection settings for labeled items** page, select **Next**.
+You've created a label group for internal use. This group helps you manage related labels for specific departments or data categories.
 
-1. On the **Auto-labeling for files and emails** page, select **Next**.
+## Task 4 – Create a child label
 
-1. On the **Define protection settings for groups and sites** page, select **Next**.
+Now that you've created a label group, you'll add a child label for HR-related content. This label enforces encryption and content markings to protect HR data from unauthorized access.
 
-1. On the **Review your settings and finish** page, select **Create label**.
+1. On the **Sensitivity labels** page, find the **Internal** sensitivity label group. Select the vertical ellipsis (**...**) next to it, then select **+ Create label in group** from the dropdown menu.
 
-1. On the **Your sensitivity label was created** page, select **Don't create a policy yet**, then select **Done**.
-
-You've created a sensitivity label for internal use. This label will act as a parent label for more specific sublabels used across different departments.
-
-## Task 3 – Create a sublabel
-
-Now that you have a base label, you'll create a sublabel for HR-related documents. This sublabel includes protection settings and visible content markings to support internal data handling practices for the HR department.
-
-1. On the **Sensitivity labels** page, find the newly created **Internal** sensitivity label. Select the vertical ellipsis (**...**) next to it, then select **+ Create sublabel** from the dropdown menu.
-
-    ![Screenshot showing the Action menu to create a sublabel for a sensitivity label.](../Media/create-sublabel-button.png)
+    ![Screenshot showing the Action menu to create a label in group for a sensitivity label.](../Media/create-label-in-group.png)
 
 1. The **New sensitivity label** wizard will start. On the **Provide basic details for this label** page enter:
 
@@ -131,11 +142,11 @@ Now that you have a base label, you'll create a sublabel for HR-related document
 
 1. On the **Your sensitivity label was created** page, select **Don't create a policy yet**, then select **Done**.
 
-You've created a sublabel that applies encryption and content markings to HR documents. This label helps ensure HR data is only accessible to authenticated users and can be identified by visual markings.
+You've created a child label within the Internal label group. The label applies encryption and content markings to HR documents, making sensitive data easy to identify and protected by policy.
 
-## Task 4 – Publish sensitivity labels
+## Task 5 – Publish labels
 
-You will now publish the Internal and HR sensitivity labels so that the published sensitivity labels will be available for the HR users to apply to their HR documents.
+Next, you'll publish the HR label from the Internal label group so users in the HR department can apply it to their documents.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account, and you should be logged into Microsoft Purview as **Joni Sherman**.
 
@@ -147,7 +158,7 @@ You will now publish the Internal and HR sensitivity labels so that the publishe
 
 1. On the **Choose sensitivity labels to publish** page, select the **Choose sensitivity labels to publish** link.
 
-1. On the **Sensitivity labels to publish** flyout panel, select the **Internal** and **Internal/Employee data (HR)** checkboxes, then select **Add** at the bottom of the flyout page.
+1. On the **Sensitivity labels to publish** flyout panel, select the  **Internal/Employee data (HR)** checkbox, then select **Add** at the bottom of the flyout page.
 
 1. Back on the **Choose sensitivity labels to publish** page, select **Next**.
 
@@ -177,11 +188,11 @@ You will now publish the Internal and HR sensitivity labels so that the publishe
 
 1. On the **New policy created** page, select **Done** to finish publishing your label policy.
 
-You have successfully published the Internal and HR sensitivity labels. Note that it can take up to 24 hours for changes to replicate to all users and services.
+You've published the Internal label group and its HR label so users can apply them to HR documents. It might take up to 24 hours for the policy to propagate across services.
 
-## Task 5 – Configure auto labeling
+## Task 6 – Configure auto-labeling
 
-In this task, you'll create a sensitivity label for financial data and configure it to apply automatically to content containing specific financial identifiers, such as credit card numbers and bank routing information.
+You'll now create a child label for financial data and configure it to apply automatically to content containing financial identifiers such as credit card or bank routing numbers.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
@@ -189,7 +200,7 @@ In this task, you'll create a sensitivity label for financial data and configure
 
 1. In the Microsoft Purview portal, select **Solutions** > **Information protection** > **Sensitivity labels**.
 
-1. On the **Sensitivity labels** page, find the **Internal** sensitivity label. Select the vertical ellipsis (**...**), then select **+ Create sublabel** from the dropdown menu.
+1. On the **Sensitivity labels** page, find the **Internal** sensitivity label. Select the vertical ellipsis (**...**), then select **+ Create label in group** from the dropdown menu.
 
 1. On the **Provide basic details for this label** page, enter:
 
@@ -212,7 +223,7 @@ In this task, you'll create a sensitivity label for financial data and configure
 
 1. In the **Detect content that matches these conditions** section, select **+ Add condition** > **Content contains**.
 
-1. In **Content contains** section select the **Add** > **Sensitive info types**.
+1. In **Content contains** section, select the **Add** > **Sensitive info types**.
 
 1. In the **Sensitive info types** flyout page, search for and select these sensitive info types:
 
@@ -260,26 +271,26 @@ In this task, you'll create a sensitivity label for financial data and configure
 
 1. On the **Your auto-labeling policy was created** page, select **Done**.
 
-You have successfully created a sensitivity label for financial data and configured an auto-labeling policy to detect and label content that contains sensitive financial information.
+You've created a child label for financial data and configured an auto-labeling policy that detects and labels content containing financial information.
 
-## Task 6 – Create and publish a DKE label for confidential content
+## Task 7 – Create and publish a DKE label for confidential content
 
-In this task, you'll create a sublabel under the Internal label. This sublabel will use Double Key Encryption (DKE) and dynamic watermarking to protect sensitive content accessed only by Legal. You'll also configure a label policy that requires justification for downgrading the label.
+Next, you'll create a child label in the Internal group that uses Double Key Encryption (DKE) and dynamic watermarking to protect confidential legal content.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and log into the Microsoft Purview portal as **Joni Sherman**.
 
-1. In the Microsoft Purview portal, select **Solutions** > **Information protection** > **Sensitivity labels**.
+1. In the Microsoft Purview portal, select **Solutions** > **Information Protection** > **Sensitivity labels**.
 
-1. On the **Sensitivity labels** page, find the **Internal** sensitivity label. Select the vertical ellipsis (**...**), then select **+ Create sublabel** from the dropdown menu.
+1. On the **Sensitivity labels** page, find the **Internal** sensitivity label group. Select the vertical ellipsis (**...**), then select **+ Create label in group** from the dropdown menu.
 
 1. On the **Provide basic details for this label** page, enter:
 
    |Details|Text|
    |---|---|
-   |**Name**|`Highly Confidential - Legal`|
-   |**Display name**|`Highly Confidential - Legal`|
+   |**Name**|`Confidential Legal`|
+   |**Display name**|`Confidential Legal`|
    |**Description for users**|`Use this label for highly sensitive content that must be encrypted using Double Key Encryption.`|
    |**Description for admins**|`Label configured with DKE and dynamic watermarking for highly sensitive content.`|
 
@@ -309,7 +320,7 @@ In this task, you'll create a sublabel under the Internal label. This sublabel w
 
 1. Back on the **Access control** page, select the checkbox for **Use dynamic watermarking**, then select **Customize text (optional)**.
 
-1. On the **Add custom text to watermark (optional)** page, Enter `Confidential`, then select the links for **UPN** and **Timestamp**.
+1. On the **Add custom text to watermark (optional)** page, enter `Confidential`, then select **UPN** and **Timestamp**.
 
 1. Select **Save** at the bottom of the flyout page.
 
@@ -327,7 +338,7 @@ In this task, you'll create a sublabel under the Internal label. This sublabel w
 
 1. On the **Publish label** flyout page, select **Create new label policy**.
 
-1. On the **Choose sensitivity labels to publish** page, select **Choose sensitivity labels to publish** and add the **Highly Confidential** label and **Highly Confidential - Legal** sublabel, then select **Add**.
+1. On the **Choose sensitivity labels to publish** page, select **Choose sensitivity labels to publish** and add the **Internal/Confidential Legal** label, then select **Add**.
 
 1. Select **Next**.
 
@@ -347,9 +358,9 @@ In this task, you'll create a sublabel under the Internal label. This sublabel w
 
 1. On the **Name your policy** page, enter:
 
-   - **Name**: `Highly Confidential - Legal`
+   - **Name**: `Confidential Legal`
 
-   - **Description**: `Enables manual use of the DKE label for highly confidential content accessible by Legal.`
+   - **Description**: `Enables manual use of the DKE label for confidential content accessible by Legal.`
 
 1. Select **Next**.
 
@@ -357,11 +368,11 @@ In this task, you'll create a sublabel under the Internal label. This sublabel w
 
 1. On the **New policy created** page, select **Done**.
 
-You have successfully created and published a sublabel using Double Key Encryption with dynamic watermarking. This label provides strong protection for highly confidential content and enforces restricted access and justification for classification changes.
+You've created and published a child label using Double Key Encryption and dynamic watermarking. This label restricts access to authorized users and enforces justification for downgrading classifications.
 
-## Task 7 – Enable Microsoft Purview integration in Defender for Cloud Apps
+## Task 8 – Enable Microsoft Purview integration in Defender for Cloud Apps
 
-In this task, you'll enable Microsoft Purview integration in Microsoft Defender for Cloud Apps and turn on file monitoring. This allows Defender to scan new and modified files for sensitivity labels from Microsoft Purview, inspect content based on those labels, and monitor files so that file policies can be applied.
+With your sensitivity labels created and published, you'll now integrate Microsoft Purview with Microsoft Defender for Cloud Apps. This integration allows Defender to scan files for sensitivity labels and apply file monitoring.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin**, and you should still be logged in as Joni Sherman.
 
@@ -391,7 +402,7 @@ In this task, you'll enable Microsoft Purview integration in Microsoft Defender 
 
 1. Select **Save** to apply the settings.
 
-You've enabled Defender for Cloud Apps to scan files for sensitivity labels and monitor files so that file policies can evaluate and apply governance actions.
+You've enabled Microsoft Purview integration in Defender for Cloud Apps. Defender can now detect sensitivity labels and monitor files for policy evaluation and governance actions.
 
 <!---
 
@@ -448,9 +459,9 @@ Now that label scanning is enabled, you'll create a file policy that applies the
 You've created a file policy that applies a highly confidential sensitivity label to externally shared files located in the Mark 8 Project folders in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically.
 -->
 
-## Task 8 – Create a file policy to label externally shared files
+## Task 9 – Create a file policy to label externally shared files
 
-In this task, you'll create a file policy that automatically applies a sensitivity label to files that are shared outside your organization. This type of policy helps protect sensitive content by ensuring externally shared files are labeled and governed according to your data loss prevention (DLP) strategy.
+Finally, you'll create a file policy that automatically applies a sensitivity label to files shared externally. This ensures sensitive content remains protected even when shared outside the organization.
 
 1. In **Microsoft Defender**, navigate to **Cloud apps** > **Policies** > **Policy management**.
 
@@ -488,4 +499,4 @@ In this task, you'll create a file policy that automatically applies a sensitivi
 
 1. Select **Create** to finish creating the file policy.
 
-You've created a file policy that applies a highly confidential sensitivity label to externally shared files in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps apply the label automatically to enforce protection on externally shared files.
+You've created a file policy that applies sensitivity labels to externally shared files. This policy extends your information protection strategy to cloud-stored content.
