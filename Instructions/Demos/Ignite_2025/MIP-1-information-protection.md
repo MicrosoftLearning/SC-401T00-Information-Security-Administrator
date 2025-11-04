@@ -1,6 +1,6 @@
-# Lab – Classify and protect project data with information protection in Copilot
+# Lab – Manage sensitive data using Microsoft Purview Information Protection in the age of AI
 
-Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating the organization's information protection strategy to reduce the risk of sensitive data showing up in Microsoft 365 Copilot. After previous incidents where personal data surfaced in support tickets, she needs to create and test custom sensitive information types that detect Contoso project codes and other sensitive information. As she refines her configuration, Megan realizes that many internal documents are created without labels. To maintain consistent protection and reduce unclassified content in Copilot results, she plans to apply a default label across supported workloads. These classifications will later support labels and policies that protect content from being exposed in Copilot or shared inappropriately.
+Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating the company's information protection strategy to reduce the risk of sensitive data appearing in Microsoft 365 Copilot. After incidents where personal data surfaced in support tickets, she plans to create and test custom sensitive information types (SITs) to detect Contoso project codes and other confidential data. To maintain consistent protection, Megan will apply a default sensitivity label across workloads so that all content is classified and protected before it can appear in Copilot results or be shared inappropriately.
 
 **Tasks**:
 
@@ -17,9 +17,7 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating
 
 Audit records user and administrator activity, and you'll need it enabled to continue with creating auto-apply sensitivity labels in this session.
 
-1. Log into Client 1 VM (SC-401-CL1) with the **Admin** account.
-
-1. Open Microsoft Edge.
+1. With the lab environment ready, open **Microsoft Edge**.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **Megan Bowen** (`MeganB@WWLxZZZZZZ.onmicrosoft.com`, where ZZZZZZ is your unique tenant ID). Use the password provided by your lab host.
 
@@ -56,7 +54,7 @@ In this task, you'll create a custom sensitive information type (SIT) to detect 
 
 1. On the **Define patterns for this sensitive info type** page, select **Create one now**.
 
-1. On the **New pattern** flyout, select **+ Add primary element** > **Regular expression**.
+1. On the **New pattern** flyout, under **Primary element**, select **+ Add primary element** > **Regular expression**.
 
 1. On the **+ Add a regular expression** flyout, enter:
 
@@ -65,7 +63,9 @@ In this task, you'll create a custom sensitive information type (SIT) to detect 
    - Select the radio button for **String match**.
    - Select **Done**.
 
-1. Back on the **New pattern** flyout, under **Supporting elements**, select **+ Add supporting elements or group of elements**, then select **Keyword list**.
+1. Back on the **New pattern** flyout, set **Detect primary AND supporting elements** to **100** characters.
+
+1. Under **Supporting elements**, select **+ Add supporting elements or group of elements**, then select **Keyword list**.
 
 1. On the **Add a keyword list** flyout, enter:
 
@@ -80,8 +80,6 @@ In this task, you'll create a custom sensitive information type (SIT) to detect 
 
    - Select the radio button for **Word match**.
    - Select **Done**.
-
-1. Back on the **New pattern** flyout, set **Detect primary AND supporting elements** to **100** characters.
 
 1. Select **Create** at the bottom of the flyout.
 
