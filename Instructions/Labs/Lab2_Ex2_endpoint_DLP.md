@@ -157,13 +157,13 @@ In this task, you'll fine-tune endpoint DLP settings by excluding a local folder
 
 1. On the **Add cloud service domain** flyout page in the **Domain** field enter `dropbox.com` then select the **+** (plus) icon to add the path. Select **Save** to save this setting.
 
-You've applied custom endpoint DLP settings that refine the behavior of your policy, including exclusions, browser restrictions, and blocking access to specific domains.
+You've applied custom endpoint DLP settings that refine the behavior of your policy, including exclusions, browser restrictions, and blocking access to specific domains. Next, switch to the onboarded device to install the Microsoft Purview Extension and prepare to test policy enforcement.
 
 ## Task 4 – Configure Microsoft Purview extension
 
-In this task, you'll install the Microsoft Purview Extension in Google Chrome to test endpoint DLP policy behavior in supported browsers.
+In this task, you'll switch to the onboarded device and install the Microsoft Purview Extension in Google Chrome to test endpoint DLP policy behavior in supported browsers.
 
-1. Open the Edge browser from the task bar.
+1. On **Client 2 VM (SC-401-CL2)**, sign in as **SC-401-CL2\admin**, then open **Microsoft Edge** from the taskbar.
 
 1. Navigate to the Google Chrome download at **`https://chrome.google.com`**.
 
