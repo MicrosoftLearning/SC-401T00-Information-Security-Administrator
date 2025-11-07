@@ -7,8 +7,8 @@ Megan Bowen, the Information Security Administrator at Contoso Ltd., is updating
 1. Enable Audit in the Microsoft Purview portal
 1. Create a custom sensitive information type
 1. Test custom sensitive information types
-1. Create a parent sensitivity label
-1. Create a sublabel
+1. Create a sensitivity label group
+1. Create a label in the group for project data
 1. Publish sensitivity labels
 1. Configure auto-apply labeling
 1. Configure default sensitivity labels
@@ -125,9 +125,9 @@ In this task, you'll confirm that the custom sensitive information type (SIT) fo
 
 You've successfully tested the custom sensitive information type for project codes. Testing confirms the SIT works as intended, so you can now use it to help protect sensitive content across Microsoft Purview.
 
-## Task 4 – Create a parent sensitivity label
+## Task 4 – Create a sensitivity label group
 
-In this task, you'll enable support for sensitivity labels in SharePoint and OneDrive, then create a parent label to organize department- or project-specific sublabels. This parent label provides a simple foundation for the Copilot-related sublabel you'll configure in the next task.
+In this task, you'll enable support for sensitivity labels in SharePoint and OneDrive, then create a label group to organize related labels. This provides a structure for internal and project-specific labels that will help control data exposure to Copilot.
 
 1. In the **Microsoft Purview portal**, navigate to **Solutions** > **Information Protection**.
 
@@ -137,39 +137,37 @@ In this task, you'll enable support for sensitivity labels in SharePoint and One
 
    ![Screenshot showing the banner with the Turn on now button for enabling sensitivity labels in SharePoint and OneDrive.](./media/turn-on-sensitivity-labels.png)
 
-1. On the **Sensitivity labels** page, select **+ Create a label**.
+1. On the **Sensitivity labels** page, select **+ Create** > **Label group**.
 
-1. On the **Provide basic details for this label** page, enter:
+1. On the **Provide basic details for this label group** page, enter:
 
    - **Name**: `Internal`
    - **Display name**: `Internal`
    - **Description for users**: `Use this label for internal Contoso content.`
-   - **Description for admins**: `Parent label for internal content. Used to organize sublabels, including Copilot project data.`
+   - **Description for admins**: `Label group for internal content. Used to organize sublabels, including Copilot project data.`
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Files** and **Emails**. If **Meetings** is selected, deselect it.
+1. On the **Review your settings and finish** page, select **Create label group**.
 
-1. Select **Next** until you reach the **Review your settings and finish** page, then select **Create label**.
+1. On the **Your label group was created successfully** page, select **Don't create a label yet**, then select **Done**.
 
-1. On the **Your sensitivity label was created** page, select **Don't create a policy yet**, then select **Done**.
+You created a label group named **Internal** to organize labels for internal content. This structure helps you manage related labels for different protection needs.
 
-You've created a parent sensitivity label named **Internal**. This label provides a foundation for organizing sublabels, including the Copilot project data sublabel you'll configure next.
+## Task 5 – Create a label in the group for project data
 
-## Task 5 – Create a sublabel
+Now that the label group is in place, you'll create a label for project data. This label will be used later in an auto-labeling policy to automatically classify content containing Contoso project codes.
 
-Now that you have a base label, you'll create a sublabel specifically for project data. This sublabel will later be used with an auto-apply policy so that content containing project codes is automatically labeled and protected.
+1. On the **Sensitivity labels** page, find the **Internal** sensitivity label group. Select the vertical ellipsis (**...**) next to it, then select **+ Create label in group** from the dropdown menu.
 
-1. On the **Sensitivity labels** page, find the newly created **Internal** sensitivity label. Select the vertical ellipsis (**...**) next to it, then select **+ Create sublabel**.
-
-   ![Screenshot showing the Action menu to create a sublabel for a sensitivity label.](./media/create-sublabel-button.png)
+    ![Screenshot showing the Action menu to create a label in group for a sensitivity label.](./media/create-label-in-group.png)
 
 1. The **New sensitivity label** wizard will open. On the **Provide basic details for this label** page enter:
 
    - **Name**: `Project data`
    - **Display name**: `Project data`
    - **Description for users**: `Label for documents and emails that contain Contoso project codes.`
-   - **Description for admins**: `This sublabel is used with auto-apply policies to protect project data and reduce Copilot exposure.`
+   - **Description for admins**: `This label is used with auto-apply policies to protect project data and reduce Copilot exposure.`
 
 1. Select **Next**.
 
@@ -197,11 +195,11 @@ Now that you have a base label, you'll create a sublabel specifically for projec
 
 1. On the **Your sensitivity label was created** page, select **Don't create a policy yet**, then select **Done**.
 
-You've created a sublabel that applies a footer to project data. When used with an auto-apply policy, this label automatically classifies project documents and emails and makes them clearly identifiable.
+You created a Project data label in the Internal label group. It applies a clear footer to help users identify protected content and supports automatic labeling in future steps.
 
 ## Task 6 – Publish sensitivity labels
 
-You've created a sublabel that applies a footer to project data. When used with an auto-apply policy, this label automatically classifies project documents and emails and makes them clearly identifiable, reducing the chance they surface in Copilot responses.
+With the label created, you'll publish it so users and policies can apply it across Microsoft 365 workloads. Publishing makes the label available for manual and automated use.
 
 1. In the Microsoft Purview portal, under **Information Protection**, expand **Policies** then select **Label publishing policies**.
 
@@ -209,9 +207,8 @@ You've created a sublabel that applies a footer to project data. When used with 
 
 1. On the **Choose sensitivity labels to publish** page, select **Choose sensitivity labels to publish**.
 
-1. On the **Sensitivity labels to publish** flyout, select the checkboxes for:
+1. On the **Sensitivity labels to publish** flyout, select the checkbox for:
 
-   - **Internal**
    - **Internal/Project data**
    - Select **Add**
 
@@ -226,11 +223,11 @@ You've created a sublabel that applies a footer to project data. When used with 
 
 1. On the **New policy created** page, select **Done**.
 
-You've successfully published the Internal and Project data sensitivity labels. They're now available for manual use and for auto-apply policies.
+You published the Internal/Project data label so it can be applied manually or automatically. This makes the label available for use in your upcoming auto-labeling policy.
 
 ## Task 7 – Configure auto-apply labeling
 
-In this task, you'll configure an auto-apply policy so that the Project data sublabel is automatically applied when Contoso project codes are detected. This ensures project data is consistently protected without relying on users to manually apply the label.
+You'll now create an auto-apply policy that automatically assigns the Project data label when Contoso project codes are detected. Automating labeling ensures consistent protection without depending on users to classify data manually.
 
 1. In the Microsoft Purview portal, under **Information Protection**, expand **Policies** then select **Auto-labeling policies**.
 
@@ -294,11 +291,11 @@ In this task, you'll configure an auto-apply policy so that the Project data sub
 
 1. On the confirmation page, select **Done**.
 
-You've successfully configured an auto-apply policy for project data. Any content containing Contoso project codes is automatically labeled with the Project data sensitivity label, helping prevent sensitive information from appearing in Copilot responses or being shared inappropriately.
+You configured an auto-apply policy that labels content containing Contoso project codes with the Project data label. This ensures project information is consistently classified and protected before it appears in Copilot or is shared externally.
 
 ## Task 8 – Configure default sensitivity labels
 
-In this task, you'll configure a default labeling policy to make sure all new content starts with a baseline level of protection. This helps prevent unlabeled internal documents, emails, meetings, and Fabric content from appearing in Copilot results or being shared without classification.
+To make sure every new document and email starts with a baseline level of protection, you'll create a default labeling policy. Default labels apply automatically to new content and help prevent unlabeled data from appearing in Copilot results.
 
 1. In the Microsoft Purview portal, under **Information Protection**, expand **Policies** then select **Label publishing policies**.
 
@@ -308,7 +305,6 @@ In this task, you'll configure a default labeling policy to make sure all new co
 
 1. On the **Sensitivity labels to publish** flyout, select the checkboxes for:
 
-   - **General**
    - **General/All Employees (unrestricted)**
    - Select **Add**
 
@@ -351,7 +347,7 @@ In this task, you'll configure a default labeling policy to make sure all new co
 
 1. On the **New policy created** page, select **Done**.
 
-You've successfully configured a default labeling policy that applies the General label by default across supported workloads. This ensures that all new documents, emails, meetings, and Fabric content begin with consistent protection, reducing the risk of unclassified data appearing in Copilot or being shared without proper labeling.
+You created a default labeling policy that applies the General/All Employees (unrestricted) label to new documents, emails, meetings, and Fabric content. This enforces a consistent baseline for internal data protection across workloads.
 
 ## Lab complete
 
