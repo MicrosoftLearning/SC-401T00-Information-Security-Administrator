@@ -171,9 +171,10 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
       - Select **+ Add group**.
       - In the **Choose sensitive service domain groups** flyout, select the checkbox for **Generative AI Websites**, then select **Add**.
-      - Back on the **Sensitive service domain restrictions** flyout, select **Save**.
+      - Back on the **Sensitive service domain restrictions** flyout, change the action in the dropdown from **Audit only** to **Block**.
+      - Select **Save**.
 
-   1. In the **Create rule** flyout, under **Upload to a restricted cloud service domain or access from an unallowed browser**, set the restriction to **Block**.
+   1. In the **Create rule** flyout, under **Upload to a restricted cloud service domain or access from an unallowed browser**, set the restriction to **Audit only**.
 
 1. In the same **Service domain and browser activities** section:
 
@@ -185,9 +186,10 @@ In this task, you'll create an endpoint DLP policy that blocks users from pastin
 
       - Select **+ Add group**.
       - In the **Choose sensitive service domain groups** flyout, select the checkbox for **Generative AI Websites**, then select **Add**.
-      - Back on the **Sensitive service domain restrictions** flyout, select **Save**.
+      - Back on the **Sensitive service domain restrictions** flyout, change the action in the dropdown from **Audit only** to **Block**.
+      - Select **Save**.
 
-   1. In the **Create rule** flyout, under **Paste to supported browsers**, set the restriction to **Block**.
+   1. In the **Create rule** flyout, under **Paste to supported browsers**, set the restriction to **Audit only**.
 
 1. Under **User notifications**:
 
