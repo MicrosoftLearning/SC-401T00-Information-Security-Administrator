@@ -232,13 +232,7 @@ Now that the DLP rule is in place, you'll configure alert settings so DLP incide
 
       - Select the checkbox to the left of the **MOD Administrator** account, then select **Add** at the bottom of the flyout.
 
-   - Select **Send alert when the volume of matched activities reaches a threshold**.
-
-   - Select the checkbox for **Instances more than or equal to _15_ matched activities**
-
-   - In **During the last**, enter **60** minutes.
-
-    ![Screenshot showing incident alert settings in a data loss prevention rule.](./media/incident-alert-settings.png)
+   - Select **Send alert every time an activity matches the rule**.
 
 1. Select **Save** at the bottom of the flyout.
 
@@ -250,7 +244,7 @@ Now that the DLP rule is in place, you'll configure alert settings so DLP incide
 
 1. Select **Done** on the **Policy updated** page.
 
-You configured incident alert settings so that medium-severity DLP alerts are sent to the MOD Administrator account when multiple matches occur within an hour.
+You configured incident alert settings so that medium-severity DLP alerts are sent to the MOD Administrator account whenever a rule match occurs.
 
 ## Task 5 – Configure DLP alert aggregation
 
