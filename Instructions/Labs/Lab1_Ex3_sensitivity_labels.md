@@ -11,7 +11,6 @@ Joni Sherman, an Information Security Administrator at Contoso Ltd., is deployin
 **Tasks**:
 
 1. Enable support for sensitivity labels
-1. Migrate to the modern label scheme
 1. Create a label group
 1. Create a child label
 1. Publish labels
@@ -38,6 +37,8 @@ In this task, you'll enable co-authoring for sensitivity labels, which also enab
 
 You have successfully enabled support for sensitivity labels for files in SharePoint and OneDrive.
 
+<!--
+
 ## Task 2 – Migrate to the modern label scheme
 
 With sensitivity label support enabled, you'll confirm that the tenant uses the modern label scheme. If it still uses the classic scheme, you'll migrate to the modern one to ensure new labels and policies use the latest configuration model.
@@ -58,7 +59,8 @@ With sensitivity label support enabled, you'll confirm that the tenant uses the 
 
 You've successfully migrated your tenant to the modern sensitivity label scheme. New labels and policies you create will now use the modern configuration experience.
 
-## Task 3 – Create a label group
+-->
+## Task 2 – Create a label group
 
 In this task, you'll create a label group to organize internal sensitivity labels. Label groups act as containers for related labels, like department or business unit classifications.
 
@@ -87,7 +89,7 @@ In this task, you'll create a label group to organize internal sensitivity label
 
 You've created a label group for internal use. This group helps you manage related labels for specific departments or data categories.
 
-## Task 4 – Create a child label
+## Task 3 – Create a child label
 
 Now that you've created a label group, you'll add a child label for HR-related content. This label enforces encryption and content markings to protect HR data from unauthorized access.
 
@@ -144,7 +146,7 @@ Now that you've created a label group, you'll add a child label for HR-related c
 
 You've created a child label within the Internal label group. The label applies encryption and content markings to HR documents, making sensitive data easy to identify and protected by policy.
 
-## Task 5 – Publish labels
+## Task 4 – Publish labels
 
 Next, you'll publish the HR label from the Internal label group so users in the HR department can apply it to their documents.
 
@@ -190,7 +192,7 @@ Next, you'll publish the HR label from the Internal label group so users in the 
 
 You've published the Internal label group and its HR label so users can apply them to HR documents. It might take up to 24 hours for the policy to propagate across services.
 
-## Task 6 – Configure auto-labeling
+## Task 5 – Configure auto-labeling
 
 You'll now create a child label for financial data and configure it to apply automatically to content containing financial identifiers such as credit card or bank routing numbers.
 
@@ -273,7 +275,7 @@ You'll now create a child label for financial data and configure it to apply aut
 
 You've created a child label for financial data and configured an auto-labeling policy that detects and labels content containing financial information.
 
-## Task 7 – Create and publish a DKE label for confidential content
+## Task 6 – Create and publish a DKE label for confidential content
 
 Next, you'll create a child label in the Internal group that uses Double Key Encryption (DKE) and dynamic watermarking to protect confidential legal content.
 
@@ -370,7 +372,7 @@ Next, you'll create a child label in the Internal group that uses Double Key Enc
 
 You've created and published a child label using Double Key Encryption and dynamic watermarking. This label restricts access to authorized users and enforces justification for downgrading classifications.
 
-## Task 8 – Enable Microsoft Purview integration in Defender for Cloud Apps
+## Task 7 – Enable Microsoft Purview integration in Defender for Cloud Apps
 
 With your sensitivity labels created and published, you'll now integrate Microsoft Purview with Microsoft Defender for Cloud Apps. This integration allows Defender to scan files for sensitivity labels and apply file monitoring.
 
@@ -459,7 +461,7 @@ Now that label scanning is enabled, you'll create a file policy that applies the
 You've created a file policy that applies a highly confidential sensitivity label to externally shared files located in the Mark 8 Project folders in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically.
 -->
 
-## Task 9 – Create a file policy to label externally shared files
+## Task 8 – Create a file policy to label externally shared files
 
 Finally, you'll create a file policy that automatically applies a sensitivity label to files shared externally. This ensures sensitive content remains protected even when shared outside the organization.
 
