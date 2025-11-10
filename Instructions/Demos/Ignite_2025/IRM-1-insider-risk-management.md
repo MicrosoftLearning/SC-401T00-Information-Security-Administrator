@@ -271,3 +271,16 @@ You can explore this click-through experience at `https://aka.ms/IRMlabIgnite202
 ## Lab complete
 
 You enabled analytics, set exclusions, and turned on AI risk indicators. You then built a Risky AI usage policy, connected it to Adaptive Protection, and linked it with DLP enforcement. With these controls in place, Contoso can detect risky Copilot and AI activity and automatically strengthen protections before sensitive data is exposed.
+
+---
+
+## Share your feedback
+
+Thank you for completing **LAB547 – Detect and adapt to risky AI usage with Insider Risk Management**.
+
+Your feedback helps improve future labs and events.
+
+You can use your phone to scan the QR codes in the feedback image at [https://aka.ms/IgniteLab547feedback](https://aka.ms/IgniteLab547feedback), or use the links below:
+
+- On the Ignite page: [Give feedback](https://aka.ms/ignite25-feedback)  
+- Lab content issues: [Open an issue in the repo](https://aka.ms/ignite25-LAB547)
