@@ -280,7 +280,7 @@ Thank you for completing **LAB547 – Detect and adapt to risky AI usage with In
 
 Your feedback helps improve future labs and events.
 
-You can use your phone to scan the QR codes in the feedback image at [https://aka.ms/IgniteLab547feedback](https://aka.ms/IgniteLab547feedback), or use the links below:
+Scan the QR codes at [https://aka.ms/IgniteLab547feedback](https://aka.ms/IgniteLab547feedback), or use the links below:
 
 - On the Ignite page: [Give feedback](https://aka.ms/ignite25-feedback)  
 - Lab content issues: [Open an issue in the repo](https://aka.ms/ignite25-LAB547)
