@@ -77,7 +77,7 @@ In this task, you'll create a data loss prevention (DLP) policy that restricts M
 
    ![Screenshot of the Conditions pane in Microsoft Purview with Content contains selected and the Add menu showing Sensitivity labels.](./media/dlp-condition-sensitivity-label.png)
 
-1. In the **Sensitivity labels** flyout, select the checkbox for **Highly Confidential**, then select **Add** at the bottom of the flyout.
+1. In the **Sensitivity labels** flyout, select the checkbox for **Specified People**, then select **Add** at the bottom of the flyout.
 
 1. Back on the **Create rule** flyout, under **Actions** select **+ Add an action** > **Restrict Copilot from processing content**.
 
