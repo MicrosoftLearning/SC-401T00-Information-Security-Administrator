@@ -73,7 +73,7 @@ In this task, you'll create a DLP policy that blocks the transfer of sensitive i
 
 1. From the left, navigation pane, select **Policies** then select **+ Create policy**.
 
-1. On the **Choose what type of data to protect** page, select **Data stored in connected sources**, then select **Next**.
+1. On the **What info do you want to protect?** page, select **Enterprise applications & devices**, then select **Next**.
 
 1. On the **Start with a template or create a custom policy** page, select **Custom** and **Custom policy**, then select **Next**.
 

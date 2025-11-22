@@ -35,9 +35,9 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
 
 1. Select **Solutions** > **Data Loss Prevention** > **Policies**.
 
-1. On the **Policies** page, select **+ Create policy** to start the configuration for creating a new data loss prevention policy.
+1. On the **Policies** page, select **+ Create policy**.
 
-1. On the **Choose what type of data to protect** page, select **Data stored in connected sources**, then select **Next**.
+1. On the **What info do you want to protect?** page, select **Enterprise applications & devices**, then select **Next**.
 
 1. On the **Start with a template or create a custom policy** page, select **Custom** as the category, then select **Custom policy** under **Regulations**.
 
