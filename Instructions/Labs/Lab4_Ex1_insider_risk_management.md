@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 1 - Implement Insider Risk Management'
-    module: 'Module 3 - Implement Insider Risk Management'
+    module: 'Module 4 - Implement Insider Risk Management'
 ---
 
 ## WWL Tenants - Terms of use
@@ -12,7 +12,7 @@ Tenants should not be shared or used for purposes outside of hands-on labs. The 
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
-# Lab 3 - Exercise 1 - Implement Insider Risk Management
+# Lab 4 - Exercise 1 - Implement Insider Risk Management
 
 You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Your role involves ensuring regulatory compliance and protecting sensitive information within the organization. Recently, Contoso Ltd. has noticed unusual browsing activities that could potentially expose sensitive data. To proactively address this insider risk, you will implement Microsoft Purview Insider Risk Management, focusing on identifying, analyzing, and responding to potential insider threats effectively.
 

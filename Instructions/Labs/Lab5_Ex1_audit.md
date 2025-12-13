@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 1 - Search the Audit log'
-    module: 'Module 6 - Audit and search activity in Microsoft Purview'
+    module: 'Module 5 - Audit and search activity in Microsoft Purview'
 ---
 
 ## WWL Tenants - Terms of use
@@ -12,7 +12,7 @@ Tenants should not be shared or used for purposes outside of hands-on labs. The 
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
-# Lab 6 - Exercise 1 - Search the Audit log
+# Lab 5 - Exercise 1 - Search the Audit log
 
 You're Joni Sherman, an Information Security Administrator at Contoso Ltd. As part of strengthening your organization's investigation and compliance readiness, you've been asked to use Microsoft Purview Audit to review DLP configuration changes and ensure that audit records for sensitive activity are retained for an extended period. You'll search for audit events related to DLP policies, export the results for offline analysis, and configure an audit retention policy that preserves key records across Exchange, SharePoint, and endpoint activity.
 

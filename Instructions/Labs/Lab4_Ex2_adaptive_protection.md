@@ -1,10 +1,10 @@
 ---
 lab:
     title: 'Exercise 2 - Implement Adaptive Protection'
-    module: 'Module 3 - Implement Insider Risk Management'
+    module: 'Module 4 - Implement Insider Risk Management'
 ---
 
-# Lab 3 - Exercise 2 - Implement Adaptive Protection
+# Lab 4 - Exercise 2 - Implement Adaptive Protection
 
 You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Your role involves protecting sensitive data and responding to insider risks. To enhance protection, you'll enable Microsoft Purview Adaptive Protection, which dynamically adjusts data loss prevention (DLP) enforcement based on insider risk levels.
 

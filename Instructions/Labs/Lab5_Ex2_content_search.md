@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 2 - Perform a content search'
-    module: 'Module 6 - Audit and search activity in Microsoft Purview'
+    module: 'Module 5 - Audit and search activity in Microsoft Purview'
 ---
 
 ## WWL Tenants - Terms of use
@@ -12,7 +12,7 @@ Tenants should not be shared or used for purposes outside of hands-on labs. The 
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
-# Lab 6 - Exercise 2 - Perform a content search
+# Lab 5 - Exercise 2 - Perform a content search
 
 You are Joni Sherman, an Information Security Administrator at Contoso Ltd. The organization has received an alert that sensitive financial data may have been exposed. You've been asked to use Microsoft Purview to search for content containing key financial terms across Microsoft 365 services. Your goal is to determine whether any sensitive content was shared inappropriately and support the investigation.
 

@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 1 - Protect data in AI environments'
-    module: 'Module 4 - Protect data in AI environments'
+    module: 'Module 6 - Protect data in AI environments'
 ---
 
 ## WWL Tenants - Terms of use
@@ -12,7 +12,7 @@ Tenants should not be shared or used for purposes outside of hands-on labs. The 
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
-# Lab 4 - Exercise 1 - Protect data in AI environments
+# Lab 6 - Exercise 1 - Protect data in AI environments
 
 You are Joni Sherman, the Information Security Administrator for Contoso Ltd. As AI tools like Microsoft Copilot become more integrated into daily workflows, your team has been asked to assess and improve protections around sensitive data. In this lab, you'll explore how Microsoft Purview DSPM for AI can help secure data interactions with AI tools through policy enforcement, risk detection, and exposure assessments.
 
