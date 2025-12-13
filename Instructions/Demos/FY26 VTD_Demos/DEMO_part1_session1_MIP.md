@@ -1,10 +1,4 @@
----
-lab:
-    title: 'Exercise 2 - Create and manage sensitivity labels'
-    module: 'Module 1 - Implement Information Protection'
----
-
-# Lab 1 - Exercise 2 - Create and manage sensitivity labels
+# Lab 1 - Create and manage sensitivity labels
 
 In this demo, you’ll see how an administrator organizes and publishes sensitivity labels to protect sensitive data. The demo shows how to create a label group, configure a sensitivity label that enforces encryption, and publish the label so it’s available in user apps.
 

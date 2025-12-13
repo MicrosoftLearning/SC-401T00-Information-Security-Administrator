@@ -84,7 +84,7 @@ In this task, you'll create a DLP policy that blocks the transfer of sensitive i
 
 1. On the **Assign admin units** page, select **Next**.
 
-1. On the **Choose locations to apply the policy** page, ensure only the **Devices** location is selected. If any other location is selected, ensure they're deselected, then select **Next**.
+1. On the **Choose where to apply the policy** page, ensure only the **Devices** location is selected. If any other location is selected, ensure they're deselected, then select **Next**.
 
 1. On the **Define policy settings** page, select **Create or customize advanced DLP rules** then select **Next**.
 

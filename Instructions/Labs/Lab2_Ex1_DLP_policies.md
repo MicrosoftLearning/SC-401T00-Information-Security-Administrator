@@ -52,7 +52,7 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
 
 1. On the **Assign admin units** page select **Next**.
 
-1. On the **Choose locations to apply the policy** page, enable the location for **Teams chat and channel messages** only. If any other locations are selected, deselect them.
+1. On the **Choose where to apply the policy** page, enable the location for **Teams chat and channel messages** only. If any other locations are selected, deselect them.
 
 1. Select **Next**.
 
@@ -120,7 +120,7 @@ In this task, you'll expand the scope of your existing DLP policy to include Exc
 
 1. On the **Assign admin units** page select **Next**.
 
-1. On the **Choose locations to apply the policy** page, select the checkbox for **Exchange email** to add this location to your DLP policy.
+1. On the **Choose where to apply the policy** page, select the checkbox for **Exchange email** to add this location to your DLP policy.
 
 1. Select **Next** until you reach the **Review and finish** page.
 

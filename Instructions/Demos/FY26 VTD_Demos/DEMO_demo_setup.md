@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Lab setup - Prepare your environment for demos'
-    module: 'Lab setup'
----
-
 # Lab setup - Prepare your environment for demos
 
 **This setup is not part of any demo.**
