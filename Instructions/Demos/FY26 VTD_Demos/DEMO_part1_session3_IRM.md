@@ -1,4 +1,4 @@
-# Demo 3 - Implement Insider Risk Management
+# Session 1 - Demo 3 - Implement Insider Risk Management
 
 In this demo, you'll see how an administrator enables insider risk detection and quickly creates a policy to identify potential data exfiltration. The demo shows how to turn on the required indicators and use a quick policy to start detecting risky user activity with minimal setup.
 

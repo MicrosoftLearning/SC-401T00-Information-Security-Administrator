@@ -133,7 +133,7 @@ In this task, you'll create a policy in DSPM for AI to detect unethical or inapp
 
 You've created a policy that detects unethical activity in AI applications to help Contoso maintain responsible use of Copilot.
 
-## Task 4 – Run a data risk assessment to detect unlabeled content
+## Task 4 – Create a data risk assessment to detect unlabeled content
 
 To understand potential gaps in labeling coverage, you'll run a data risk assessment to identify files without sensitivity labels that may be accessed by Copilot.
 

@@ -1,4 +1,4 @@
-# Demo 1 - Create and manage sensitivity labels
+# Session 1 - Demo 1 - Create and manage sensitivity labels
 
 In this demo, you’ll see how an administrator organizes and publishes sensitivity labels to protect sensitive data. The demo shows how to create a label group, configure a sensitivity label that enforces encryption, and publish the label so it’s available in user apps.
 
