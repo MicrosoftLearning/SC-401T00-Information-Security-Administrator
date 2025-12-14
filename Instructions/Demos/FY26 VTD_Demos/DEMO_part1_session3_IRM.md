@@ -1,20 +1,6 @@
----
-lab:
-    title: 'Exercise 1 - Implement Insider Risk Management'
-    module: 'Module 4 - Implement Insider Risk Management'
----
+# Demo 3 - Implement Insider Risk Management
 
-## WWL Tenants - Terms of use
-
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
-
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
-
-Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
-
-# Lab 4 - Exercise 1 - Implement Insider Risk Management
-
-You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Your role involves ensuring regulatory compliance and protecting sensitive information within the organization. Recently, Contoso Ltd. has noticed unusual browsing activities that could potentially expose sensitive data. To proactively address this insider risk, you will implement Microsoft Purview Insider Risk Management, focusing on identifying, analyzing, and responding to potential insider threats effectively.
+In this demo, you'll see how an administrator enables insider risk detection and quickly creates a policy to identify potential data exfiltration. The demo shows how to turn on the required indicators and use a quick policy to start detecting risky user activity with minimal setup.
 
 **Tasks**:
 
@@ -23,7 +9,16 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 ## Task 1 – Configure insider risk indicators
 
-Before you create an insider risk policy, you'll turn on the indicators needed for detection. These indicators define the types of risky activity the system will look for.
+In this task, you'll enable the indicators that Insider Risk Management uses to detect risky activity. Policies rely on these indicators to evaluate user behavior.
+
+   > **Trainer note**:
+   >
+   > - Set expectations that indicators are prerequisites
+   > - Emphasize that nothing is detected until these are enabled
+   >
+   > **Suggested talk track**:
+   >
+   > _Before any insider risk policy can work, the service needs signals. These indicators define what types of activity Insider Risk Management can evaluate._
 
 1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the new permissions are active.
 
@@ -38,11 +33,27 @@ Before you create an insider risk policy, you'll turn on the indicators needed f
 
 1. Select **Save** at the bottom of the page.
 
+   > **Trainer note**:
+   >
+   > **Suggested talk track**:
+   >
+   > _At this point, the system can start evaluating user activity. Without this step, policies either won't work or will remain in a warning state._
+
 You've enabled key policy indicators so the system can detect sensitive actions like file exfiltration or risky Office activity.
 
 ## Task 2 – Create an insider risk policy
 
-In this task, you'll create a data leaks quick policy to automatically detect and respond to risky user behavior related to data exfiltration. Quick policies use built-in templates and default thresholds to simplify setup.
+In this task, you'll create a quick data leaks policy to start detecting risky data exfiltration behavior using built-in defaults.
+
+   > **Trainer note**:
+   >
+   > - Call out that this is a quick policy
+   > - Emphasize speed and safe defaults
+   > - Do not open customization
+   >
+   > **Suggested talk track**:
+   >
+   > _Now the service can evaluate behavior. Any policy created before this would stay in a warning state._
 
 1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Policies**.
 
@@ -51,6 +62,14 @@ In this task, you'll create a data leaks quick policy to automatically detect an
 1. On the **Create quick policies** flyout, select to **Get started** under **Data leaks**.
 
 1. Review the settings for creating a quick data leak policy, then select **Create policy**.
+
+   > **Trainer note**:
+   >
+   > - One sentence only
+   >
+   > **Suggested talk track**:
+   >
+   > _These notifications help security teams stay aware of policy health and high-risk activity without constantly checking the portal._
 
 1. On the **Your data leak policy is being created** page, select the checkboxes for:
 
@@ -61,4 +80,10 @@ In this task, you'll create a data leaks quick policy to automatically detect an
 
 1. On the bottom of the **Your data leak policy is being created** page, select **Done**.
 
-You've created a quick policy for detecting potential data leaks using the default settings. Next, you'll customize it to resolve the configuration warning.
+   > **Trainer note**:
+   >
+   > **Suggested talk track**:
+   >
+   > _At this point, insider risk detection is active. Indicators are enabled, and a policy is in place to identify potential data exfiltration._
+
+You've created a quick policy for detecting potential data leaks using the default settings.

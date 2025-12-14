@@ -111,3 +111,21 @@ In this task, you'll enable co-authoring for sensitivity labels, which also enab
 1. Select **Apply** at the bottom of the screen.
 
 You have successfully enabled support for sensitivity labels for files in SharePoint and OneDrive.
+
+## Task 3 – Enable insider risk analytics
+
+In this task, you'll enable analytics and data sharing for Insider Risk Management.
+
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged in as the MOD Administrator in Microsoft Purview.
+
+1. In Microsoft Purview, navigate to **Settings** > **Insider Risk Management** > **Analytics**.
+
+1. Toggle these settings to **On**:
+
+   - **Show insights at tenant level**
+
+   - **Show insights at user level**
+
+1. Select **Save** at the bottom of the page.
+
+You have enabled analytics for Insider Risk Management.
