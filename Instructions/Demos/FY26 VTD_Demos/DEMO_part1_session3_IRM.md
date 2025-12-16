@@ -20,7 +20,7 @@ In this task, you'll enable the indicators that Insider Risk Management uses to 
    >
    > _Before any insider risk policy can work, the service needs signals. These indicators define what types of activity Insider Risk Management can evaluate._
 
-1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the new permissions are active.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
 1. Select **Settings** > **Insider risk management**.
 

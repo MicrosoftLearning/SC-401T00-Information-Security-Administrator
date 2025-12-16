@@ -24,7 +24,7 @@ In this task, you'll create a label group that acts as a container for related s
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com`.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
 1. In the Microsoft Purview portal, select **Solutions** from the left sidebar, then select **Information Protection**.
 
