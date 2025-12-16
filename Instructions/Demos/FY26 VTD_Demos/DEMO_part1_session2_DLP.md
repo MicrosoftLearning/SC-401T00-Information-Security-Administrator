@@ -1,4 +1,4 @@
-# Session 1 - Demo 2 – Implement and manage DLP policies
+# Session 1 - Demo 2 – Create a DLP policy from a built-in template
 
 In this demo, you'll see how an administrator creates a data loss prevention (DLP) policy using a built-in template. The demo shows how to start from a template, make a small customization to the data being detected, and apply the policy so it protects Teams messages in Microsoft 365.
 
