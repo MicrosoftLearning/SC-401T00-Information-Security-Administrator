@@ -2,7 +2,7 @@
 
 **This setup is not part of any demo.**
 
-Complete all steps in this lab before recording or delivering Virtual Training Day demos. These tasks prepare the tenant so demos run as expected and don't rely on background configuration being performed live.
+Complete all steps in this lab **24 hours** before recording or delivering Virtual Training Day demos. These tasks prepare the tenant so demos run as expected and don't rely on background configuration being performed live.
 
 Nothing in this lab should be shown, narrated, or completed during a demo.
 
@@ -18,7 +18,11 @@ During this setup, you'll:
 
 **Tasks:**
 
-1. Enable Audit in the Microsoft Purview portal  
+1. Enable Audit in the Microsoft Purview portal
+1. Enable support for sensitivity labels
+1. Enable insider risk analytics
+1. Enable device onboarding
+1. Onboard a device for endpoint DLP
 
 ## Task 1 - Enable Audit in the Microsoft Purview portal
 
@@ -29,8 +33,6 @@ Enable Audit so activity data is available during demos that rely on logging and
 1. Open Microsoft Edge.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
-
-1. In Microsoft Edge, navigate to the Microsoft Purview portal, `https://purview.microsoft.com`, and log in.
 
 1. A message about the new Microsoft Purview portal will appear on the screen. Select **Get started** to access the new portal.
 
@@ -142,13 +144,13 @@ In this task, you'll enable device onboarding for your organization.
 
 1. On the **Devices** page, select **Turn on device onboarding** then select **Ok** to confirm.
 
-1. When prompted, select **OK** to confirm that device monitoring is being turned on.
+1. When prompted, select **OK** to confirm that device onboarding is being turned on.
 
 You have now enabled device onboarding and can start to onboard devices to be protected with Endpoint DLP policies. The process of enabling the feature might take up to 30 minutes.
 
-## Task 3 – Onboard a device for endpoint DLP
+## Task 5 – Onboard a device for endpoint DLP
 
-In this task, you'll onboard a Windows 11 device so it's ready to be protected by endpoint DLP policies.
+Insider Risk Management demos that use the risky browser usage template require at least one onboarded device to generate and surface related activity. Complete this task ahead of time so these scenarios work as expected during demos.
 
 1. Select **Settings** from the left sidebar.
 
@@ -158,7 +160,7 @@ In this task, you'll onboard a Windows 11 device so it's ready to be protected b
 
 1. In the **Downloads** dialog, hover over the download, then select the folder icon to **Show in folder**.
 
-1. Extract the zip file to the **Desktop** of SC-401-CL2. You should see a script named **DeviceComplianceLocalOnboardingScript.cmd**.
+1. Extract the zip file to the **Desktop** of SC-401-CL1. You should see a script named **DeviceComplianceLocalOnboardingScript.cmd**.
 
 1. On the desktop right click the **DeviceComplianceLocalOnboardingScript.cmd** file you just extracted and select **Show more options**, then select **Properties**.
 
@@ -174,16 +176,12 @@ In this task, you'll onboard a Windows 11 device so it's ready to be protected b
 
 1. In the **Access work or school** window for **Add a work or school account** select **Connect**.
 
-1. In the **Set up a work or school account** dialog, select the **Join this device to Microsoft Entra ID** link and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
+1. In the **Set up a work or school account** dialog, select the **Join this device to Microsoft Entra ID** link and sign in as **MOD Administrator** `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. In the **Make sure this is your organization** dialog, review the tenant URL and select **Join**.  
 
 1. Once your device has connected select **Done** on the **You're all set!** screen.
 
-1. Restart Client 2 VM (SC-401-CL2).
-
-1. Log back into Client 1 VM (SC-401-CL1).
-
-1. The Microsoft Purview window should still be open at the **Devices** page. Refresh this page and verify the device has been successfully onboarded.
+1. Restart Client 1 VM (SC-401-CL1).
 
 You've successfully onboarded the device and joined it to Microsoft Entra ID. It can now be protected by endpoint DLP policies.
