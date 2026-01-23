@@ -24,6 +24,8 @@ You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is 
 1. Create a static retention policy
 1. Recover SharePoint content
 
+**Estimated time:** 60-90 minutes
+
 ## Task 1 – Create a retention label
 
 In this task, you'll create a retention label for sensitive financial data that needs to be retained for auditing and investigation purposes.

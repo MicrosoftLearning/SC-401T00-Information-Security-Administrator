@@ -15,6 +15,8 @@ Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd.
 1. Configure Endpoint DLP settings
 1. Configure Microsoft Purview extension
 
+**Estimated time:** 60-90 minutes
+
 ## Task 1 – Onboard a device for endpoint DLP
 
 In this task, you'll onboard a Windows 11 device so it's ready to be protected by endpoint DLP policies.

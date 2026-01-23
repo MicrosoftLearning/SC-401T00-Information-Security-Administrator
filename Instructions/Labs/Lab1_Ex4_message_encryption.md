@@ -242,6 +242,8 @@ Joni Sherman, an Information Security Administrator at Contoso Ltd., is implemen
 1. Enable the mail flow rule  
 1. Validate message encryption
 
+**Estimated time:** 30-45 minutes
+
 ## Task 1 – Create a mail flow rule to encrypt messages from the Finance department
 
 In this task, you'll use the Exchange admin center to create a mail flow rule that applies Microsoft Purview Message Encryption to all messages sent by members of the Finance Team group.

@@ -27,6 +27,8 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 1. Create a policy for security policy violations by priority users
 1. Create a notice template
 
+**Estimated time:** 90-120 minutes
+
 ## Task 1 – Assign insider risk management permissions
 
 In this task, you'll assign Joni Sherman the Insider Risk Management role so she can access and manage insider risk features in Microsoft Purview.
@@ -254,7 +256,7 @@ You've created a custom insider risk policy that uses Defender for Endpoint sign
 
 In this task, you'll create a notice template in Microsoft Purview to notify users when an insider risk alert is triggered.
 
-1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Notice templates**.
+1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Users** > **Notice templates**.
 
 1. On the **Notice templates** page, select **+ Create notice template**.
 

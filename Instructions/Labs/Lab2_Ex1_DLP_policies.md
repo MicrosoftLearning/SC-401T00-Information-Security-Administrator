@@ -25,6 +25,8 @@ Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd.
 1. Enable file inspection in Microsoft Defender
 1. Create a file policy for Microsoft Defender
 
+**Estimated time:** 60-90 minutes
+
 ## Task 1 – Create a DLP policy in simulation mode
 
 In this task, you'll create a DLP policy in simulation mode that targets credit card numbers in Teams messages. The policy will notify users when they attempt to share sensitive content and allow them to override with justification.

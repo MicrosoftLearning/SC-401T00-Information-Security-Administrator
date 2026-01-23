@@ -20,6 +20,8 @@ As the recently hired Information Security Administrator for Contoso Ltd., you (
 1. Assign administrative roles
 1. Explore the Microsoft Purview portal
 
+**Estimated time:** 15-25 minutes
+
 ## Task 1 – Assign administrative roles
 
 In this task, you'll assign the required compliance and security roles to Joni Sherman.

@@ -15,13 +15,15 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 1. Configure Conditional Access with Adaptive Protection
 1. Enable Adaptive Protection
 
+**Estimated time:** 45-60 minutes
+
 ## Task 1 – Assign an insider risk policy to Adaptive Protection
 
 1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
-1. In the Microsoft Purview portal, navigate to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
+1. In the Microsoft Purview portal, navigate to **Solutions** > **Insider Risk Management** > **Users** > **Adaptive Protection**.
 
 1. From the left navigation pane, select **Insider risk levels**.
 
@@ -113,7 +115,7 @@ In this final task, you'll turn on Adaptive Protection so the system can start a
 
 1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the Conditional Access policy appears in Adaptive Protection.
 
-1. Navigate to **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
+1. Navigate to **Solutions** > **Insider Risk Management** > **Users** > **Adaptive Protection**.
 
 1. Confirm your configurations:
 

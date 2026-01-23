@@ -19,6 +19,8 @@ Joni Sherman, the Information Security Administrator at Contoso Ltd., is updatin
 1. Create keyword dictionary
 1. Test custom sensitive information types
 
+**Estimated time:** 60-90 minutes
+
 ## Task 1 – Create custom sensitive information types
 
 In this task, you'll create a new custom sensitive information type that recognizes the pattern of employee IDs near the keywords "Employee" and "ID".

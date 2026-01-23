@@ -23,6 +23,8 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. As
 1. Detect unethical behavior in AI apps
 1. Run a data assessment to detect unlabeled content
 
+**Estimated time:** 30-45 minutes
+
 ## Task 1 – Use DSPM for AI to create a DLP policy for generative AI sites
 
 To reduce the risk of data loss through AI assistants, you'll start by creating a DLP policy using the Fortify your data security recommendation. This policy uses Adaptive Protection to restrict pasting or uploading sensitive data into AI tools like ChatGPT and Copilot in Edge, Chrome, and Firefox.

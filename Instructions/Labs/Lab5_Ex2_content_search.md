@@ -21,6 +21,8 @@ You are Joni Sherman, an Information Security Administrator at Contoso Ltd. The 
 1. Assign eDiscovery permissions
 1. Search for content using sensitive financial terms
 
+**Estimated time:** 20-30 minutes
+
 ## Task 1 – Assign eDiscovery permissions
 
 In this task, you'll assign eDiscovery permissions to Joni Sherman so she can perform a content search in Microsoft Purview.

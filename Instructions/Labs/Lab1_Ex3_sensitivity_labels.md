@@ -19,6 +19,8 @@ Joni Sherman, an Information Security Administrator at Contoso Ltd., is deployin
 1. Enable Microsoft Purview integration in Defender for Cloud Apps
 1. Create a file policy to label externally shared files
 
+**Estimated time:** 60-90 minutes
+
 ## Task 1 – Enable support for sensitivity labels
 
 In this task, you'll enable co-authoring for sensitivity labels, which also enables sensitivity labels for files in SharePoint and OneDrive.

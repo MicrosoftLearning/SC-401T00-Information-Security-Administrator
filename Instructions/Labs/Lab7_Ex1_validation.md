@@ -22,6 +22,8 @@ You are Joni Sherman, the Information Security Administrator at Contoso Ltd. Now
 1. Trigger a DLP policy in Outlook
 1. Apply retention and sensitivity labels in SharePoint
 
+**Estimated time:** 20-30 minutes
+
 ## Task 1 – Apply a sensitivity label in Word
 
 In this task, you'll verify that published sensitivity labels are available to users and can be applied directly from Microsoft Word.

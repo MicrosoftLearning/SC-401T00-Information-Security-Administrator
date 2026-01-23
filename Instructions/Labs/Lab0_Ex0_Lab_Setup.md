@@ -24,6 +24,8 @@ In this lab, you'll configure and prepare your environment for administration ta
 1. Initialize Microsoft Defender XDR
 1. Configure multi-factor authentication in Microsoft Entra
 
+**Estimated time:** 30-45 minutes
+
 ## Task 1 - Enable Audit in the Microsoft Purview portal
 
 In this task, you'll enable Audit in the Microsoft Purview portal to monitor portal activities.
