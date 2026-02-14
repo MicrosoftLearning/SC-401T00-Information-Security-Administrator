@@ -51,7 +51,7 @@ In this task, you'll create a retention label for sensitive financial data that 
 1. On the **Define the period** page, ensure these values are set for the retention period configuration input:
 
     - **How long is the period?**: 5 Years
-    - **When should the period begin?**: When items were modified
+    - **When should the period begin?**: When items were last modified
 
 1. Select **Next**.
 
