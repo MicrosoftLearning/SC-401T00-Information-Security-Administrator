@@ -50,7 +50,13 @@ In this task, you'll assign the required compliance and security roles to Joni S
 
 1. On the **Manage admin roles** panel, select **Admin center access**, then scroll down to expand **Show all by category**.
 
-1. Under the **Security & Compliance** category, select the checkbox for **Compliance Administrator**, **Security Administrator**, and **Application Administrator** then select **Save changes** at the bottom of the flyout panel.
+1. Under the **Security & Compliance** category, select the checkbox for:
+
+    - **Compliance Administrator**
+    - **Security Administrator**
+    - **Application Administrator**
+
+1. Select **Save changes** at the bottom of the flyout panel.
 
 1. You should see a message: **Admin roles updated**.
 
