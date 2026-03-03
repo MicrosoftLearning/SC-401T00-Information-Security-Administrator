@@ -201,7 +201,7 @@ In this task, you'll go to Microsoft Defender and wait for Microsoft Defender XD
 
 1. In **Microsoft Edge**, navigate to **`https://security.microsoft.com/`** to open Microsoft Defender.
 
-1. From the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents**.
+1. From the navigation pane, select **Incidents & alerts** > **Incidents**.
 
     > [!Note] **Note: Microsoft Defender XDR initialization**
     >
