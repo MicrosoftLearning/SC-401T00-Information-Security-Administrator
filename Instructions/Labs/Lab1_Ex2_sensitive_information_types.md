@@ -167,9 +167,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 1. On the **Information Protection** page, expand **Classifiers** then select **EDM classifiers**.
 
-1. On the **EDM classifiers** page, select **+ Create EDM classifier**.
-
-1. Review the **Familiarize yourself with the steps needed to put your classifier to work** to understand the workflow for creating EDM classifiers, then select **Create EDM classifier**.
+1. On the **EDM classifiers** page, click on and review the link **Learn about the end-to-end process** to understand the workflow for creating EDM classifiers, then select **+ Create EDM classifier**.
 
 1. On the **Name and describe your EDM classifier** page, enter:
 
