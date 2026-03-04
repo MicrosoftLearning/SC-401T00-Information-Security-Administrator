@@ -110,7 +110,7 @@ In this task, you'll configure a policy that automatically applies a retention l
 1. On the **Let's get started page**, enter:
 
    - **Name**: `Auto-apply Personal Financial PII`
-   - **Description**: `Applies this label to personal financial data to help meet audit and investigation requirements. Retains content for 3 years.`
+   - **Description**: `Applies this label to personal financial data to help meet audit and investigation requirements. Retains content for 5 years.`
 
 1. Select **Next**.
 
