@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Lab setup - Prepare your environment for administration'
-    module: 'Lab setup'
+  title: Lab setup - Prepare your environment for administration
+  module: Lab setup
+  description: If you are being provided with a tenant as a part of an instructor-led
+    training delivery, please note that the tenant is made available for the purpose
+    of supporting the hands-on labs in the instructor-led training.
+  duration: 45 minutes
+  level: 200
+  islab: true
 ---
 
 ## WWL Tenants - Terms of use
