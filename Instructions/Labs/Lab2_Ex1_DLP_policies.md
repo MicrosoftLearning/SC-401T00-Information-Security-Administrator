@@ -1,8 +1,15 @@
 ---
 lab:
-    title: 'Exercise 1 - Implement and manage DLP policies'
-    module: 'Module 2 - Implement Data Loss Prevention'
+  title: Exercise 1 - Implement and manage DLP policies
+  module: Module 2 - Implement Data Loss Prevention
+  description: If you are being provided with a tenant as a part of an instructor-led
+    training delivery, please note that the tenant is made available for the purpose
+    of supporting the hands-on labs in the instructor-led training.
+  duration: 90 minutes
+  level: 300
+  islab: true
 ---
+
 ## WWL Tenants - Terms of use
 
 If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
