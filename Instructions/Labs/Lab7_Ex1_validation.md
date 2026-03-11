@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Validate sensitivity, DLP, and retention policies'
-    module: 'Policy validation - Validate sensitivity, DLP, and retention policies'
+  title: Validate sensitivity, DLP, and retention policies
+  module: Policy validation - Validate sensitivity, DLP, and retention policies
+  description: If you are being provided with a tenant as a part of an instructor-led
+    training delivery, please note that the tenant is made available for the purpose
+    of supporting the hands-on labs in the instructor-led training.
+  duration: 30 minutes
+  level: 200
+  islab: true
 ---
 
 ## WWL Tenants - Terms of use
