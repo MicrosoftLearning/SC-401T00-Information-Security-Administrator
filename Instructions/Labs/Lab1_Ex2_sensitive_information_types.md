@@ -1,9 +1,12 @@
 ---
 lab:
-    title: 'Exercise 2 - Create and manage sensitive information types'
-    module: 'Module 1 - Implement Information Protection'
+  title: Exercise 2 - Create and manage sensitive information types
+  module: Module 1 - Implement Information Protection
+  description: In this task, you'll create a new custom sensitive information type that recognizes the pattern of employee IDs near the keywords "Employee" and "ID".
+  duration: 90 minutes
+  level: 200
+  islab: true
 ---
-
 
 # Lab 1 - Exercise 2 - Create and manage sensitive information types
 
