@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 1 - Implement Insider Risk Management'
-    module: 'Module 4 - Implement Insider Risk Management'
+  title: Exercise 1 - Implement Insider Risk Management
+  module: Module 4 - Implement Insider Risk Management
+  description: If you are being provided with a tenant as a part of an instructor-led
+    training delivery, please note that the tenant is made available for the purpose
+    of supporting the hands-on labs in the instructor-led training.
+  duration: 120 minutes
+  level: 200
+  islab: true
 ---
 
 ## WWL Tenants - Terms of use
