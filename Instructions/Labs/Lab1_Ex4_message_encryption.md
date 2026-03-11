@@ -1,8 +1,20 @@
 ---
 lab:
-    title: 'Exercise 4 - Deploy Microsoft Purview Message Encryption'
-    module: 'Module 1 - Implement Information Protection'
+  title: Exercise 4 - Deploy Microsoft Purview Message Encryption
+  module: Module 1 - Implement Information Protection
+  description: Joni Sherman, an Information Security Administrator at Contoso Ltd.,
+    is implementing secure email communication to protect sensitive information exchanged
+    between departments. As part of this effort, she'll configure Microsoft Purview
+    Message Encryption (OME) by using the Exchange admin center to automatically encrypt
+    messages sent from the Finance department and include a clear notice that the
+    message was sent securely.
+  duration: 45 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft Purview
 ---
+
 <!--
 
 =======
