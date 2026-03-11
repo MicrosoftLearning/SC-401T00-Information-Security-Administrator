@@ -1,7 +1,22 @@
 ---
 lab:
-    title: 'Exercise 3 - Create and manage sensitivity labels'
-    module: 'Module 1 - Implement Information Protection'
+  title: Exercise 3 - Create and manage sensitivity labels
+  module: Module 1 - Implement Information Protection
+  description: Joni Sherman, an Information Security Administrator at Contoso Ltd.,
+    is deploying a modern sensitivity labeling framework to strengthen data protection
+    across the organization. She'll create and publish sensitivity label groups and
+    labels to classify and protect content, including encryption, auto-labeling, and
+    Double Key Encryption (DKE). Joni will also integrate Microsoft Purview with Microsoft
+    Defender for Cloud Apps to extend data protection controls to files stored in
+    cloud locations.
+  duration: 90 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft Defender
+  - Microsoft Defender for Cloud
+  - Microsoft Defender for Cloud Apps
+  - Microsoft Purview
 ---
 
 # Lab 1 - Exercise 3 - Create and manage sensitivity labels
