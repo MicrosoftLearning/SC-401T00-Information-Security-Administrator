@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 1 - Search the Audit log'
-    module: 'Module 5 - Audit and search activity in Microsoft Purview'
+  title: Exercise 1 - Search the Audit log
+  module: Module 5 - Audit and search activity in Microsoft Purview
+  description: You're Joni Sherman, an Information Security Administrator at Contoso Ltd. As part of strengthening your organization's investigation and compliance readiness, you've been asked to use Microsoft Purview Audit to review DLP configuration changes and ensure that audit records for sensitive activity are retained for an extended period. You'll search for audit events related to DLP policies, export the results for offline analysis, and configure an audit retention policy that preserves key records across Exchange, SharePoint, and endpoint activity.
+  duration: 45 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft Purview
 ---
 
 ## WWL Tenants - Terms of use
