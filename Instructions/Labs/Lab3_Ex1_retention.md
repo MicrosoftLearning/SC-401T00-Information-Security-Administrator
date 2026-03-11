@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 1 - Configure retention policies'
-    module: 'Module 3 - Implement and manage retention'
+  title: Exercise 1 - Configure retention policies
+  module: Module 3 - Implement and manage retention
+  description: If you are being provided with a tenant as a part of an instructor-led
+    training delivery, please note that the tenant is made available for the purpose
+    of supporting the hands-on labs in the instructor-led training.
+  duration: 90 minutes
+  level: 200
+  islab: true
 ---
 
 ## WWL Tenants - Terms of use
