@@ -1,9 +1,16 @@
 ---
 lab:
-    title: 'Exercise 2 - Create and manage sensitive information types'
-    module: 'Module 1 - Implement Information Protection'
+  title: Exercise 2 - Create and manage sensitive information types
+  module: Module 1 - Implement Information Protection
+  description: Joni Sherman, the Information Security Administrator at Contoso Ltd.,
+    is updating the organization's information protection strategy after previous
+    incidents involving the unintentional sharing of personal data in support tickets.
+    She needs to create and test custom sensitive information types that help detect
+    employee IDs and references to personal health information in documents and emails.
+  duration: 90 minutes
+  level: 200
+  islab: true
 ---
-
 
 # Lab 1 - Exercise 2 - Create and manage sensitive information types
 
