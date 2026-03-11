@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 1 - Protect data in AI environments'
-    module: 'Module 6 - Protect data in AI environments'
+  title: Exercise 1 - Protect data in AI environments
+  module: Module 6 - Protect data in AI environments
+  description: If you are being provided with a tenant as a part of an instructor-led
+    training delivery, please note that the tenant is made available for the purpose
+    of supporting the hands-on labs in the instructor-led training.
+  duration: 45 minutes
+  level: 100
+  islab: true
 ---
 
 ## WWL Tenants - Terms of use
