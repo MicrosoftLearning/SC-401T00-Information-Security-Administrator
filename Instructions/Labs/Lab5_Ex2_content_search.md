@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 2 - Perform a content search'
-    module: 'Module 5 - Audit and search activity in Microsoft Purview'
+  title: Exercise 2 - Perform a content search
+  module: Module 5 - Audit and search activity in Microsoft Purview
+  description: In this task, you'll assign eDiscovery permissions to Joni Sherman so she can perform a content search in Microsoft Purview.
+  duration: 30 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft Purview
 ---
 
 ## WWL Tenants - Terms of use
