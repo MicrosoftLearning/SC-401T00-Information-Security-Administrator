@@ -1,9 +1,12 @@
 ---
 lab:
-    title: 'Exercise 2 - Create and manage sensitive information types'
-    module: 'Module 1 - Implement Information Protection'
+  title: Exercise 2 - Create and manage sensitive information types
+  module: Module 1 - Implement Information Protection
+  description: Create and test custom sensitive information types using pattern matching, keyword dictionaries, and exact data match classifiers.
+  duration: 90 minutes
+  level: 200
+  islab: true
 ---
-
 
 # Lab 1 - Exercise 2 - Create and manage sensitive information types
 

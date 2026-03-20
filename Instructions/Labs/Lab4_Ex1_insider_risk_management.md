@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 1 - Implement Insider Risk Management'
-    module: 'Module 4 - Implement Insider Risk Management'
+  title: Exercise 1 - Implement Insider Risk Management
+  module: Module 4 - Implement Insider Risk Management
+  description: Configure Insider Risk Management by assigning roles, enabling indicators, creating policies, integrating Defender signals, and setting up priority users and notifications.
+  duration: 120 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Purview
 ---
 
 ## WWL Tenants - Terms of use

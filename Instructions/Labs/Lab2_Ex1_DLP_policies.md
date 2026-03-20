@@ -1,8 +1,17 @@
 ---
 lab:
-    title: 'Exercise 1 - Implement and manage DLP policies'
-    module: 'Module 2 - Implement Data Loss Prevention'
+  title: Exercise 1 - Implement and manage DLP policies
+  module: Module 2 - Implement Data Loss Prevention
+  description: Create, test, and manage DLP policies across Microsoft Purview and Defender, including simulation mode, PowerShell configuration, and file policy enforcement.
+  duration: 90 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft 365
+    - Microsoft Defender
+    - Microsoft Purview
 ---
+
 ## WWL Tenants - Terms of use
 
 If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.

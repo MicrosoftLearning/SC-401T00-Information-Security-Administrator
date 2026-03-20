@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Exercise 2 - Implement and manage endpoint DLP'
-    module: 'Module 2 - Implement Data Loss Prevention'
+  title: Exercise 2 - Implement and manage endpoint DLP
+  module: Module 2 - Implement Data Loss Prevention
+  description: Onboard a device, create an endpoint DLP policy, and configure endpoint settings and browser support to protect sensitive data on Windows devices.
+  duration: 90 minutes
+  level: 200
+  islab: true
 ---
 
 # Lab 2 – Exercise 2 – Implement and manage endpoint DLP

@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 1 - Search the Audit log'
-    module: 'Module 5 - Audit and search activity in Microsoft Purview'
+  title: Exercise 1 - Search the Audit log
+  module: Module 5 - Audit and search activity in Microsoft Purview
+  description: Search and export audit log activity and configure an audit retention policy for DLP events in Microsoft Purview.
+  duration: 45 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft Purview
 ---
 
 ## WWL Tenants - Terms of use

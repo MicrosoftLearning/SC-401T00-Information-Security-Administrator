@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Validate sensitivity, DLP, and retention policies'
-    module: 'Policy validation - Validate sensitivity, DLP, and retention policies'
+  title: Validate sensitivity, DLP, and retention policies
+  module: Policy validation - Validate sensitivity, DLP, and retention policies
+  description: Validate sensitivity labels, DLP policies, and retention labels by testing their behavior across Microsoft 365 apps.
+  duration: 30 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft 365
+    - Microsoft 365 Apps
 ---
 
 ## WWL Tenants - Terms of use

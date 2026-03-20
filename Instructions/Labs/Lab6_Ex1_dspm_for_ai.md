@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Exercise 1 - Protect data in AI environments'
-    module: 'Module 6 - Protect data in AI environments'
+  title: Exercise 1 - Protect data in AI environments
+  module: Module 6 - Protect data in AI environments
+  description: Create and review DLP, insider risk, and communication compliance policies and run a data assessment to protect sensitive data in AI interactions using Microsoft Purview DSPM for AI.
+  duration: 45 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Copilot
+    - Microsoft Purview
 ---
 
 ## WWL Tenants - Terms of use
