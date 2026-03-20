@@ -2,9 +2,9 @@
 lab:
   title: Exercise 4 - Deploy Microsoft Purview Message Encryption
   module: Module 1 - Implement Information Protection
-  description: In this task, you'll use the Exchange admin center to create a mail flow rule that applies Microsoft Purview Message Encryption to all messages sent by members of the Finance Team group.
+  description: Configure a mail flow rule to apply Microsoft Purview Message Encryption, add a disclaimer, and validate encrypted email behavior.
   duration: 45 minutes
-  level: 300
+  level: 100
   islab: true
   primarytopics:
     - Microsoft Purview

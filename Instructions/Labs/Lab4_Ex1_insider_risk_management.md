@@ -2,7 +2,7 @@
 lab:
   title: Exercise 1 - Implement Insider Risk Management
   module: Module 4 - Implement Insider Risk Management
-  description: You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Your role involves ensuring regulatory compliance and protecting sensitive information within the organization. Recently, Contoso Ltd. has noticed unusual browsing activities that could potentially expose sensitive data. To proactively address this insider risk, you will implement Microsoft Purview Insider Risk Management, focusing on identifying, analyzing, and responding to potential insider threats effectively.
+  description: Configure Insider Risk Management by assigning roles, enabling indicators, creating policies, integrating Defender signals, and setting up priority users and notifications.
   duration: 120 minutes
   level: 200
   islab: true

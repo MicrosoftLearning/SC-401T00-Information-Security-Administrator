@@ -2,9 +2,9 @@
 lab:
   title: Exercise 2 - Implement Adaptive Protection
   module: Module 4 - Implement Insider Risk Management
-  description: You've linked an insider risk policy to Adaptive Protection, enabling dynamic risk-based actions across Microsoft Purview.
+  description: Configure Adaptive Protection by linking insider risk policies with DLP and Conditional Access to apply risk-based controls in Microsoft Purview and Entra.
   duration: 60 minutes
-  level: 300
+  level: 200
   islab: true
   primarytopics:
     - Microsoft Purview

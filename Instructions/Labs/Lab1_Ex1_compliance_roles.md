@@ -2,7 +2,7 @@
 lab:
   title: Exercise 1 - Manage compliance and security roles
   module: Module 1 - Implement Information Protection
-  description: You have successfully assigned Joni Sherman the Compliance and Security Administrator roles, which is required to complete the tasks in this lab.
+  description: Assign required administrative roles and explore the Microsoft Purview portal to prepare for compliance and security tasks.
   duration: 25 minutes
   level: 100
   islab: true

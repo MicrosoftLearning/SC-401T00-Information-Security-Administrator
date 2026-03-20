@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Lab setup - Prepare your environment for administration'
-    module: 'Lab setup'
+  title: Lab setup - Prepare your environment for administration
+  module: Lab setup
+  description: Configure core Microsoft Purview and Defender features, permissions, and services to prepare the environment for administration tasks.
+  duration: 45 minutes
+  level: 100
+  islab: true
 ---
 
 ## WWL Tenants - Terms of use

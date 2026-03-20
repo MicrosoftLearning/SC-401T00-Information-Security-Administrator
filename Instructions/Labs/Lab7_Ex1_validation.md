@@ -2,9 +2,9 @@
 lab:
   title: Validate sensitivity, DLP, and retention policies
   module: Policy validation - Validate sensitivity, DLP, and retention policies
-  description: You are Joni Sherman, the Information Security Administrator at Contoso Ltd. Now that you've configured sensitivity labels, data loss prevention (DLP), and retention policies, you've been asked to validate that those configurations are working as expected. In this lab, you'll test the behavior of each policy in Microsoft 365 apps and verify that content is protected and retained according to your policy settings.
+  description: Validate sensitivity labels, DLP policies, and retention labels by testing their behavior across Microsoft 365 apps.
   duration: 30 minutes
-  level: 200
+  level: 100
   islab: true
   primarytopics:
     - Microsoft 365

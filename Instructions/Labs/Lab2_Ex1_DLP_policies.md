@@ -2,9 +2,9 @@
 lab:
   title: Exercise 1 - Implement and manage DLP policies
   module: Module 2 - Implement Data Loss Prevention
-  description: Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd., has been asked to configure data loss prevention (DLP) policies to help protect sensitive customer data across Microsoft 365. In this lab, you'll use Microsoft Purview and Microsoft Defender to create and manage DLP policies that detect and restrict the sharing of sensitive information such as credit card numbers and employee IDs.
+  description: Create, test, and manage DLP policies across Microsoft Purview and Defender, including simulation mode, PowerShell configuration, and file policy enforcement.
   duration: 90 minutes
-  level: 300
+  level: 200
   islab: true
   primarytopics:
     - Microsoft 365

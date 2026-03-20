@@ -2,7 +2,7 @@
 lab:
   title: Exercise 1 - Configure retention policies
   module: Module 3 - Implement and manage retention
-  description: You've configured a static retention policy that retains Teams messages for three years before automatically deleting them.
+  description: Create and manage retention labels and policies, including auto-apply and adaptive scopes, and validate data recovery in Microsoft Purview.
   duration: 90 minutes
   level: 200
   islab: true

@@ -2,9 +2,9 @@
 lab:
   title: Exercise 3 - Create and manage sensitivity labels
   module: Module 1 - Implement Information Protection
-  description: With your sensitivity labels created and published, you'll now integrate Microsoft Purview with Microsoft Defender for Cloud Apps. This integration allows Defender to scan files for sensitivity labels and apply file monitoring.
+  description: Configure and publish sensitivity labels with encryption, auto-labeling, and policy integration across Microsoft Purview and Defender for Cloud Apps.
   duration: 90 minutes
-  level: 300
+  level: 200
   islab: true
   primarytopics:
     - Microsoft Defender
