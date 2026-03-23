@@ -209,7 +209,7 @@ In this task, you'll go to Microsoft Defender and wait for Microsoft Defender XD
 
     > [!Note] **Note: Microsoft Defender XDR initialization**
     >
-    > The Microsoft Defender XDR initialization screen might or might not appear depending on your lab tenant.
+    > The navigation might appear differently depending on whether Microsoft Defender XDR is already initialized. If initialization has completed, **Incidents & alerts** appears as a top-level option instead of under **Investigation & response**.
 
 1. You'll see a message stating that Microsoft Defender XDR is being prepared. This process runs automatically and might take a few minutes.
 
