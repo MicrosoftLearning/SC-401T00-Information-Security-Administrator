@@ -105,7 +105,7 @@ You've published the retention label, making it available for users to apply in 
 
 ## Task 3 – Create an auto-apply retention label policy
 
-In this task, you'll configure a policy that automatically applies a retention label to content containing personal financial information.
+In this task, you'll configure a policy that automatically applies an existing retention label to content containing personal financial information.
 
 1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Policies** > **Label policies**.
 
@@ -114,7 +114,7 @@ In this task, you'll configure a policy that automatically applies a retention l
 1. On the **Let's get started page**, enter:
 
    - **Name**: `Auto-apply Personal Financial PII`
-   - **Description**: `Applies this label to personal financial data to help meet audit and investigation requirements. Retains content for 3 years.`
+   - **Description**: `Applies an existing retention label to personal financial data to support audit and investigation requirements.`
 
 1. Select **Next**.
 
@@ -145,7 +145,7 @@ In this task, you'll configure a policy that automatically applies a retention l
 
 1. On the **Review and finish** page, select **Submit**, then select **Done** on the **Your auto-labeling policy has been created** page.
 
-You've created an auto-apply policy that identifies personal financial data and applies a retention label automatically.
+You've created an auto-apply policy that identifies personal financial data and applies an existing retention label automatically.
 
 ## Task 4 – Create a static retention policy
 
