@@ -40,8 +40,6 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
-1. In Microsoft Edge, navigate to the Microsoft Purview portal, `https://purview.microsoft.com`, and log in.
-
 1. A message about the new Microsoft Purview portal will appear on the screen. Select **Get started** to access the new portal.
 
     ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/welcome-purview-portal.png)
