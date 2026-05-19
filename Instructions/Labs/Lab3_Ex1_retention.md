@@ -12,7 +12,7 @@ lab:
 
 If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
@@ -26,6 +26,8 @@ You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is 
 1. Publish a retention label
 1. Create an auto-apply retention label policy
 1. Create a static retention policy
+1. Create an adaptive scope
+1. Create an adaptive retention policy
 1. Recover SharePoint content
 
 **Estimated time:** 60-90 minutes
@@ -34,9 +36,9 @@ You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is 
 
 In this task, you'll create a retention label for sensitive financial data that needs to be retained for auditing and investigation purposes.
 
-1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
+1. In Microsoft Edge, navigate to **`https://purview.microsoft.com`** and sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. Navigate to **Solutions** > **Data Lifecycle Management** > **Retention labels**.
 
@@ -59,7 +61,7 @@ In this task, you'll create a retention label for sensitive financial data that 
 
 1. Select **Next**.
 
-1. On the **Choose what happens after the retention period** page select **Delete items automatically**, then select **Next**.
+1. On the **Choose what happens after the retention period** page, select **Delete items automatically**, then select **Next**.
 
 1. On the **Review and finish** page, select **Create label**.
 
@@ -77,11 +79,11 @@ In this task, you'll publish the retention label so users can apply it in Micros
 
 1. On the **Choose labels to publish** page, verify the **Sensitive Financial Records** label is selected, then select **Next**.
 
-1. On the **Policy Scope** page select **Next**.
+1. On the **Policy Scope** page, select **Next**.
 
-1. On the **Choose the type of retention policy to create** page select **Static** then select **Next**.
+1. On the **Choose the type of retention policy to create** page, select **Static**, then select **Next**.
 
-1. On the **Choose where to publish labels** page select **Let me choose specific locations** and select:
+1. On the **Choose where to publish labels** page, select **Let me choose specific locations** and select:
 
     - Exchange mailboxes
     - SharePoint classic and communication sites
@@ -90,14 +92,14 @@ In this task, you'll publish the retention label so users can apply it in Micros
 
 1. Select **Next**.
 
-1. On the **Name your policy** enter:
+1. On the **Name your policy** page, enter:
 
     - **Name**: `Sensitive Financial Data Retention`
     - **Description**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, and OneDrive.`
 
 1. Select **Next**.
 
-1. On the **Finish** page, select **Submit**.  
+1. On the **Finish** page, select **Submit**.
 
 1. On the **Your retention label was published** page, select **Done**.
 
@@ -111,7 +113,7 @@ In this task, you'll configure a policy that automatically applies an existing r
 
 1. On the **Label policies** page, select **Auto-apply a label** to start the label configuration.
 
-1. On the **Let's get started page**, enter:
+1. On the **Let's get started** page, enter:
 
    - **Name**: `Auto-apply Personal Financial PII`
    - **Description**: `Applies an existing retention label to personal financial data to support audit and investigation requirements.`
@@ -128,14 +130,16 @@ In this task, you'll configure a policy that automatically applies an existing r
 
 1. On the **Choose the type of retention policy to create​** page, select **Static**.
 
-1. On the **Choose where to publish labels** page select **Let me choose specific locations** and select:
+1. On the **Choose where to publish labels** page, select **Let me choose specific locations** and select:
 
     - Exchange mailboxes
     - SharePoint classic and communication sites
     - OneDrive accounts
     - Deselect all other locations
 
-1. On the **Choose a label to auto-apply** page, select **Add label**.
+1. Select **Next**.
+
+1. On the **Choose a label to auto-apply** page, select **+ Add label**.
 
 1. On the **Choose a label** flyout, select **Personal Financial PII**, then select **Add**.
 
@@ -153,7 +157,7 @@ In this task, you'll create a static retention policy for Microsoft Teams conten
 
 1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Policies** > **Retention policies**.
 
-1. On the **Retention policies** page, select **New retention policy**.
+1. On the **Retention policies** page, select **+ New retention policy**.
 
 1. On the **Name your retention policy** page, enter:
 
@@ -184,7 +188,7 @@ In this task, you'll create a static retention policy for Microsoft Teams conten
 
 1. Select **Next**.
 
-1. On the **Review and finish** page select **Submit**, then select **Done** on the **You successfully created a retention policy** page.
+1. On the **Review and finish** page, select **Submit**, then select **Done** on the **You successfully created a retention policy** page.
 
 You've configured a static retention policy that retains Teams messages for three years before automatically deleting them.
 
@@ -192,39 +196,39 @@ You've configured a static retention policy that retains Teams messages for thre
 
 In this task, you'll define an adaptive scope that targets Microsoft 365 groups associated with leadership and operations roles.
 
-1. In Microsoft Purview, **Settings** > **Roles and scopes** > **Adaptive scopes**.
+1. In Microsoft Purview, navigate to **Settings** > **Roles and scopes** > **Adaptive scopes**.
 
-1. On the **Adaptive scopes** page select **+ Create scope**.
+1. On the **Adaptive scopes** page, select **+ Create scope**.
 
-1. On the **Name your adaptive policy scope** page enter:
+1. On the **Name your adaptive policy scope** page, enter:
 
     - **Name**: `Leadership and Ops Groups`
     - **Description**: `Targets Leadership and Operations M365 groups with privileged access to sensitive data.`
 
 1. Select **Next**.
 
-1. On the **Assign admin unit** page select **Next**.
+1. On the **Assign admin unit** page, select **Next**.
 
-1. On the **What type of scope do you want to create?** page select **Microsoft 365 Groups**, then select **Next**.
+1. On the **What type of scope do you want to create?** page, select **Microsoft 365 Groups**, then select **Next**.
 
 1. On the **Create the query to define users** page, in the **User attributes** section, ensure these values are selected for the user attribute configuration:
 
-   - Select the **Attribute** dropdown then select **Name**
+   - Select the **Attribute** dropdown, then select **Name**
    - Leave the default **is equal to** value in the next field
    - Enter `Leadership` as the **Value**
 
-1. Add a second attribute by selecting **+ Add attribute** on the **Create the query to define users** page. In the new field under the one we just configured, configure these values:
+1. Add a second attribute by selecting **+ Add attribute** on the **Create the query to define users** page. In the new field under the one you just configured, configure these values:
 
-   - Select the dropdown for the query operator and update it from And to **Or**
-   - Select the **Attribute** dropdown then select **Name**
+   - Select the dropdown for the query operator and update it from **And** to **Or**
+   - Select the **Attribute** dropdown, then select **Name**
    - Leave the default **is equal to** value in the next field
    - Enter `Operations` as the **Value**
 
 1. Select **Next**.
 
-1. On the **Review and finish** page select **Submit**.
+1. On the **Review and finish** page, select **Submit**.
 
-1. Once your adaptive scope is created select **Done** on the **Your scope was created** page.
+1. Once your adaptive scope is created, select **Done** on the **Your scope was created** page.
 
 You've created an adaptive scope to support targeted retention for privileged groups in the organization.
 
@@ -232,26 +236,26 @@ You've created an adaptive scope to support targeted retention for privileged gr
 
 In this task, you'll use the adaptive scope you created to configure a retention policy for Microsoft 365 groups with sensitive responsibilities.
 
-1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Policies** >  **Retention policies**.
+1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Policies** > **Retention policies**.
 
 1. On the **Retention policies** page, select **+ New retention policy**.
 
-1. On the **Name your retention policy** page enter:
+1. On the **Name your retention policy** page, enter:
 
     - **Name**: `Privileged Group Retention`
     - **Description**: `Retains content from Leadership and Operations groups for 5 years to support audit and investigation.`
 
 1. Select **Next**.
 
-1. On the **Policy Scope** page select **Next**.
+1. On the **Policy Scope** page, select **Next**.
 
-1. On the **Choose the type of retention policy to create** page select **Adaptive** then select **Next**.
+1. On the **Choose the type of retention policy to create** page, select **Adaptive**, then select **Next**.
 
-1. On the **Choose adaptive policy scopes and locations** page select **+ Add scopes**.
+1. On the **Choose adaptive policy scopes and locations** page, select **+ Add scopes**.
 
-1. On the **Choose adaptive policy scopes** flyout panel select the checkbox for **Leadership and Ops Groups** then select **Add** at the bottom of the panel.
+1. On the **Choose adaptive policy scopes** flyout panel, select the checkbox for **Leadership and Ops Groups**, then select **Add** at the bottom of the panel.
 
-1. Back on the **Choose locations to apply the policy** enable:
+1. Back on the **Choose locations to apply the policy**, enable:
 
     - Microsoft 365 Group mailboxes & sites
     - Leave all other locations disabled.
@@ -267,7 +271,7 @@ In this task, you'll use the adaptive scope you created to configure a retention
 
 1. Select **Next**.
 
-1. On the **Review and finish** page select **Submit**.
+1. On the **Review and finish** page, select **Submit**.
 
 1. Select **Done** once the policy is created.
 
@@ -281,20 +285,20 @@ In this task, you'll simulate restoring a deleted document from a SharePoint sit
 
 1. Select the App launcher (the grid icon) in the top-left corner, then select **SharePoint** from the sub-menu.
 
-   ![Screenshot showing where there ellipses is to display the action menu.](../Media/sharepoint-app-launcher.png)
+   ![Screenshot showing where the App launcher (grid icon) is to display the Apps menu.](../Media/sharepoint-app-launcher.png)
 
-1. On the SharePoint landing page, search for `Benefits` then select **Benefits @ Contoso** from the search results.
+1. On the SharePoint landing page, search for `Benefits`, then select **Benefits @ Contoso** from the search results.
 
-1. In the left sidebar select **Documents**.
+1. In the left sidebar, select **Documents**.
 
-1. On the **Documents** page, select the checkbox for **Vacation Policies.pptx** then select **Delete** from the action bar.
+1. On the **Documents** page, select the checkbox for **Vacation Policies.pptx**, then select **Delete** from the action bar.
 
 1. On the **Delete?** dialog, select **Delete**.
 
 1. On the left sidebar, select **Recycle bin**.
 
-1. On the **Recycle bin** page, right click **Vacation Policies.pptx**, then select **Restore**.
+1. On the **Recycle bin** page, right-click **Vacation Policies.pptx**, then select **Restore**.
 
 1. On the left sidebar, select **Documents** and notice the file has been restored.
 
-You have successfully recovered a deleted document from a SharePoint Site.
+You have successfully recovered a deleted document from a SharePoint site.
