@@ -25,7 +25,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 ## Task 1 – Assign an insider risk policy to Adaptive Protection
 
-1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
@@ -35,7 +35,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 1. On the **Insider risk levels** page:
 
-   - In the Insider risk policy dropdown, select the **Data leaks quick policy** you created in a previous exercise.
+   - In the **Insider risk policy** dropdown, select the **Data leaks quick policy** you created in a previous exercise.
    - Leave the default risk level settings unchanged.
    - Select **Save**.
 
@@ -47,7 +47,7 @@ Now that Adaptive Protection is linked to your insider risk policy, you'll updat
 
 1. In Microsoft Purview, navigate to **Solutions** > **Data Loss Prevention** > **Policies**.
 
-1. On the **Policies** page, select the checkbox for the **DLP - Credit Card Protection** policy created in a previous exercise, then select **Edit policy**.
+1. On the **Policies** page, select the checkbox for the **DLP - Credit Card Protection** policy created in a previous exercise, then select the **Edit policy** (pencil) icon.
 
 1. In the DLP configuration, select **Next** until you reach the **Customize advanced DLP rules** page.
 
@@ -72,38 +72,49 @@ You've updated your DLP policy to block sharing when insider risk is elevated, s
 
 To add another layer of enforcement, you can use insider risk levels to restrict access using Conditional Access. In this task, you'll create a policy that blocks access for users with an elevated insider risk level.
 
-1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
+1. Open **Microsoft Edge** in an InPrivate window by right-clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
-1. Navigate **Microsoft Entra admin center** at `https://entra.microsoft.com`, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
+1. Navigate to the **Microsoft Entra admin center** at **`https://entra.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
-    > [!note] **Multi-factor authentication prompt**
+    > **Note: Multi-factor authentication prompt**
     >
-    > If you're prompted for MFA while signing in, open the **Microsoft Authenticator** app on your mobile device and approve the sign-in request.  
+    > If you're prompted for MFA while signing in, open the **Microsoft Authenticator** app on your mobile device and approve the sign-in request.
     >
     > After approval, you'll be redirected to the **Microsoft Entra admin center**.
 
-1. In the Microsoft Entra admin center, navigate to **Protection** > **Conditional Access** > **Policies**.
+1. In the Microsoft Entra admin center, navigate to **Entra ID** > **Conditional Access** > **Policies**.
 
 1. On the **Policies** page, select **+ New policy**.
 
 1. On the **New policy** page, name your policy: `Block all access for elevated risk`.
 
-1. Under **Assignments**, configure the **Users** section:
+1. Under **Assignments**, select **0 users or agents (Preview) selected**.
 
-   - **Include**: All users  
-   - **Exclude**: `Joni Sherman` and `MOD Administrator`
+1. On the **Include** tab, select **All users**, then switch to the **Exclude** tab.
+
+1. On the **Exclude** tab, select the **Users and groups** checkbox.
+
+1. In the **Select users and groups** pane, select `Joni Sherman` and `MOD Administrator`, then select **Select**.
 
      ![Screenshot showing where to exclude users in Conditional Access.](../Media/ca-exclude-users.png)
 
-1. Under **Target resources**, confirm the dropdown is set to **Resources (formerly cloud apps)** and select **All resources (formerly 'All cloud apps')**.
+1. Under **Target Resources**, select **No target resources selected**, then confirm the dropdown is set to **Resources (formerly cloud apps)**.
+
+1. On the **Include** tab, select **All resources (formerly 'All cloud apps')**.
 
      ![Screenshot showing how to configure target resources in Conditional Access.](../Media/ca-target-resources.png)
 
-1. Under **Conditions**, select **Insider risk**. Set **Configure** to **Yes**, then set the risk level to **Elevated**.
+1. Under **Conditions**, select **0 conditions selected**, then under **Insider risk** select **Not configured**.
+
+1. On the **Insider risk** pane, set **Configure** to **Yes**, then set the risk level to **Elevated**.
+
+1. Select **Done**.
 
      ![Screenshot showing insider risk configuration in Conditional Access.](../Media/ca-insider-risk-levels.png)
 
-1. Under **Access controls**, select **Grant**. Choose **Block access**, then select **Select** at the bottom of the flyout.
+1. Under **Access controls**, in the **Grant** section, select **0 controls selected**.
+
+1. On the **Grant** pane, select **Block access**, then select **Select** at the bottom of the flyout.
 
      ![Screenshot showing where to block access in Conditional Access.](../Media/ca-block-access.png)
 
@@ -113,7 +124,7 @@ To add another layer of enforcement, you can use insider risk levels to restrict
 
 1. Close the InPrivate window.
 
-You've created a Conditional Access policy that blocks access for elevated-risk users, without affecting access immediately, since the policy is in report-only mode.
+You've created a Conditional Access policy that blocks access for elevated-risk users, without affecting access immediately, because the policy is in report-only mode.
 
 ## Task 4 – Enable Adaptive Protection
 
