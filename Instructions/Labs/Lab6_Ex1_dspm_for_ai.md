@@ -15,7 +15,7 @@ lab:
 
 If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
@@ -28,7 +28,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. As
 1. Use DSPM for AI to create a DLP policy for generative AI sites
 1. Create an insider risk policy to detect risky AI interactions
 1. Detect unethical behavior in AI apps
-1. Run a data assessment to detect unlabeled content
+1. Create a data risk assessment to detect unlabeled content
 
 **Estimated time:** 30-45 minutes
 
@@ -36,27 +36,23 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. As
 
 To reduce the risk of data loss through AI assistants, you'll start by creating a DLP policy using the Fortify your data security recommendation. This policy uses Adaptive Protection to restrict pasting or uploading sensitive data into AI tools like ChatGPT and Copilot in Edge, Chrome, and Firefox.
 
-1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman**, `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
-1. In Microsoft Purview, navigate to DSPM for AI by selecting **Solutions** > **DSPM for AI** > **Recommendations**
+1. In Microsoft Purview, navigate to DSPM for AI by selecting **Solutions** > **DSPM for AI (Classic)** > **Recommendations**.
+
+   > **Note:** A **New Unified Data Security Posture Management** dialog box may appear. This is an informational flyout introducing the unified DSPM experience. Review if needed, then select **Take me there** to proceed or **Maybe later** to close the dialog and continue with the lab.
 
 1. Select the **Fortify your data security** recommendation.
 
-1. In the **Data security for AI** flyout page, review the summary, then select **Create policies**. This creates a preconfigured DLP policy targeting generative AI sites.
+1. In the **Data security for AI** pane, review the summary, then select **Create policies**. This creates a preconfigured DLP policy targeting generative AI sites.
 
-1. Once the policy has been created, select **View policy**.
+1. Once the policy has been created, select **Policy details**.
 
-1. In the **Policy details** section, select **Edit policy in solution** to open the **Data Loss Prevention** solution in Microsoft Purview.
+1. In the **DSPM for AI - Block sensitive info from AI sites** pane, in the **Policy details** section, select **Edit policy in solution** to open the policy in Microsoft Purview Data Loss Prevention.
 
-1. On the **Policies** page, locate and select the **DSPM for AI - Block sensitive info from AI sites** policy.
-
-1. In the flyout, select **View simulation**.
-
-1. On the simulation dashboard, select **Edit the policy**.
-
-1. Select **Next** until you reach the **Choose where to apply the policy** page. Confirm the policy is scoped to **Devices**.
+1. On the **Data Loss Prevention > Edit policy** page, select **Next** until you reach the **Choose where to apply the policy** page. Confirm the policy is scoped to **Devices**.
 
 1. Select **Next**.
 
@@ -64,8 +60,8 @@ To reduce the risk of data loss through AI assistants, you'll start by creating 
 
 1. Review the configuration of the rule created by DSPM for AI:
    - Under **Conditions**, note the sensitive info types included and that the rule uses **Adaptive Protection** based on elevated risk.
-   - Under **Actions**, for both the Upload and Paste activities, select **Edit** next to **Sensitive service domain group restriction(s)**.
-   - In the service domain group configuration, confirm that **Generative AI Websites** is set to **Block with override**.
+   - Under **Actions**, for both the Upload and Paste activities, select **Edit** next to **Sensitive service domain group restriction(s) configured**.
+   - In the **Sensitive service domain restrictions**, confirm that **Generative AI Websites** is set to **Block with override**.
 
 1. Select **Cancel** to exit the rule editor without changes.
 
@@ -81,24 +77,23 @@ You've created a policy that blocks high-risk users from sharing sensitive data 
 
 Next, you'll create a policy that helps detect risky prompt behavior in Copilot.
 
-1. In Microsoft Purview, navigate to **DSPM for AI** by selecting **Solutions** > **DSPM for AI** > **Recommendations**.
+1. In Microsoft Purview, navigate to **DSPM for AI** by selecting **Solutions** > **DSPM for AI (Classic)** > **Recommendations**.
 
 1. Select the **Detect risky interactions in AI apps (preview)** recommendation.
 
-1. In the **Detect risky interactions in AI apps (preview)** flyout page, review the summary, then select **Create policy**.
+1. In the **Detect risky interactions in AI apps (preview)** pane, review the summary, then select **Create policy**.
 
-1. Once the policy is created, select **View policy**.
+1. Once the policy has been created, select **Policy details**.
 
-1. In the **Policy details** section, select **Edit policy in solution** to open the **Insider Risk Management** area of Microsoft Purview.
+1. In the **DSPM for AI - Detect risky AI usage** pane, in the **Policy details** section, select **Edit policy in solution** to open the **Policies** page in the Microsoft Purview **Insider Risk Management** solution.
 
 1. On the **Policies** page, locate and select the **DSPM for AI - Detect risky AI usage** policy.
 
-1. In the flyout, select **Edit policy** to review the full policy configuration.
+1. In the **DSPM for AI - Detect risky AI usage** pane, select **Edit policy** to review the full policy configuration.
 
-1. On the **Choose a policy template** page, observe that the policy uses the **Risky AI usage (preview)** template.
+1. On the **Choose a policy template** page, observe that the policy uses the **Risky AI usage** template.
 
-1. Select **Next** until you reach the **Choose triggering event for this policy page**.
-Confirm that the triggering event is **User account deleted from Microsoft Entra ID**, which signals potential offboarding-related risks that might precede or follow risky AI activity.
+1. Select **Next** until you reach the **Choose triggering event for this policy** page. Confirm that the triggering event is **User account deleted from Microsoft Entra ID**, which signals potential offboarding-related risks that might precede or follow risky AI activity.
 
 1. Select **Next**.
 
@@ -116,11 +111,11 @@ You've created a policy that detects risky AI interactions, including prompts an
 
 In this task, you'll create a policy in DSPM for AI to detect unethical or inappropriate behavior in Microsoft 365 Copilot and other AI applications.
 
-1. In Microsoft Purview, go to **DSPM for AI** by selecting **Solutions** > **DSPM for AI** > **Recommendations**.
+1. In Microsoft Purview, go to **DSPM for AI** by selecting **Solutions** > **DSPM for AI (Classic)** > **Recommendations**.
 
 1. Select the **Detect unethical behavior in AI apps** recommendation.
 
-1. In the flyout, review the overview of what this policy will configure:
+1. In the **Detect unethical behavior in AI apps** pane, review the overview of what this policy will configure:
 
    - The default policy name is **DSPM for AI – Unethical behavior in AI apps**.
 
@@ -146,11 +141,13 @@ You've created a policy that detects unethical activity in AI applications to he
 
 To understand potential gaps in labeling coverage, you'll run a data risk assessment to identify files without sensitivity labels that may be accessed by Copilot.
 
-1. In **DSPM for AI**, select the recommendation titled **Protect sensitive data referenced in Copilot and agent responses**.
+1. In Microsoft Purview, go to **DSPM for AI** by selecting **Solutions** > **DSPM for AI (Classic)** > **Recommendations**.
+
+1. Select the recommendation titled **Protect sensitive data referenced in Copilot and agent responses**.
 
 1. In the **Protect sensitive data referenced in Copilot and agent responses** pane, review the summary, then select **Go to assessments**.
 
-1. On the **Data risk assessments** page, select **Create custom assessment**
+1. On the **Data risk assessments** page, select **Create custom assessment**.
 
 1. On the **Basic details** page, enter:
 
