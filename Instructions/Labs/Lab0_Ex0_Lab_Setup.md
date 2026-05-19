@@ -52,7 +52,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 1. Once you select this option, the blue bar should disappear from this page.
 
-    >[!Note] **Note: If the Audit button doesn't enable logging**
+    > **Note:** If the Audit button doesn't enable logging
     >
     >In some tenants, selecting **Start recording user and admin activity** might not activate Audit.  
     >
@@ -205,7 +205,7 @@ In this task, you'll go to Microsoft Defender and wait for Microsoft Defender XD
 
 1. From the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents**.
 
-    > [!Note] **Note: Microsoft Defender XDR initialization**
+    > **Note:** Microsoft Defender XDR initialization
     >
     > The navigation might appear differently depending on whether Microsoft Defender XDR is already initialized. If initialization has completed, **Incidents & alerts** appears as a top-level option instead of under **Investigation & response**.
 
