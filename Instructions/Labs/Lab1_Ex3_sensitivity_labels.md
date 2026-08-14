@@ -60,7 +60,7 @@ With sensitivity label support enabled, you'll confirm that the tenant uses the 
 
 1. In the **Confirm migration to modern label scheme** dialog box, select **Confirm migration**.
 
-    > **Note: Migration processing time**<br>The migration process might take a few minutes to complete.
+    > **Note: Migration processing time**<p>The migration process might take a few minutes to complete.
 
 You've successfully migrated your tenant to the modern sensitivity label scheme. New labels and policies you create will now use the modern configuration experience.
 
