@@ -10,11 +10,11 @@ lab:
 
 ## WWL Tenants - Terms of use
 
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
+If you are being provided with a tenant as part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
-Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
+Tenants must not be converted to a paid subscription. Tenants obtained as part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
 # Lab setup - Prepare your environment for administration
 
@@ -114,7 +114,7 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. On the **Set up your account in app** page, select **Next**.
 
-1. On the **Scan the QR code** page, use your the multifactor authentication app on your mobile device to scan the QR code, then select **Next**
+1. On the **Scan the QR code** page, use the multifactor authentication app on your mobile device to scan the QR code, then select **Next**.
 
 1. On the **Let's try it out** page, enter the number on the screen in Microsoft Authenticator to add the authenticator.
 
