@@ -49,7 +49,7 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. On the **New pattern** flyout panel on the right, select **+ Add primary element** > **Regular expression**.
 
-1. On the **+ Add a regular expression​** flyout panel on the right, enter:
+1. On the **+ Add a regular expression​** flyout on the right, enter:
 
    - **ID**: `Contoso IDs`
    - **Regular expression**: `[A-Z]{3}[0-9]{6}`
@@ -57,7 +57,7 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. Select **Done** at the bottom of the flyout panel.
 
-1. Back on the **New pattern** flyout panel, under **Supporting elements**, select **+ Add supporting elements or group of elements** drop-down menu and select **Keyword list**.
+1. Back on the **New pattern** flyout, under **Supporting elements**, select **+ Add supporting elements or group of elements** drop-down menu and select **Keyword list**.
 
 1. On the **Add a keyword list** flyout panel on the right, enter:
 
@@ -71,9 +71,9 @@ In this task, you'll create a new custom sensitive information type that recogni
 
    - Select the radio button for _Word match_
 
-1. Select **Done** at the bottom of the flyout panel.
+1. Select **Done** at the bottom of the flyout.
 
-1. Back on the **New pattern** flyout panel, under **Character proximity**, decrease the **Detect primary AND supporting elements** value to `100` characters.
+1. Back on the **New pattern** flyout, under **Character proximity**, decrease the **Detect primary AND supporting elements** value to `100` characters.
 
 1. Select the **Create** button at the bottom of the flyout panel.
 
@@ -97,7 +97,14 @@ You've received reports that some documents containing employee IDs aren't being
 
 1. Search for `Contoso Employee IDs` in the list and select the SIT name to open the details page.
 
-1. Select **Edit** at the top of the page to modify the SIT.
+   > [!NOTE]
+   > **Refresh the list of sensitive info types**
+   >
+   > If you're unable to find the Contoso Employee IDs on the sensitive info type page, try refreshing the list of sensitive info types from the top menu.
+   >
+   > ![Screenshot showing the Sensitive info types page with the Refresh button highlighted.](../Media/refresh-sensitive-info-type.png)
+
+1. Select **Edit** at the top of the flyout to modify the SIT.
 
 1. On the **Name your sensitive info type** page, select **Next**.
 
@@ -138,7 +145,7 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. Select **Next**.
 
-1. On the **Edit settings** page, leave the default settings, then select **Next**.
+1. On the **Edit settings** page, leave the default, then select **Next**.
 
 1. On the **Review and finish adding group** page, review your settings and select **Create group**.
 
@@ -215,8 +222,6 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 1. Select the dropdown for **Choose delimiters and punctuation to ignore** and select:
 
    - _Hyphen ('-')_
-   - _Period ('.')_
-   - _Space (' ')_
    - _Open parenthesis ('(')_
    - _Close parenthesis (')')_
 
@@ -300,7 +305,8 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
     You should get a message that the command completed successfully.
 
-    > [!Note] **Note**: If the last command fails, it possibly takes more time until the **EDM_DataUploaders** group membership is applied. It can take up to one hour until it is possible to download the schema file.  If it fails, proceed to the next task and return to this step later.
+   > [!NOTE]
+   > If the last command fails, it possibly takes more time until the **EDM_DataUploaders** group membership is applied. It can take up to one hour until it is possible to download the schema file. If it fails, proceed to the next task and return to this step later.
 
 1. Hash the database file and upload it to the EDM-based classification sensitive information type by running the following script in PowerShell:
 
@@ -320,7 +326,8 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
     Alternatively, you can also refresh the **EDM classifiers** window in the Microsoft Purview portal to check the status of the hash. Once the status is set to **Index complete** the hash is complete.
 
-    > [!Note] **Note**: This process might take some time. You might need to run the GetSession script or refresh the EDM classifiers page several times before the status indicates that the hash is complete.
+   > [!NOTE]
+   > This process might take some time. You might need to run the GetSession script or refresh the EDM classifiers page several times before the status indicates that the hash is complete.
 
     ![Screenshot showing the EDM hash status set to Completed in PowerShell.](../Media/edm-hash-completed.png)
 
@@ -366,7 +373,7 @@ Several violations of personal information leakage happened when users sent out 
     otitis
     ```
 
-1. Select **Done** at the bottom of the flyout panel.
+1. Select **Done** at the bottom of the flyout.
 
 1. Back on the **New pattern** page, under **Supporting elements**, select **+ Add supporting elements or group of elements**, then select **Keyword list** to add additional support for the keyword dictionary.
 

@@ -18,7 +18,7 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 # Lab 3 - Exercise 1 - Implement and manage retention
 
-You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is tightening its data security strategy to reduce risk exposure related to financial data and privileged communications. You've been asked to configure Microsoft Purview retention solutions that support audit readiness, limit unnecessary data retention, and ensure proper oversight for sensitive communications.
+You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is tightening its data security strategy to reduce risk exposure related to financial data and privileged communications. You've been asked to configure Microsoft Purview retention solutions that support audit readiness, limit unnecessary data retention, and ensure proper oversight for sensitive communications by using both static and adaptive retention controls.
 
 **Tasks**:
 
@@ -26,6 +26,8 @@ You are Joni Sherman, a Compliance Administrator at Contoso Ltd. The company is 
 1. Publish a retention label
 1. Create an auto-apply retention label policy
 1. Create a static retention policy
+1. Create an adaptive scope
+1. Create an adaptive retention policy
 1. Recover SharePoint content
 
 **Estimated time:** 60-90 minutes
@@ -137,7 +139,7 @@ In this task, you'll configure a policy that automatically applies an existing r
 
 1. On the **Choose a label to auto-apply** page, select **Add label**.
 
-1. On the **Choose a label** flyout, select **Personal Financial PII**, then select **Add**.
+1. On the **Choose a label** flyout, select **Sensitive Financial Records**, then select **Add**.
 
 1. Back on the **Choose a label to auto-apply** page, select **Next**.
 
@@ -207,13 +209,13 @@ In this task, you'll define an adaptive scope that targets Microsoft 365 groups 
 
 1. On the **What type of scope do you want to create?** page select **Microsoft 365 Groups**, then select **Next**.
 
-1. On the **Create the query to define users** page, in the **User attributes** section, ensure these values are selected for the user attribute configuration:
+1. On the **Create the query to define groups** page, in the **Group attributes** section, ensure these values are selected for the group attribute configuration:
 
    - Select the **Attribute** dropdown then select **Name**
    - Leave the default **is equal to** value in the next field
    - Enter `Leadership` as the **Value**
 
-1. Add a second attribute by selecting **+ Add attribute** on the **Create the query to define users** page. In the new field under the one we just configured, configure these values:
+1. Add a second attribute by selecting **+ Add attribute** on the **Create the query to define groups** page. In the new field under the one we just configured, configure these values:
 
    - Select the dropdown for the query operator and update it from And to **Or**
    - Select the **Attribute** dropdown then select **Name**

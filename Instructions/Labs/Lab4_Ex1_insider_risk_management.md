@@ -69,7 +69,7 @@ You've assigned Joni the necessary permissions to work with Insider Risk Managem
 
 ## Task 2 – Configure insider risk indicators
 
-Before you create an insider risk policy, you'll turn on the indicators needed for detection. These indicators define the types of risky activity the system will look for.
+Before you create an insider risk policy, you'll configure baseline indicators needed for core data leak detection. These indicators define the common risky activity the system will look for.
 
 1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the new permissions are active.
 
@@ -84,7 +84,7 @@ Before you create an insider risk policy, you'll turn on the indicators needed f
 
 1. Select **Save** at the bottom of the page.
 
-You've enabled key policy indicators so the system can detect sensitive actions like file exfiltration or risky Office activity.
+You've enabled baseline policy indicators so the system can detect sensitive actions like file exfiltration or risky Office activity.
 
 ## Task 3 – Create an insider risk policy
 
@@ -145,7 +145,7 @@ On the **Policies** page for **Insider Risk Management**, you'll notice your dat
 
 1. On the **Choose threshold type for indicators** page, select **Next**.
 
-   This policy uses a built-in triggering event and indicators. It starts evaluating user activity only when Microsoft Defender for Endpoint detects threats like defense evasion or unwanted software.
+   This policy uses built-in sequence triggers and indicators. It starts evaluating user activity based on the selected sequence and exfiltration conditions configured for this policy.
 
 1. On the **Review settings and finish** page, select **Submit**.
 
@@ -161,7 +161,7 @@ In this task, you'll enable integration between Microsoft Defender for Endpoint 
 
 1. In Microsoft Edge, navigate to Microsoft Defender by going to `https://security.microsoft.com`.
 
-1. In the left navigation pane, select **Settings** > **Endpoints** > **Advanced features**.
+1. In the left navigation pane, select **System** > **Settings** > **Endpoints** > **Optional features**.
 
 1. Scroll down and select the toggle to **On** to **Share endpoint alerts with Microsoft Compliance Center**.
 
@@ -173,9 +173,10 @@ You've successfully enabled Defender for Endpoint to share alerts with Microsoft
 
 ## Task 6 – Enable indicators and configure priority users
 
-In this task, you'll configure the policy indicators and create a priority user group that can be used in insider risk policies.
+In this task, you'll enable advanced indicators and create a priority user group that can be used in targeted insider risk policies.
 
-> [!note] Microsoft Defender for Endpoint indicators might appear greyed out and unselectable if the integration from the previous task hasn't finished processing. If that happens, wait a few minutes and refresh the page before continuing.
+> [!NOTE]
+> Microsoft Defender for Endpoint indicators might appear greyed out and unselectable if the integration from the previous task hasn't finished processing. If that happens, wait a few minutes and refresh the page before continuing.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com`.
 
@@ -185,7 +186,7 @@ In this task, you'll configure the policy indicators and create a priority user 
 
 1. On the **Policy indicators** page, expand and select **Select all** to enable all indicators in these categories:
 
-   - Microsoft Defender for Endpoint indicators (preview)
+   - Microsoft Defender for Endpoint indicators
    - Risky browsing indicators (preview)
 
 1. Select **Save** at the bottom of the page.
@@ -213,7 +214,7 @@ In this task, you'll configure the policy indicators and create a priority user 
 
 1. On the **Choose who can view data involving users in this priority group**, select **+ Choose users and role groups**.
 
-1. In the flyout, select the checkbox for **Insider Risk Management**, then select **Add**.
+1. In the flyout, select the **Insider Risk Management** role group. This allows members of the role group, including Joni, to view data involving users in this priority group. Select **Add**.
 
 1. Select **Next**.
 
@@ -229,7 +230,7 @@ In this task, you'll create an insider risk policy that detects Defender for End
 
 1. On the **Policies** page, select **Create policy**, then select **Custom policy**.
 
-1. On the **Choose a policy template** page, select **Security policy violations by priority users (preview)**, then select Next.
+1. On the **Choose a policy template** page, select **Security policy violations by priority users**, then select Next.
 
 1. On the **Name your policy** page, enter:
 
@@ -256,11 +257,13 @@ In this task, you'll create an insider risk policy that detects Defender for End
 
 1. On the **Your policy was created** page, select **Done**.
 
-You've created a custom insider risk policy that uses Defender for Endpoint signals to detect risky activity from priority users.
+1. Back on the **Policies** page, select **Security policy violations - Priority users** and confirm the policy status is **Healthy**.
+
+You've created a custom insider risk policy that uses Defender for Endpoint signals to detect risky activity from priority users. When an alert from this policy is triaged, an investigator can use a notice template to communicate with the user. In the next task, you'll create that reusable response asset.
 
 ## Task 8 – Create a notice template
 
-In this task, you'll create a notice template in Microsoft Purview to notify users when an insider risk alert is triggered.
+Notice templates are created separately from insider risk policies and selected when an investigator communicates with a user about a triaged alert. In this task, you'll create a reusable template for security policy violation alerts generated by the priority-user policy.
 
 1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Users** > **Notice templates**.
 
@@ -291,4 +294,4 @@ In this task, you'll create a notice template in Microsoft Purview to notify use
 
 1. Back on the **Notice templates** page you'll see the **Security Violation Alert** template you just created.
 
-You've created a notice template that Insider Risk Management can use to notify users of security policy violations.
+You've created the **Security Violation Alert** notice template. It is now available for an investigator to select when communicating with a user about a relevant insider risk alert.
