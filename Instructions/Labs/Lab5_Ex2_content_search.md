@@ -14,7 +14,7 @@ lab:
 
 If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
@@ -71,7 +71,7 @@ You've assigned eDiscovery permissions to Joni Sherman, enabling her to search f
 
    ![Screenshot showing where to create a search in eDiscovery.](../Media/ediscovery-create-search.png)
 
-1. On the **Enter details to get started** dialog, enter:
+1. On the **New search** dialog, enter:
 
    - **Case name**: `Financial Data Exposure Review`
    - **Search name**: `Financial Data Leak Investigation`
@@ -80,7 +80,7 @@ You've assigned eDiscovery permissions to Joni Sherman, enabling her to search f
 
 1. Select **Create** to create the search.
 
-1. On the **Financial Data Leak Investigation** page, under **Data sources** select **+** (plus sign) > **Add data sources**.
+1. On the **Financial Data Leak Investigation** page, under **Data sources**, select **+** (plus sign) > **+ Add data sources**.
 
    ![Screenshot showing add data sources in Content Search.](../Media/content-search-data-sources.png)
 
@@ -90,7 +90,7 @@ You've assigned eDiscovery permissions to Joni Sherman, enabling her to search f
 
    ![Screenshot showing the condition builder in Content Search.](../Media/content-search-query-builder.png)
 
-1. In the **Choose search results** flyout under **Statistics**, select the checkboxes for **Include categories** and **Include query keywords report**, then select **Run Query**.
+1. In the **Choose search results** flyout, under **Statistics**, select the checkboxes for **Include categories** and **Include query keywords report**, then select **Run query**.
 
 1. Review the results of the search by:
 

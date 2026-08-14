@@ -106,6 +106,7 @@ In this task, you'll create a DLP policy that blocks the transfer of sensitive i
 1. In the new **Content contains** section:
     - Select **Add** > **Sensitive info types**.
     - On the **Sensitive info types** page, search for and select the following, then select **Add**:
+
        - `Credit Card Number`
        - `U.S. Social Security Number (SSN)`
        - `U.S. Driver's License Number`
@@ -149,7 +150,7 @@ In this task, you'll fine-tune endpoint DLP settings by excluding a local folder
 
 1. On the **Endpoint DLP settings** page, expand **File path exclusions for Windows**, then select **+ Add file path exclusion**.
 
-1. On the **Exclude these file paths from Windows devices** flyout page, in the **File path exclusion** field, enter `C:\FilePathExclusionTest`, then select the **+** button to the right. Select **Save** to save this entry.
+1. On the **Exclude these file paths from Windows devices** flyout page, in the **File path exclusion** field, enter `C:\FilePathExclusionTest`, then select the **+** (plus) button to the right. Select **Save** to save this entry.
 
 1. Back on the **Endpoint DLP settings** page, expand **Browser and domain restrictions to sensitive data**, and select **+ Add or edit unallowed browsers**.
 
@@ -177,7 +178,7 @@ In this task, you'll switch to the onboarded device and install the Microsoft Pu
 
 1. Select **Yes** in the **User Account Control** dialog to install the Chrome browser.
 
-1. When the installation is finished, on the **Sign in to Chrome** screen, select **Stay signed out**.
+1. When the installation is finished and the **Sign in to Chrome** screen appears, select **Stay signed out**.
 
 1. Select **Skip** on the **Set your default browser** page.
 
