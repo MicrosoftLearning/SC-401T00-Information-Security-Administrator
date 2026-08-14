@@ -114,7 +114,7 @@ To test your retention configuration, you'll apply a retention label to a docume
    ![Screenshot showing where to select document details in SharePoint.](../Media/sharepoint-details.png)
 
 1. In the **Details** panel, update the following fields:
-   - **Sensitivity**: Confidential - Finance
+   - **Sensitivity**: Internal > Financial Data
    - **Apply label**: Sensitive Financial Records
 
      ![Screenshot showing sensitivity label and retention label applied in SharePoint.](../Media/sharepoint-choose-labels.png)

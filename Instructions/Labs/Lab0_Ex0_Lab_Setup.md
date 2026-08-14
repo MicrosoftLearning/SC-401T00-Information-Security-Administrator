@@ -52,7 +52,7 @@ In this task, you'll enable Audit in the Microsoft Purview portal to monitor por
 
 1. Once you select this option, the blue bar should disappear from this page.
 
-    >[!Note] **Note: If the Audit button doesn't enable logging**
+    > **Note: If the Audit button doesn't enable logging**
     >
     >In some tenants, selecting **Start recording user and admin activity** might not activate Audit.  
     >
@@ -146,10 +146,6 @@ In this task, you'll enable analytics and data sharing for Insider Risk Manageme
 
 You have enabled analytics and data sharing for Insider Risk Management.
 
-<!---
-
-Removing this task in favor of using lab passwords
-
 ## Task 4 - Set user passwords for lab exercises
 
 In this task, you'll set passwords for the user accounts needed for the labs.
@@ -158,17 +154,27 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. Open **Microsoft Edge** and navigate to **`https://admin.microsoft.com`** to log into the Microsoft 365 admin center as the MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
-    > [!Note] **Note: Skip MFA for the Microsoft 365 Admin center**
+1. In the prompt to set up multifactor authentication, select **Set up now**.
+
+1. On the **Let's keep your account secure** page, select **Next**.
+
+1. On the **Install Microsoft Authenticator** page, ensure the **Microsoft Authenticator** app is installed on your mobile device, then select **Next**.
+
+    > **Note: Using a different authenticator app**
     >
-    > In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
+    > If you choose to use a different authenticator app from the Microsoft Authenticator, select **Set up a different authentication app**.
+
+1. On the **Set up your account in app** page, select **Next**.
+
+1. On the **Scan the QR code** page, use your the multifactor authentication app on your mobile device to scan the QR code, then select **Next**
+
+1. On the **Let's try it out** page, enter the number on the screen in Microsoft Authenticator to add the authenticator.
+
+    > **Note: Using a different authenticator app**
     >
-    > - Select **Skip for now** to temporarily delay MFA setup.
-    >
-    >   ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
-    >
-    > - On the **Let us know why you're skipping MFA** dialogue, select any justification, then select **Send and skip**.
-    >
-    > This postpones MFA enforcement in the Microsoft 365 Admin center for the tenant and allows you to proceed with the lab.
+    > If you're using a different authenticator app, adding the authenticator might be a different process. Follow the steps provided to ensure your authenticator is registered successfully.
+
+1. On the **Authenticator Added** page, select **Ok** to get signed into the Microsoft 365 admin center.
 
 1. On the left navigation pane, expand **Users** then select **Active users**.
 
@@ -193,9 +199,8 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 1. On the **Passwords have been reset** page, you should see the three user accounts that have been reset. At the bottom of this flyout page, select **Close**.
 
 You have successfully reset passwords for lab exercises.
--->
 
-## Task 4 – Initialize Microsoft Defender XDR
+## Task 5 – Initialize Microsoft Defender XDR
 
 In this task, you'll go to Microsoft Defender and wait for Microsoft Defender XDR to initialize.
 
@@ -203,9 +208,9 @@ In this task, you'll go to Microsoft Defender and wait for Microsoft Defender XD
 
 1. In **Microsoft Edge**, navigate to **`https://security.microsoft.com/`** to open Microsoft Defender.
 
-1. From the navigation pane, select **Investigation & response** > **Incidents & alerts** > **Incidents**.
+1. From the navigation pane, select **Show navigation**, then select **Incidents**.
 
-    > [!Note] **Note: Microsoft Defender XDR initialization**
+    > **Note: Microsoft Defender XDR initialization**
     >
     > The navigation might appear differently depending on whether Microsoft Defender XDR is already initialized. If initialization has completed, **Incidents & alerts** appears as a top-level option instead of under **Investigation & response**.
 
@@ -214,35 +219,3 @@ In this task, you'll go to Microsoft Defender and wait for Microsoft Defender XD
    ![Screenshot showing Microsoft Defender XDR being onboarded.](../Media/enable-defender-xdr.png)
 
 Microsoft Defender XDR is being initialized. You can continue with other tasks while it finishes setting up.
-
-## Task 5 – Configure multi-factor authentication in Microsoft Entra
-
-In this task, you'll configure multi-factor authentication (MFA) for the admin account to secure access to Microsoft Entra and other connected Microsoft 365 services.
-
-1. In **Microsoft Edge**, navigate to **`https://entra.microsoft.com/`** to open Microsoft Entra.
-
-1. On the **Start by getting the app** screen, install the **Microsoft Authenticator** app from your device's app store, or open it if it's already installed.
-
-   ![Screenshot showing the Keep your account secure screen for multi-factor authentication.](../Media/mfa-entra.png)
-
-   - If you prefer a different app, select **I want to use a different authenticator app** and follow the on-screen instructions.
-
-1. Select **Next**.
-
-1. On the **Set up your account** screen, follow the instructions on your phone to allow notifications, then select **Next**.  
-
-   - If you already have the Microsoft Authenticator app installed and configured, you might not see this screen. In that case, continue to the next step.
-
-1. On the **Scan the QR code** screen, use the Microsoft Authenticator app on your device to scan the QR code displayed on your screen, then select **Next**.
-
-1. On your phone, approve the sign-in request by entering the number shown on your browser.
-
-1. After approving the request, the **Notification approved** screen will appear. Select **Next**.
-
-1. On the **Success!** screen, verify that your **Default sign-in method** shows **Microsoft Authenticator**, then select **Done**.
-
-1. When prompted to sign in again, approve the sign-in request on your phone to verify your identity.
-
-1. After the approval completes, you'll be redirected to the **Microsoft Entra admin center**.
-
-You've successfully configured and verified multi-factor authentication for the admin account in Microsoft Entra.

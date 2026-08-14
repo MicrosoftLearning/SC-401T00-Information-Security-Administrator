@@ -2,33 +2,29 @@
 lab:
   title: Exercise 3 - Create and manage sensitivity labels
   module: Module 1 - Implement Information Protection
-  description: Configure and publish sensitivity labels with encryption, auto-labeling, and policy integration across Microsoft Purview and Defender for Cloud Apps.
-  duration: 90 minutes
+  description: Configure and publish sensitivity labels with encryption, auto-labeling, and policy settings in Microsoft Purview.
+  duration: 75 minutes
   level: 200
   islab: true
   primarytopics:
-    - Microsoft Defender
-    - Microsoft Defender for Cloud
-    - Microsoft Defender for Cloud Apps
     - Microsoft Purview
 ---
 
 # Lab 1 - Exercise 3 - Create and manage sensitivity labels
 
-Joni Sherman, an Information Security Administrator at Contoso Ltd., is deploying a modern sensitivity labeling framework to strengthen data protection across the organization. She'll create and publish sensitivity label groups and labels to classify and protect content, including encryption, auto-labeling, and Double Key Encryption (DKE). Joni will also integrate Microsoft Purview with Microsoft Defender for Cloud Apps to extend data protection controls to files stored in cloud locations.
+Joni Sherman, an Information Security Administrator at Contoso Ltd., is deploying a modern sensitivity labeling framework to strengthen data protection across the organization. She'll configure sensitivity label support, create and publish label groups and labels, and use encryption, auto-labeling, and Double Key Encryption (DKE) to protect sensitive content.
 
 **Tasks**:
 
 1. Enable support for sensitivity labels
+1. Migrate to the modern label scheme
 1. Create a label group
 1. Create a child label
 1. Publish labels
 1. Configure auto-labeling
 1. Create and publish a DKE label for confidential content
-1. Enable Microsoft Purview integration in Defender for Cloud Apps
-1. Create a file policy to label externally shared files
 
-**Estimated time:** 60-90 minutes
+**Estimated time:** 60-75 minutes
 
 ## Task 1 – Enable support for sensitivity labels
 
@@ -47,8 +43,6 @@ In this task, you'll enable co-authoring for sensitivity labels, which also enab
 1. Select **Apply** at the bottom of the screen.
 
 You have successfully enabled support for sensitivity labels for files in SharePoint and OneDrive.
-
-<!--
 
 ## Task 2 – Migrate to the modern label scheme
 
@@ -70,8 +64,7 @@ With sensitivity label support enabled, you'll confirm that the tenant uses the 
 
 You've successfully migrated your tenant to the modern sensitivity label scheme. New labels and policies you create will now use the modern configuration experience.
 
--->
-## Task 2 – Create a label group
+## Task 3 – Create a label group
 
 In this task, you'll create a label group to organize internal sensitivity labels. Label groups act as containers for related labels, like department or business unit classifications.
 
@@ -100,7 +93,7 @@ In this task, you'll create a label group to organize internal sensitivity label
 
 You've created a label group for internal use. This group helps you manage related labels for specific departments or data categories.
 
-## Task 3 – Create a child label
+## Task 4 – Create a child label
 
 Now that you've created a label group, you'll add a child label for HR-related content. This label enforces encryption and content markings to protect HR data from unauthorized access.
 
@@ -117,7 +110,7 @@ Now that you've created a label group, you'll add a child label for HR-related c
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. On the **Define the scope for this label** page, select **Files**, **Emails**, and **Meetings**.
 
 1. Select **Next**.
 
@@ -157,7 +150,7 @@ Now that you've created a label group, you'll add a child label for HR-related c
 
 You've created a child label within the Internal label group. The label applies encryption and content markings to HR documents, making sensitive data easy to identify and protected by policy.
 
-## Task 4 – Publish labels
+## Task 5 – Publish labels
 
 Next, you'll publish the HR label from the Internal label group so users in the HR department can apply it to their documents.
 
@@ -203,7 +196,7 @@ Next, you'll publish the HR label from the Internal label group so users in the 
 
 You've published the Internal label group and its HR label so users can apply them to HR documents. It might take up to 24 hours for the policy to propagate across services.
 
-## Task 5 – Configure auto-labeling
+## Task 6 – Configure auto-labeling
 
 You'll now create a child label for financial data and configure it to apply automatically to content containing financial identifiers such as credit card or bank routing numbers.
 
@@ -226,7 +219,7 @@ You'll now create a child label for financial data and configure it to apply aut
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. On the **Define the scope for this label** page, select **Files**, **Emails**, and **Meetings**.
 
 1. Select **Next**.
 
@@ -286,7 +279,7 @@ You'll now create a child label for financial data and configure it to apply aut
 
 You've created a child label for financial data and configured an auto-labeling policy that detects and labels content containing financial information.
 
-## Task 6 – Create and publish a DKE label for confidential content
+## Task 7 – Create and publish a DKE label for confidential content
 
 Next, you'll create a child label in the Internal group that uses Double Key Encryption (DKE) and dynamic watermarking to protect confidential legal content.
 
@@ -309,7 +302,7 @@ Next, you'll create a child label in the Internal group that uses Double Key Enc
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Files** and **Emails**. If the checkbox for **Meetings** is selected, make sure it's deselected.
+1. On the **Define the scope for this label** page, select **Files**,  **Emails**, and **Meetings**.
 
 1. On the **Choose protection settings for the types of items you selected** page, select **Control access**, then select **Next**.
 
@@ -382,134 +375,3 @@ Next, you'll create a child label in the Internal group that uses Double Key Enc
 1. On the **New policy created** page, select **Done**.
 
 You've created and published a child label using Double Key Encryption and dynamic watermarking. This label restricts access to authorized users and enforces justification for downgrading classifications.
-
-## Task 7 – Enable Microsoft Purview integration in Defender for Cloud Apps
-
-With your sensitivity labels created and published, you'll now integrate Microsoft Purview with Microsoft Defender for Cloud Apps. This integration allows Defender to scan files for sensitivity labels and apply file monitoring.
-
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin**, and you should still be logged in as Joni Sherman.
-
-1. Open **Microsoft Edge**, then go to **Microsoft Defender** by navigating to `https://security.microsoft.com`.
-
-1. In the left navigation, select **Settings**, then select **Cloud Apps**.
-
-1. Under the **Information Protection** section in the left pane, select **Microsoft Information Protection**.
-
-1. On the **Microsoft Information Protection** page, select both checkboxes available on the page.
-
-    ![Screenshot showing both checkboxes enabled for Information Protection in the Defender portal.](../Media/defender-information-protection-settings.png)
-
-   - **Automatically scan new files for Microsoft Information Protection sensitivity labels and content inspection warnings**
-
-      Enables Defender for Cloud Apps to automatically scan new or modified files for sensitivity labels and content inspection warnings from Microsoft Purview.
-
-   - **Only scan files for Microsoft Information Protection sensitivity labels and content inspection warnings from this tenant**
-
-      Limits scanning to labels and warnings created in your own organization. Labels applied by external tenants will be ignored.
-
-1. Select **Save** to apply the settings.
-
-1. Under the **Information Protection** section in the left pane, select **Files**.
-
-1. On the **Files** page, select **Enable file monitoring**.
-
-1. Select **Save** to apply the settings.
-
-You've enabled Microsoft Purview integration in Defender for Cloud Apps. Defender can now detect sensitivity labels and monitor files for policy evaluation and governance actions.
-
-<!---
-
-NOTE - Reworking task 8 due to tenant issue
-
-## Task 8 – Create a file policy to auto-label externally shared files
-
-Now that label scanning is enabled, you'll create a file policy that applies the **Highly Confidential - Project - Falcon** sensitivity label to files in the Mark 8 Project folders that are shared outside your organization. This policy is categorized as DLP because it protects sensitive data from unintended exposure.
-
-1. In **Microsoft Defender**, navigate to **Cloud apps** > **Policies** > **Policy management**.
-
-1. Select the **Information protection** tab, then select **Create policy** > **File policy**.
-
-    ![Screenshot showing where to navigate to create a file policy in Microsoft Defender.](../Media/file-policy-defender.png)
-
-1. On the **Create file policy** page, configure:
-
-   - **Policy name**: `Auto-label external sharing for Project Falcon files`
-
-   - **Policy severity**: **High**
-
-   - **Category**: **DLP**
-
-   - **Apply to**: **Selected folders**
-
-      - Select **Add folder(s)**, then search for `Project` in the **File name** field.
-
-      - Select the checkbox for the **Mark 8 Project Team Notebook** and **Mark 8 Project team** SharePoint folders.
-
-      - Select **Done** to close the **Select a folder** window.
-
-   - In the **Files matching all of the following section**:
-
-      - For the first filter, configure the dropdowns to: **Access level equals external**
-
-      - For the second filter, configure the dropdowns to: **Last modified after (date)** and use today's date
-
-          ![Screenshot showing the filter settings in Defender.](../Media/configure-file-policy-filter.png)
-
-   - Under **Governance actions**, expand **Microsoft OneDrive for Business**:
-
-      - Select the checkbox for **Apply sensitivity label**
-
-      - In the dropdown select **Highly Confidential-Project - Falcon**
-
-   - Repeat the same process for **Microsoft SharePoint Online**
-
-      - Select the checkbox for **Apply sensitivity label**
-
-      - Select **Highly Confidential-Project - Falcon** from the dropdown
-
-1. Select **Create** to finish creating the file policy.
-
-You've created a file policy that applies a highly confidential sensitivity label to externally shared files located in the Mark 8 Project folders in SharePoint and OneDrive. Once a matching file is detected, Defender for Cloud Apps will apply the label automatically.
--->
-
-## Task 8 – Create a file policy to label externally shared files
-
-Finally, you'll create a file policy that automatically applies a sensitivity label to files shared externally. This ensures sensitive content remains protected even when shared outside the organization.
-
-1. In **Microsoft Defender**, navigate to **Cloud apps** > **Policies** > **Policy management**.
-
-1. Select the **Information protection** tab, then select **Create policy** > **File policy**.
-
-    ![Screenshot showing where to navigate to create a file policy in Microsoft Defender.](../Media/file-policy-defender.png)
-
-1. On the **Create file policy** page, configure:
-
-   - **Policy name**: `Auto-label externally shared files`
-
-   - **Policy severity**: **High**
-
-   - **Category**: **DLP**
-
-   - In the **Files matching all of the following section**:
-
-      - For the first filter, configure the dropdowns to: **Access level equals external**
-
-      - For the second filter, configure the dropdowns to: **Last modified after (date)** and use today's date
-
-          ![Screenshot showing the filter settings in Defender.](../Media/configure-file-policy-filter.png)
-
-   - Under **Governance actions**, expand **Microsoft OneDrive for Business**:
-
-      - Select the checkbox for **Apply sensitivity label**
-
-      - In the dropdown select **Highly Confidential-Specified People**
-
-   - Repeat the same process for **Microsoft SharePoint Online**
-
-      - Select the checkbox for **Apply sensitivity label**
-
-      - Select **Highly Confidential-Specified People** from the dropdown
-
-1. Select **Create** to finish creating the file policy.
-
-You've created a file policy that applies sensitivity labels to externally shared files. This policy extends your information protection strategy to cloud-stored content.

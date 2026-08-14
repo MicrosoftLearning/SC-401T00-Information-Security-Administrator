@@ -2,13 +2,12 @@
 lab:
   title: Exercise 1 - Implement and manage DLP policies
   module: Module 2 - Implement Data Loss Prevention
-  description: Create, test, and manage DLP policies across Microsoft Purview and Defender, including simulation mode, PowerShell configuration, and file policy enforcement.
-  duration: 90 minutes
+  description: Create, test, and manage DLP policies in Microsoft Purview, including policy templates, simulation mode, and PowerShell configuration.
+  duration: 75 minutes
   level: 200
   islab: true
   primarytopics:
     - Microsoft 365
-    - Microsoft Defender
     - Microsoft Purview
 ---
 
@@ -22,27 +21,70 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 # Lab 2 – Exercise 1 – Implement and manage DLP policies
 
-Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd., has been asked to configure data loss prevention (DLP) policies to help protect sensitive customer data across Microsoft 365. In this lab, you'll use Microsoft Purview and Microsoft Defender to create and manage DLP policies that detect and restrict the sharing of sensitive information such as credit card numbers and employee IDs.
+Joni Sherman, the newly hired Information Security Administrator at Contoso Ltd., has been asked to configure data loss prevention (DLP) policies to help protect sensitive customer data across Microsoft 365. In this lab, you'll use Microsoft Purview to create and manage DLP policies from templates, customize policy rules, test policies in simulation mode, and configure DLP by using PowerShell.
 
 **Tasks**:
 
-1. Create a DLP policy in simulation mode
+1. Create a DLP policy from a template
+1. Create a custom DLP policy in simulation mode
 1. Modify a DLP policy
 1. Create a DLP policy in PowerShell
 1. Activate a policy in simulation mode
 1. Modify policy priority
-1. Enable file inspection in Microsoft Defender
-1. Create a file policy for Microsoft Defender
 
-**Estimated time:** 60-90 minutes
+**Estimated time:** 60-75 minutes
 
-## Task 1 – Create a DLP policy in simulation mode
+## Task 1 – Create a DLP policy from a template
 
-In this task, you'll create a DLP policy in simulation mode that targets credit card numbers in Teams messages. The policy will notify users when they attempt to share sensitive content and allow them to override with justification.
+In this task, you'll create a DLP policy from a template to help protect personal data stored in SharePoint and OneDrive. Starting from a template gives you a baseline policy with preconfigured rules that you can review and adjust before enforcement.
 
 1. Log into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**. Sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
+
+1. Select **Solutions** > **Data Loss Prevention** > **Policies**.
+
+1. On the **Policies** page, select **+ Create policy**.
+
+1. On the **What info do you want to protect?** page, select **Enterprise applications & devices**, then select **Next**.
+
+1. On the **Start with a template or create a custom policy** page, select **Privacy** under **Categories**, then select **GDPR** under **Regulations**.
+
+1. Select **Next**.
+
+1. On the **Name your DLP policy** page, keep the default name and description, then select **Next**.
+
+1. On the **Assign admin units** page, select **Next**.
+
+1. On the **Choose where to apply the policy** page, select the locations for **SharePoint sites** and **OneDrive accounts** only. If any other locations are selected, deselect them.
+
+1. Select **Next**.
+
+1. On the **Define policy settings** page, review the settings created by the template, then select **Next**.
+
+1. On the **Info to protect** page, leave the default settings, then select **Next**.
+
+1. On the **Protection actions** page, leave the default settings, then select **Next**.
+
+1. On the **Customize access and override settings** page, select the checkbox for **Require a business justification to override**, then select **Next**.
+
+1. On the **Policy mode** page, select **Run the policy in simulation mode**.
+
+1. Select the checkboxes for **Show policy tips while in simulation mode** and **Turn the policy on if it's not edited within fifteen days of simulation**.
+
+1. Select **Next**.
+
+1. On the **Review and finish** page, review your settings, then select **Submit**.
+
+1. On the **New policy created** page, select **Done**.
+
+You've created a DLP policy from a template that scans SharePoint and OneDrive content for personal data. The policy runs in simulation mode so you can review matches and user experience before enforcement.
+
+## Task 2 – Create a custom DLP policy in simulation mode
+
+In this task, you'll create a DLP policy in simulation mode that targets credit card numbers in Teams messages. The policy will notify users when they attempt to share sensitive content and allow them to override with justification.
+
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft Purview as **Joni Sherman**.
 
 1. Select **Solutions** > **Data Loss Prevention** > **Policies**.
 
@@ -95,13 +137,13 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
     - Select the checkbox for **Notify users in Office 365 service with a policy tip**.
 
 1. Under **User overrides**:
-    - Select the checkbox for **Allow users to override policy restrictions** (Fabric, Exchange, SharePoint, OneDrive, and Teams).
+    - Select the checkbox for **Allow users to override policy restrictions in Fabric (including Power BI), Exchange, SharePoint, OneDrive, and Teams.**
     - Select the checkbox for **Require a business justification to override**.
 
 1. Under **Incident reports**, in the **Use this severity level in admin alerts and reports** dropdown:
     - Select **Low**.
 
-1. At the bottom of the **Create rule** flyout panel, select **Save**.
+1. At the bottom of the **Create rule** flyout, select **Save**.
 
 1. Back on the **Customize advanced DLP rules**, select **Next**.
 
@@ -115,7 +157,7 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
 
 You've created a DLP policy that scans Teams content for credit card numbers and allows overrides with business justification.
 
-## Task 2 – Modify a DLP policy
+## Task 3 – Modify a DLP policy
 
 In this task, you'll expand the scope of your existing DLP policy to include Exchange email. This helps ensure consistent protection across additional communication channels.
 
@@ -141,7 +183,7 @@ In this task, you'll expand the scope of your existing DLP policy to include Exc
 
 You've successfully updated the policy to scan email along with Teams messages.
 
-## Task 3 – Create a DLP policy in PowerShell
+## Task 4 – Create a DLP policy in PowerShell
 
 In this task, you'll create a DLP policy using PowerShell to block sharing of employee IDs via email. This approach demonstrates how to define and enforce policy settings through scripting.
 
@@ -185,7 +227,7 @@ In this task, you'll create a DLP policy using PowerShell to block sharing of em
 
 You've successfully used PowerShell to create a DLP policy that blocks the sharing of employee IDs.
 
-## Task 4 – Activate a policy in simulation mode
+## Task 5 – Activate a policy in simulation mode
 
 Now that your DLP policy has been tested in simulation, you'll activate it to begin enforcing its actions.
 
@@ -209,7 +251,7 @@ Now that your DLP policy has been tested in simulation, you'll activate it to be
 
 The policy is now active and enforcing restrictions on credit card information in Teams and Exchange.
 
-## Task 5 – Modify policy priority
+## Task 6 – Modify policy priority
 
 When multiple policies exist, their priority determines which one applies first. In this task, you'll move the employee ID policy to the highest priority.
 
@@ -224,63 +266,3 @@ When multiple policies exist, their priority determines which one applies first.
 1. In the **Data loss prevention** window, select **Refresh** and review the priority in the **Order** column of the policy table.
 
 You've updated policy priority so that the employee ID policy takes precedence over others.
-
-## Task 6 – Enable file inspection in Microsoft Defender
-
-Some file policies require access to inspect the contents of protected files. In this task, you'll grant the necessary permissions to allow Microsoft Defender to scan the contents of OneDrive and SharePoint files for sensitive information.
-
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and signed in as Joni Sherman.
-
-1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
-
-1. Navigate to Microsoft Defender XDR by going to **`https://security.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
-
-1. On the left sidebar, select **System** > **Settings**, then select **Cloud Apps**.
-
-1. In the left pane within the **Cloud apps** window, scroll down to the **Information Protection** section and select **Microsoft Information Protection**.
-
-1. Under **Inspect protected files**, select **Grant permission** to enable file inspection.
-
-1. Follow the prompt to allow the required permissions in Microsoft Entra ID, then you should see file inspection is **Active** in Microsoft Defender for Cloud Apps.
-
-1. Close the InPrivate window.
-
-File inspection is now enabled in Defender, allowing file policies to scan for sensitive content.
-
-## Task 7 – Create a file policy for Microsoft Defender
-
-In this task, you'll create a file policy in Microsoft Defender that identifies and quarantines files containing credit card numbers in OneDrive and SharePoint.
-
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
-
-1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the new permissions are active.
-
-1. In the **Microsoft Defender** portal, in the left navigation, select  **Cloud apps** > **Policies** then select **Policy management**.
-
-1. On the **Policies** page, select **+ Create policy**, then select **File policy**.
-
-1. On the **Create file policy** page, configure:
-
-   - **Policy name**: `Credit card information for files`
-   - **Policy severity**: **Low**
-   - **Category**: **DLP**
-   - **Description**: `Protect credit card numbers from being shared in files.`
-   - In the **Files matching all of the following section**:
-      - For the first filter, configure the dropdowns to: **Access level equals Public (Internet), External, Public**, and add **Internal**
-      - For the second filter, configure the dropdowns to: **Last modified after (date)** and use today's date
-
-          ![Screenshot showing the files matching dropdown with the internal option added.](../Media/files-matching-internal.png)
-
-   - In the **Inspection method** dropdown menu, select **Data Classification Service**.
-   - In the **Choose inspection type...** dropdown menu, select **Sensitive information type...**.
-   - On the **Select a sensitive information type** dialog, search for then select the checkbox for `Credit Card Number`.
-      - Select **Done** in the top right of the **Select a sensitive information type** dialog.
-
-   - Under **Governance actions**, expand **Microsoft OneDrive for Business**:
-      - Select the checkbox for **Put in user quarantine**
-   - Repeat the same process for **Microsoft SharePoint Online**
-      - Select the checkbox for **Put in user quarantine**
-
-1. Select **Create** at the bottom of the page to create the file policy.
-
-You've successfully created a file policy that detects and quarantines files with sensitive credit card data.
