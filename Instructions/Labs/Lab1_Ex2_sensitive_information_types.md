@@ -64,10 +64,10 @@ In this task, you'll create a new custom sensitive information type that recogni
    - **ID**: `Employee ID keywords`
    - **Case insensitive**:
 
-      ```text
-      Employee
-      ID
-      ```
+    ```text
+    Employee
+    ID
+    ```
 
    - Select the radio button for _Word match_
 
