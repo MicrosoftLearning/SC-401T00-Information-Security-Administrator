@@ -335,9 +335,7 @@ By default, new mail flow rules are created in a disabled state. In this task, y
 
 1. Close the flyout by selecting the **X** in the top right corner of the flyout.
 
-    > [!note] **Note: Rule propagation**
-    >
-    > Changes can take several minutes to apply. If validation fails, wait a few minutes and send the test again.
+    > **Note: Rule propagation**<p>Changes can take several minutes to apply. If validation fails, wait a few minutes and send the test again.
 
 The encryption rule is now active and enforcing Microsoft Purview Message Encryption for messages sent from the Finance department. Any future messages from Finance users will be automatically encrypted and include the Contoso Ltd. disclaimer.
 
@@ -345,7 +343,7 @@ The encryption rule is now active and enforcing Microsoft Purview Message Encryp
 
 In this task, you'll send a test email from a member of the Finance department to confirm that Microsoft Purview Message Encryption is applied automatically and that the recipient sees the secure message notice.
 
-> [!alert] External email delivery might be blocked in some lab environments. This task might not complete as expected.
+> **Alert:** External email delivery might be blocked in some lab environments. This task might not complete as expected.
 
 1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
@@ -361,7 +359,7 @@ In this task, you'll send a test email from a member of the Finance department t
 
 1. Sign into your personal email account in a new window and open the message from Lynne Robbins. If you sent the message to a Microsoft account (such as @outlook.com), it might open automatically. If you sent the email to another email service like (@gmail.com), you might have to perform the next steps to process the encryption and read the message.
 
-    > [!Note] **Note**: You might need to check your junk or spam folder for the message from Lynne Robbins.
+    > **Note:** You might need to check your junk or spam folder for the message from Lynne Robbins.
 
 1. Select **Read the message**.
 
