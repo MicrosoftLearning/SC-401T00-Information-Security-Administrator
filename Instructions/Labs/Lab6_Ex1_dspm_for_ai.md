@@ -15,7 +15,7 @@ lab:
 
 If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
@@ -35,7 +35,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. As
 
 Contoso is preparing for broader AI adoption, and the security team needs a unified view of data exposure before rollout. In this task, you enable the required analytics so DSPM can start gathering the signals it needs.
 
-1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and sign in as **Joni Sherman**, `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
