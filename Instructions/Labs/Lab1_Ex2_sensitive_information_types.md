@@ -32,9 +32,9 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
-1. On the left sidebar, select **Solutions** then select **Information Protection**.
+1. On the left sidebar, select **Solutions**, then select **Information Protection**.
 
-1. On the left sidebar, expand **Classifiers** then select **Sensitive info types**.
+1. On the left sidebar, expand **Classifiers**, then select **Sensitive info types**.
 
 1. On the **Sensitive info types** page, select **+ Create sensitive info type** to start the sensitive information type configuration.
 
@@ -127,9 +127,9 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. Navigate to **`https://admin.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
-1. From the left pane, expand **Teams & groups** then select **Active teams & groups**.
+1. From the left pane, expand **Teams & groups**, then select **Active teams & groups**.
 
-1. On the top of the **Active teams and groups** page, select **Security groups** then select **+ Add a security group**.
+1. On the top of the **Active teams and groups** page, select **Security groups**, then select **+ Add a security group**.
 
     ![Screenshot of the Add a group button.](../Media/add-security-group.png)
 
@@ -150,7 +150,7 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. Select the **Members** tab then select **View all and manage members**.
 
-1. On the **Members** page select **+ Add members**.
+1. On the **Members** page, select **+ Add members**.
 
 1. On the **Add members** page, select the checkbox to the left of **Joni Sherman**, then select the **Add (1)** button at the bottom of the flyout panel.
 
@@ -170,7 +170,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 1. Navigate to **Information Protection** by selecting **Solutions** > **Information Protection** from the left sidebar.
 
-1. On the **Information Protection** page, expand **Classifiers** then select **EDM classifiers**.
+1. On the **Information Protection** page, expand **Classifiers**, then select **EDM classifiers**.
 
 1. On the **EDM classifiers** page, select **+ Create EDM classifier**.
 
@@ -338,7 +338,7 @@ Several violations of personal information leakage happened when users sent out 
 
 1. The Microsoft Purview portal should still be open to the EDM classifiers page in Microsoft Edge. If not, in Microsoft Edge, navigate to `https://purview.microsoft.com` > **Solutions** > **Information Protection**.
 
-1. In the left sidebar, expand **Classifiers** then select **Sensitive info types**.
+1. In the left sidebar, expand **Classifiers**, then select **Sensitive info types**.
 
 1. Select **+ Create sensitive info type** to open the configuration for a new sensitive information type.
 

@@ -122,7 +122,7 @@ You must confirm that no social IDs dialog is displayed for external recipients 
 
 1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Lynne's password was set in a previous exercise.
 
-1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again** then select **No**.
+1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again**, then select **No**.
 
 1. In Outlook on the web, select **New mail**.
 
@@ -349,7 +349,7 @@ In this task, you'll send a test email from a member of the Finance department t
 
 1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
-1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again** then select **No**.
+1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again**, then select **No**.
 
 1. In Outlook on the web, select **New mail**.
 
