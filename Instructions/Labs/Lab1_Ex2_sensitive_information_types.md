@@ -45,7 +45,7 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. Select **Next**.
 
-1. On the **Define patterns for this sensitive info type** page, select **Create pattern**.
+1. On the **Define patterns for this sensitive info type** page, select **+ Create pattern**.
 
 1. On the **New pattern** flyout panel on the right, select **+ Add primary element** > **Regular expression**.
 
@@ -77,13 +77,13 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. Select the **Create** button at the bottom of the flyout panel.
 
-1. Back on the **Define patterns for this sensitive info type** page select **Next**.
+1. Back on the **Define patterns for this sensitive info type** page, select **Next**.
 
-1. On the **Choose the recommended confidence level to show in compliance policies** page use the default value and select **Next**.
+1. On the **Choose the recommended confidence level to show in compliance policies** page, use the default value and select **Next**.
 
-1. On the **Review settings and finish** page review the settings and select **Create**. When successfully created select **Done**.
+1. On the **Review settings and finish** page, review the settings and select **Create**. When successfully created, select **Done**.
 
-You have successfully created a new sensitive information type to identify employee IDs in the pattern of three uppercase characters, six numbers, and the keywords 'Employee' or 'IDs' within a range of 100 characters.
+You have successfully created a new sensitive information type to identify employee IDs in the pattern of three uppercase characters, six numbers, and the keywords "Employee" or "ID" within a range of 100 characters.
 
 ## Task 2 – Modify confidence level to reduce false positives
 
@@ -123,7 +123,7 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
+1. Open **Microsoft Edge** in an InPrivate window by right-clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
 1. Navigate to **`https://admin.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
@@ -146,7 +146,7 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. On the **EDM_DataUploaders group created** page, select **Close**.
 
-1. Back on the **Active teams and groups** page, ensure the **Security** tab is selected from the top navigation ribbon, then select the **Refresh** button to display the newly created security group. Select the **EDM_DataUploaders** group from the list to open the **EDM_DataUploaders** flyout panel on the right.
+1. Back on the **Active teams and groups** page, ensure the **Security groups** tab is selected from the top navigation ribbon, then select the **Refresh** button to display the newly created security group. Select the **EDM_DataUploaders** group from the list to open the **EDM_DataUploaders** flyout panel on the right.
 
 1. Select the **Members** tab then select **View all and manage members**.
 
@@ -160,7 +160,7 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 You have successfully created the **EDM_DataUploaders group** and assigned Joni access to create an EDM classifier.
 
-## Task 4 –  Create EDM-based classification information type
+## Task 4 – Create EDM-based classification information type
 
 In this task, you'll create an Exact Data Match (EDM) based classification with a database schema of employee data.
 
@@ -274,7 +274,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
 1. Close the Notepad window.
 
-1. Right click the Windows symbol in the task bar and select **Terminal (Admin)**.
+1. Right-click the Windows symbol in the task bar and select **Terminal (Admin)**.
 
 1. If the **User Account Control** window pops up, select **Yes** to allow this application to make changes to your device.
 
@@ -336,7 +336,7 @@ Several violations of personal information leakage happened when users sent out 
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
 
-1. The Microsoft Purview portal should still be to the EDM classifiers page in Microsoft Edge. If not, in Microsoft Edge, navigate to `https://purview.microsoft.com` > **Solutions** > **Information Protection**.
+1. The Microsoft Purview portal should still be open to the EDM classifiers page in Microsoft Edge. If not, in Microsoft Edge, navigate to `https://purview.microsoft.com` > **Solutions** > **Information Protection**.
 
 1. In the left sidebar, expand **Classifiers** then select **Sensitive info types**.
 
@@ -353,7 +353,7 @@ Several violations of personal information leakage happened when users sent out 
 
 1. On the **New pattern** flyout panel on the right, under **Primary element** select **+ Add primary element**, then select **Keyword dictionary**.
 
-1. On the **Add a keyword dictionary** page enter:
+1. On the **Add a keyword dictionary** page, enter:
 
    - **Name**: `Diseases Dictionary`
    - **Keywords**:
@@ -425,7 +425,7 @@ Always test custom sensitive information types before using them in policies. Ot
 
 1. On the **Upload file to test "Contoso Employee IDs"** flyout panel on the right, select **Upload file**.
 
-1. Select **Documents** from the left pane, select the _SickTestData.txt_ file, then select **Open**.
+1. Select **Documents** from the left pane, select the **SickTestData.txt** file, then select **Open**.
 
 1. Select **Test** to start the analysis.
 
@@ -437,7 +437,7 @@ Always test custom sensitive information types before using them in policies. Ot
 
 1. On the **Upload file to test "Contoso Diseases List"** flyout panel on the right, select **Upload file**.
 
-1. Select **Documents** from the left pane, select the _SickTestData.txt_ file, then select **Open**.
+1. Select **Documents** from the left pane, select the **SickTestData.txt** file, then select **Open**.
 
 1. Select **Test** to start the analysis.
 

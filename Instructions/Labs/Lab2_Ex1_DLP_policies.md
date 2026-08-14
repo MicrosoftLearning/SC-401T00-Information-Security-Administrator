@@ -13,11 +13,11 @@ lab:
 
 ## WWL Tenants - Terms of use
 
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
+If you are provided with a tenant as part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
-Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
+Tenants must not be converted to a paid subscription. Tenants obtained as part of this course remain the property of Microsoft Corporation, and we reserve the right to obtain access and repossess them at any time.
 
 # Lab 2 – Exercise 1 – Implement and manage DLP policies
 
@@ -46,7 +46,7 @@ In this task, you'll create a DLP policy from a template to help protect persona
 
 1. On the **Policies** page, select **+ Create policy**.
 
-1. On the **What info do you want to protect?** page, select **Enterprise applications & devices**, then select **Next**.
+1. On the **What info do you want to protect?** page, select **Enterprise applications & devices**.
 
 1. On the **Start with a template or create a custom policy** page, select **Privacy** under **Categories**, then select **GDPR** under **Regulations**.
 
@@ -90,7 +90,7 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
 
 1. On the **Policies** page, select **+ Create policy**.
 
-1. On the **What info do you want to protect?** page, select **Enterprise applications & devices**, then select **Next**.
+1. On the **What info do you want to protect?** page, select **Enterprise applications & devices**.
 
 1. On the **Start with a template or create a custom policy** page, select **Custom** as the category, then select **Custom policy** under **Regulations**.
 
@@ -103,7 +103,7 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
 
 1. Select **Next**.
 
-1. On the **Assign admin units** page select **Next**.
+1. On the **Assign admin units** page, select **Next**.
 
 1. On the **Choose where to apply the policy** page, enable the location for **Teams chat and channel messages** only. If any other locations are selected, deselect them.
 
@@ -147,13 +147,13 @@ In this task, you'll create a DLP policy in simulation mode that targets credit 
 
 1. Back on the **Customize advanced DLP rules**, select **Next**.
 
-1. On the **Policy mode** page select **Run the policy in simulation mode** and select the checkbox for **Show policy tips while in simulation mode**.
+1. On the **Policy mode** page, select **Run the policy in simulation mode** and select the checkbox for **Show policy tips while in simulation mode**.
 
 1. Select **Next**.
 
-1. On the **Review and finish** page review your settings then select **Submit**.
+1. On the **Review and finish** page, review your settings then select **Submit**.
 
-1. On the **New policy created** page select **Done**.
+1. On the **New policy created** page, select **Done**.
 
 You've created a DLP policy that scans Teams content for credit card numbers and allows overrides with business justification.
 
@@ -163,15 +163,15 @@ In this task, you'll expand the scope of your existing DLP policy to include Exc
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
 
-1. You should still be on the **Policies** page in Microsoft Purview. If not, open **Microsoft Edge** and navigate to `https://purview.microsoft.com`. Select **Solutions** > **Data Loss Prevention** > **Policies**.
+1. You should still be on the **Policies** page in Microsoft Purview. If not, open **Microsoft Edge** and navigate to **`https://purview.microsoft.com`**. Select **Solutions** > **Data Loss Prevention** > **Policies**.
 
-1. On the **Policies** page select the checkbox for the recently created **DLP - Credit Card Protection**, then select **Edit policy** to open the policy configuration.
+1. On the **Policies** page, select the checkbox for the recently created **DLP - Credit Card Protection**, then select **Edit policy** to open the policy configuration.
 
 1. On the **Name your DLP policy** page, edit the description to `Detect and restrict sharing of credit card numbers in Teams and Exchange messages.`
 
 1. Select **Next**.
 
-1. On the **Assign admin units** page select **Next**.
+1. On the **Assign admin units** page, select **Next**.
 
 1. On the **Choose where to apply the policy** page, select the checkbox for **Exchange email** to add this location to your DLP policy.
 
@@ -179,7 +179,7 @@ In this task, you'll expand the scope of your existing DLP policy to include Exc
 
 1. Select **Submit** on the **Review and finish** page to apply the change you made to the policy.
 
-1. Once the policy is updated select **Done** on the **Policy updated** page.
+1. Once the policy is updated, select **Done** on the **Policy updated** page.
 
 You've successfully updated the policy to scan email along with Teams messages.
 
@@ -189,7 +189,7 @@ In this task, you'll create a DLP policy using PowerShell to block sharing of em
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Open an elevated PowerShell window by right clicking the **Start** button in the task bar, then select **Terminal (Admin)**.
+1. Open an elevated PowerShell window by right-clicking the **Start** button in the task bar, then select **Terminal (Admin)**.
 
 1. Run the **Install Module** cmdlet in the terminal window to install the latest **Exchange Online PowerShell** module version:
 
@@ -197,7 +197,7 @@ In this task, you'll create a DLP policy using PowerShell to block sharing of em
     Install-Module ExchangeOnlineManagement
     ```
 
-1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
+1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process might take some time to complete.
 
 1. Run the **Connect-IPPSSession** cmdlet to connect to the Security & Compliance PowerShell:
 
@@ -233,19 +233,19 @@ Now that your DLP policy has been tested in simulation, you'll activate it to be
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
 
-1. In **Microsoft Edge**, navigate to DLP policies by going to `https://purview.microsoft.com` > **Solutions** > **Data Loss Prevention** then select **Policies** from the left sidebar.
+1. In **Microsoft Edge**, navigate to DLP policies by going to **`https://purview.microsoft.com`** > **Solutions** > **Data Loss Prevention** then select **Policies** from the left sidebar.
 
-1. On the **Policies** page select the **DLP - Credit Card Protection** policy.
+1. On the **Policies** page, select the **DLP - Credit Card Protection** policy.
 
 1. At the bottom of the flyout on the right, select **View simulation**.
 
 1. On the simulation page, take a moment to explore:
 
    - The **Simulation overview** tab, which shows scanning progress, total matches, and scanning status by location.
-   - The **Items for review tab**, where any predicted matches will appear once available.
-   - The **Alerts tab**, where any alerts triggered in simulation mode would be listed.
+   - The **Items for review** tab, where any predicted matches will appear once available.
+   - The **Alerts** tab, where any alerts triggered in simulation mode would be listed.
 
-1. After exploring the insights in simulation mode, select **Turn the policy on** then **Confirm** to activate the DLP policy.
+1. After exploring the insights in simulation mode, select **Turn the policy on**, then **Confirm** to activate the DLP policy.
 
    A confirmation flyout will appear indicating that the policy has been published successfully.
 
@@ -257,7 +257,7 @@ When multiple policies exist, their priority determines which one applies first.
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
 
-1. In **Microsoft Edge**, the Microsoft Purview portal tab should still be open to the **Policies** page. If not, open **Microsoft Edge** and navigate to `https://purview.microsoft.com`. Select **Solutions** > **Data Loss Prevention** > **Policies**.
+1. In **Microsoft Edge**, the Microsoft Purview portal tab should still be open to the **Policies** page. If not, open **Microsoft Edge** and navigate to **`https://purview.microsoft.com`**. Select **Solutions** > **Data Loss Prevention** > **Policies**.
 
 1. On the **Policies** page, select the **EmployeeID DLP Policy**.
 

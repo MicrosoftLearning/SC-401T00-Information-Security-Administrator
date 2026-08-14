@@ -35,7 +35,7 @@ In this task, you'll assign eDiscovery permissions to Joni Sherman so she can pe
 
 1. Sign into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
+1. Open **Microsoft Edge** in an InPrivate window by right-clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
 1. Navigate to **`https://purview.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
@@ -71,7 +71,7 @@ You've assigned eDiscovery permissions to Joni Sherman, enabling her to search f
 
    ![Screenshot showing where to create a search in eDiscovery.](../Media/ediscovery-create-search.png)
 
-1. On the **Enter details to get started** dialogue, enter:
+1. On the **Enter details to get started** dialog, enter:
 
    - **Case name**: `Financial Data Exposure Review`
    - **Search name**: `Financial Data Leak Investigation`

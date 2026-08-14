@@ -32,7 +32,7 @@ In this task, you'll enable co-authoring for sensitivity labels, which also enab
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account and logged into Microsoft Purview as Joni Sherman.
 
-1. Open **Microsoft Edge**, then navigate to `https://purview.microsoft.com`.
+1. Open **Microsoft Edge**, then navigate to **`https://purview.microsoft.com`**.
 
 1. In the left navigation, select **Settings** > **Information Protection**.
 
@@ -70,13 +70,13 @@ In this task, you'll create a label group to organize internal sensitivity label
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com`.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`**.
 
 1. In the Microsoft Purview portal, select **Solutions** from the left sidebar, then select **Information Protection**.
 
 1. On the **Microsoft Information Protection** page, on the left sidebar, select **Sensitivity labels**.
 
-1. On the **Sensitivity labels** page select **+ Create** > **Label group**.
+1. On the **Sensitivity labels** page, select **+ Create** > **Label group**.
 
 1. The **New label group** configuration will start. On the **Provide basic details for this label group**, enter:
 
@@ -101,7 +101,7 @@ Now that you've created a label group, you'll add a child label for HR-related c
 
     ![Screenshot showing the Action menu to create a label in group for a sensitivity label.](../Media/create-label-in-group.png)
 
-1. The **New sensitivity label** wizard will start. On the **Provide basic details for this label** page enter:
+1. The **New sensitivity label** wizard will start. On the **Provide basic details for this label** page, enter:
 
    - **Name**: `Employee data (HR)`
    - **Display name**: `Employee data (HR)`
@@ -130,7 +130,7 @@ Now that you've created a label group, you'll add a child label for HR-related c
 
 1. On the **Content marking** page, select the toggle to enable **Content marking**.
 
-1. For each of the following marking types, select the checkbox, then select the edit icon to enter the text:
+1. For each of the following marking types, select the checkbox, then select **Customize text**, enter the text, then select **Save**:
 
    |Marking type|Text|
    |:---|:---|
@@ -154,31 +154,31 @@ You've created a child label within the Internal label group. The label applies 
 
 Next, you'll publish the HR label from the Internal label group so users in the HR department can apply it to their documents.
 
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account, and you should be logged into Microsoft Purview as **Joni Sherman**.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft Purview as **Joni Sherman**.
 
 1. In **Microsoft Edge**, the Microsoft Purview portal tab should still be open. If not, navigate to **`https://purview.microsoft.com`** > **Solutions** > **Information Protection** > **Sensitivity labels**.
 
-1. On the **Sensitivity labels** page select **Publish labels**.
+1. On the **Sensitivity labels** page, select **Publish labels**.
 
 1. The publish sensitivity labels configuration will start.
 
 1. On the **Choose sensitivity labels to publish** page, select the **Choose sensitivity labels to publish** link.
 
-1. On the **Sensitivity labels to publish** flyout panel, select the  **Internal/Employee data (HR)** checkbox, then select **Add** at the bottom of the flyout page.
+1. On the **Sensitivity labels to publish** flyout panel, select the **Internal/Employee data (HR)** checkbox, then select **Add** at the bottom of the flyout page.
 
 1. Back on the **Choose sensitivity labels to publish** page, select **Next**.
 
-1. On the **Assign admin units** page, select **Next**
+1. On the **Assign admin units** page, select **Next**.
 
 1. On the **Publish to users and groups** page, select **Next**.
 
 1. On the **Policy settings** page, select **Next**.
 
-1. On the **Default settings for documents** select **Next**.
+1. On the **Default settings for documents**, select **Next**.
 
-1. On the **Default settings for emails** select **Next**.
+1. On the **Default settings for emails**, select **Next**.
 
-1. On the **Default settings for meetings and calendar events** select **Next**.
+1. On the **Default settings for meetings and calendar events**, select **Next**.
 
 1. On the **Default settings for Fabric and Power BI content** page, select **Next**.
 
@@ -200,9 +200,9 @@ You've published the Internal label group and its HR label so users can apply th
 
 You'll now create a child label for financial data and configure it to apply automatically to content containing financial identifiers such as credit card or bank routing numbers.
 
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and log into the Microsoft Purview portal as **Joni Sherman**.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**.
 
 1. In the Microsoft Purview portal, select **Solutions** > **Information Protection** > **Sensitivity labels**.
 
@@ -229,7 +229,7 @@ You'll now create a child label for financial data and configure it to apply aut
 
 1. In the **Detect content that matches these conditions** section, select **+ Add condition** > **Content contains**.
 
-1. In the **Content contains** section, select the **Add** > **Sensitive info types**.
+1. In the **Content contains** section, select **Add** > **Sensitive info types**.
 
 1. In the **Sensitive info types** flyout page, search for and select these sensitive info types:
 
@@ -251,7 +251,7 @@ You'll now create a child label for financial data and configure it to apply aut
 
 1. On the **Name your auto-labeling policy** page, leave the default, then select **Next**.
 
-1. On the **Choose a label to auto-apply** page, review to ensure the _Internal/Financial Data_ label is selected, then select **Next**.
+1. On the **Choose a label to auto-apply** page, review to ensure the **Internal/Financial Data** label is selected, then select **Next**.
 
 1. On the **Assign admin units** page, select **Next**.
 
@@ -265,7 +265,7 @@ You'll now create a child label for financial data and configure it to apply aut
 
 1. On the **Set up common or advanced rules** page, leave the default **Common rules** selected, then select **Next**.
 
-1. On the **Define rules for content in all locations** page, expand the rules for _Financial Data rule_ to ensure the expected rules are defined, then select **Next**.
+1. On the **Define rules for content in all locations** page, expand the rules for **Financial Data rule** to ensure the expected rules are defined, then select **Next**.
 
 1. On the **Additional settings for email** page, select **Next**.
 
@@ -283,9 +283,9 @@ You've created a child label for financial data and configured an auto-labeling 
 
 Next, you'll create a child label in the Internal group that uses Double Key Encryption (DKE) and dynamic watermarking to protect confidential legal content.
 
-1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-cl1\admin** account.
+1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com` and log into the Microsoft Purview portal as **Joni Sherman**.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as **Joni Sherman**.
 
 1. In the Microsoft Purview portal, select **Solutions** > **Information Protection** > **Sensitivity labels**.
 

@@ -14,7 +14,7 @@ lab:
 
 If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
@@ -41,25 +41,25 @@ In this task, you'll assign Joni Sherman the Insider Risk Management role so she
 
 1. Sign into the Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
+1. Open **Microsoft Edge** in an InPrivate window by right-clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
 1. Navigate to **`https://purview.microsoft.com`** and sign into the Microsoft Purview portal as MOD Administrator, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
 1. Select **Settings** > **Roles and Scopes** > **Role groups**.
 
-1. On the **Role groups for Microsoft Purview solutions** page select **Insider Risk Management**.
+1. On the **Role groups for Microsoft Purview solutions** page, select **Insider Risk Management**.
 
 1. On the **Insider Risk Management** flyout panel on the right, select **Edit**.
 
-1. On the **Edit members of the role group** page select **+ Choose users**.
+1. On the **Edit members of the role group** page, select **+ Choose users**.
 
-1. On the **Choose users** flyout panel, search for `Joni` then select the checkbox for **Joni Sherman**.
+1. On the **Choose users** flyout panel, search for `Joni`, then select the checkbox for **Joni Sherman**.
 
 1. Select the **Select** button at the bottom of the panel.
 
-1. On the **Edit members of the role group** page select **Next**.
+1. On the **Edit members of the role group** page, select **Next**.
 
-1. On the **Review the role group and finish** page select **Save**.
+1. On the **Review the role group and finish** page, select **Save**.
 
 1. Once you have successfully added Joni to the role group, select **Done** on the **You successfully updated the role group** page.
 
@@ -71,7 +71,7 @@ You've assigned Joni the necessary permissions to work with Insider Risk Managem
 
 Before you create an insider risk policy, you'll configure baseline indicators needed for core data leak detection. These indicators define the common risky activity the system will look for.
 
-1. Return to the Microsoft Edge window where you're signed in as Joni Sherman. Refresh the tab to ensure the new permissions are active.
+1. In Microsoft Edge, navigate to **`https://purview.microsoft.com`** and sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. Select **Settings** > **Insider risk management**.
 
@@ -92,9 +92,9 @@ In this task, you'll create a data leaks quick policy to automatically detect an
 
 1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Policies**.
 
-1. On the **Policies** page, select **Create policy**, then select **Quick policy**.
+1. On the **Policies** page, select **+ Create policy**, then select **Quick policy**.
 
-1. On the **Create quick policies** flyout, select to **Get started** under **Data leaks**.
+1. On the **Create quick policies** flyout, select **Get started** under **Data leaks**.
 
 1. Review the settings for creating a quick data leak policy, then select **Create policy**.
 
@@ -127,13 +127,13 @@ On the **Policies** page for **Insider Risk Management**, you'll notice your dat
 
 1. On the **Exclude users and groups (optional) (preview)** page, select **Next**.
 
-1. On the **Decide whether to prioritize content** page, select **Next**
+1. On the **Decide whether to prioritize content** page, select **Next**.
 
-1. On the **Choose triggering event for this policy** page, review the **Select which sequences will trigger this policy** and view the information stating **Some sequences require specific indicators to be turned on in 'Settings' before they can be selected below.**
+1. On the **Choose triggering event for this policy** page, review the **Select which sequences will trigger this policy** section and view the information stating **Some sequences require specific indicators to be turned on in 'Settings' before they can be selected below.**
 
 1. Select the option to **Turn on indicators** to enable the necessary sequence indicators for this policy.
 
-1. Data leaks is primarily a data exfiltration insider risk policy. In the dialogue to enable sequence indicators, select **Select all** to turn on all required **Exfiltrate indicators**, then select **Save**.
+1. Data leaks is primarily a data exfiltration insider risk policy. In the dialog to enable sequence indicators, select **Select all** to turn on all required **Exfiltrate indicators**, then select **Save**.
 
 1. Select **Next** on the **Choose triggering event for this policy** page.
 
@@ -159,7 +159,7 @@ Your insider risk policy is now healthy and ready to detect risky activities bas
 
 In this task, you'll enable integration between Microsoft Defender for Endpoint and Microsoft Purview so security alerts can be used in insider risk policies.
 
-1. In Microsoft Edge, navigate to Microsoft Defender by going to `https://security.microsoft.com`.
+1. In Microsoft Edge, navigate to Microsoft Defender by going to **`https://security.microsoft.com`**.
 
 1. In the left navigation pane, select **System** > **Settings** > **Endpoints** > **Optional features**.
 
@@ -177,7 +177,7 @@ In this task, you'll enable advanced indicators and create a priority user group
 
 > **Note: Defender for Endpoint indicator availability**<br>Microsoft Defender for Endpoint indicators might appear greyed out and unselectable if the integration from the previous task hasn't finished processing. If that happens, wait a few minutes and refresh the page before continuing.
 
-1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com`.
+1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`**.
 
 1. Select **Settings** > **Insider risk management**.
 
@@ -227,9 +227,9 @@ In this task, you'll create an insider risk policy that detects Defender for End
 
 1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Policies**.
 
-1. On the **Policies** page, select **Create policy**, then select **Custom policy**.
+1. On the **Policies** page, select **+ Create policy**, then select **Custom policy**.
 
-1. On the **Choose a policy template** page, select **Security policy violations by priority users**, then select Next.
+1. On the **Choose a policy template** page, select **Security policy violations by priority users**, then select **Next**.
 
 1. On the **Name your policy** page, enter:
 
@@ -240,7 +240,7 @@ In this task, you'll create an insider risk policy that detects Defender for End
 
 1. On the **Choose users, groups, & adaptive scopes** page, select **Add or edit priority user groups**.
 
-1. On the **Choose priority user groups** flyout, select the checkbox for the **Finance team** group, then select Add.
+1. On the **Choose priority user groups** flyout, select the checkbox for the **Finance team** group, then select **Add**.
 
 1. Select **Next**.
 
@@ -268,7 +268,7 @@ Notice templates are created separately from insider risk policies and selected 
 
 1. On the **Notice templates** page, select **+ Create notice template**.
 
-1. Fill out the necessary information in **Create a new notice template** flyout panel on the right.
+1. Fill out the necessary information in the **Create a new notice template** flyout panel on the right.
 
     - **Template name**: `Security Violation Alert`
     - **Send from**: `Joni Sherman`
@@ -291,6 +291,6 @@ Notice templates are created separately from insider risk policies and selected 
 
 1. Select **Create**.
 
-1. Back on the **Notice templates** page you'll see the **Security Violation Alert** template you just created.
+1. Back on the **Notice templates** page, you'll see the **Security Violation Alert** template you just created.
 
 You've created the **Security Violation Alert** notice template. It is now available for an investigator to select when communicating with a user about a relevant insider risk alert.
