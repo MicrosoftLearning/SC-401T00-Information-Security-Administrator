@@ -51,7 +51,7 @@ In this task, you'll verify that published sensitivity labels are available to u
 
     ![Screenshot showing the sensitivity label button in Word.](../Media/word_label.png)
 
-    > **Note: Label propagation delay**<p>It can take 24-48 hours for newly published sensitivity labels to be available for application. If the newly created sensitivity labels aren't available, you can use **Confidential** > **All Employees** for this exercise.
+    > **Note: Label propagation delay**<br>It can take 24-48 hours for newly published sensitivity labels to be available for application. If the newly created sensitivity labels aren't available, you can use **Confidential** > **All Employees** for this exercise.
 
 1. Change the sensitivity label to **Highly Confidential** > **Project - Falcon** to verify the business justification dialog appears.
 

@@ -49,7 +49,7 @@ Contoso is preparing for broader AI adoption, and the security team needs a unif
 
 1. Select **Start setup**.
 
-> **Note: DSPM setup actions**<p>Selecting **Start setup** enables any required analytics that aren't already enabled and starts the initial DSPM scan.
+> **Note: DSPM setup actions**<br>Selecting **Start setup** enables any required analytics that aren't already enabled and starts the initial DSPM scan.
 
 You've enabled DSPM analytics and started the initial scan that correlates sensitive-data risks across Microsoft Purview.
 
@@ -96,6 +96,6 @@ Contoso is preparing for broader Copilot and AI adoption, and wants to find cont
 
 1. Back on the **Data risk assessments** page, select **Unlabeled SharePoint Content Assessment** to review its status and scope.
 
-> **Note: Assessment scan processing time**<p>The assessment scan can take time to complete. Review the assessment results after processing finishes to identify files that need labeling, access review, or other remediation.
+> **Note: Assessment scan processing time**<br>The assessment scan can take time to complete. Review the assessment results after processing finishes to identify files that need labeling, access review, or other remediation.
 
 You've created a DSPM data risk assessment that will identify potential oversharing risks in unlabeled SharePoint content. Use the results with the DSPM posture and objectives pages to prioritize appropriate labeling, DLP, and access-remediation actions.
