@@ -25,8 +25,8 @@ In this lab, you'll configure and prepare your environment for administration ta
 1. Enable Audit in the Microsoft Purview portal  
 1. Enable device onboarding  
 1. Enable insider risk analytics and data sharing  
+1. Set user passwords for lab exercises
 1. Initialize Microsoft Defender XDR
-1. Configure multi-factor authentication in Microsoft Entra
 
 **Estimated time:** 30-45 minutes
 
