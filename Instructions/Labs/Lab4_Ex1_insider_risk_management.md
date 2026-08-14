@@ -175,7 +175,7 @@ You've successfully enabled Defender for Endpoint to share alerts with Microsoft
 
 In this task, you'll enable advanced indicators and create a priority user group that can be used in targeted insider risk policies.
 
-> **Note: Defender for Endpoint indicator availability**<p>Microsoft Defender for Endpoint indicators might appear greyed out and unselectable if the integration from the previous task hasn't finished processing. If that happens, wait a few minutes and refresh the page before continuing.
+> **Note: Defender for Endpoint indicator availability**<br>Microsoft Defender for Endpoint indicators might appear greyed out and unselectable if the integration from the previous task hasn't finished processing. If that happens, wait a few minutes and refresh the page before continuing.
 
 1. In **Microsoft Edge**, navigate to `https://purview.microsoft.com`.
 
