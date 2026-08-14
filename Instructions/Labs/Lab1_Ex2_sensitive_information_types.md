@@ -97,7 +97,7 @@ You've received reports that some documents containing employee IDs aren't being
 
 1. Search for `Contoso Employee IDs` in the list and select the SIT name to open the details page.
 
-    > **Note: Refresh the list of sensitive info types**<p>If you're unable to find the Contoso Employee IDs on the sensitive info type page, try refreshing the list of sensitive info types from the top menu.<p>![Screenshot showing the Sensitive info types page with the Refresh button highlighted.](../Media/refresh-sensitive-info-type.png)
+    > **Note: Refresh the list of sensitive info types**<br>If you're unable to find the Contoso Employee IDs on the sensitive info type page, try refreshing the list of sensitive info types from the top menu.<br>![Screenshot showing the Sensitive info types page with the Refresh button highlighted.](../Media/refresh-sensitive-info-type.png)
 
 1. Select **Edit** at the top of the flyout to modify the SIT.
 
