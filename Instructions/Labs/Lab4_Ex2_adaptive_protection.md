@@ -12,10 +12,9 @@ lab:
 
 # Lab 4 - Exercise 2 - Implement Adaptive Protection
 
-> [!NOTE]
-> **Temporary skip - Adaptive Protection is currently unavailable on lab tenants.**
+> **Warning: Temporary skip - Adaptive Protection is currently unavailable on lab tenants.**
 >
->This exercise depends on Adaptive Protection functionality that is not working in the current tenant environment. Skip this exercise until further notice. The rest of the lab set is unaffected.
+> This exercise depends on Adaptive Protection functionality that is not working in the current tenant environment. Skip this exercise until further notice. The rest of the lab set is unaffected.
 
 You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Your role involves protecting sensitive data and responding to insider risks. To enhance protection, you'll enable Microsoft Purview Adaptive Protection, which dynamically adjusts data loss prevention (DLP) enforcement based on insider risk levels.
 
@@ -81,12 +80,11 @@ To add another layer of enforcement, you can use insider risk levels to restrict
 
 1. Navigate **Microsoft Entra admin center** at `https://entra.microsoft.com`, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
-   > [!NOTE]
-   > **Multi-factor authentication prompt**
-   >
-   > If you're prompted for MFA while signing in, open the **Microsoft Authenticator** app on your mobile device and approve the sign-in request.
-   >
-   > After approval, you'll be redirected to the **Microsoft Entra admin center**.
+    > **Note: Multi-factor authentication prompt**
+    >
+    > If you're prompted for MFA while signing in, open the **Microsoft Authenticator** app on your mobile device and approve the sign-in request.
+    >
+    > After approval, you'll be redirected to the **Microsoft Entra admin center**.
 
 1. In the Microsoft Entra admin center, navigate to **Protection** > **Conditional Access** > **Policies**.
 
