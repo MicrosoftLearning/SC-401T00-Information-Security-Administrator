@@ -110,7 +110,7 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. On the **Install Microsoft Authenticator** page, ensure the **Microsoft Authenticator** app is installed on your mobile device, then select **Next**.
 
-   > **Note: Using a different authenticator app**<br>If you choose to use a different authenticator app from the Microsoft Authenticator, select **Set up a different authentication app**.
+    > **Note: Using a different authenticator app**<br>If you choose to use a different authenticator app from the Microsoft Authenticator, select **Set up a different authentication app**.
 
 1. On the **Set up your account in app** page, select **Next**.
 
@@ -118,7 +118,7 @@ In this task, you'll set passwords for the user accounts needed for the labs.
 
 1. On the **Let's try it out** page, enter the number on the screen in Microsoft Authenticator to add the authenticator.
 
-   > **Note: Using a different authenticator app**<br>If you're using a different authenticator app, adding the authenticator might be a different process. Follow the steps provided to ensure your authenticator is registered successfully.
+    > **Note: Using a different authenticator app**<br>If you're using a different authenticator app, adding the authenticator might be a different process. Follow the steps provided to ensure your authenticator is registered successfully.
 
 1. On the **Authenticator Added** page, select **Ok** to get signed into the Microsoft 365 admin center.
 
@@ -156,7 +156,7 @@ In this task, you'll go to Microsoft Defender and wait for Microsoft Defender XD
 
 1. From the navigation pane, select **Show navigation**, then select **Incidents**.
 
-   > **Note: Microsoft Defender XDR initialization**<br>The navigation might appear differently depending on whether Microsoft Defender XDR is already initialized. If initialization has completed, **Incidents & alerts** appears as a top-level option instead of under **Investigation & response**.
+    > **Note: Microsoft Defender XDR initialization**<br>The navigation might appear differently depending on whether Microsoft Defender XDR is already initialized. If initialization has completed, **Incidents & alerts** appears as a top-level option instead of under **Investigation & response**.
 
 1. You'll see a message stating that Microsoft Defender XDR is being prepared. This process runs automatically and might take a few minutes.
 
