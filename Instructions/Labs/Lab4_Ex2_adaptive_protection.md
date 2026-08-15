@@ -12,7 +12,7 @@ lab:
 
 # Lab 4 - Exercise 2 - Implement Adaptive Protection
 
-> **Warning: Temporary skip this exercise - Adaptive Protection is currently unavailable on lab tenants.**<br>This exercise depends on Adaptive Protection functionality that is not working in the current tenant environment. Skip this exercise until further notice. The rest of the lab set is unaffected.
+ > **Warning: Skip this exercise.**<br>Due to a temporary lab environment issue, Adaptive Protection is unavailable on lab tenants. Skip this exercise and continue with the next one. This does not impact any other exercises in the lab set.
 
 You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Your role involves protecting sensitive data and responding to insider risks. To enhance protection, you'll enable Microsoft Purview Adaptive Protection, which dynamically adjusts data loss prevention (DLP) enforcement based on insider risk levels.
 
