@@ -79,15 +79,15 @@ Next, you'll send sensitive employee information in an email to verify that your
 
 1. In the body of the email, enter:
 
-   ```text
-   Please help me with the start dates for the following employees:
-   ABC123456
-   DEF678901
-   GHI234567
+    ```text
+    Please help me with the start dates for the following employees:
+    ABC123456
+    DEF678901
+    GHI234567
 
-   Thank you,
-   Joni Sherman
-   ```
+    Thank you,
+    Joni Sherman
+    ```
 
 1. Select the **Send** button in the upper right of the message window to send the email.
 
