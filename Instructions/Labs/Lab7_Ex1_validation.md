@@ -53,7 +53,7 @@ In this task, you'll verify that published sensitivity labels are available to u
 
     > **Note: Label propagation delay**<br>It can take 24-48 hours for newly published sensitivity labels to be available for application. If the newly created sensitivity labels aren't available, you can use **Confidential** > **All Employees** for this exercise.
 
-1. Change the sensitivity label to **Highly Confidential** > **Project - Falcon** to verify the business justification dialog appears.
+1. Change the sensitivity label to **Highly Confidential** or **Project - Falcon** to verify the business justification dialog appears.
 
 1. Select **Cancel** to keep the sensitivity label.
 
