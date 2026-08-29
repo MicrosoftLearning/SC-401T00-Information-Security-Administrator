@@ -246,10 +246,9 @@ Joni Sherman, an Information Security Administrator at Contoso Ltd., is implemen
 
 1. Create a mail flow rule to encrypt messages from the Finance department
 1. Add a disclaimer to encrypted messages
-1. Enable the mail flow rule  
-1. Validate message encryption
+1. Enable the mail flow rule
 
-**Estimated time:** 30-45 minutes
+**Estimated time:** 20-30 minutes
 
 ## Task 1 – Create a mail flow rule to encrypt messages from the Finance department
 
@@ -338,37 +337,3 @@ By default, new mail flow rules are created in a disabled state. In this task, y
     > **Note: Rule propagation**<br>Changes can take several minutes to apply. If validation fails, wait a few minutes and send the test again.
 
 The encryption rule is now active and enforcing Microsoft Purview Message Encryption for messages sent from the Finance department. Any future messages from Finance users will be automatically encrypted and include the Contoso Ltd. disclaimer.
-
-## Task 4 – Validate message encryption
-
-In this task, you'll send a test email from a member of the Finance department to confirm that Microsoft Purview Message Encryption is applied automatically and that the recipient sees the secure message notice.
-
-> **Alert:** External email delivery might be blocked in some lab environments. This task might not complete as expected.
-
-1. Open **Microsoft Edge** in an InPrivate window by right-clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
-
-1. Navigate to **`https://outlook.office.com`** and log into Outlook on the web as `LynneR@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
-
-1. On the **Stay signed in?** dialog box, select the checkbox for **Don't show this again**, then select **No**.
-
-1. In Outlook on the web, select **New mail**.
-
-1. In the **To** line enter your personal or other third-party email address that isn't in the tenant domain. Enter **`Secret Message`** in the subject line and **`My super-secret message.`** in the body of the email.
-
-1. Select **Send** to send the message. Leave the Outlook window open.
-
-1. Sign into your personal email account in a new window and open the message from Lynne Robbins. If you sent the message to a Microsoft account (such as @outlook.com), it might open automatically. If you sent the email to another email service like (@gmail.com), you might have to perform the next steps to process the encryption and read the message.
-
-    > **Note:** You might need to check your junk or spam folder for the message from Lynne Robbins.
-
-1. Select **Read the message**.
-
-1. Select **Sign in with a One-time passcode** to receive a limited time passcode.
-
-1. Go to your personal email portal and open the message with subject **Your one-time passcode to view the message**.
-
-1. Copy the passcode, paste it into the portal and select **Continue**.
-
-1. Review the encrypted message. You should see the **This email has been encrypted and sent securely by Contoso Ltd.** message at the bottom of your email.
-
-You've successfully validated that messages from the Finance department are automatically encrypted and include the appended Contoso disclaimer, confirming that Microsoft Purview Message Encryption is working as expected.

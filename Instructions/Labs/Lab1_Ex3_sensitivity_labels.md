@@ -302,7 +302,9 @@ Next, you'll create a child label in the Internal group that uses Double Key Enc
 
 1. Select **Next**.
 
-1. On the **Define the scope for this label** page, select **Files**,  **Emails**, and **Meetings**.
+1. On the **Define the scope for this label** page, select **Files** and **Emails**.
+
+   > **Note: DKE scope limitation**<br>Double Key Encryption doesn't support Meetings. Select only Files and Emails for DKE labels.
 
 1. On the **Choose protection settings for the types of items you selected** page, select **Control access**, then select **Next**.
 

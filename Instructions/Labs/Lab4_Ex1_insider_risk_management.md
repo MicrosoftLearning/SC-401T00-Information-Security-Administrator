@@ -25,11 +25,10 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 **Tasks**:
 
 1. Assign insider risk management permissions
-1. Configure insider risk indicators
-1. Create an insider risk policy
-1. Customize the data leaks policy
+1. Configure policy indicators
+1. Create a data leaks policy
 1. Enable Microsoft Defender for Endpoint integration with Insider Risk Management
-1. Enable indicators and configure priority users
+1. Enable Defender indicators and configure priority users
 1. Create a policy for security policy violations by priority users
 1. Create a notice template
 
@@ -49,27 +48,21 @@ In this task, you'll assign Joni Sherman the Insider Risk Management role so she
 
 1. On the **Role groups for Microsoft Purview solutions** page, select **Insider Risk Management**.
 
-1. On the **Insider Risk Management** flyout panel on the right, select **Edit**.
+1. On the **Insider Risk Management** flyout panel on the right, select **Add member**.
 
-1. On the **Edit members of the role group** page, select **+ Choose users**.
+1. On the **Add member** flyout panel, search for `Joni`, then select the checkbox for **Joni Sherman**.
 
-1. On the **Choose users** flyout panel, search for `Joni`, then select the checkbox for **Joni Sherman**.
+1. Select **Add** at the bottom of the panel.
 
-1. Select the **Select** button at the bottom of the panel.
-
-1. On the **Edit members of the role group** page, select **Next**.
-
-1. On the **Review the role group and finish** page, select **Save**.
-
-1. Once you have successfully added Joni to the role group, select **Done** on the **You successfully updated the role group** page.
+1. Back on the **Insider Risk Management** flyout panel, verify **Joni Sherman** appears as a member, then close the flyout.
 
 1. Close the InPrivate window.
 
 You've assigned Joni the necessary permissions to work with Insider Risk Management in the Microsoft Purview portal.
 
-## Task 2 – Configure insider risk indicators
+## Task 2 – Configure policy indicators
 
-Before you create an insider risk policy, you'll configure baseline indicators needed for core data leak detection. These indicators define the common risky activity the system will look for.
+Before you create insider risk policies, you need to enable the indicators that define which user activities the system monitors. Enabling them upfront ensures your policies can use sequence detection and built-in thresholds without additional configuration.
 
 1. In Microsoft Edge, navigate to **`https://purview.microsoft.com`** and sign in as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
@@ -77,51 +70,34 @@ Before you create an insider risk policy, you'll configure baseline indicators n
 
 1. Select the tab on the left for **Policy indicators**.
 
-1. On the **Policy indicators** page, expand and select **Select all** to enable all indicators in these categories:
+1. On the **Policy indicators** page, expand each of the following categories and select **Select all** to enable all indicators:
 
    - Office indicators
+   - Device indicators
    - Cumulative exfiltration detection
+
+   > **Note: Greyed-out categories**<br>Some categories, such as Microsoft Defender for Endpoint indicators, require additional integration before they can be enabled. You'll configure that integration and enable those indicators in a later task.
 
 1. Select **Save** at the bottom of the page.
 
-You've enabled baseline policy indicators so the system can detect sensitive actions like file exfiltration or risky Office activity.
+You've enabled the core policy indicators for insider risk detection. Office indicators track file activity in Microsoft 365 apps, device indicators cover USB and print operations, and cumulative exfiltration detection identifies activity that exceeds normal baselines.
 
-## Task 3 – Create an insider risk policy
+## Task 3 – Create a data leaks policy
 
-In this task, you'll create a data leaks quick policy to automatically detect and respond to risky user behavior related to data exfiltration. Quick policies use built-in templates and default thresholds to simplify setup.
+In this task, you'll create a policy from the Data leaks template to detect risky data exfiltration. This policy uses the Office, device, and exfiltration indicators you enabled in Task 2 to identify patterns like file downloads followed by USB copies or cloud uploads.
 
 1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Policies**.
 
-1. On the **Policies** page, select **+ Create policy**, then select **Quick policy**.
+1. On the **Policies** page, select **+ Create policy**, then select **Custom policy**.
 
-1. On the **Create quick policies** flyout, select **Get started** under **Data leaks**.
+1. On the **Choose a policy template** page, select **Data leaks**, then select **Next**.
 
-1. Review the settings for creating a quick data leak policy, then select **Create policy**.
+1. On the **Name your policy** page, enter:
 
-1. On the **Your data leak policy is being created** page, select the checkboxes for:
+   - **Name**: `Data leaks policy`
+   - **Description**: `Detects risky data exfiltration activity using Office, device, and cumulative exfiltration indicators.`
 
-   - Email me when policies have unresolved warnings
-   - Email me when new high severity alerts are generated
-
-     Then select **Update notification settings**.
-
-1. On the bottom of the **Your data leak policy is being created** page, select **Done**.
-
-You've created a quick policy for detecting potential data leaks using the default settings. Next, you'll customize it to resolve the configuration warning.
-
-## Task 4 – Customize the data leaks policy
-
-Some insider risk policies require additional indicators to function correctly. In this task, you'll modify your policy to enable sequence indicators and bring the policy into a healthy state.
-
-On the **Policies** page for **Insider Risk Management**, you'll notice your data leaks policy has a recommendation.
-
-1. Select the **Data leaks quick policy** you just created.
-
-1. Review the recommendation in the flyout page for the policy. You have a warning stating **Sequence trigger required indicators are not selected**. To resolve this warning, select **Edit policy**.
-
-1. On the **Choose a policy template** page, select **Next**.
-
-1. On the **Name your policy** page, select **Next**.
+1. Select **Next**.
 
 1. On the **Choose users, groups, & adaptive scopes** page, select **Next**.
 
@@ -129,33 +105,27 @@ On the **Policies** page for **Insider Risk Management**, you'll notice your dat
 
 1. On the **Decide whether to prioritize content** page, select **Next**.
 
-1. On the **Choose triggering event for this policy** page, review the **Select which sequences will trigger this policy** section and view the information stating **Some sequences require specific indicators to be turned on in 'Settings' before they can be selected below.**
+1. On the **Choose triggering event for this policy** page, review the available sequences. The sequences listed here rely on the indicators you enabled in Task 2 — each one combines multiple signals to detect coordinated data movement.
 
-1. Select the option to **Turn on indicators** to enable the necessary sequence indicators for this policy.
-
-1. Data leaks is primarily a data exfiltration insider risk policy. In the dialog to enable sequence indicators, select **Select all** to turn on all required **Exfiltrate indicators**, then select **Save**.
-
-1. Select **Next** on the **Choose triggering event for this policy** page.
+1. Select **Next**.
 
 1. On the **Choose thresholds for triggering events** page, select **Next**.
 
 1. On the **Indicators** page, select **Next**.
 
-1. On the **Detection options**, select **Next**.
+1. On the **Detection options** page, select **Next**.
 
 1. On the **Choose threshold type for indicators** page, select **Next**.
 
-   This policy uses built-in sequence triggers and indicators. It starts evaluating user activity based on the selected sequence and exfiltration conditions configured for this policy.
-
 1. On the **Review settings and finish** page, select **Submit**.
 
-1. Select **Done** on the **Your policy was created** page.
+1. On the **Your policy was created** page, select **Done**.
 
-1. Back on the **Policies** page, your policy should now have a **Healthy** status.
+1. Back on the **Policies** page, verify your data leaks policy has a **Healthy** status.
 
-Your insider risk policy is now healthy and ready to detect risky activities based on sequence triggers and enabled indicators.
+You've created a data leaks policy that uses sequence-based triggers and the indicators configured in Task 2 to detect risky data exfiltration patterns.
 
-## Task 5 – Enable Microsoft Defender for Endpoint integration with Insider Risk Management
+## Task 4 – Enable Microsoft Defender for Endpoint integration with Insider Risk Management
 
 In this task, you'll enable integration between Microsoft Defender for Endpoint and Microsoft Purview so security alerts can be used in insider risk policies.
 
@@ -171,9 +141,9 @@ In this task, you'll enable integration between Microsoft Defender for Endpoint 
 
 You've successfully enabled Defender for Endpoint to share alerts with Microsoft Purview.
 
-## Task 6 – Enable indicators and configure priority users
+## Task 5 – Enable Defender indicators and configure priority users
 
-In this task, you'll enable advanced indicators and create a priority user group that can be used in targeted insider risk policies.
+With Defender for Endpoint integration active, you can now enable the security-specific indicators that feed security policy violations policies. You'll also create a priority user group to target monitoring for high-risk roles.
 
 > **Note: Defender for Endpoint indicator availability**<br>Microsoft Defender for Endpoint indicators might appear greyed out and unselectable if the integration from the previous task hasn't finished processing. If that happens, wait a few minutes and refresh the page before continuing.
 
@@ -219,11 +189,11 @@ In this task, you'll enable advanced indicators and create a priority user group
 
 1. **Review** and **Submit** your settings, then select **Done** once your priority user group has been created.
 
-You've configured policy indicators and created a priority group for monitoring high-risk users.
+You've enabled Defender-based indicators for detecting security policy violations and created a priority user group for targeted monitoring.
 
-## Task 7 – Create a policy for security policy violations by priority users
+## Task 6 – Create a policy for security policy violations by priority users
 
-In this task, you'll create an insider risk policy that detects Defender for Endpoint alerts for risky activity by priority users.
+In this task, you'll create an insider risk policy that uses the Defender for Endpoint indicators you enabled in Task 5 to detect security-related events — such as disabled protections or malware — for priority users.
 
 1. In Microsoft Purview, select **Solutions** > **Insider Risk Management** > **Policies**.
 
@@ -260,7 +230,7 @@ In this task, you'll create an insider risk policy that detects Defender for End
 
 You've created a custom insider risk policy that uses Defender for Endpoint signals to detect risky activity from priority users. When an alert from this policy is triaged, an investigator can use a notice template to communicate with the user. In the next task, you'll create that reusable response asset.
 
-## Task 8 – Create a notice template
+## Task 7 – Create a notice template
 
 Notice templates are created separately from insider risk policies and selected when an investigator communicates with a user about a triaged alert. In this task, you'll create a reusable template for security policy violation alerts generated by the priority-user policy.
 

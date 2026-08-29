@@ -48,7 +48,7 @@ In this task, you'll create a DLP policy from a template to help protect persona
 
 1. On the **What info do you want to protect?** page, select **Enterprise applications & devices**.
 
-1. On the **Start with a template or create a custom policy** page, select **Privacy** under **Categories**, then select **GDPR** under **Regulations**.
+1. On the **Start with a template or create a custom policy** page, select **Privacy** under **Categories**, then select **GDPR Enhanced** under **Regulations**.
 
 1. Select **Next**.
 
@@ -60,13 +60,9 @@ In this task, you'll create a DLP policy from a template to help protect persona
 
 1. Select **Next**.
 
-1. On the **Define policy settings** page, review the settings created by the template, then select **Next**.
+1. On the **Define policy settings** page, select **Next**.
 
-1. On the **Info to protect** page, leave the default settings, then select **Next**.
-
-1. On the **Protection actions** page, leave the default settings, then select **Next**.
-
-1. On the **Customize access and override settings** page, select the checkbox for **Require a business justification to override**, then select **Next**.
+1. On the **Customize advanced DLP rules** page, select **Next**.
 
 1. On the **Policy mode** page, select **Run the policy in simulation mode**.
 
