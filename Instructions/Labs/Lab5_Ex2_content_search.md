@@ -43,19 +43,11 @@ In this task, you'll assign eDiscovery permissions to Joni Sherman so she can pe
 
 1. On the **Role groups for Microsoft Purview solutions** page, search for `eDiscovery`, then select **eDiscovery Manager**.
 
-1. On the **eDiscovery Manager** flyout panel, select **Edit**.
+1. On the **eDiscovery Manager** flyout panel, select **Add Manager**.
 
-1. On the **Manage eDiscovery Manager** page, select **Choose users**.
+1. On the **Add Manager** flyout page, search for `Joni`, then select the checkbox for **Joni Sherman**. Select **Add** at the bottom of the panel.
 
-1. On the **Choose users** flyout page, search for `Joni`, then select the checkbox for **Joni Sherman**. Select the **Select** button at the bottom of the panel.
-
-1. Back on the **Manage eDiscovery Manager** page, select **Next**.
-
-1. On the **Manage eDiscovery Administrator** page, select **Next**.
-
-1. On the **Review the role group and finish** page, select **Save**.
-
-1. On the **You successfully updated the role group** page, select **Done**.
+1. Back on the **eDiscovery Manager** flyout panel, verify **Joni Sherman** appears under **Manager**, then close the flyout.
 
 1. Close the InPrivate window.
 

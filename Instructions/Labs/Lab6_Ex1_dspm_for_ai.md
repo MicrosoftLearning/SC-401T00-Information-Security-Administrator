@@ -86,6 +86,8 @@ Contoso is preparing for broader Copilot and AI adoption, and wants to find cont
 
 1. Select **Next**.
 
+1. On the **Select Scan level** page, leave **Site-level** selected, then select **Next**.
+
 1. On the **Add users** page, select **All**, then select **Next**.
 
 1. On the **Add data sources to assess** page, select **SharePoint** and **OneDrive**, then select **Next**.
