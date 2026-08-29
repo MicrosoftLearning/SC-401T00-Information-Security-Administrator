@@ -60,6 +60,10 @@ In this task, you'll create a DLP policy from a template to help protect persona
 
 1. Select **Next**.
 
+1. On the **Define policy settings** page, select **Next**.
+
+1. On the **Customize advanced DLP rules** page, select **Next**.
+
 1. On the **Policy mode** page, select **Run the policy in simulation mode**.
 
 1. Select the checkboxes for **Show policy tips while in simulation mode** and **Turn the policy on if it's not edited within fifteen days of simulation**.

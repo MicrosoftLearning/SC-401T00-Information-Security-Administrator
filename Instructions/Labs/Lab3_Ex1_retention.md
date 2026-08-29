@@ -54,10 +54,10 @@ In this task, you'll create a retention label for sensitive financial data that 
 
 1. On the **Define label settings** page, select **Retain items forever or for a specific period**, then select **Next**.
 
-1. On the **Define the period** page, ensure these values are set for the retention period configuration input:
+1. On the **Define the retention period** page, ensure these values are set for the retention period configuration input:
 
-    - **How long is the period?**: 5 Years
-    - **When should the period begin?**: When items were last modified
+    - **Retain items for**: 5 Years
+    - **Start the retention period based on**: When items were last modified
 
 1. Select **Next**.
 
@@ -130,7 +130,7 @@ In this task, you'll configure a policy that automatically applies an existing r
 
 1. On the **Choose the type of retention policy to create​** page, select **Static**.
 
-1. On the **Choose where to publish labels** page, select **Let me choose specific locations** and select:
+1. On the **Choose where to automatically apply the label** page, select **Let me choose specific locations** and select:
 
     - Exchange mailboxes
     - SharePoint classic and communication sites
@@ -170,7 +170,7 @@ In this task, you'll create a static retention policy for Microsoft Teams conten
 
 1. On the **Choose the type of retention policy to create** page, select **Static**, then select **Next**.
 
-1. On the **Choose locations to apply the policy** page, enable:
+1. On the **Choose where to apply this policy** page, enable:
 
    - Teams channel messages
    - Teams chats
