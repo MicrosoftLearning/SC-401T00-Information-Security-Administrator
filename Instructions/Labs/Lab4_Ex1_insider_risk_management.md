@@ -54,9 +54,9 @@ In this task, you'll assign Joni Sherman the Insider Risk Management role so she
 
 1. Select **Select** at the bottom of the panel.
 
-1. Select **Done**, then select **Confirm** to update the role group.
+1. Back on the **Insider Risk Management** flyout panel, verify **Joni Sherman** appears as a member.
 
-1. Back on the **Insider Risk Management** flyout panel, verify **Joni Sherman** appears as a member, then close the flyout.
+1. Select **Done**, then select **Confirm** to update the role group.
 
 1. Close the InPrivate window.
 
