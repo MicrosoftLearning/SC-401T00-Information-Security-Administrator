@@ -47,7 +47,7 @@ In this task, you'll assign eDiscovery permissions to Joni Sherman so she can pe
 
 1. On the **Choose users** flyout page, search for `Joni`, then select the checkbox for **Joni Sherman**. Select **Select** at the bottom of the panel.
 
-1. Back on the **eDiscovery Manager** flyout panel, verify **Joni Sherman** appears under **Manager**, then select **Done**. 
+1. Back on the **eDiscovery Manager** flyout panel, verify **Joni Sherman** appears under **eDiscovery Manager**, then select **Done**. 
 
 1. Select **Confirm** to update the role group.
 
