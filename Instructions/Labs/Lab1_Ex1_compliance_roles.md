@@ -10,11 +10,11 @@ lab:
 
 ## WWL Tenants - Terms of use
 
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
+If you are being provided with a tenant as part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
-Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
+Tenants must not be converted to a paid subscription. Tenants obtained as part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
 # Lab 1 - Exercise 1 - Manage compliance and security roles
 
@@ -34,18 +34,6 @@ In this task, you'll assign the required compliance and security roles to Joni S
 1. Log into the Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account. The password should be provided by your lab hosting provider.
 
 1. Open **Microsoft Edge** and navigate to the Microsoft 365 admin center, `https://admin.microsoft.com`, and log in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
-
-    > [!Note] **Note: Skip MFA for the Microsoft 365 Admin center**
-    >
-    > In some tenants, you might see a Portal MFA Enforcement prompt when signing in. If this prompt appears:
-    >
-    > - Select **Skip for now** to temporarily delay MFA setup.
-    >
-    >    ![Screenshot showing the option to postpone MFA.](../Media/postpone-mfa.png)
-    >
-    > - On the **Let us know why you're skipping MFA** dialogue, select any justification, then select **Send and skip**.
-    >
-    > This postpones MFA enforcement in the Microsoft 365 Admin center for the tenant and allows you to proceed with the lab.
 
 1. On the left sidebar, expand **Users** then select **Active users**.
 

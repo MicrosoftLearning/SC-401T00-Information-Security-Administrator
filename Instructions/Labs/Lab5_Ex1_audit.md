@@ -12,11 +12,11 @@ lab:
 
 ## WWL Tenants - Terms of use
 
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
+If you are being provided with a tenant as part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
-Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
+Tenants must not be converted to a paid subscription. Tenants obtained as part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
 # Lab 5 - Exercise 1 - Search the Audit log
 
@@ -34,7 +34,7 @@ You're Joni Sherman, an Information Security Administrator at Contoso Ltd. As pa
 
 In this task, you'll use the Microsoft Purview Audit solution to search for recent audit events related to DLP policy and rules.
 
-1. In Microsoft Edge, navigate to `https://purview.microsoft.com` and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
+1. In Microsoft Edge, navigate to **`https://purview.microsoft.com`** and sign in to the Microsoft Purview portal as **Joni Sherman** `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
 1. In Microsoft Purview, navigate to **Solutions** > **Audit**.
 
@@ -45,7 +45,7 @@ In this task, you'll use the Microsoft Purview Audit solution to search for rece
      - **Start date**: 3 days ago
      - **End date**: Today
 
-   - **Activities - friendly names**: Search for `DLP` and select the following activities under **Information protection and DLP activities**:
+   - **Activities - friendly names**: Search for `DLP` and select these activities under **Information protection and DLP activities**:
 
      - Created DLP rule
      - Updated DLP rule
@@ -82,7 +82,7 @@ In this task, you'll export the DLP audit search results for offline analysis or
 
 1. When the export completes, select the **Download file** link in the green **Your export is complete** banner.
 
- > [!Note] **Note**: Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review, use Excel or another spreadsheet tool. In this lab environment, you can open the CSV in Notepad to confirm that the export completed successfully.
+> **Note: Audit export file format**<br>Audit export files are saved in CSV format and can be opened in any text editor or spreadsheet application. For easier review, use Excel or another spreadsheet tool. In this lab environment, you can open the CSV in Notepad to confirm that the export completed successfully.
 
 You've exported DLP-related audit logs, which can be used for offline review or recordkeeping.
 
@@ -94,7 +94,7 @@ In this task, you'll configure an audit retention policy to preserve logs relate
 
 1. Select **Policies** from the left sidebar.
 
-1. On the **Policies** page select **Create audit retention policy**
+1. On the **Policies** page, select **Create audit retention policy**.
 
 1. On the **New audit retention policy** panel, enter:
 

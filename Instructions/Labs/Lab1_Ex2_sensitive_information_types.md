@@ -32,9 +32,9 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. In **Microsoft Edge**, navigate to **`https://purview.microsoft.com`** and log into the Microsoft Purview portal as `JoniS@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). User account passwords are provided by your lab hosting provider.
 
-1. On the left sidebar, select **Solutions** then select **Information Protection**.
+1. On the left sidebar, select **Solutions**, then select **Information Protection**.
 
-1. On the left sidebar, expand **Classifiers** then select **Sensitive info types**.
+1. On the left sidebar, expand **Classifiers**, then select **Sensitive info types**.
 
 1. On the **Sensitive info types** page, select **+ Create sensitive info type** to start the sensitive information type configuration.
 
@@ -45,11 +45,11 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. Select **Next**.
 
-1. On the **Define patterns for this sensitive info type** page, select **Create pattern**.
+1. On the **Define patterns for this sensitive info type** page, select **+ Create pattern**.
 
 1. On the **New pattern** flyout panel on the right, select **+ Add primary element** > **Regular expression**.
 
-1. On the **+ Add a regular expression​** flyout panel on the right, enter:
+1. On the **+ Add a regular expression​** flyout on the right, enter:
 
    - **ID**: `Contoso IDs`
    - **Regular expression**: `[A-Z]{3}[0-9]{6}`
@@ -57,33 +57,33 @@ In this task, you'll create a new custom sensitive information type that recogni
 
 1. Select **Done** at the bottom of the flyout panel.
 
-1. Back on the **New pattern** flyout panel, under **Supporting elements**, select **+ Add supporting elements or group of elements** drop-down menu and select **Keyword list**.
+1. Back on the **New pattern** flyout, under **Supporting elements**, select **+ Add supporting elements or group of elements** drop-down menu and select **Keyword list**.
 
 1. On the **Add a keyword list** flyout panel on the right, enter:
 
    - **ID**: `Employee ID keywords`
    - **Case insensitive**:
 
-      ```text
-      Employee
-      ID
-      ```
+    ```text
+    Employee
+    ID
+    ```
 
    - Select the radio button for _Word match_
 
-1. Select **Done** at the bottom of the flyout panel.
+1. Select **Done** at the bottom of the flyout.
 
-1. Back on the **New pattern** flyout panel, under **Character proximity**, decrease the **Detect primary AND supporting elements** value to `100` characters.
+1. Back on the **New pattern** flyout, under **Character proximity**, decrease the **Detect primary AND supporting elements** value to `100` characters.
 
 1. Select the **Create** button at the bottom of the flyout panel.
 
-1. Back on the **Define patterns for this sensitive info type** page select **Next**.
+1. Back on the **Define patterns for this sensitive info type** page, select **Next**.
 
-1. On the **Choose the recommended confidence level to show in compliance policies** page use the default value and select **Next**.
+1. On the **Choose the recommended confidence level to show in compliance policies** page, use the default value and select **Next**.
 
-1. On the **Review settings and finish** page review the settings and select **Create**. When successfully created select **Done**.
+1. On the **Review settings and finish** page, review the settings and select **Create**. When successfully created, select **Done**.
 
-You have successfully created a new sensitive information type to identify employee IDs in the pattern of three uppercase characters, six numbers, and the keywords 'Employee' or 'IDs' within a range of 100 characters.
+You have successfully created a new sensitive information type to identify employee IDs in the pattern of three uppercase characters, six numbers, and the keywords "Employee" or "ID" within a range of 100 characters.
 
 ## Task 2 – Modify confidence level to reduce false positives
 
@@ -97,7 +97,9 @@ You've received reports that some documents containing employee IDs aren't being
 
 1. Search for `Contoso Employee IDs` in the list and select the SIT name to open the details page.
 
-1. Select **Edit** at the top of the page to modify the SIT.
+    > **Note: Refresh the list of sensitive info types**<br>If you're unable to find the Contoso Employee IDs on the sensitive info type page, try refreshing the list of sensitive info types from the top menu.<br>![Screenshot showing the Sensitive info types page with the Refresh button highlighted.](../Media/refresh-sensitive-info-type.png)
+
+1. Select **Edit** at the top of the flyout to modify the SIT.
 
 1. On the **Name your sensitive info type** page, select **Next**.
 
@@ -121,13 +123,13 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
+1. Open **Microsoft Edge** in an InPrivate window by right-clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
 1. Navigate to **`https://admin.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
-1. From the left pane, expand **Teams & groups** then select **Active teams & groups**.
+1. From the left pane, expand **Teams & groups**, then select **Active teams & groups**.
 
-1. On the top of the **Active teams and groups** page, select **Security groups** then select **+ Add a security group**.
+1. On the top of the **Active teams and groups** page, select **Security groups**, then select **+ Add a security group**.
 
     ![Screenshot of the Add a group button.](../Media/add-security-group.png)
 
@@ -138,17 +140,17 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 1. Select **Next**.
 
-1. On the **Edit settings** page, leave the default settings, then select **Next**.
+1. On the **Edit settings** page, leave the default, then select **Next**.
 
 1. On the **Review and finish adding group** page, review your settings and select **Create group**.
 
 1. On the **EDM_DataUploaders group created** page, select **Close**.
 
-1. Back on the **Active teams and groups** page, ensure the **Security** tab is selected from the top navigation ribbon, then select the **Refresh** button to display the newly created security group. Select the **EDM_DataUploaders** group from the list to open the **EDM_DataUploaders** flyout panel on the right.
+1. Back on the **Active teams and groups** page, ensure the **Security groups** tab is selected from the top navigation ribbon, then select the **Refresh** button to display the newly created security group. Select the **EDM_DataUploaders** group from the list to open the **EDM_DataUploaders** flyout panel on the right.
 
 1. Select the **Members** tab then select **View all and manage members**.
 
-1. On the **Members** page select **+ Add members**.
+1. On the **Members** page, select **+ Add members**.
 
 1. On the **Add members** page, select the checkbox to the left of **Joni Sherman**, then select the **Add (1)** button at the bottom of the flyout panel.
 
@@ -158,7 +160,7 @@ In this task, you'll create the role group to create an EDM classifier and add J
 
 You have successfully created the **EDM_DataUploaders group** and assigned Joni access to create an EDM classifier.
 
-## Task 4 –  Create EDM-based classification information type
+## Task 4 – Create EDM-based classification information type
 
 In this task, you'll create an Exact Data Match (EDM) based classification with a database schema of employee data.
 
@@ -168,7 +170,7 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 
 1. Navigate to **Information Protection** by selecting **Solutions** > **Information Protection** from the left sidebar.
 
-1. On the **Information Protection** page, expand **Classifiers** then select **EDM classifiers**.
+1. On the **Information Protection** page, expand **Classifiers**, then select **EDM classifiers**.
 
 1. On the **EDM classifiers** page, select **+ Create EDM classifier**.
 
@@ -215,8 +217,6 @@ In this task, you'll create an Exact Data Match (EDM) based classification with 
 1. Select the dropdown for **Choose delimiters and punctuation to ignore** and select:
 
    - _Hyphen ('-')_
-   - _Period ('.')_
-   - _Space (' ')_
    - _Open parenthesis ('(')_
    - _Close parenthesis (')')_
 
@@ -274,7 +274,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
 1. Close the Notepad window.
 
-1. Right click the Windows symbol in the task bar and select **Terminal (Admin)**.
+1. Right-click the Windows symbol in the task bar and select **Terminal (Admin)**.
 
 1. If the **User Account Control** window pops up, select **Yes** to allow this application to make changes to your device.
 
@@ -300,7 +300,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
     You should get a message that the command completed successfully.
 
-    > [!Note] **Note**: If the last command fails, it possibly takes more time until the **EDM_DataUploaders** group membership is applied. It can take up to one hour until it is possible to download the schema file.  If it fails, proceed to the next task and return to this step later.
+    > **Note: EDM group membership propagation**<br>If the last command fails, it possibly takes more time until the **EDM_DataUploaders** group membership is applied. It can take up to one hour until it is possible to download the schema file. If it fails, proceed to the next task and return to this step later.
 
 1. Hash the database file and upload it to the EDM-based classification sensitive information type by running the following script in PowerShell:
 
@@ -320,7 +320,7 @@ In this task, you'll hash and upload the actual data for the EDM-based classific
 
     Alternatively, you can also refresh the **EDM classifiers** window in the Microsoft Purview portal to check the status of the hash. Once the status is set to **Index complete** the hash is complete.
 
-    > [!Note] **Note**: This process might take some time. You might need to run the GetSession script or refresh the EDM classifiers page several times before the status indicates that the hash is complete.
+    > **Note: EDM hash processing time**<br>This process might take some time. You might need to run the GetSession script or refresh the EDM classifiers page several times before the status indicates that the hash is complete.
 
     ![Screenshot showing the EDM hash status set to Completed in PowerShell.](../Media/edm-hash-completed.png)
 
@@ -336,9 +336,9 @@ Several violations of personal information leakage happened when users sent out 
 
 1. You should still be logged into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account, and you should be logged into Microsoft 365 as **Joni Sherman**.
 
-1. The Microsoft Purview portal should still be to the EDM classifiers page in Microsoft Edge. If not, in Microsoft Edge, navigate to `https://purview.microsoft.com` > **Solutions** > **Information Protection**.
+1. The Microsoft Purview portal should still be open to the EDM classifiers page in Microsoft Edge. If not, in Microsoft Edge, navigate to `https://purview.microsoft.com` > **Solutions** > **Information Protection**.
 
-1. In the left sidebar, expand **Classifiers** then select **Sensitive info types**.
+1. In the left sidebar, expand **Classifiers**, then select **Sensitive info types**.
 
 1. Select **+ Create sensitive info type** to open the configuration for a new sensitive information type.
 
@@ -353,7 +353,7 @@ Several violations of personal information leakage happened when users sent out 
 
 1. On the **New pattern** flyout panel on the right, under **Primary element** select **+ Add primary element**, then select **Keyword dictionary**.
 
-1. On the **Add a keyword dictionary** page enter:
+1. On the **Add a keyword dictionary** page, enter:
 
    - **Name**: `Diseases Dictionary`
    - **Keywords**:
@@ -366,7 +366,7 @@ Several violations of personal information leakage happened when users sent out 
     otitis
     ```
 
-1. Select **Done** at the bottom of the flyout panel.
+1. Select **Done** at the bottom of the flyout.
 
 1. Back on the **New pattern** page, under **Supporting elements**, select **+ Add supporting elements or group of elements**, then select **Keyword list** to add additional support for the keyword dictionary.
 
@@ -425,7 +425,7 @@ Always test custom sensitive information types before using them in policies. Ot
 
 1. On the **Upload file to test "Contoso Employee IDs"** flyout panel on the right, select **Upload file**.
 
-1. Select **Documents** from the left pane, select the _SickTestData.txt_ file, then select **Open**.
+1. Select **Documents** from the left pane, select the **SickTestData.txt** file, then select **Open**.
 
 1. Select **Test** to start the analysis.
 
@@ -437,7 +437,7 @@ Always test custom sensitive information types before using them in policies. Ot
 
 1. On the **Upload file to test "Contoso Diseases List"** flyout panel on the right, select **Upload file**.
 
-1. Select **Documents** from the left pane, select the _SickTestData.txt_ file, then select **Open**.
+1. Select **Documents** from the left pane, select the **SickTestData.txt** file, then select **Open**.
 
 1. Select **Test** to start the analysis.
 

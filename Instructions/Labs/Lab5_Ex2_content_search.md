@@ -12,11 +12,11 @@ lab:
 
 ## WWL Tenants - Terms of use
 
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
+If you are being provided with a tenant as part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and is not eligible for extension.
 
-Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
+Tenants must not be converted to a paid subscription. Tenants obtained as part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
 # Lab 5 - Exercise 2 - Perform a content search
 
@@ -35,7 +35,7 @@ In this task, you'll assign eDiscovery permissions to Joni Sherman so she can pe
 
 1. Sign into Client 1 VM (SC-401-CL1) as the **SC-401-CL1\admin** account.
 
-1. Open **Microsoft Edge** in an InPrivate window by right clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
+1. Open **Microsoft Edge** in an InPrivate window by right-clicking Microsoft Edge from the task bar and selecting **New InPrivate window**.
 
 1. Navigate to **`https://purview.microsoft.com`**, and sign in as **MOD Administrator**, `admin@WWLxZZZZZZ.onmicrosoft.com` (where ZZZZZZ is your unique tenant prefix provided by your lab hosting provider). Admin's password should be provided by your lab hosting provider.
 
@@ -43,19 +43,11 @@ In this task, you'll assign eDiscovery permissions to Joni Sherman so she can pe
 
 1. On the **Role groups for Microsoft Purview solutions** page, search for `eDiscovery`, then select **eDiscovery Manager**.
 
-1. On the **eDiscovery Manager** flyout panel, select **Edit**.
+1. On the **eDiscovery Manager** flyout panel, select **Add Manager**.
 
-1. On the **Manage eDiscovery Manager** page, select **Choose users**.
+1. On the **Add Manager** flyout page, search for `Joni`, then select the checkbox for **Joni Sherman**. Select **Add** at the bottom of the panel.
 
-1. On the **Choose users** flyout page, search for `Joni`, then select the checkbox for **Joni Sherman**. Select the **Select** button at the bottom of the panel.
-
-1. Back on the **Manage eDiscovery Manager** page, select **Next**.
-
-1. On the **Manage eDiscovery Administrator** page, select **Next**.
-
-1. On the **Review the role group and finish** page, select **Save**.
-
-1. On the **You successfully updated the role group** page, select **Done**.
+1. Back on the **eDiscovery Manager** flyout panel, verify **Joni Sherman** appears under **Manager**, then close the flyout.
 
 1. Close the InPrivate window.
 
@@ -71,7 +63,7 @@ You've assigned eDiscovery permissions to Joni Sherman, enabling her to search f
 
    ![Screenshot showing where to create a search in eDiscovery.](../Media/ediscovery-create-search.png)
 
-1. On the **Enter details to get started** dialogue, enter:
+1. On the **New search** dialog, enter:
 
    - **Case name**: `Financial Data Exposure Review`
    - **Search name**: `Financial Data Leak Investigation`
@@ -80,7 +72,7 @@ You've assigned eDiscovery permissions to Joni Sherman, enabling her to search f
 
 1. Select **Create** to create the search.
 
-1. On the **Financial Data Leak Investigation** page, under **Data sources** select **+** (plus sign) > **Add data sources**.
+1. On the **Financial Data Leak Investigation** page, under **Data sources**, select **+** (plus sign) > **+ Add data sources**.
 
    ![Screenshot showing add data sources in Content Search.](../Media/content-search-data-sources.png)
 
@@ -90,7 +82,7 @@ You've assigned eDiscovery permissions to Joni Sherman, enabling her to search f
 
    ![Screenshot showing the condition builder in Content Search.](../Media/content-search-query-builder.png)
 
-1. In the **Choose search results** flyout under **Statistics**, select the checkboxes for **Include categories** and **Include query keywords report**, then select **Run Query**.
+1. In the **Choose search results** flyout, under **Statistics**, select the checkboxes for **Include categories** and **Include query keywords report**, then select **Run query**.
 
 1. Review the results of the search by:
 
