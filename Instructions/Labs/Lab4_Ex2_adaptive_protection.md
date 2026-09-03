@@ -37,7 +37,7 @@ You are Joni Sherman, the Information Security Administrator for Contoso Ltd. Yo
 
 1. On the **Insider risk levels** page:
 
-   - In the **Insider risk policy** dropdown, select the **Data leaks quick policy** you created in a previous exercise.
+   - In the **Insider risk policy** dropdown, select the **Data leaks policy** you created in a previous exercise.
    - Leave the default risk level settings unchanged.
    - Select **Save**.
 
@@ -134,7 +134,7 @@ In this final task, you'll turn on Adaptive Protection so the system can start a
 
 1. Confirm your configurations:
 
-   - On the **Insider risk levels** tab, the **Data leaks quick policy** is selected.
+   - On the **Insider risk levels** tab, the **Data leaks policy** is selected.
 
    - On the **Conditional Access** tab, the **Block all access for elevated risk** policy is visible.
 

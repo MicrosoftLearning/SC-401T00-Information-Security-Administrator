@@ -48,13 +48,15 @@ In this task, you'll assign Joni Sherman the Insider Risk Management role so she
 
 1. On the **Role groups for Microsoft Purview solutions** page, select **Insider Risk Management**.
 
-1. On the **Insider Risk Management** flyout panel on the right, select **Add member**.
+1. On the **Insider Risk Management** flyout panel, select the **Members** tab. Select **+ Add member**, then select **Choose users**.
 
-1. On the **Add member** flyout panel, search for `Joni`, then select the checkbox for **Joni Sherman**.
+1. On the **Choose users** flyout panel, search for `Joni`, then select the checkbox for **Joni Sherman**.
 
-1. Select **Add** at the bottom of the panel.
+1. Select **Select** at the bottom of the panel.
 
-1. Back on the **Insider Risk Management** flyout panel, verify **Joni Sherman** appears as a member, then close the flyout.
+1. Back on the **Insider Risk Management** flyout panel, verify **Joni Sherman** appears as a member.
+
+1. Select **Done**, then select **Confirm** to update the role group.
 
 1. Close the InPrivate window.
 
@@ -103,7 +105,7 @@ In this task, you'll create a policy from the Data leaks template to detect risk
 
 1. On the **Exclude users and groups (optional) (preview)** page, select **Next**.
 
-1. On the **Decide whether to prioritize content** page, select **Next**.
+1. On the **Decide whether to prioritize content** page, select **I don't want to prioritize content right now**, then select **Next**.
 
 1. On the **Choose triggering event for this policy** page, review the available sequences. The sequences listed here rely on the indicators you enabled in Task 2 — each one combines multiple signals to detect coordinated data movement.
 
