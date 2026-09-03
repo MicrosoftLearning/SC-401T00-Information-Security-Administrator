@@ -57,7 +57,7 @@ In this task, you'll verify that published sensitivity labels are available to u
 
 1. Select **Cancel** to keep the sensitivity label.
 
-1. In the upper left of the document, select **Document** to rename this file, and rename it to `HR Document`. Press Enter to apply this name change.
+1. In the upper-left corner of the document, select the document name (**Important HR employee document**) and rename the file to `HR Document`. Press Enter to apply this name change.
 
     ![Screenshot showing where to rename a file in Word on the web.](../Media/rename-web-word-file.png)
 
@@ -114,7 +114,7 @@ To test your retention configuration, you'll apply a retention label to a docume
    ![Screenshot showing where to select document details in SharePoint.](../Media/sharepoint-details.png)
 
 1. In the **Details** panel, update the following fields:
-   - **Sensitivity**: Internal > Financial Data
+   - **Sensitivity**: Internal \ Employee data (HR)
    - **Apply label**: Sensitive Financial Records
 
      ![Screenshot showing sensitivity label and retention label applied in SharePoint.](../Media/sharepoint-choose-labels.png)
