@@ -133,7 +133,7 @@ In this task, you'll enable integration between Microsoft Defender for Endpoint 
 
 1. In Microsoft Edge, navigate to Microsoft Defender by going to **`https://security.microsoft.com`**.
 
-1. In the left navigation pane, select **System** > **Settings** > **Endpoints** > **Optional features**.
+1. In the left navigation pane, select **Setup & Configuration** > **Settings** > **Endpoints** > **Optional features**.
 
 1. Scroll down and select the toggle to **On** to **Share endpoint alerts with Microsoft Compliance Center**.
 
